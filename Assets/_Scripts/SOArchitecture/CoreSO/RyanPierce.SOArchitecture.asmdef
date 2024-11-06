@@ -1,0 +1,16 @@
+{
+    "name": "RyanPierce.SOArchitecture",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bcfdb534a3e4b064ba82891fe8f75426"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
