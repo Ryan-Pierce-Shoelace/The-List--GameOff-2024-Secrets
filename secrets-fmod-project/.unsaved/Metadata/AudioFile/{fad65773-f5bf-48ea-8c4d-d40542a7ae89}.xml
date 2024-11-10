@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{e74ccba5-1198-49e2-be51-e0c75475d911}">
+	<object class="AudioFile" id="{fad65773-f5bf-48ea-8c4d-d40542a7ae89}">
 		<property name="assetPath">
-			<value>FX/Player/foley_footsteps_shoes_softly_slight_tip_toe_carpet_walking_18324.mp3</value>
+			<value>Ambience/Awkward Meeting.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>48</value>
+			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>6.024</value>
+			<value>84.06204081632653</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{72461692-d837-4f33-b0b2-b457889a5b43}</destination>
