@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-namespace WW.Menu
+namespace UserInterface
 {
     public class SettingsMenu : MonoBehaviour
     {
