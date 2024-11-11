@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using FMODUnity;
 using UnityEngine;
 
@@ -27,7 +28,9 @@ namespace Shoelace.Audio.XuulSound
 		[SerializeField] private float defaultFadeTime = 2f;
 
 
-		private readonly Dictionary<string, ISoundPlayer> activeSounds = new();
+		private Dictionary<string, ISoundPlayer> activeSounds;
+		private HashSet<SoundEmitter> activeEmitters;
+
 		private MusicSystem musicSystem;
 
 		private VolumeSettings volumeSettings;
@@ -45,6 +48,7 @@ namespace Shoelace.Audio.XuulSound
 			Instance = this;
 			DontDestroyOnLoad(gameObject);
 
+
 			InitializeSystem();
 		}
 
@@ -61,6 +65,9 @@ namespace Shoelace.Audio.XuulSound
 
 		private void InitializeSystem()
 		{
+			activeSounds = new Dictionary<string, ISoundPlayer>();
+			activeEmitters = new HashSet<SoundEmitter>();
+
 			volumeSettings = new VolumeSettings();
 			volumeSettings.OnVolumeChanged += HandleVolumeChanged;
 			volumeSettings.LoadSettings();
@@ -104,6 +111,8 @@ namespace Shoelace.Audio.XuulSound
 		#endregion
 
 
+		#region Sound Playback
+
 		public void PlayOneShot(SoundConfig config, Vector3 position = default)
 		{
 			RuntimeManager.PlayOneShot(config.EventRef, position);
@@ -130,12 +139,40 @@ namespace Shoelace.Audio.XuulSound
 			musicSystem.StopMusic(fadeTime);
 		}
 
+		#endregion
+
+		#region Emitter Management
+
+		public void RegisterEmitter(SoundEmitter emitter)
+		{
+			if (emitter != null && activeEmitters.Add(emitter))
+			{
+				emitter.SetVolume(masterVolume * sfxVolume);
+			}
+		}
+
+		public void UnregisterEmitter(SoundEmitter emitter)
+		{
+			if (emitter != null)
+			{
+				activeEmitters.Remove(emitter);
+			}
+		}
+
+		#endregion
+
+		#region Cleanup
 
 		public void StopAllSounds()
 		{
 			foreach (ISoundPlayer sound in activeSounds.Values)
 			{
 				sound.Stop();
+			}
+
+			foreach (SoundEmitter emitter in activeEmitters)
+			{
+				emitter.Stop();
 			}
 		}
 
@@ -146,6 +183,7 @@ namespace Shoelace.Audio.XuulSound
 				Instance = null;
 			}
 
+
 			foreach (ISoundPlayer sound in activeSounds.Values)
 			{
 				sound.Dispose();
@@ -153,7 +191,22 @@ namespace Shoelace.Audio.XuulSound
 
 			activeSounds.Clear();
 
+
+			foreach (SoundEmitter emitter in activeEmitters.Where(emitter => emitter != null))
+			{
+				Destroy(emitter.gameObject);
+			}
+
+			activeEmitters.Clear();
+
 			musicSystem?.Dispose();
+
+			if (volumeSettings != null)
+			{
+				volumeSettings.OnVolumeChanged -= HandleVolumeChanged;
+			}
 		}
+
+		#endregion
 	}
 }
