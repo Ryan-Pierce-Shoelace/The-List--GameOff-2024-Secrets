@@ -1,3 +1,5 @@
+using Shoelace.Audio;
+using Shoelace.Audio.XuulSound;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +8,9 @@ namespace Text_Display
 {
 	public class PhoneDialer : MonoBehaviour
 	{
+		[SerializeField] private SoundConfig buttonPressSound;
+		
+		
 		[SerializeField] private TMP_Text displayText;
 		[SerializeField] private Button dialButton;
 		[SerializeField] private Button backButton;
@@ -51,6 +56,7 @@ namespace Text_Display
 		private void OnNumberPressed(int number)
 		{
 			if (currentNumber.Length >= MAX_DIGITS) return;
+			AudioManager.Instance.PlayOneShot(buttonPressSound);
 			currentNumber += number.ToString();
 			UpdateDisplay();
 		}

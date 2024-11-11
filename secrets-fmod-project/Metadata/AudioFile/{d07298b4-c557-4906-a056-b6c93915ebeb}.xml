@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{fad65773-f5bf-48ea-8c4d-d40542a7ae89}">
+	<object class="AudioFile" id="{d07298b4-c557-4906-a056-b6c93915ebeb}">
 		<property name="assetPath">
-			<value>Ambience/Awkward Meeting.mp3</value>
-		</property>
-		<property name="isStreaming">
-			<value>true</value>
+			<value>FX/Player/FootStep 1.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="length">
-			<value>84.06204081632653</value>
+			<value>0.5013333333333333</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{72461692-d837-4f33-b0b2-b457889a5b43}</destination>

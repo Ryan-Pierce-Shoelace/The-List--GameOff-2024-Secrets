@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{f636a0cf-63b0-4507-873d-3f3727e74b55}">
+	<object class="AudioFile" id="{e4da7c0b-1c05-47be-9f70-0858b59d5ad6}">
 		<property name="assetPath">
-			<value>Ambience/Very Low Note.mp3</value>
-		</property>
-		<property name="isStreaming">
-			<value>true</value>
+			<value>FX/Player/FootStep 4.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="length">
-			<value>83.069387755102042</value>
+			<value>0.49181249999999999</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{72461692-d837-4f33-b0b2-b457889a5b43}</destination>
