@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Shoelace.Audio.XuulSound;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -14,8 +15,12 @@ namespace UserInterface
         [Header("Toggles")]
         [SerializeField] private TMP_Dropdown resolutionDropdown;
         [SerializeField] private Toggle fullScreenToggle;
-        [SerializeField] private Slider volumeSlider;
         [SerializeField] private Button closeButton;
+        
+        [SerializeField] private Slider masterVolumeSlider;
+        [SerializeField] private Slider musicVolumeSlider;
+        [SerializeField] private Slider sfxVolumeSlider;
+        
 
         private Resolution[] resolutions;
 
@@ -26,7 +31,9 @@ namespace UserInterface
 
         private void OnEnable()
         {
+            
             SetupListeners();
+            SetupVolumeControls();
             SetupResolutionDropdown();
         }
         
@@ -41,15 +48,37 @@ namespace UserInterface
                 fullScreenToggle.onValueChanged.AddListener(SetFullScreen);
             }
 
-            if (volumeSlider != null)
-            {
-                volumeSlider.onValueChanged.RemoveAllListeners();
-                volumeSlider.onValueChanged.AddListener(SetMasterVolume);
-            }
 
             resolutionDropdown.onValueChanged.RemoveAllListeners();
             resolutionDropdown.onValueChanged.AddListener(ChangeResolution);
         }
+        
+        private void SetupVolumeControls()
+        {
+            VolumeSettings volumeSettings = AudioManager.Instance.VolumeSettings;
+
+     
+            masterVolumeSlider.value = volumeSettings.Master;
+            musicVolumeSlider.value = volumeSettings.Music;
+            sfxVolumeSlider.value = volumeSettings.SFX;
+
+
+            masterVolumeSlider.onValueChanged.AddListener(value => {
+                volumeSettings.SetMasterVolume(value);
+                volumeSettings.SaveSettings();
+            });
+
+            musicVolumeSlider.onValueChanged.AddListener(value => {
+                volumeSettings.SetMusicVolume(value);
+                volumeSettings.SaveSettings();
+            });
+
+            sfxVolumeSlider.onValueChanged.AddListener(value => {
+                volumeSettings.SetSFXVolume(value);
+                volumeSettings.SaveSettings();
+            });
+        }
+        
 
         private void SetupResolutionDropdown()
         {
