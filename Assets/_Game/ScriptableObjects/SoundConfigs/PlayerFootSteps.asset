@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventReference:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -460332647
+      Data2: 1121309330
+      Data3: 204147618
+      Data4: -1794748145
+    Path: event:/PlayerFootsteps
   is3D: 0
   defaultVolume: 1
   useParameters: 0
