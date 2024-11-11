@@ -18,7 +18,7 @@ MonoBehaviour:
       Data2: 1302007415
       Data3: -2077746533
       Data4: 1446974758
-    Path: event:/PhoneButtonPressed
+    Path: event:/SFX/Phone/PhoneButtonPressed
   is3D: 0
   defaultVolume: 1
   useParameters: 0
