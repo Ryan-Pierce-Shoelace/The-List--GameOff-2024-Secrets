@@ -26,13 +26,13 @@ namespace Text_Display
 
 		private void OnEnable()
 		{
-			ThoughtEvent.OnThoughtTriggered += DisplayThought;
+			StaticEvents.OnThoughtTriggered += DisplayThought;
 		}
 
 
 		private void OnDisable()
 		{
-			ThoughtEvent.OnThoughtTriggered -= DisplayThought;
+			StaticEvents.OnThoughtTriggered -= DisplayThought;
 		}
 
 

@@ -15,7 +15,7 @@ namespace Text_Display
 			{
 				if (!string.IsNullOrEmpty(thoughtToTest))
 				{
-					ThoughtEvent.TriggerThought(thoughtToTest);
+					StaticEvents.TriggerThought(thoughtToTest);
 				}
 			}
 		}
