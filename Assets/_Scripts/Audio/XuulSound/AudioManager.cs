@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
 
@@ -9,32 +10,25 @@ namespace Shoelace.Audio.XuulSound
 	public class AudioManager : MonoBehaviour
 	{
 		public static AudioManager Instance { get; private set; }
-
 		public VolumeSettings VolumeSettings => volumeSettings;
-
 
 		[Header("Initial Setup")]
 		[SerializeField] private SoundConfig startingMusic;
 
 		[SerializeField] private bool playMusicOnStart = true;
 
-		[Header("Volume Controls")]
-		[SerializeField, Range(0, 1)] private float masterVolume = 1f;
-
-		[SerializeField, Range(0, 1)] private float musicVolume = 1f;
-		[SerializeField, Range(0, 1)] private float sfxVolume = 1f;
+		private Bus masterBus;
+		private Bus musicBus;
+		private Bus sfxBus;
+		private Bus ambienceBus;
 
 		[Header("Fade Settings")]
 		[SerializeField] private float defaultFadeTime = 2f;
 
-
 		private Dictionary<string, ISoundPlayer> activeSounds;
 		private HashSet<SoundEmitter> activeEmitters;
-
 		private MusicSystem musicSystem;
-
 		private VolumeSettings volumeSettings;
-
 
 		#region Setup
 
@@ -43,12 +37,12 @@ namespace Shoelace.Audio.XuulSound
 			if (Instance != null)
 			{
 				Debug.LogError("More than one audio manager in the scene");
+				Destroy(gameObject);
+				return;
 			}
 
 			Instance = this;
 			DontDestroyOnLoad(gameObject);
-
-
 			InitializeSystem();
 		}
 
@@ -62,7 +56,6 @@ namespace Shoelace.Audio.XuulSound
 			UpdateAllVolumes();
 		}
 
-
 		private void InitializeSystem()
 		{
 			activeSounds = new Dictionary<string, ISoundPlayer>();
@@ -73,7 +66,11 @@ namespace Shoelace.Audio.XuulSound
 			volumeSettings.LoadSettings();
 
 			musicSystem = new MusicSystem();
-			UpdateMusicVolume();
+
+			masterBus = RuntimeManager.GetBus("bus:/");
+			musicBus = RuntimeManager.GetBus("bus:/Music");
+			sfxBus = RuntimeManager.GetBus("bus:/SFX");
+			ambienceBus = RuntimeManager.GetBus("bus:/Ambience");
 		}
 
 		#endregion
@@ -87,29 +84,28 @@ namespace Shoelace.Audio.XuulSound
 
 		private void UpdateAllVolumes()
 		{
-			UpdateMusicVolume();
-			UpdateSFXVolume();
-		}
+			masterBus.setVolume(volumeSettings.Master);
+			musicBus.setVolume(volumeSettings.Music);
+			sfxBus.setVolume(volumeSettings.SFX);
 
-		private void UpdateSFXVolume()
-		{
-			float effectiveVolume = masterVolume * sfxVolume;
+			float effectiveVolume = volumeSettings.Master * volumeSettings.SFX;
 			foreach (ISoundPlayer sound in activeSounds.Values)
 			{
 				sound.SetVolume(effectiveVolume);
 			}
-		}
 
-		private void UpdateMusicVolume()
-		{
+			foreach (SoundEmitter emitter in activeEmitters)
+			{
+				emitter.SetVolume(effectiveVolume);
+			}
+
 			if (musicSystem != null)
 			{
-				musicSystem.Volume = masterVolume * musicVolume;
+				musicSystem.Volume = volumeSettings.Master * volumeSettings.Music;
 			}
 		}
 
 		#endregion
-
 
 		#region Sound Playback
 
@@ -122,7 +118,8 @@ namespace Shoelace.Audio.XuulSound
 		{
 			ISoundPlayer player = config.Is3D ? new AttachedSoundPlayer(config, parent) : new SimpleSoundPlayer(config);
 
-			player.SetVolume(masterVolume * sfxVolume);
+			float effectiveVolume = volumeSettings.Master * volumeSettings.SFX;
+			player.SetVolume(effectiveVolume);
 
 			string id = Guid.NewGuid().ToString();
 			activeSounds[id] = player;
@@ -147,7 +144,8 @@ namespace Shoelace.Audio.XuulSound
 		{
 			if (emitter != null && activeEmitters.Add(emitter))
 			{
-				emitter.SetVolume(masterVolume * sfxVolume);
+				float effectiveVolume = volumeSettings.Master * volumeSettings.SFX;
+				emitter.SetVolume(effectiveVolume);
 			}
 		}
 
@@ -183,14 +181,12 @@ namespace Shoelace.Audio.XuulSound
 				Instance = null;
 			}
 
-
 			foreach (ISoundPlayer sound in activeSounds.Values)
 			{
 				sound.Dispose();
 			}
 
 			activeSounds.Clear();
-
 
 			foreach (SoundEmitter emitter in activeEmitters.Where(emitter => emitter != null))
 			{

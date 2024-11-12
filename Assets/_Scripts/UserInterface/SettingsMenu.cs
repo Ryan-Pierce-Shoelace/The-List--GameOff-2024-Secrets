@@ -57,12 +57,17 @@ namespace UserInterface
         {
             VolumeSettings volumeSettings = AudioManager.Instance.VolumeSettings;
 
-     
+            // Remove existing listeners to prevent duplicates
+            masterVolumeSlider.onValueChanged.RemoveAllListeners();
+            musicVolumeSlider.onValueChanged.RemoveAllListeners();
+            sfxVolumeSlider.onValueChanged.RemoveAllListeners();
+
+            // Set initial values
             masterVolumeSlider.value = volumeSettings.Master;
             musicVolumeSlider.value = volumeSettings.Music;
             sfxVolumeSlider.value = volumeSettings.SFX;
 
-
+            // Add listeners
             masterVolumeSlider.onValueChanged.AddListener(value => {
                 volumeSettings.SetMasterVolume(value);
                 volumeSettings.SaveSettings();

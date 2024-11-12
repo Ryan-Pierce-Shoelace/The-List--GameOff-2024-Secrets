@@ -30,9 +30,11 @@ namespace Shoelace.Audio.XuulSound
 
 		private void SetupEventEmitter()
 		{
-			if (soundConfig == null) return;
-			studioEventEmitter.EventReference = soundConfig.EventRef;
-			studioEventEmitter.AllowFadeout = allowFadeout;
+			if (soundConfig != null)
+			{
+				studioEventEmitter.EventReference = soundConfig.EventRef;
+				studioEventEmitter.AllowFadeout = allowFadeout;
+			}
 		}
 
 		private void OnValidate()
