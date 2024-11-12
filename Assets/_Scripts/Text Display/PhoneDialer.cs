@@ -1,3 +1,4 @@
+using System;
 using Shoelace.Audio;
 using Shoelace.Audio.XuulSound;
 using TMPro;
@@ -9,6 +10,7 @@ namespace Text_Display
 	public class PhoneDialer : MonoBehaviour
 	{
 		[SerializeField] private SoundConfig buttonPressSound;
+		[SerializeField] private SoundConfig dialToneSound;
 		
 		
 		[SerializeField] private TMP_Text displayText;
@@ -21,12 +23,25 @@ namespace Text_Display
 		private string currentNumber = "";
 		private const int MAX_DIGITS = 10;
 
+		private ISoundPlayer dialTonePlayer;
+		
 		private void Start()
 		{
 			InitializeButtons();
 			UpdateDisplay();
+			dialTonePlayer = AudioManager.Instance.CreateSound(dialToneSound);
 		}
 
+		private void OnEnable()
+		{
+			dialTonePlayer?.Play();
+		}
+
+		private void OnDisable()
+		{
+			ClearNumber();
+			dialTonePlayer?.Stop();
+		}
 
 		private void InitializeButtons()
 		{
@@ -56,9 +71,13 @@ namespace Text_Display
 		private void OnNumberPressed(int number)
 		{
 			if (currentNumber.Length >= MAX_DIGITS) return;
+			
+			dialTonePlayer?.Stop();
+			
 			AudioManager.Instance.PlayOneShot(buttonPressSound);
 			currentNumber += number.ToString();
 			UpdateDisplay();
+			
 		}
 
 		private void ClearNumber()
@@ -96,6 +115,8 @@ namespace Text_Display
 			displayText.text = FormatPhoneNumber(currentNumber);
 		}
 
+
+		
 
 		private string FormatPhoneNumber(string number)
 		{

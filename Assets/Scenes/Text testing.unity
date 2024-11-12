@@ -2586,9 +2586,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingMusic: {fileID: 0}
   playMusicOnStart: 0
-  masterVolume: 1
-  musicVolume: 1
-  sfxVolume: 1
   defaultFadeTime: 2
 --- !u!1 &861440420
 GameObject:
@@ -6381,6 +6378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonPressSound: {fileID: 11400000, guid: 7ce345b36a8306841905e10e5b71be9b, type: 2}
+  dialToneSound: {fileID: 11400000, guid: cb7de46137b9d8848b88d302edb5ef0e, type: 2}
   displayText: {fileID: 1780728635}
   dialButton: {fileID: 1021034220}
   backButton: {fileID: 900372318}
