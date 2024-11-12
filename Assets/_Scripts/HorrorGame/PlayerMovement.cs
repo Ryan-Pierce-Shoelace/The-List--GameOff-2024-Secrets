@@ -30,7 +30,7 @@ namespace Horror.Game
 
 		private void FixedUpdate()
 		{
-			rigidBody.velocity = input.currentMove * moveSpeed;
+			rigidBody.velocity = input.CurrentMove * moveSpeed;
 			UpdateSound();
 		}
 
