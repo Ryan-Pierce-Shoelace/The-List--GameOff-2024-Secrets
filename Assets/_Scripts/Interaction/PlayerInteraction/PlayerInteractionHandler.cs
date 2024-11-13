@@ -16,7 +16,7 @@ namespace Horror.InteractionSystem
         private IInteractable currentInteractable;
         private void Start()
         {
-            input.interactEvent += TryInteracting;
+            input.InteractEvent += TryInteracting;
         }
 
         private void TryInteracting()
