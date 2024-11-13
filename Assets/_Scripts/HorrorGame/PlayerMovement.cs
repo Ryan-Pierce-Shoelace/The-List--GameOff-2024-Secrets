@@ -15,7 +15,8 @@ namespace Horror.Game
 
 		private Rigidbody2D rigidBody;
 		private ISoundPlayer footstepPlayer;
-		private bool isPlayingFootsteps;
+		private float lastFootstepTime;
+
 
 		private void Start()
 		{

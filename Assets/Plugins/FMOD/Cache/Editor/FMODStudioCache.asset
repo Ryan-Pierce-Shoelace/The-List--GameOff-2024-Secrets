@@ -100,7 +100,7 @@ MonoBehaviour:
   - {fileID: 6084831907439133859}
   StringsBanks:
   - {fileID: -1957872200369089339}
-  cacheTime: 638669446479378081
+  cacheTime: 638670296802547510
   cacheVersion: 131620
 --- !u!114 &3935439547349387412
 MonoBehaviour:
@@ -144,10 +144,10 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638669445326183834
+  lastModified: 638670296802547510
   FileSizes:
   - Name: Desktop
-    Value: 268544
+    Value: 268416
   Exists: 1
 --- !u!114 &6084831907439133859
 MonoBehaviour:
@@ -191,7 +191,7 @@ MonoBehaviour:
   - {fileID: 5259880333220668561}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
