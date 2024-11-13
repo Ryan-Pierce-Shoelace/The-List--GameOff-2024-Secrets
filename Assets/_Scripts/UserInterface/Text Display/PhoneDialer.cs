@@ -29,12 +29,15 @@ namespace Text_Display
 		{
 			InitializeButtons();
 			UpdateDisplay();
-			dialTonePlayer = AudioManager.Instance.CreateSound(dialToneSound);
+			
 		}
 
 		private void OnEnable()
 		{
-			dialTonePlayer?.Play();
+			if(dialTonePlayer == null)
+                dialTonePlayer = AudioManager.Instance.CreateSound(dialToneSound);
+
+            dialTonePlayer?.Play();
 		}
 
 		private void OnDisable()
