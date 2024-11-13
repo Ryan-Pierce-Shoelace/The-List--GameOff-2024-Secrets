@@ -2586,9 +2586,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingMusic: {fileID: 0}
   playMusicOnStart: 0
-  masterVolume: 1
-  musicVolume: 1
-  sfxVolume: 1
   defaultFadeTime: 2
 --- !u!1 &861440420
 GameObject:
@@ -11352,6 +11349,14 @@ PrefabInstance:
     - target: {fileID: 2511310706545526487, guid: 77efe563410fc7a42a2951212a9b35df, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789720107324915112, guid: 77efe563410fc7a42a2951212a9b35df, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789720107324915112, guid: 77efe563410fc7a42a2951212a9b35df, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: 6391199568027453423, guid: 77efe563410fc7a42a2951212a9b35df, type: 3}
       propertyPath: m_LocalPosition.x

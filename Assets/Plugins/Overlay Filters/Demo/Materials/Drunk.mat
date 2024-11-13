@@ -12,12 +12,9 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ENABLECOLORSTEPS_ON
-  - _ENABLESATURATION_ON
-  - _OUTLINEFILLINSIDE_ON
   - _OUTLINEFILLLINES_ON
   - _REFLECTLOCALMIRROR_ON
-  - _SHADERSPACE_OBJECT
+  - _SHADERSPACE_WORLD
   m_InvalidKeywords:
   - ETC1_EXTERNAL_ALPHA
   - _FADINGMETHOD_NONE
@@ -55,14 +52,14 @@ Material:
     - _ColorStepsFade: 1
     - _ColorStepsStep1: 0.25
     - _ColorStepsStep2: 0.5
-    - _ColorStepsStep3: 0.8
+    - _ColorStepsStep3: 0.75
     - _Contrast: 1
     - _DirectionalBlurDirection: 0
     - _DirectionalBlurOffset: 1
-    - _DistortFade: 1
+    - _DistortFade: 0
     - _DistortOppositeFlow: 0
     - _EnableBrightness: 0
-    - _EnableColorSteps: 1
+    - _EnableColorSteps: 0
     - _EnableContrast: 0
     - _EnableDirectionalBlur: 0
     - _EnableDistort: 0
@@ -82,7 +79,7 @@ Material:
     - _EnableRainbow: 0
     - _EnableReflect: 0
     - _EnableRipple: 0
-    - _EnableSaturation: 1
+    - _EnableSaturation: 0
     - _EnableSharpen: 0
     - _EnableSingleTone: 0
     - _EnableSnapDistort: 0
@@ -109,7 +106,7 @@ Material:
     - _FadingNoiseFactor: 0.2
     - _FadingWidth: 0.5
     - _FullFade: 1
-    - _GaussianBlurOffset: 1
+    - _GaussianBlurOffset: 0
     - _GlitchBrightness: 4
     - _GlitchFade: 1
     - _GlitchHueSpeed: 1
@@ -123,16 +120,16 @@ Material:
     - _LimitColorsHueSteps: 15
     - _LimitColorsSaturationSteps: 15
     - _NegativeFade: 1
-    - _OutlineBias: 0.5
+    - _OutlineBias: 0.578
     - _OutlineBrightnessTolerance: 0.04
     - _OutlineFade: 1
-    - _OutlineFillInside: 1
+    - _OutlineFillInside: 0
     - _OutlineFillLines: 1
     - _OutlineHueTolerance: 0.02
     - _OutlineSaturationTolerance: 0.04
     - _OutlineWidth: 0.002
-    - _PixelateFade: 1
-    - _PixelatePixels: 100
+    - _PixelateFade: 2
+    - _PixelatePixels: 250
     - _PixelsPerUnit: 100
     - _RainbowBrightness: 1.5
     - _RainbowContrast: 1
@@ -145,19 +142,19 @@ Material:
     - _RectWidth: 100
     - _ReflectLocalMirror: 1
     - _ReflectMirrorHeight: 0
-    - _RippleOffset: 1
-    - _Saturation: 0
+    - _RippleOffset: 0
+    - _Saturation: 1
     - _ScreenWidthUnits: 10
-    - _ShaderSpace: 2
+    - _ShaderSpace: 4
     - _SharpenIntensity: 1.5
     - _SingleToneContrast: 1
     - _SingleToneFade: 1
     - _SnapDistortFade: 1
     - _SnapDistortOppositeFlow: 0
     - _SnapDistortSnapLevels: 3
-    - _SplitToneContrast: 2
+    - _SplitToneContrast: 1
     - _SplitToneFade: 1
-    - _SplitTonePolarize: 0
+    - _SplitTonePolarize: 1
     - _SplitToneShift: 0
     - _StaticNoiseFade: 1
     - _StaticNoiseSpeed: 5
@@ -181,12 +178,12 @@ Material:
     - _ZoomBlurPower: 2
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorStepsColor0: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 0}
-    - _ColorStepsColor1: {r: 0.4188679, g: 0.4188679, b: 0.4188679, a: 0}
-    - _ColorStepsColor2: {r: 0.690566, g: 0.690566, b: 0.690566, a: 0}
-    - _ColorStepsColor3: {r: 1, g: 1, b: 1, a: 0}
-    - _DistortOffset: {r: 0.02, g: 0.02, b: 0, a: 0}
-    - _DistortScale: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _ColorStepsColor0: {r: 0.05882353, g: 0.2196078, b: 0.05882353, a: 0}
+    - _ColorStepsColor1: {r: 0.1882353, g: 0.3843137, b: 0.1882353, a: 0}
+    - _ColorStepsColor2: {r: 0.5450981, g: 0.6745098, b: 0.05882353, a: 0}
+    - _ColorStepsColor3: {r: 0.6078432, g: 0.7372549, b: 0.05882353, a: 0}
+    - _DistortOffset: {r: 0.05, g: 0.05, b: 0, a: 0}
+    - _DistortScale: {r: 0.4, g: 0.4, b: 0, a: 0}
     - _DistortSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _FadeDissolveNoiseScale: {r: 0.04, g: 0.04, b: 0, a: 0}
     - _FadeNoiseScrollScale: {r: 0, g: 0.02, b: 0, a: 0}
@@ -206,13 +203,13 @@ Material:
     - _OutlineLineColor: {r: 1, g: 1, b: 1, a: 1}
     - _RainbowCenter: {r: 0, g: 0, b: 0, a: 0}
     - _RainbowNoiseScale: {r: 0.2, g: 0.2, b: 0, a: 0}
-    - _RippleCenter: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _RippleCenter: {r: 1.84, g: 0.65, b: 0, a: 0}
     - _SingleToneColor: {r: 1, g: 0, b: 0, a: 0}
     - _SnapDistortOffset: {r: 0.1, g: 0, b: 0, a: 0}
     - _SnapDistortScale: {r: 0, g: 0.01, b: 0, a: 0}
     - _SnapDistortSpeed: {r: 0, g: 50, b: 0, a: 0}
-    - _SplitToneHighlightsColor: {r: 1, g: 0.8754902, b: 0.5019608, a: 0}
-    - _SplitToneShadowsColor: {r: 1, g: 0.8015748, b: 0.6, a: 0}
+    - _SplitToneHighlightsColor: {r: 1, g: 0.1, b: 0.1, a: 0}
+    - _SplitToneShadowsColor: {r: 0.1, g: 0.4000002, b: 1, a: 0}
     - _StaticNoiseScale: {r: 1, g: 1, b: 0, a: 0}
     - _ZoomBlurPosition: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

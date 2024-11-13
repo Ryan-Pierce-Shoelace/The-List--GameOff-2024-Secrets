@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638669446479378081
+  lastModified: 638670022387275765
   FileSizes:
   - Name: Desktop
     Value: 1104
@@ -100,7 +100,7 @@ MonoBehaviour:
   - {fileID: 6084831907439133859}
   StringsBanks:
   - {fileID: -1957872200369089339}
-  cacheTime: 638669446479378081
+  cacheTime: 638670022388242246
   cacheVersion: 131620
 --- !u!114 &3935439547349387412
 MonoBehaviour:
@@ -144,7 +144,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638669445326183834
+  lastModified: 638670022388242246
   FileSizes:
   - Name: Desktop
     Value: 268544
@@ -164,7 +164,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638669446479368038
+  lastModified: 638670022387084214
   FileSizes:
   - Name: Desktop
     Value: 1486

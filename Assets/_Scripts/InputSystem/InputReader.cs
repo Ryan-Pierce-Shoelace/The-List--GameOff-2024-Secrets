@@ -25,15 +25,9 @@ namespace Project.Input
 
         private void OnEnable()
         {
-            if (input == null)
-            {
-                input = new HorrorInput();
-                input.Player.SetCallbacks(this);
-
-
-                //input.Menu.SetCallbacks(this) <- can add something like this in the future9
-            }
-
+            input = new HorrorInput();
+            input.Player.SetCallbacks(this);
+            //input.Menu.SetCallbacks(this) <- can add something like this in the future9
             input.Player.Enable();
 
             //input.UI.Disable(); will need to toggle active action maps once we add more to the system.

@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: GameArtFile_Frame_0
     originalName: 
-    pivot: {x: 0.51423484, y: -0.29565218}
+    pivot: {x: 0.51423484, y: -0.6997167}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -131,7 +131,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 562
-      height: 460
+      height: 353
     spriteID: ecb93e710218c354e8c72efd12fa5372
     spriteBone: []
     spriteOutline: []
@@ -315,9 +315,9 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 11
-        y: 136
+        y: 247
         width: 562
-        height: 460
+        height: 353
       spriteId: ecb93e710218c354e8c72efd12fa5372
     - name: GameArtFile_Frame_1
       frameIndex: 1
