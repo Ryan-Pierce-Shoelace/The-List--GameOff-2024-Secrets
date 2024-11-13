@@ -5791,6 +5791,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2511310706545526487, guid: 77efe563410fc7a42a2951212a9b35df, type: 3}
   m_PrefabInstance: {fileID: 7642979629042585836}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1215246681 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8741290560716602058, guid: 77efe563410fc7a42a2951212a9b35df, type: 3}
+  m_PrefabInstance: {fileID: 7642979629042585836}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215246680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2202a3cb4fee99d469477089d39e6ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1228292355
 GameObject:
   m_ObjectHideFlags: 0
@@ -6881,6 +6892,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 7
   myButton: {fileID: 1569370620}
+--- !u!1 &1587169981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4816926097989884954, guid: 77efe563410fc7a42a2951212a9b35df, type: 3}
+  m_PrefabInstance: {fileID: 7642979629042585836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1587169987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587169981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323b750a4b1d409ba88c185b79c6d784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationEvents:
+  - EventName: OnMove
+    OnAnimationEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1215246681}
+          m_TargetAssemblyTypeName: Horror.Game.PlayerMovement, Horror.Game
+          m_MethodName: PlaySound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1622974925
 GameObject:
   m_ObjectHideFlags: 0
@@ -13229,7 +13274,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4816926097989884954, guid: 77efe563410fc7a42a2951212a9b35df, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1587169987}
   m_SourcePrefab: {fileID: 100100000, guid: 77efe563410fc7a42a2951212a9b35df, type: 3}
 --- !u!224 &7698089911054011573
 RectTransform:

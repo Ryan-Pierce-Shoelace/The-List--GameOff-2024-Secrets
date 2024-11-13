@@ -20,7 +20,7 @@ namespace Horror.Game
 		private void Start()
 		{
 			rigidBody = GetComponent<Rigidbody2D>();
-			footstepPlayer = AudioManager.Instance.CreateSound(footStepSound, transform);
+			// footstepPlayer = AudioManager.Instance.CreateSound(footStepSound, transform);
 		}
 
 		private void OnDestroy()
@@ -31,23 +31,27 @@ namespace Horror.Game
 		private void FixedUpdate()
 		{
 			rigidBody.velocity = input.CurrentMove * moveSpeed;
-			UpdateSound();
 		}
 
-		private void UpdateSound()
+		public void PlaySound()
 		{
-			if (rigidBody.velocity.magnitude > 0.1f)
-			{
-				if (isPlayingFootsteps) return;
-
-				footstepPlayer.Play();
-				isPlayingFootsteps = true;
-			}
-			else if (isPlayingFootsteps)
-			{
-				footstepPlayer.Stop();
-				isPlayingFootsteps = false;
-			}
+			AudioManager.Instance.PlayOneShot(footStepSound);
 		}
+
+		// private void UpdateSound()
+		// {
+		// 	if (rigidBody.velocity.magnitude > 0.1f)
+		// 	{
+		// 		if (isPlayingFootsteps) return;
+		//
+		// 		footstepPlayer.Play();
+		// 		isPlayingFootsteps = true;
+		// 	}
+		// 	else if (isPlayingFootsteps)
+		// 	{
+		// 		footstepPlayer.Stop();
+		// 		isPlayingFootsteps = false;
+		// 	}
+		// }
 	}
 }
