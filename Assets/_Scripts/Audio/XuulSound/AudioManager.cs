@@ -10,7 +10,6 @@ namespace Shoelace.Audio.XuulSound
 	public class AudioManager : MonoBehaviour
 	{
 		public static AudioManager Instance { get; private set; }
-		public VolumeSettings VolumeSettings => volumeSettings;
 
 		[Header("Initial Setup")]
 		[SerializeField] private SoundConfig startingMusic;
@@ -20,7 +19,12 @@ namespace Shoelace.Audio.XuulSound
 		private Bus masterBus;
 		private Bus musicBus;
 		private Bus sfxBus;
-		private Bus ambienceBus;
+		private Bus ambientBus;
+
+		[SerializeField] private float masterVolume = 1f;
+		[SerializeField] private float musicVolume = 1f;
+		[SerializeField] private float sfxVolume = 1f;
+		[SerializeField] private float ambientVolume = 1f;
 
 		[Header("Fade Settings")]
 		[SerializeField] private float defaultFadeTime = 2f;
@@ -28,7 +32,6 @@ namespace Shoelace.Audio.XuulSound
 		private Dictionary<string, ISoundPlayer> activeSounds;
 		private HashSet<SoundEmitter> activeEmitters;
 		private MusicSystem musicSystem;
-		private VolumeSettings volumeSettings;
 
 		#region Setup
 
@@ -60,49 +63,101 @@ namespace Shoelace.Audio.XuulSound
 		{
 			activeSounds = new Dictionary<string, ISoundPlayer>();
 			activeEmitters = new HashSet<SoundEmitter>();
-
-			volumeSettings = new VolumeSettings();
-			volumeSettings.OnVolumeChanged += HandleVolumeChanged;
-			volumeSettings.LoadSettings();
-
 			musicSystem = new MusicSystem();
+			//
+			// masterVolume = PlayerPrefs.GetFloat("MasterVolume", 1f);
+			// musicVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
+			// sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
+			// ambientVolume = PlayerPrefs.GetFloat("AmbientVolume", 1f);
 
 			masterBus = RuntimeManager.GetBus("bus:/");
 			musicBus = RuntimeManager.GetBus("bus:/Music");
 			sfxBus = RuntimeManager.GetBus("bus:/SFX");
-			ambienceBus = RuntimeManager.GetBus("bus:/Ambience");
+			ambientBus = RuntimeManager.GetBus("bus:/Ambience");
+
+			UpdateAllVolumes();
 		}
 
 		#endregion
 
 		#region Volume Controls
 
-		private void HandleVolumeChanged(VolumeSettings settings)
+		public float MasterVolume
 		{
-			UpdateAllVolumes();
+			get => masterVolume;
+			set
+			{
+				masterVolume = Mathf.Clamp01(value);
+				PlayerPrefs.SetFloat("MasterVolume", masterVolume);
+				PlayerPrefs.Save();
+				UpdateAllVolumes();
+			}
 		}
+
+		public float MusicVolume
+		{
+			get => musicVolume;
+			set
+			{
+				musicVolume = Mathf.Clamp01(value);
+				PlayerPrefs.SetFloat("MusicVolume", musicVolume);
+				PlayerPrefs.Save();
+				UpdateAllVolumes();
+			}
+		}
+
+		public float SFXVolume
+		{
+			get => sfxVolume;
+			set
+			{
+				sfxVolume = Mathf.Clamp01(value);
+				PlayerPrefs.SetFloat("SFXVolume", sfxVolume);
+				PlayerPrefs.Save();
+				UpdateAllVolumes();
+			}
+		}
+
+		public float AmbientVolume
+		{
+			get => ambientVolume;
+			set
+			{
+				ambientVolume = Mathf.Clamp01(value);
+				PlayerPrefs.SetFloat("AmbientVolume", ambientVolume);
+				PlayerPrefs.Save();
+				UpdateAllVolumes();
+			}
+		}
+
 
 		private void UpdateAllVolumes()
 		{
-			masterBus.setVolume(volumeSettings.Master);
-			musicBus.setVolume(volumeSettings.Music);
-			sfxBus.setVolume(volumeSettings.SFX);
-
-			float effectiveVolume = volumeSettings.Master * volumeSettings.SFX;
-			foreach (ISoundPlayer sound in activeSounds.Values)
+			try
 			{
-				sound.SetVolume(effectiveVolume);
-			}
+				float masterVolumeDB = ConvertToFMODVolume(masterVolume);
+				float musicVolumeDB = ConvertToFMODVolume(musicVolume);
+				float sfxVolumeDB = ConvertToFMODVolume(sfxVolume);
+				float ambientVolumeDB = ConvertToFMODVolume(ambientVolume);
 
-			foreach (SoundEmitter emitter in activeEmitters)
-			{
-				emitter.SetVolume(effectiveVolume);
-			}
+				masterBus.setVolume(masterVolumeDB);
+				musicBus.setVolume(musicVolumeDB);
+				sfxBus.setVolume(sfxVolumeDB);
+				ambientBus.setVolume(ambientVolumeDB);
 
-			if (musicSystem != null)
-			{
-				musicSystem.Volume = volumeSettings.Master * volumeSettings.Music;
+				// Debug.Log($"Updated volumes - Master: {masterVolumeDB}, Music: {musicVolumeDB}, " +
+				//           $"SFX: {sfxVolumeDB}, Ambient: {ambientVolumeDB}");
 			}
+			catch (Exception e)
+			{
+				Debug.LogError($"Error setting FMOD volumes: {e.Message}");
+			}
+		}
+
+		private float ConvertToFMODVolume(float sliderValue)
+		{
+			if (sliderValue <= 0) return 0.0001f;
+			return sliderValue * sliderValue;
 		}
 
 		#endregion
@@ -117,9 +172,6 @@ namespace Shoelace.Audio.XuulSound
 		public ISoundPlayer CreateSound(SoundConfig config, Transform parent = null)
 		{
 			ISoundPlayer player = config.Is3D ? new AttachedSoundPlayer(config, parent) : new SimpleSoundPlayer(config);
-
-			float effectiveVolume = volumeSettings.Master * volumeSettings.SFX;
-			player.SetVolume(effectiveVolume);
 
 			string id = Guid.NewGuid().ToString();
 			activeSounds[id] = player;
@@ -142,11 +194,7 @@ namespace Shoelace.Audio.XuulSound
 
 		public void RegisterEmitter(SoundEmitter emitter)
 		{
-			if (emitter != null && activeEmitters.Add(emitter))
-			{
-				float effectiveVolume = volumeSettings.Master * volumeSettings.SFX;
-				emitter.SetVolume(effectiveVolume);
-			}
+			activeEmitters.Add(emitter);
 		}
 
 		public void UnregisterEmitter(SoundEmitter emitter)
@@ -196,11 +244,6 @@ namespace Shoelace.Audio.XuulSound
 			activeEmitters.Clear();
 
 			musicSystem?.Dispose();
-
-			if (volumeSettings != null)
-			{
-				volumeSettings.OnVolumeChanged -= HandleVolumeChanged;
-			}
 		}
 
 		#endregion

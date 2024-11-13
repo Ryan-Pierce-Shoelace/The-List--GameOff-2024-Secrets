@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Project.Input
 {
@@ -13,13 +14,13 @@ namespace Project.Input
 
         #region Input Events
 
-        public event UnityAction interactEvent = delegate { };
-        public event UnityAction pauseEvent = delegate { };
+        public event UnityAction InteractEvent = delegate { };
+        public event UnityAction PauseEvent = delegate { };
 
 
         #endregion
 
-        public Vector2 currentMove;
+        [FormerlySerializedAs("currentMove")] public Vector2 CurrentMove;
 
         //public bool isGamepad;
 
@@ -35,17 +36,17 @@ namespace Project.Input
 
         public void OnMove(InputAction.CallbackContext context)
         {
-            currentMove = context.ReadValue<Vector2>();
+            CurrentMove = context.ReadValue<Vector2>();
         }
         public void OnInteract(InputAction.CallbackContext context)
         {
             if (context.performed)
-                interactEvent?.Invoke();
+                InteractEvent?.Invoke();
         }
         public void OnPause(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
-                pauseEvent.Invoke();
+                PauseEvent.Invoke();
         }
     }
 }

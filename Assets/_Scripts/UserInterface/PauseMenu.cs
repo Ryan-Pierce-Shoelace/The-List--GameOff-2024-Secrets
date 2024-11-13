@@ -1,3 +1,4 @@
+using Project.Input;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -7,6 +8,9 @@ namespace UserInterface
 	public class PauseMenu : MonoBehaviour
 	{
 		public bool IsGamePaused = false;
+		
+		[SerializeField] private InputReader inputReader;
+		
 
 		[SerializeField] private GameObject shadeOverlay;
 		[SerializeField] private GameObject pauseMenuUI;
@@ -14,7 +18,6 @@ namespace UserInterface
 
 		[Header("Buttons")]
 		[SerializeField] private Button resumeButton;
-
 		[SerializeField] private Button saveButton;
 		[SerializeField] private Button loadButton;
 		[SerializeField] private Button settingsButton;
@@ -26,11 +29,16 @@ namespace UserInterface
 			pauseMenuUI.SetActive(false);
 			settingsMenuUI.SetActive(false);
 			shadeOverlay.SetActive(false);
-			AddHoverListeners(resumeButton);
-			AddHoverListeners(saveButton);
-			AddHoverListeners(loadButton);
-			AddHoverListeners(settingsButton);
-			AddHoverListeners(quitButton);
+		}
+		
+		private void OnEnable()
+		{
+			inputReader.PauseEvent += HandlePauseInput;
+		}
+
+		private void OnDisable()
+		{
+			inputReader.PauseEvent -= HandlePauseInput;
 		}
 
 
@@ -59,54 +67,42 @@ namespace UserInterface
 
 		#endregion
 
-
-
-		private void AddHoverListeners(Button button)
+		
+		private void HandlePauseInput()
 		{
-			EventTrigger trigger = button.gameObject.GetComponent<EventTrigger>() ?? button.gameObject.AddComponent<EventTrigger>();
-
-			EventTrigger.Entry enterEntry = new EventTrigger.Entry { eventID = EventTriggerType.PointerEnter };
-			enterEntry.callback.AddListener((data) => { OnPointerEnter(button); });
-			trigger.triggers.Add(enterEntry);
-
-			EventTrigger.Entry exitEntry = new EventTrigger.Entry { eventID = EventTriggerType.PointerExit };
-			exitEntry.callback.AddListener((data) => { OnPointerExit(button); });
-			trigger.triggers.Add(exitEntry);
-		}
-
-		private void OnPointerEnter(Button button)
-		{
-			Debug.Log($"Pointer entered {button.name}");
-		}
-
-		private void OnPointerExit(Button button)
-		{
-			Debug.Log($"Pointer exited {button.name}");
-		}
-		public void TogglePause()
-		{
-			if (IsGamePaused)
+			if (settingsMenuUI.activeSelf)
 			{
-				Resume();
+				CloseSettings();
 			}
 			else
 			{
-				Pause();
+				if (IsGamePaused)
+				{
+					Resume();
+				}
+				else
+				{
+					Pause();
+				}
 			}
 		}
+		
+
 
 		public void Resume()
 		{
 			pauseMenuUI.SetActive(false);
+			settingsMenuUI.SetActive(false);
+			shadeOverlay.SetActive(false);
 			Time.timeScale = 1f;
 			IsGamePaused = false;
-			shadeOverlay.SetActive(false);
 		}
 
 		private void Pause()
 		{
 			shadeOverlay.SetActive(true);
 			pauseMenuUI.SetActive(true);
+			settingsMenuUI.SetActive(false);
 			Time.timeScale = 0f;
 			IsGamePaused = true;
 		}
