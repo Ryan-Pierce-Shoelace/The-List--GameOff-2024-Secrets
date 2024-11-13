@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8827456942560695179
+--- !u!114 &-4632199487778577204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19,7 +19,7 @@ MonoBehaviour:
     Data3: 1820111490
     Data4: 1536188913
   Banks:
-  - {fileID: 5259880333220668561}
+  - {fileID: 1621732825041300321}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -27,34 +27,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 14256
---- !u!114 &-8240207768980794625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Phone/PhoneButtonPressed
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Phone/PhoneButtonPressed
-  Guid:
-    Data1: -1476306724
-    Data2: 1302007415
-    Data3: -2077746533
-    Data4: 1446974758
-  Banks:
-  - {fileID: 5259880333220668561}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 200
---- !u!114 &-1957872200369089339
+--- !u!114 &-2302897444097025451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,90 +47,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1104
   Exists: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: -1957872200369089339}
-  - {fileID: 6084831907439133859}
-  - {fileID: 5259880333220668561}
-  EditorEvents:
-  - {fileID: 3935439547349387412}
-  - {fileID: 7551398851866097483}
-  - {fileID: -8827456942560695179}
-  - {fileID: -8240207768980794625}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 6084831907439133859}
-  StringsBanks:
-  - {fileID: -1957872200369089339}
-<<<<<<< HEAD
-  cacheTime: 638670022388242246
-=======
-  cacheTime: 638670296802547510
->>>>>>> origin/Travis/Interaction
-  cacheVersion: 131620
---- !u!114 &3935439547349387412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Misc/Heartbeat
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Misc/Heartbeat
-  Guid:
-    Data1: 84313716
-    Data2: 1225134907
-    Data3: -237297474
-    Data4: 68016445
-  Banks:
-  - {fileID: 5259880333220668561}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 8045
---- !u!114 &5259880333220668561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: secrets-fmod-project/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-<<<<<<< HEAD
-  lastModified: 638670022388242246
-=======
-  lastModified: 638670296802547510
->>>>>>> origin/Travis/Interaction
-  FileSizes:
-  - Name: Desktop
-    Value: 268416
-  Exists: 1
---- !u!114 &6084831907439133859
+--- !u!114 &-437412818487720875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,7 +67,82 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1486
   Exists: 1
---- !u!114 &7551398851866097483
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -2302897444097025451}
+  - {fileID: -437412818487720875}
+  - {fileID: 1621732825041300321}
+  EditorEvents:
+  - {fileID: 3518389984227549864}
+  - {fileID: 4565529804936185935}
+  - {fileID: -4632199487778577204}
+  - {fileID: 9014604801636822337}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -437412818487720875}
+  StringsBanks:
+  - {fileID: -2302897444097025451}
+  cacheTime: 638670403309940314
+  cacheVersion: 131620
+--- !u!114 &1621732825041300321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: secrets-fmod-project/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638670403309940314
+  FileSizes:
+  - Name: Desktop
+    Value: 268416
+  Exists: 1
+--- !u!114 &3518389984227549864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Misc/Heartbeat
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Misc/Heartbeat
+  Guid:
+    Data1: 84313716
+    Data2: 1225134907
+    Data3: -237297474
+    Data4: 68016445
+  Banks:
+  - {fileID: 1621732825041300321}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8045
+--- !u!114 &4565529804936185935
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,7 +161,7 @@ MonoBehaviour:
     Data3: 204147618
     Data4: -1794748145
   Banks:
-  - {fileID: 5259880333220668561}
+  - {fileID: 1621732825041300321}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -204,3 +169,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 365
+--- !u!114 &9014604801636822337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/PhoneButtonPressed
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/PhoneButtonPressed
+  Guid:
+    Data1: -1476306724
+    Data2: 1302007415
+    Data3: -2077746533
+    Data4: 1446974758
+  Banks:
+  - {fileID: 1621732825041300321}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 200
