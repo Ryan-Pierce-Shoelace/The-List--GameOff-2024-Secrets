@@ -1,6 +1,6 @@
 {
     "name": "Horror.Interaction",
-    "rootNamespace": "Horror.InteractionSystem",
+    "rootNamespace": "",
     "references": [
         "GUID:bcfdb534a3e4b064ba82891fe8f75426",
         "GUID:cd4285aad7c8fc74e9468fc7d6a2f160",

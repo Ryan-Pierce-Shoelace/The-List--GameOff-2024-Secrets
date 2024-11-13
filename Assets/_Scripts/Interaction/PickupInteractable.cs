@@ -1,5 +1,6 @@
 using UnityEngine;
-namespace Horror.InteractionSystem
+
+namespace Interaction
 {
     public class PickupInteractable : CleanInteractable
     {

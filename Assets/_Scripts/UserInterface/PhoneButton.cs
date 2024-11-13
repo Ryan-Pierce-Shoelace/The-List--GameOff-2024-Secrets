@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Text_Display
+namespace UserInterface
 {
 	public class PhoneButton : MonoBehaviour
 	{

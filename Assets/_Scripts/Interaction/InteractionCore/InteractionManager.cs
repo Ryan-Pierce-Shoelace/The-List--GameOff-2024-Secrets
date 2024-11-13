@@ -1,41 +1,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Horror.InteractionSystem
+namespace Interaction.InteractionCore
 {
     [CreateAssetMenu(fileName = "Interaction Manager", menuName = "HorrorGame/Interaction Manager")]
     public class InteractionManager : ScriptableObject
     {
-        private Dictionary<InteractObjectSO, bool> Inventory;
-        public void Clear() => Inventory.Clear();
+        private Dictionary<InteractObjectSO, bool> inventory;
+        public void Clear() => inventory.Clear();
 
         public void InitDailyInventory(List<InteractObjectSO> dailyObjects)
         {
-            Inventory = new Dictionary<InteractObjectSO, bool>();
+            inventory = new Dictionary<InteractObjectSO, bool>();
 
             foreach (InteractObjectSO obj in dailyObjects)
             {
-                Inventory.Add(obj, false);
+                inventory.Add(obj, false);
             }
         }
 
         public bool HasObject(InteractObjectSO obj)
         {
-            if(!Inventory.ContainsKey(obj))
-                return false;
-
-            return Inventory[obj];
+            return inventory.ContainsKey(obj) && inventory[obj];
         }
 
         public void CollectObject(InteractObjectSO obj)
         {
-            if(!Inventory.ContainsKey(obj)) return;
-            Inventory[obj] = true;
+            if(!inventory.ContainsKey(obj)) return;
+            inventory[obj] = true;
         }
         public void RemoveObject(InteractObjectSO obj)
         {
-            if (!Inventory.ContainsKey(obj)) return;
-            Inventory[obj] = false;
+            if (!inventory.ContainsKey(obj)) return;
+            inventory[obj] = false;
         }
 
     }

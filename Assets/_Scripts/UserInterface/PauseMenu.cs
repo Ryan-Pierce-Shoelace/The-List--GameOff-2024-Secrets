@@ -1,4 +1,5 @@
 using Project.Input;
+using Project.Input.InputSystem;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,9 +8,9 @@ namespace UserInterface
 	public class PauseMenu : MonoBehaviour
 	{
 		public bool IsGamePaused = false;
-		
+
 		[SerializeField] private InputReader inputReader;
-		
+
 
 		[SerializeField] private GameObject shadeOverlay;
 		[SerializeField] private GameObject pauseMenuUI;
@@ -17,6 +18,7 @@ namespace UserInterface
 
 		[Header("Buttons")]
 		[SerializeField] private Button resumeButton;
+
 		[SerializeField] private Button saveButton;
 		[SerializeField] private Button loadButton;
 		[SerializeField] private Button settingsButton;
@@ -29,7 +31,7 @@ namespace UserInterface
 			settingsMenuUI.SetActive(false);
 			shadeOverlay.SetActive(false);
 		}
-		
+
 		private void OnEnable()
 		{
 			inputReader.PauseEvent += HandlePauseInput;
@@ -50,7 +52,7 @@ namespace UserInterface
 
 		public void LoadGame()
 		{
-		//
+			//
 		}
 
 		public void OpenSettings()
@@ -66,7 +68,7 @@ namespace UserInterface
 
 		#endregion
 
-		
+
 		private void HandlePauseInput()
 		{
 			if (settingsMenuUI.activeSelf)
@@ -85,7 +87,6 @@ namespace UserInterface
 				}
 			}
 		}
-		
 
 
 		public void Resume()

@@ -1,10 +1,8 @@
-using Project.Input;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Interaction.InteractionCore;
+using Project.Input.InputSystem;
 using UnityEngine;
 
-namespace Horror.InteractionSystem
+namespace Interaction.PlayerInteraction
 {
     public class PlayerInteractionHandler : MonoBehaviour
     {

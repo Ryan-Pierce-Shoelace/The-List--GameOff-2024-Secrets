@@ -1,8 +1,8 @@
-using UnityEngine;
+using Interaction.InteractionCore;
 
-namespace Horror.InteractionSystem
+namespace Interaction
 {
-    public class VoidInteractable : BaseObject_Interactable
+    public class VoidInteractable : BaseObjectInteractable
     {
     }
 }
