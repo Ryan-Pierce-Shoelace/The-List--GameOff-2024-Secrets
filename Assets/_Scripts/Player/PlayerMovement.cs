@@ -1,5 +1,4 @@
-using Project.Input;
-using Project.Input.InputSystem;
+using Horror.InputSystem;
 using Shoelace.Audio.XuulSound;
 using UnityEngine;
 
@@ -20,7 +19,6 @@ namespace Horror.Player
 		private void Start()
 		{
 			rigidBody = GetComponent<Rigidbody2D>();
-			// footstepPlayer = AudioManager.Instance.CreateSound(footStepSound, transform);
 		}
 
 		private void OnDestroy()
@@ -37,21 +35,5 @@ namespace Horror.Player
 		{
 			AudioManager.Instance.PlayOneShot(footStepSound);
 		}
-
-		// private void UpdateSound()
-		// {
-		// 	if (rigidBody.velocity.magnitude > 0.1f)
-		// 	{
-		// 		if (isPlayingFootsteps) return;
-		//
-		// 		footstepPlayer.Play();
-		// 		isPlayingFootsteps = true;
-		// 	}
-		// 	else if (isPlayingFootsteps)
-		// 	{
-		// 		footstepPlayer.Stop();
-		// 		isPlayingFootsteps = false;
-		// 	}
-		// }
 	}
 }
