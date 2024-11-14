@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Horror.InteractionSystem
+namespace Interaction.InteractionCore
 {
     public interface IInteractable
     {

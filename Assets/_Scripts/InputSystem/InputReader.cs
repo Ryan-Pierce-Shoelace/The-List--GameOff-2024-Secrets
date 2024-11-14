@@ -3,7 +3,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
-namespace Project.Input
+namespace Project.Input.InputSystem
 {
     [CreateAssetMenu(fileName = "Input Reader SO", menuName = "Input Reader")]
     public class InputReader : ScriptableObject, HorrorInput.IPlayerActions

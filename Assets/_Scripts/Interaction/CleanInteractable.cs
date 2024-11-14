@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-namespace Horror.InteractionSystem
+using Interaction.InteractionCore;
+
+namespace Interaction
 {
-    public class CleanInteractable : BaseObject_Interactable
+    public class CleanInteractable : BaseObjectInteractable
     {
         public override void Interact()
         {

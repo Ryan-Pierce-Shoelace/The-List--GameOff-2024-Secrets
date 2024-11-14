@@ -1,11 +1,9 @@
-using System;
-using Shoelace.Audio;
 using Shoelace.Audio.XuulSound;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Text_Display
+namespace UserInterface
 {
 	public class PhoneDialer : MonoBehaviour
 	{
@@ -34,10 +32,9 @@ namespace Text_Display
 
 		private void OnEnable()
 		{
-			if(dialTonePlayer == null)
-                dialTonePlayer = AudioManager.Instance.CreateSound(dialToneSound);
+			dialTonePlayer ??= AudioManager.Instance.CreateSound(dialToneSound);
 
-            dialTonePlayer?.Play();
+			dialTonePlayer?.Play();
 		}
 
 		private void OnDisable()
@@ -121,7 +118,7 @@ namespace Text_Display
 
 		
 
-		private string FormatPhoneNumber(string number)
+		private static string FormatPhoneNumber(string number)
 		{
 			return number.Length switch
 			{

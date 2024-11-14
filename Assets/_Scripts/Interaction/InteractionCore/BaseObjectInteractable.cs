@@ -1,9 +1,9 @@
 using RyanPierce.Events;
 using UnityEngine;
 
-namespace Horror.InteractionSystem
+namespace Interaction.InteractionCore
 {
-    public abstract class BaseObject_Interactable : MonoBehaviour, IInteractable
+    public abstract class BaseObjectInteractable : MonoBehaviour, IInteractable
     {
         [SerializeField] protected InteractObjectSO interactObjectSO;
         [SerializeField] protected GameObject highlightObject;
@@ -49,13 +49,14 @@ namespace Horror.InteractionSystem
 
         public virtual string GetFailedInteractionThought()
         {
-            for (int i = 0; i < inventoryRequirements.Length; i++)
+            foreach (InteractObjectSO t in inventoryRequirements)
             {
-                if (!interactionManager.HasObject(inventoryRequirements[i]))
+                if (!interactionManager.HasObject(t))
                 {
-                    return $"I dont have the {inventoryRequirements[i].name}"; // did not have item
+                    return $"I dont have the {t.name}"; // did not have item
                 }
             }
+
             return "Im a failure";
         }
     }

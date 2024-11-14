@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using Interaction.InteractionCore;
 using UnityEngine;
 
-namespace Horror.InteractionSystem
+namespace Interaction
 {
-    public class ChangeInteractable : BaseObject_Interactable
+    public class ChangeInteractable : BaseObjectInteractable
     {
         [SerializeField] private SpriteRenderer targetRenderer;
         [SerializeField] private Sprite newSprite;

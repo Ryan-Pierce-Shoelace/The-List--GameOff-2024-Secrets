@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using Interaction.InteractionCore;
 using UnityEngine;
-namespace Horror.InteractionSystem
+
+namespace Interaction.PlayerInteraction
 {
     public class PlayerInventory : MonoBehaviour
     {

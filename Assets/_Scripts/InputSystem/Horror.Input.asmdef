@@ -1,6 +1,6 @@
 {
-    "name": "zProject.Input",
-    "rootNamespace": "Project.Input",
+    "name": "Horror.Input",
+    "rootNamespace": "Horror",
     "references": [
         "GUID:75469ad4d38634e559750d17036d5f7c"
     ],

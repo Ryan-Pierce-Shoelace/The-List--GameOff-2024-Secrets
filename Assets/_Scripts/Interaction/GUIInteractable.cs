@@ -1,14 +1,17 @@
+using Interaction.InteractionCore;
 using RyanPierce.Events;
 using UnityEngine;
-namespace Horror.InteractionSystem
+using UnityEngine.Serialization;
+
+namespace Interaction
 {
-    public class GUIInteractable : BaseObject_Interactable
+    public class GUIInteractable : BaseObjectInteractable
     {
-        [SerializeField] private VoidEvent OpenGUIEvent;
+        [FormerlySerializedAs("OpenGUIEvent")] [SerializeField] private VoidEvent openGUIEvent;
         public override void Interact()
         {
             base.Interact();
-            OpenGUIEvent?.Raise();
+            openGUIEvent?.Raise();
         }
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Text_Display
+namespace UserInterface.Text_Display
 {
 	public class ThoughtTester : MonoBehaviour
 	{

@@ -1,10 +1,12 @@
 using UnityEngine;
-namespace Horror.InteractionSystem
+using UnityEngine.Serialization;
+
+namespace Interaction.InteractionCore
 {
     [CreateAssetMenu(fileName = "New Interactable Object", menuName = "HorrorGame/Interactable SO")]
     public class InteractObjectSO : ScriptableObject
     {
-        public string animationString;
-        public float interactionTime;
+        [FormerlySerializedAs("animationString")] public string AnimationString;
+        [FormerlySerializedAs("interactionTime")] public float InteractionTime;
     }
 }
