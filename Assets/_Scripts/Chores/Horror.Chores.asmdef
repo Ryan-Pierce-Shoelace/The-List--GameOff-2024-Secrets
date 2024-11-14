@@ -1,7 +1,10 @@
 {
     "name": "Horror.Chores",
-    "rootNamespace": "Horror.Chores",
-    "references": [],
+    "rootNamespace": "Horror",
+    "references": [
+        "GUID:c05866f4566a78f4abdfd9f7b44cb542",
+        "GUID:446643001075db5438661ce9d9763d84"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

@@ -1,6 +1,7 @@
 using Horror.InputSystem;
 using Interaction.InteractionCore;
 using UnityEngine;
+using Utilities;
 
 namespace Interaction.PlayerInteraction
 {
