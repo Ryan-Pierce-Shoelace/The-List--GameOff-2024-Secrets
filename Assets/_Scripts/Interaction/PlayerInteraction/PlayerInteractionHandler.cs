@@ -1,5 +1,5 @@
+using Horror.InputSystem;
 using Interaction.InteractionCore;
-using Project.Input.InputSystem;
 using UnityEngine;
 
 namespace Interaction.PlayerInteraction

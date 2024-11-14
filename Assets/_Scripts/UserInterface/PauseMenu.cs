@@ -1,15 +1,12 @@
-using Project.Input;
-using Project.Input.InputSystem;
+using Horror.InputSystem;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace UserInterface
 {
-	public class PauseMenu : MonoBehaviour
+	public class PauseMenu : UIScreen
 	{
 		public bool IsGamePaused = false;
-
-		[SerializeField] private InputReader inputReader;
 
 
 		[SerializeField] private GameObject shadeOverlay;
@@ -27,19 +24,37 @@ namespace UserInterface
 
 		private void Start()
 		{
-			pauseMenuUI.SetActive(false);
 			settingsMenuUI.SetActive(false);
+
+			resumeButton.onClick.AddListener(HandleCancel);
+			settingsButton.onClick.AddListener(OpenSettings);
+		}
+
+		protected override void OnEnable()
+		{
+			base.OnEnable();
+			shadeOverlay.SetActive(true);
+			Time.timeScale = 0f;
+		}
+
+		protected override void OnDisable()
+		{
+			base.OnDisable();
 			shadeOverlay.SetActive(false);
+			settingsMenuUI.SetActive(false);
+			Time.timeScale = 1f;
 		}
 
-		private void OnEnable()
+		protected override void HandleCancel()
 		{
-			inputReader.PauseEvent += HandlePauseInput;
-		}
-
-		private void OnDisable()
-		{
-			inputReader.PauseEvent -= HandlePauseInput;
+			if (settingsMenuUI.activeSelf)
+			{
+				settingsMenuUI.SetActive(false);
+			}
+			else
+			{
+				base.HandleCancel();
+			}
 		}
 
 

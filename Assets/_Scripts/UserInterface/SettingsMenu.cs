@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 namespace UserInterface
 {
-	public class SettingsMenu : MonoBehaviour
+	public class SettingsMenu : UIScreen
 	{
-		[SerializeField] private GameObject pauseMenuUI;
+		[SerializeField] private GameObject pauseMenu;
 
 		[Header("Toggles")]
 		[SerializeField] private TMP_Dropdown resolutionDropdown;
@@ -30,17 +30,25 @@ namespace UserInterface
 			ConfigureSliders();
 		}
 
-		private void OnEnable()
+		protected override void OnEnable()
 		{
+			base.OnEnable();
 			SetupListeners();
 			SetupVolumeControls();
 			SetupResolutionDropdown();
 		}
 
+		protected override void HandleCancel()
+		{
+			gameObject.SetActive(false);
+			pauseMenu.gameObject.SetActive(true);
+		}
+
+
 		private void SetupListeners()
 		{
 			closeButton.onClick.RemoveAllListeners();
-			closeButton.onClick.AddListener(CloseSettings);
+			closeButton.onClick.AddListener(HandleCancel);
 
 			if (fullScreenToggle != null)
 			{
@@ -146,7 +154,7 @@ namespace UserInterface
 		public void CloseSettings()
 		{
 			this.gameObject.SetActive(false);
-			pauseMenuUI.SetActive(true);
+			pauseMenu.gameObject.SetActive(true);
 		}
 	}
 }

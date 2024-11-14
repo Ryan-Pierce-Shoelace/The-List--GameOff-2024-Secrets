@@ -1,3 +1,4 @@
+using Horror.InputSystem;
 using Shoelace.Audio.XuulSound;
 using TMPro;
 using UnityEngine;
@@ -5,13 +6,16 @@ using UnityEngine.UI;
 
 namespace UserInterface
 {
-	public class PhoneDialer : MonoBehaviour
+	public class PhoneDialer : UIScreen
 	{
+		[Header("Sounds")]
 		[SerializeField] private SoundConfig buttonPressSound;
+
 		[SerializeField] private SoundConfig dialToneSound;
-		
-		
+
+		[Header("UI elements")]
 		[SerializeField] private TMP_Text displayText;
+
 		[SerializeField] private Button dialButton;
 		[SerializeField] private Button backButton;
 		[SerializeField] private Button clearButton;
@@ -22,26 +26,30 @@ namespace UserInterface
 		private const int MAX_DIGITS = 10;
 
 		private ISoundPlayer dialTonePlayer;
-		
+
 		private void Start()
 		{
 			InitializeButtons();
 			UpdateDisplay();
-			
 		}
 
-		private void OnEnable()
+		protected override void OnEnable()
 		{
+			base.OnEnable();
+
 			dialTonePlayer ??= AudioManager.Instance.CreateSound(dialToneSound);
 
 			dialTonePlayer?.Play();
 		}
 
-		private void OnDisable()
+		protected override void OnDisable()
 		{
+			base.OnDisable();
+
 			ClearNumber();
 			dialTonePlayer?.Stop();
 		}
+
 
 		private void InitializeButtons()
 		{
@@ -71,13 +79,12 @@ namespace UserInterface
 		private void OnNumberPressed(int number)
 		{
 			if (currentNumber.Length >= MAX_DIGITS) return;
-			
+
 			dialTonePlayer?.Stop();
-			
+
 			AudioManager.Instance.PlayOneShot(buttonPressSound);
 			currentNumber += number.ToString();
 			UpdateDisplay();
-			
 		}
 
 		private void ClearNumber()
@@ -115,8 +122,6 @@ namespace UserInterface
 			displayText.text = FormatPhoneNumber(currentNumber);
 		}
 
-
-		
 
 		private static string FormatPhoneNumber(string number)
 		{
