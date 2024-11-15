@@ -1,0 +1,18 @@
+{
+    "name": "Horror.RoomNavigation",
+    "rootNamespace": "Horror.RoomNavigation",
+    "references": [
+        "GUID:5746ac672ac09cd4fa3d3e90dd0fe711",
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:446643001075db5438661ce9d9763d84"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
