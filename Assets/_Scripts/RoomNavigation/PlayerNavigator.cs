@@ -3,6 +3,7 @@ using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using Utilities;
 
 namespace Horror.RoomNavigation
 {
