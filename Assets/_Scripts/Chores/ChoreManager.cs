@@ -119,7 +119,7 @@ namespace Horror.Chores
 			}
 
 			return chore.RequiredChores.Any(requiredChore => 
-				requiredChore == null || 
+				!requiredChore || 
 				!choreIdLookup.ContainsKey(requiredChore.ID) || 
 				choreStates[choreIdLookup[requiredChore.ID]] != ChoreState.Completed);
 		}
@@ -128,7 +128,7 @@ namespace Horror.Chores
 
 		public ChoreState GetChoreState(ChoreDataSO chore)
 		{
-			if (chore == null)
+			if (!chore)
 			{
 				return ChoreState.Locked;
 			}
