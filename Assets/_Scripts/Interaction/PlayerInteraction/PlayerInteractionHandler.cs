@@ -20,6 +20,11 @@ namespace Interaction.PlayerInteraction
 
         private void TryInteracting()
         {
+            if (currentInteractable == null)
+            {
+                return;
+            }
+            
             if(currentInteractable.CanInteract())
             {
                 currentInteractable.Interact();
@@ -39,7 +44,7 @@ namespace Interaction.PlayerInteraction
         {
             Collider2D col = Physics2D.OverlapCircle(transform.position, searchRadius, interactableLayer);
 
-            if (col == null)
+            if (!col)
             {
                 ClearInteractable();
                 return;
@@ -69,8 +74,7 @@ namespace Interaction.PlayerInteraction
 
         private void ClearInteractable()
         {
-            if(currentInteractable != null)
-                currentInteractable.ToggleHighlight(false);
+            currentInteractable?.ToggleHighlight(false);
             currentInteractable = null;
             StaticEvents.DisplayInteractable("");
             interactButtonPrompt.SetActive(false);

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74141902e0b0e6b4583b3b0066e88d3b, type: 3}
   m_Name: DayOnePlan
   m_EditorClassIdentifier: 
-  DayName: 
-  Chores: []
+  DayName: day one
+  Chores:
+  - {fileID: 11400000, guid: 49402d0e04b3d2d498d188d09b22ffed, type: 2}

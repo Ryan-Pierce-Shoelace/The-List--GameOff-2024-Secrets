@@ -4,6 +4,7 @@ namespace Horror.Chores
 	{
 		Locked,
 		Available,
-		Completed
+		Completed,
+		Hidden
 	}
 }

@@ -8,12 +8,14 @@ namespace Horror.Chores
 	public class ChoreManager : MonoBehaviour
 	{
 		[SerializeField] private DayPlan currentDayPlan;
-		private readonly Dictionary<string, ChoreState> choreStates = new Dictionary<string, ChoreState>();
-
-		public event Action<Dictionary<string, ChoreState>> OnChoreStateChanged;
-
+		private Dictionary<ChoreDataSO, ChoreState> choreStates;
+		private Dictionary<string, ChoreDataSO> choreIdLookup;
+		
 		private void Awake()
 		{
+			choreStates = new Dictionary<ChoreDataSO, ChoreState>();
+			choreIdLookup = new Dictionary<string, ChoreDataSO>();
+			
 			SubscribeToEvents();
 			if (currentDayPlan != null)
 			{
@@ -24,6 +26,7 @@ namespace Horror.Chores
 		private void SubscribeToEvents()
 		{
 			ChoreEvents.OnChoreCompleted += HandleChoreCompleted;
+			ChoreEvents.OnChoreAdvanced += ProgressChore;
 			ChoreEvents.OnDayReset += ResetChores;
 			ChoreEvents.OnDayPlanChanged += LoadDayPlan;
 		}
@@ -37,43 +40,55 @@ namespace Horror.Chores
 		private void InitializeChores()
 		{
 			choreStates.Clear();
+			choreIdLookup.Clear();
 			foreach (ChoreDataSO chore in currentDayPlan.Chores)
 			{
+				chore.Reset();
 				bool hasUncompletedRequirements = HasUncompletedRequirements(chore);
-				choreStates[chore.ID] = hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available;
+				choreStates[chore] = hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available;
+				choreIdLookup[chore.ID] = chore;
 			}
-
-			OnChoreStateChanged?.Invoke(choreStates);
 		}
 
 		private void HandleChoreCompleted(string choreId)
 		{
-			if (!choreStates.ContainsKey(choreId)) return;
+			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
 
-			choreStates[choreId] = ChoreState.Completed;
+			choreStates[chore] = ChoreState.Completed;
+			Debug.Log($"Chore {chore.ID} is comepleted");
 			UpdateChoreStates();
-			OnChoreStateChanged?.Invoke(choreStates);
+		}
+
+		private void ProgressChore(string choreId)
+		{
+			if (!choreIdLookup.ContainsKey(choreId)) return;
+            
+			ChoreDataSO chore = choreIdLookup[choreId];
+			if (choreStates[chore] == ChoreState.Available)
+			{
+				chore.Increment();
+			}
 		}
 
 		private void UpdateChoreStates()
 		{
 			foreach (ChoreDataSO chore in currentDayPlan.Chores)
 			{
-				if (choreStates[chore.ID] == ChoreState.Completed) continue;
+				if (choreStates[chore] == ChoreState.Completed) continue;
 
-				choreStates[chore.ID] = HasUncompletedRequirements(chore) ? ChoreState.Locked : ChoreState.Available;
+				choreStates[chore] = HasUncompletedRequirements(chore) ? ChoreState.Locked : ChoreState.Available;
 			}
 		}
-
 
 		private bool HasUncompletedRequirements(ChoreDataSO chore)
 		{
 			return chore.RequiredChoreIds.Any(id =>
-				!choreStates.ContainsKey(id) ||
-				choreStates[id] != ChoreState.Completed);
+				!choreIdLookup.ContainsKey(id) ||
+				choreStates[choreIdLookup[id]] != ChoreState.Completed);
 		}
 
 		private void ResetChores() => InitializeChores();
+		
 
 		private void OnDestroy()
 		{

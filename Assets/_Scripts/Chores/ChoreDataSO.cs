@@ -10,38 +10,43 @@ namespace Horror.Chores
 		public string ID;
 		public string ChoreName;
 		public List<string> RequiredChoreIds = new List<string>();
-		public string Description;
-		
-		public int RequiredCount = 1;  
-        
-		private ChoreProgress progress;
-		public ChoreProgress Progress => progress ??= new ChoreProgress { RequiredCount = RequiredCount };
+
+		public int CurrentCount { get; private set; }
+		public int RequiredCount = 1;
+
+
+		private void Awake()
+		{
+			Reset();
+		}
+
+		public void Reset()
+		{
+			CurrentCount = 0;
+		}
+
+		public void SetRequiredCount(int count)
+		{
+			RequiredCount = count;
+		}
+
 
 		public void Increment()
 		{
-			progress.CurrentCount++;
-			if (progress.IsCompleted)
+			if(IsCompleted()) return;
+			
+			CurrentCount++;
+			Debug.Log($"chore {ID}, has progressed to {CurrentCount}");
+			if (IsCompleted())
 			{
 				ChoreEvents.CompleteChore(ID);
 			}
-			else
-			{
-				ChoreEvents.AdvanceChore(ID);
-			}
 		}
-		
-		public void Reset()
-		{
-			progress = new ChoreProgress { RequiredCount = RequiredCount };
-		}
-		
-	}
-	[Serializable]
-	public class ChoreProgress
-	{
-		public int CurrentCount;
-		public int RequiredCount = 1;
-		public bool IsCompleted => CurrentCount >= RequiredCount;
-	}
 
+
+		public bool IsCompleted()
+		{
+			return CurrentCount >= RequiredCount;
+		}
+	}
 }
