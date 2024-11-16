@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 581c0b928eb0a6149becd91fd6ee4871, type: 3}
-  m_Name: FeedTheDog
+  m_Name: CleanUpBeer
   m_EditorClassIdentifier: 
-  ID: FeedTheDog
-  ChoreName: Feed The Dog
+  ID: PickUpBeer
+  ChoreName: Clean Up Beer Bottles
   RequiredChores: []
   ChoresToUnhide: []
-  StartsHidden: 0
-  RequiredCount: 1
+  StartsHidden: 1
+  RequiredCount: 3
+  isTutorialChore: 0

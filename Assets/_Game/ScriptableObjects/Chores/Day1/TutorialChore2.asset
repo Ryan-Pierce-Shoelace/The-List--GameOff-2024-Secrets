@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 581c0b928eb0a6149becd91fd6ee4871, type: 3}
-  m_Name: EatTacos
+  m_Name: TutorialChore2
   m_EditorClassIdentifier: 
-  ID: EatTacos
-  ChoreName: Eat a Taco
+  ID: tutorialTwo
+  ChoreName: WASD to Move
   RequiredChores: []
-  ChoresToUnhide: []
+  ChoresToUnhide:
+  - {fileID: 11400000, guid: 3e73712085ca9174d9f7e21633dc69d9, type: 2}
   StartsHidden: 1
   RequiredCount: 1
-  isTutorialChore: 0
+  isTutorialChore: 1

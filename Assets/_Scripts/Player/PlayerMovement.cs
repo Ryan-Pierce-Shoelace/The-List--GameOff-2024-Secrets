@@ -2,6 +2,7 @@ using Horror.InputSystem;
 using Shoelace.Audio.XuulSound;
 using System;
 using System.Threading.Tasks;
+using Horror.Chores;
 using UnityEngine;
 
 namespace Horror.Player
@@ -18,6 +19,8 @@ namespace Horror.Player
 		private float lastFootstepTime;
 
 		private bool inputEnabled;
+
+
 
 		private void Start()
 		{

@@ -9,11 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74141902e0b0e6b4583b3b0066e88d3b, type: 3}
-  m_Name: DayOnePlan
+  m_Script: {fileID: 11500000, guid: 581c0b928eb0a6149becd91fd6ee4871, type: 3}
+  m_Name: TutorialChore3
   m_EditorClassIdentifier: 
-  DayName: day one
-  Chores:
+  ID: tutorialOThree
+  ChoreName: Press E to Interact
+  RequiredChores: []
+  ChoresToUnhide:
   - {fileID: 11400000, guid: 49402d0e04b3d2d498d188d09b22ffed, type: 2}
   - {fileID: 11400000, guid: a107ff9ec64323f40bcb7a215fc82352, type: 2}
-  - {fileID: 11400000, guid: 4998a0a7cc4a3cd4b93e6b468bac36d1, type: 2}
+  StartsHidden: 1
+  RequiredCount: 1
+  isTutorialChore: 1

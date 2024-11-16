@@ -7,6 +7,9 @@ namespace Horror.Chores.UI
 {
 	public class ChoreListEntry : MonoBehaviour
 	{
+		public float StrikethroughDuration => strikethroughDuration;
+		public bool IsTutorial => choreData.IsTutorialChore;
+
 		[Header("References")]
 		[SerializeField] private TextMeshProUGUI choreName;
 
@@ -20,7 +23,9 @@ namespace Horror.Chores.UI
 
 		[Header("Animation Settings")]
 		[SerializeField] private float strikethroughDuration = 0.5f;
-		[SerializeField] private float randomSkewRange = 5f; 
+
+		[SerializeField] private float randomSkewRange = 5f;
+
 
 		private ChoreDataSO choreData;
 		private ChoreState currentState;
@@ -113,9 +118,9 @@ namespace Horror.Chores.UI
 		{
 			choreName.color = unavailableColor;
 			progressCounter.gameObject.SetActive(false);
-			
+
 			float randomOffset = Random.Range(-randomSkewRange, randomSkewRange);
-			
+
 			Sequence completionSequence = DOTween.Sequence();
 
 			completionSequence.Append(
@@ -126,11 +131,6 @@ namespace Horror.Chores.UI
 				DOTween.To(() => strikethrough.fillAmount, x => strikethrough.fillAmount = x, 1f, strikethroughDuration)
 					.SetEase(Ease.OutQuad)
 			);
-			
 		}
 	}
-	
-	
-	
-	
 }

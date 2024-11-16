@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 581c0b928eb0a6149becd91fd6ee4871, type: 3}
-  m_Name: EatTacos
+  m_Name: TutorialChore1
   m_EditorClassIdentifier: 
-  ID: EatTacos
-  ChoreName: Eat a Taco
+  ID: tutorialOne
+  ChoreName: Press TAB to Toggle List
   RequiredChores: []
-  ChoresToUnhide: []
-  StartsHidden: 1
+  ChoresToUnhide:
+  - {fileID: 11400000, guid: 3485cb70206fa724f8c5d1900d5fb949, type: 2}
+  StartsHidden: 0
   RequiredCount: 1
-  isTutorialChore: 0
+  isTutorialChore: 1

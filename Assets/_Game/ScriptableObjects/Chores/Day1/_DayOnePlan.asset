@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74141902e0b0e6b4583b3b0066e88d3b, type: 3}
+  m_Name: _DayOnePlan
+  m_EditorClassIdentifier: 
+  DayName: 
+  Chores:
+  - {fileID: 11400000, guid: a613dcd481c36884c906a8aa90c9e4fe, type: 2}
+  - {fileID: 11400000, guid: 3485cb70206fa724f8c5d1900d5fb949, type: 2}
+  - {fileID: 11400000, guid: 3e73712085ca9174d9f7e21633dc69d9, type: 2}
+  - {fileID: 11400000, guid: 49402d0e04b3d2d498d188d09b22ffed, type: 2}
+  - {fileID: 11400000, guid: a107ff9ec64323f40bcb7a215fc82352, type: 2}
