@@ -141,7 +141,7 @@ MonoBehaviour:
   unavailableColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   availableColor: {r: 0, g: 0, b: 0, a: 1}
   strikethroughDuration: 0.5
-  strikethroughSkewAngle: 2
+  strikethroughSkewAngle: 5
 --- !u!1 &7394487394009280105
 GameObject:
   m_ObjectHideFlags: 0

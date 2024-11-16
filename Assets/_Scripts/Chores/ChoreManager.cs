@@ -31,6 +31,7 @@ namespace Horror.Chores
 			ChoreEvents.OnChoreCompleted += HandleChoreCompleted;
 			ChoreEvents.OnChoreAdvanced += ProgressChore;
 			ChoreEvents.OnDayReset += ResetChores;
+			ChoreEvents.OnChoreUnhidden += HandleChoreUnhidden; 
 		}
 
 		private void UnsubscribeToEvents()
@@ -38,6 +39,7 @@ namespace Horror.Chores
 			ChoreEvents.OnChoreCompleted -= HandleChoreCompleted;
 			ChoreEvents.OnChoreAdvanced -= ProgressChore;
 			ChoreEvents.OnDayReset -= ResetChores;
+			ChoreEvents.OnChoreUnhidden -= HandleChoreUnhidden; 
 		}
 
 
@@ -64,6 +66,8 @@ namespace Horror.Chores
 			}
 		}
 
+
+		#region State Handlers
 		private void HandleChoreCompleted(string choreId)
 		{
 			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
@@ -71,7 +75,15 @@ namespace Horror.Chores
 			choreStates[chore] = ChoreState.Completed;
 			UpdateChoreStates();
 		}
+		private void HandleChoreUnhidden(string choreId) 
+		{
+			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
+			if (choreStates[chore] != ChoreState.Hidden) return;
 
+			bool hasUncompletedRequirements = HasUncompletedRequirements(chore);
+			choreStates[chore] = hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available;
+			UpdateChoreStates();
+		}
 		private void ProgressChore(string choreId)
 		{
 			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
@@ -80,6 +92,14 @@ namespace Horror.Chores
 
 			chore.Increment();
 		}
+
+		#endregion
+
+	
+
+		
+		
+		
 
 		private void UpdateChoreStates()
 		{
@@ -93,9 +113,15 @@ namespace Horror.Chores
 
 		private bool HasUncompletedRequirements(ChoreDataSO chore)
 		{
-			return chore.RequiredChoreIds.Any(id =>
-				!choreIdLookup.ContainsKey(id) ||
-				choreStates[choreIdLookup[id]] != ChoreState.Completed);
+			if (chore.RequiredChores == null || chore.RequiredChores.Count == 0)
+			{
+				return false;
+			}
+
+			return chore.RequiredChores.Any(requiredChore => 
+				requiredChore == null || 
+				!choreIdLookup.ContainsKey(requiredChore.ID) || 
+				choreStates[choreIdLookup[requiredChore.ID]] != ChoreState.Completed);
 		}
 
 		private void ResetChores() => InitializeChores();

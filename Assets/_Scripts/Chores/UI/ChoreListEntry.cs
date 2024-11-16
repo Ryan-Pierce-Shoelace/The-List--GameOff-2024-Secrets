@@ -20,7 +20,6 @@ namespace Horror.Chores.UI
 
 		[Header("Animation Settings")]
 		[SerializeField] private float strikethroughDuration = 0.5f;
-
 		[SerializeField] private float strikethroughSkewAngle = 15f;
 
 		private ChoreDataSO choreData;

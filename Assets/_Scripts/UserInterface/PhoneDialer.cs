@@ -25,11 +25,13 @@ namespace UserInterface
 
 		private string currentNumber = "";
 		private const int MAX_DIGITS = 10;
+		private Canvas parentCanvas;
 
 		private ISoundPlayer dialTonePlayer;
 
 		private void Start()
 		{
+			parentCanvas = GetComponentInParent<Canvas>();
 			InitializeButtons();
 			UpdateDisplay();
 		}
@@ -49,6 +51,14 @@ namespace UserInterface
 
 			ClearNumber();
 			dialTonePlayer?.Stop();
+		}
+
+		public void OpenPanel()
+		{
+
+			dialTonePlayer ??= AudioManager.Instance.CreateSound(dialToneSound);
+
+			dialTonePlayer?.Play();
 		}
 
 

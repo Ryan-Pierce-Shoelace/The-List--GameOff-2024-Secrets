@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Horror.InputSystem;
 using UnityEngine;
 
@@ -9,19 +11,36 @@ namespace Horror.Chores.UI
 	{
 		[Header("References")]
 		[SerializeField] private ChoreListEntry listEntryPrefab;
+
 		[SerializeField] private Transform listEntryContainer;
 		[SerializeField] private InputReader input;
 		[SerializeField] private ChoreManager choreManager;
-        
-		private Dictionary<string, ChoreListEntry> choreEntries;
-		private bool isVisible = true; 
-		
 
-	
+		[Header("Animation Settings")]
+		[SerializeField] private float animationDuration = 0.5f;
+
+		//TODO set up math to auto set this up	
+		[SerializeField] private Vector2 hiddenPosition = new Vector2(0, -100);
+		[SerializeField] private Vector2 visiblePosition = new Vector2(0, 100);
+
+		[Header("Auto-close Settings")]
+		[SerializeField] private float autoCloseDelay = 2f;
+
+		private bool isInitializing = false; 
+		private RectTransform rectTransform;
+		private bool isVisible;
+		private Tween currentTween;
+		private Coroutine autoCloseCoroutine;
+
+		private Dictionary<string, ChoreListEntry> choreEntries;
+
 
 		private void Awake()
 		{
+			rectTransform = GetComponent<RectTransform>();
+			rectTransform.anchoredPosition = hiddenPosition;
 			choreEntries = new Dictionary<string, ChoreListEntry>();
+			isVisible = false;
 		}
 
 		private void Start()
@@ -42,8 +61,6 @@ namespace Horror.Chores.UI
 			UnsubscribeFromEvents();
 		}
 
-	
-
 
 		private void CreateChoreEntry(ChoreDataSO chore)
 		{
@@ -52,22 +69,92 @@ namespace Horror.Chores.UI
 
 			ChoreListEntry entry = Instantiate(listEntryPrefab, listEntryContainer);
 			entry.Initialize(chore);
-            
+
 
 			if (choreManager != null)
 			{
 				ChoreState state = choreManager.GetChoreState(chore);
 				entry.SetState(state);
 			}
-            
+
 			choreEntries[chore.ID] = entry;
+			if (!isInitializing)
+			{
+				ShowTemporarily();
+			}
 		}
+
+		#region Pop up
 
 		private void ToggleList() //TODO
 		{
-			isVisible = !isVisible;
-			Debug.Log($"List visibility toggled: {isVisible}");
+			if (isVisible)
+			{
+				Close();
+			}
+			else
+			{
+				Open();
+			}
 		}
+
+		private void ShowTemporarily()
+		{
+			Open(autoClose: true);
+		}
+
+		private void Open(bool autoClose = false)
+		{
+			if (isVisible) return;
+
+
+			if (autoCloseCoroutine != null)
+			{
+				StopCoroutine(autoCloseCoroutine);
+				autoCloseCoroutine = null;
+			}
+
+
+			currentTween?.Kill();
+
+
+			currentTween = rectTransform.DOAnchorPos(visiblePosition, animationDuration)
+				.SetEase(Ease.OutBack);
+
+			isVisible = true;
+
+			if (autoClose)
+			{
+				autoCloseCoroutine = StartCoroutine(AutoCloseCoroutine());
+			}
+		}
+
+		private void Close()
+		{
+			if (!isVisible) return;
+
+
+			if (autoCloseCoroutine != null)
+			{
+				StopCoroutine(autoCloseCoroutine);
+				autoCloseCoroutine = null;
+			}
+
+			currentTween?.Kill();
+
+			currentTween = rectTransform.DOAnchorPos(hiddenPosition, animationDuration)
+				.SetEase(Ease.InBack);
+
+			isVisible = false;
+		}
+
+		private IEnumerator AutoCloseCoroutine()
+		{
+			yield return new WaitForSeconds(autoCloseDelay);
+			Close();
+		}
+
+		#endregion
 
 
 		private void HandleDayPlanChanged(DayPlan newPlan)
@@ -81,10 +168,17 @@ namespace Horror.Chores.UI
 			Debug.Log($"Creating UI for day plan with {newPlan.Chores.Count} chores");
 			ClearList();
 
+			isInitializing = true; 
+            
 			foreach (ChoreDataSO chore in newPlan.Chores)
 			{
-				CreateChoreEntry(chore);
+				if (!chore.StartsHidden)
+				{
+					CreateChoreEntry(chore);
+				}
 			}
+            
+			isInitializing = false;
 		}
 
 
@@ -101,6 +195,18 @@ namespace Horror.Chores.UI
 			if (choreEntries.TryGetValue(choreId, out ChoreListEntry entry))
 			{
 				entry.SetState(ChoreState.Completed);
+				ShowTemporarily();
+			}
+		}
+
+		private void HandleChoreUnhidden(string choreId)
+		{
+			if (choreEntries.ContainsKey(choreId)) return;
+
+			ChoreDataSO chore = choreManager.GetChoreById(choreId);
+			if (chore != null)
+			{
+				CreateChoreEntry(chore);
 			}
 		}
 
@@ -117,14 +223,14 @@ namespace Horror.Chores.UI
 			choreEntries.Clear();
 			Debug.Log("Cleared chore list");
 		}
-		
-		
-		
+
+
 		private void SubscribeToEvents()
 		{
 			ChoreEvents.OnDayPlanChanged += HandleDayPlanChanged;
 			ChoreEvents.OnChoreCompleted += HandleChoreCompleted;
 			ChoreEvents.OnChoreAdvanced += HandleChoreAdvanced;
+			ChoreEvents.OnChoreUnhidden += HandleChoreUnhidden;
 			ChoreEvents.OnDayReset += ClearList;
 
 			if (input != null)
@@ -138,6 +244,7 @@ namespace Horror.Chores.UI
 			ChoreEvents.OnDayPlanChanged -= HandleDayPlanChanged;
 			ChoreEvents.OnChoreCompleted -= HandleChoreCompleted;
 			ChoreEvents.OnChoreAdvanced -= HandleChoreAdvanced;
+			ChoreEvents.OnChoreUnhidden -= HandleChoreUnhidden;
 			ChoreEvents.OnDayReset -= ClearList;
 
 			if (input != null)

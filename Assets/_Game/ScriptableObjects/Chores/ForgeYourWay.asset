@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 581c0b928eb0a6149becd91fd6ee4871, type: 3}
-  m_Name: EatTacos
+  m_Name: ForgeYourWay
   m_EditorClassIdentifier: 
-  ID: EatTacos
-  ChoreName: Eat a Taco
+  ID: ForgeYourWay
+  ChoreName: Forge Your Way
   RequiredChores: []
   ChoresToUnhide: []
-  StartsHidden: 1
+  StartsHidden: 0
   RequiredCount: 1

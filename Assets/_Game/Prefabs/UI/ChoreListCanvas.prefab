@@ -298,6 +298,10 @@ MonoBehaviour:
   listEntryContainer: {fileID: 4619751528469821323}
   input: {fileID: 11400000, guid: bf44ea509f8e4bb439384f2ae0bac319, type: 2}
   choreManager: {fileID: 0}
+  animationDuration: 0.5
+  hiddenPosition: {x: 0, y: -100}
+  visiblePosition: {x: 0, y: 100}
+  autoCloseDelay: 2
 --- !u!1 &8152031310939439029
 GameObject:
   m_ObjectHideFlags: 0
