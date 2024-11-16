@@ -33,10 +33,9 @@ namespace Horror.Chores
 
 		public void Increment()
 		{
-			if(IsCompleted()) return;
-			
+			if (IsCompleted()) return;
+
 			CurrentCount++;
-			Debug.Log($"chore {ID}, has progressed to {CurrentCount}");
 			if (IsCompleted())
 			{
 				ChoreEvents.CompleteChore(ID);

@@ -2,24 +2,27 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Horror.Chores
 {
 	public class ChoreManager : MonoBehaviour
 	{
-		[SerializeField] private DayPlan currentDayPlan;
+		[FormerlySerializedAs("currentDayPlan")] [SerializeField]
+		public DayPlan CurrentDayPlan;
+
 		private Dictionary<ChoreDataSO, ChoreState> choreStates;
 		private Dictionary<string, ChoreDataSO> choreIdLookup;
-		
+
 		private void Awake()
 		{
 			choreStates = new Dictionary<ChoreDataSO, ChoreState>();
 			choreIdLookup = new Dictionary<string, ChoreDataSO>();
-			
+
 			SubscribeToEvents();
-			if (currentDayPlan != null)
+			if (CurrentDayPlan != null)
 			{
-				LoadDayPlan(currentDayPlan);
+				SetDayPlan(CurrentDayPlan);
 			}
 		}
 
@@ -28,20 +31,31 @@ namespace Horror.Chores
 			ChoreEvents.OnChoreCompleted += HandleChoreCompleted;
 			ChoreEvents.OnChoreAdvanced += ProgressChore;
 			ChoreEvents.OnDayReset += ResetChores;
-			ChoreEvents.OnDayPlanChanged += LoadDayPlan;
 		}
 
-		private void LoadDayPlan(DayPlan plan)
+		private void UnsubscribeToEvents()
 		{
-			currentDayPlan = plan ?? throw new ArgumentNullException(nameof(plan));
-			InitializeChores();
+			ChoreEvents.OnChoreCompleted -= HandleChoreCompleted;
+			ChoreEvents.OnChoreAdvanced -= ProgressChore;
+			ChoreEvents.OnDayReset -= ResetChores;
 		}
+
+
+		public void SetDayPlan(DayPlan newPlan)
+		{
+			if (newPlan == null) throw new ArgumentNullException(nameof(newPlan));
+
+			CurrentDayPlan = newPlan;
+			InitializeChores();
+			ChoreEvents.ChangeDayPlan(CurrentDayPlan);
+		}
+
 
 		private void InitializeChores()
 		{
 			choreStates.Clear();
 			choreIdLookup.Clear();
-			foreach (ChoreDataSO chore in currentDayPlan.Chores)
+			foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
 			{
 				chore.Reset();
 				bool hasUncompletedRequirements = HasUncompletedRequirements(chore);
@@ -55,24 +69,21 @@ namespace Horror.Chores
 			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
 
 			choreStates[chore] = ChoreState.Completed;
-			Debug.Log($"Chore {chore.ID} is comepleted");
 			UpdateChoreStates();
 		}
 
 		private void ProgressChore(string choreId)
 		{
-			if (!choreIdLookup.ContainsKey(choreId)) return;
-            
-			ChoreDataSO chore = choreIdLookup[choreId];
-			if (choreStates[chore] == ChoreState.Available)
-			{
-				chore.Increment();
-			}
+			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
+
+			if (choreStates[chore] != ChoreState.Available) return;
+
+			chore.Increment();
 		}
 
 		private void UpdateChoreStates()
 		{
-			foreach (ChoreDataSO chore in currentDayPlan.Chores)
+			foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
 			{
 				if (choreStates[chore] == ChoreState.Completed) continue;
 
@@ -88,13 +99,36 @@ namespace Horror.Chores
 		}
 
 		private void ResetChores() => InitializeChores();
-		
+
+		public ChoreState GetChoreState(ChoreDataSO chore)
+		{
+			if (chore == null)
+			{
+				return ChoreState.Locked;
+			}
+
+			if (choreStates != null && choreStates.TryGetValue(chore, out ChoreState state))
+			{
+				return state;
+			}
+
+
+			return ChoreState.Locked;
+		}
+
+		public ChoreDataSO GetChoreById(string choreId)
+		{
+			if (choreIdLookup != null && choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore))
+			{
+				return chore;
+			}
+
+			return null;
+		}
 
 		private void OnDestroy()
 		{
-			ChoreEvents.OnChoreCompleted -= HandleChoreCompleted;
-			ChoreEvents.OnDayReset -= ResetChores;
-			ChoreEvents.OnDayPlanChanged -= LoadDayPlan;
+			UnsubscribeToEvents();
 		}
 	}
 }

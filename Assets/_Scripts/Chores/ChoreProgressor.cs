@@ -4,11 +4,11 @@ namespace Horror.Chores
 {
     public class ChoreProgressor : MonoBehaviour
     {
-	    [SerializeField] private ChoreDataSO choreID;
+	    [SerializeField] private ChoreDataSO chore;
 
 	    public void ProgressChore()
 	    {
-		    choreID.Increment();
+		    ChoreEvents.AdvanceChore(chore.ID);
 	    }
     }
 }
