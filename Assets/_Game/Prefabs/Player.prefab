@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 8741290560716602058}
   - component: {fileID: 1316708545832671311}
   - component: {fileID: 1568609569310348782}
+  - component: {fileID: 5039940490863942321}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -181,6 +182,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   searchRadius: 2
+--- !u!114 &5039940490863942321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511310706545526487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9483fa14a280f8746b552473ee834bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentDoorway: {fileID: 0}
+  input: {fileID: 11400000, guid: bf44ea509f8e4bb439384f2ae0bac319, type: 2}
+  doorWayDepth: 0.5
+  playerSprite: {fileID: 2150690133049590697}
+  movement: {fileID: 8741290560716602058}
 --- !u!1 &4816926097989884954
 GameObject:
   m_ObjectHideFlags: 0

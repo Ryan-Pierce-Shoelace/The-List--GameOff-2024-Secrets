@@ -1,6 +1,6 @@
+using Horror.InputSystem;
 using Horror.Player;
 using Sirenix.OdinInspector;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -9,6 +9,8 @@ namespace Horror.RoomNavigation
     public class PlayerNavigator : MonoBehaviour
     {
         [ReadOnly] public Doorway CurrentDoorway;
+
+        [SerializeField] private InputReader input;
 
         [SerializeField] private float doorWayDepth;
         [SerializeField] private SpriteRenderer playerSprite;
@@ -48,6 +50,8 @@ namespace Horror.RoomNavigation
 
         private async void MoveToNewRoom(Doorway current, Doorway nextDoor)
         {
+            input.DisableAllInput();
+
             await FadeTransition.Instance.ToggleFadeTransition(true, .3f);
 
             current.RootRoom.ToggleRoomCamera(false);
@@ -71,7 +75,7 @@ namespace Horror.RoomNavigation
             await Task.WhenAll(moveIntoRoom);
 
             movement.ToggleInput(true);
-
+            input.EnableGameplayInput();
             transitioning = false;
         }
     }
