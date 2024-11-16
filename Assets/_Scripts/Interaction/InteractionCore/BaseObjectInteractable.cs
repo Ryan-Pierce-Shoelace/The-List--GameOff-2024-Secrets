@@ -1,3 +1,4 @@
+using Horror.Chores;
 using RyanPierce.Events;
 using UnityEngine;
 
@@ -13,9 +14,12 @@ namespace Interaction.InteractionCore
         [SerializeField] protected InteractionManager interactionManager;
         [SerializeField] protected InteractObjectSO[] inventoryRequirements;
 
+        private ChoreProgressor choreProgressor;
+
         protected virtual void Start()
         {
             ToggleHighlight(false);
+            choreProgressor = GetComponent<ChoreProgressor>();
         }
         public virtual bool CanInteract()
         {
@@ -43,6 +47,7 @@ namespace Interaction.InteractionCore
         public virtual void Interact()
         {
             interactionEvent?.Raise();
+            choreProgressor?.ProgressChore();
         }
         public void ToggleHighlight(bool toggleOn) => highlightObject.SetActive(toggleOn);
         public InteractObjectSO GetInteractableObject() => interactObjectSO;
