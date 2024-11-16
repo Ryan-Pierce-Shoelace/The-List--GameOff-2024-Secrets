@@ -7,6 +7,13 @@ namespace UserInterface
 	{
 		[SerializeField] protected InputReader inputReader;
 
+		protected Canvas parentCanvas;
+
+		protected virtual void Awake()
+		{
+			parentCanvas = GetComponentInParent<Canvas>();
+		}
+
 		protected virtual void OnEnable()
 		{
 			inputReader.EnableUIInput();
@@ -19,9 +26,17 @@ namespace UserInterface
 			inputReader.CancelEvent -= HandleCancel;
 		}
 
-		protected virtual void HandleCancel()
+		public virtual void HandleCancel()
 		{
-			gameObject.SetActive(false);
+			if (parentCanvas != null)
+			{
+				parentCanvas.gameObject.SetActive(false);
+			}
+			else
+			{
+				gameObject.SetActive(false);
+				Debug.LogWarning($"Parent Canvas not found for {gameObject.name}, falling back to disabling GameObject directly.", this);
+			}
 		}
 	}
 }

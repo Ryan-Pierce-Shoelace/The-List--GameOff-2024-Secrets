@@ -45,7 +45,7 @@ namespace UserInterface
 			Time.timeScale = 1f;
 		}
 
-		protected override void HandleCancel()
+		public override void HandleCancel()
 		{
 			if (settingsMenuUI.activeSelf)
 			{
