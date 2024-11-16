@@ -6,7 +6,7 @@ namespace Interaction.InteractionCore
     [CreateAssetMenu(fileName = "New Interactable Object", menuName = "HorrorGame/Interactable SO")]
     public class InteractObjectSO : ScriptableObject
     {
-        [FormerlySerializedAs("animationString")] public string AnimationString;
-        [FormerlySerializedAs("interactionTime")] public float InteractionTime;
+        [FormerlySerializedAs("animationString")] public string AnimationName = "Interact";
+        [FormerlySerializedAs("interactionTime")] public float InteractionTime = 1f;
     }
 }
