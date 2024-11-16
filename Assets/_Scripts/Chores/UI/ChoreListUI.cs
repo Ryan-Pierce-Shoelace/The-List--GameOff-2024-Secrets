@@ -26,15 +26,14 @@ namespace Horror.Chores.UI
 		[Header("Auto-close Settings")]
 		[SerializeField] private float autoCloseDelay = 2f;
 
-		private bool isInitializing = false; 
+		private bool isInitializing = false;
 		private RectTransform rectTransform;
 		private bool isVisible;
 		private Tween currentTween;
 		private Coroutine autoCloseCoroutine;
 
 		private Dictionary<string, ChoreListEntry> choreEntries;
-
-
+		
 		private void Awake()
 		{
 			rectTransform = GetComponent<RectTransform>();
@@ -60,8 +59,7 @@ namespace Horror.Chores.UI
 		{
 			UnsubscribeFromEvents();
 		}
-
-
+		
 		private void CreateChoreEntry(ChoreDataSO chore)
 		{
 			if (chore == null || choreEntries.ContainsKey(chore.ID))
@@ -168,8 +166,8 @@ namespace Horror.Chores.UI
 			Debug.Log($"Creating UI for day plan with {newPlan.Chores.Count} chores");
 			ClearList();
 
-			isInitializing = true; 
-            
+			isInitializing = true;
+
 			foreach (ChoreDataSO chore in newPlan.Chores)
 			{
 				if (!chore.StartsHidden)
@@ -177,7 +175,7 @@ namespace Horror.Chores.UI
 					CreateChoreEntry(chore);
 				}
 			}
-            
+
 			isInitializing = false;
 		}
 
