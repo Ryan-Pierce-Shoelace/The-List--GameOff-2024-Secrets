@@ -1,5 +1,72 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8114974933586623256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambient.bank
+  m_EditorClassIdentifier: 
+  Path: secrets-fmod-project/Build/Desktop/Ambient.bank
+  Name: Ambient
+  StudioPath: bank:/Ambient
+  lastModified: 638673717412181814
+  FileSizes:
+  - Name: Desktop
+    Value: 728832
+  Exists: 1
+--- !u!114 &-8065386082751207942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambient.bank
+  m_EditorClassIdentifier: 
+  Path: secrets-fmod-project/Build/Desktop/Ambient.bank
+  Name: Ambient
+  StudioPath: bank:/Ambient
+  lastModified: 638673538588358356
+  FileSizes:
+  - Name: Desktop
+    Value: 728832
+  Exists: 1
+--- !u!114 &-6304911513771571874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Notebook/PencilStroke
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Notebook/PencilStroke
+  Guid:
+    Data1: -2055399428
+    Data2: 1205259439
+    Data3: -1762957433
+    Data4: 1446783017
+  Banks:
+  - {fileID: 1621732825041300321}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &-4632199487778577204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +94,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 14256
+--- !u!114 &-4572933540888698407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/CreepyNote
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/CreepyNote
+  Guid:
+    Data1: -957653926
+    Data2: 1262266076
+    Data3: 1088787593
+    Data4: -1692349601
+  Banks:
+  - {fileID: -8114974933586623256}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 83069
 --- !u!114 &-2302897444097025451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,10 +136,10 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638670022387275765
+  lastModified: 638673717412191810
   FileSizes:
   - Name: Desktop
-    Value: 1104
+    Value: 1306
   Exists: 1
 --- !u!114 &-437412818487720875
 MonoBehaviour:
@@ -83,18 +177,49 @@ MonoBehaviour:
   - {fileID: -2302897444097025451}
   - {fileID: -437412818487720875}
   - {fileID: 1621732825041300321}
+  - {fileID: -8114974933586623256}
   EditorEvents:
   - {fileID: 3518389984227549864}
   - {fileID: 4565529804936185935}
   - {fileID: -4632199487778577204}
   - {fileID: 9014604801636822337}
+  - {fileID: -4572933540888698407}
+  - {fileID: 332972471928162209}
+  - {fileID: -6304911513771571874}
   EditorParameters: []
   MasterBanks:
   - {fileID: -437412818487720875}
   StringsBanks:
   - {fileID: -2302897444097025451}
-  cacheTime: 638670403309940314
+  cacheTime: 638673717412203646
   cacheVersion: 131620
+--- !u!114 &332972471928162209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Notebook/Writing
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Notebook/Writing
+  Guid:
+    Data1: 1225885700
+    Data2: 1243244750
+    Data3: 687646098
+    Data4: 86257419
+  Banks:
+  - {fileID: 1621732825041300321}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &1621732825041300321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,10 +235,10 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638670403309940314
+  lastModified: 638673717412203646
   FileSizes:
   - Name: Desktop
-    Value: 268416
+    Value: 341728
   Exists: 1
 --- !u!114 &3518389984227549864
 MonoBehaviour:
@@ -142,6 +267,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8045
+--- !u!114 &4433180067599608663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Notebook/Writing
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Notebook/Writing
+  Guid:
+    Data1: 1225885700
+    Data2: 1243244750
+    Data3: 687646098
+    Data4: 86257419
+  Banks:
+  - {fileID: 1621732825041300321}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &4565529804936185935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +321,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 365
+--- !u!114 &6062495317262126012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/CreepyNote
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/CreepyNote
+  Guid:
+    Data1: -957653926
+    Data2: 1262266076
+    Data3: 1088787593
+    Data4: -1692349601
+  Banks:
+  - {fileID: -8065386082751207942}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 83069
+--- !u!114 &7816831685820971315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Notebook/PencilStroke
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Notebook/PencilStroke
+  Guid:
+    Data1: -2055399428
+    Data2: 1205259439
+    Data3: -1762957433
+    Data4: 1446783017
+  Banks:
+  - {fileID: 1621732825041300321}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &9014604801636822337
 MonoBehaviour:
   m_ObjectHideFlags: 0

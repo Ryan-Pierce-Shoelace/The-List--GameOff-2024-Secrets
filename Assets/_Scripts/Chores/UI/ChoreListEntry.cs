@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Horror.Chores.HorrorEffect;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +8,9 @@ namespace Horror.Chores.UI
 {
 	public class ChoreListEntry : MonoBehaviour
 	{
+		public float StrikethroughDuration => strikethroughDuration;
+		public bool IsTutorial => choreData.IsTutorialChore;
+
 		[Header("References")]
 		[SerializeField] private TextMeshProUGUI choreName;
 
@@ -15,15 +19,19 @@ namespace Horror.Chores.UI
 
 		[Header("Visual Settings")]
 		[SerializeField] private Color unavailableColor = new Color(0.7f, 0.7f, 0.7f);
-
 		[SerializeField] private Color availableColor = Color.black;
 
 		[Header("Animation Settings")]
 		[SerializeField] private float strikethroughDuration = 0.5f;
-		[SerializeField] private float strikethroughSkewAngle = 15f;
-
+		[SerializeField] private float randomSkewRange = 5f;
+		
 		private ChoreDataSO choreData;
 		private ChoreState currentState;
+		
+		private string originalText;
+		private Color originalColor;
+		private Vector3 orignalPosition;
+		private Sequence horrorSequence;
 
 		private void Awake()
 		{
@@ -36,11 +44,14 @@ namespace Horror.Chores.UI
 		private void OnEnable()
 		{
 			ChoreEvents.OnChoreAdvanced += HandleChoreAdvanced;
+			ChoreEvents.OnChoreHorrorEffect += HandleHorrorEffect;
 		}
 
 		private void OnDisable()
 		{
 			ChoreEvents.OnChoreAdvanced -= HandleChoreAdvanced;
+			ChoreEvents.OnChoreHorrorEffect -= HandleHorrorEffect;
+			horrorSequence?.Kill();
 		}
 
 		public void Initialize(ChoreDataSO chore)
@@ -88,7 +99,7 @@ namespace Horror.Chores.UI
 
 		private void HandleChoreAdvanced(string choreId)
 		{
-			if (choreData != null && choreData.ID == choreId)
+			if (choreData && choreData.ID == choreId)
 			{
 				UpdateProgressCounter();
 			}
@@ -114,16 +125,59 @@ namespace Horror.Chores.UI
 			choreName.color = unavailableColor;
 			progressCounter.gameObject.SetActive(false);
 
+			float randomOffset = Random.Range(-randomSkewRange, randomSkewRange);
+
 			Sequence completionSequence = DOTween.Sequence();
 
 			completionSequence.Append(
-				strikethrough.transform.DORotate(new Vector3(0, 0, strikethroughSkewAngle), strikethroughDuration * 0.3f)
+				strikethrough.transform.DORotate(new Vector3(0, 0, randomOffset), strikethroughDuration * 0.3f)
 			);
 
 			completionSequence.Append(
 				DOTween.To(() => strikethrough.fillAmount, x => strikethrough.fillAmount = x, 1f, strikethroughDuration)
 					.SetEase(Ease.OutQuad)
 			);
+		}
+		
+		private void HandleHorrorEffect(string choreId, HorrorEffectData effectData)
+		{
+			if (choreData == null || choreData.ID != choreId) return;
+			
+			if (string.IsNullOrEmpty(originalText))
+			{
+				originalText = choreName.text;
+				originalColor = choreName.color;
+			}
+
+			orignalPosition = choreName.transform.localPosition;
+			horrorSequence?.Kill();
+			
+			horrorSequence = DOTween.Sequence();
+
+
+			choreName.color = effectData.TextColor;
+			if (!string.IsNullOrEmpty(effectData.OverrideText))
+			{
+				choreName.text = effectData.OverrideText;
+			}
+			
+			horrorSequence.Append(
+				choreName.transform.DOShakePosition(
+					effectData.Duration, 
+					strength: effectData.ShakeAmount,
+					vibrato: effectData.ShakeVibrato,
+					randomness: 90,
+					snapping: false,
+					fadeOut: true)
+			);
+
+
+			horrorSequence.OnComplete(() => {
+				choreName.text = originalText;
+				choreName.color = originalColor;
+				choreName.transform.localPosition = orignalPosition;
+				horrorSequence = null;
+			});
 		}
 	}
 }

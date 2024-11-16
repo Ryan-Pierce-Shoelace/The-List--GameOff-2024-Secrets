@@ -302,6 +302,8 @@ MonoBehaviour:
   hiddenPosition: {x: 120, y: -600}
   visiblePosition: {x: 120, y: 0}
   autoCloseDelay: 2
+  writingSound: {fileID: 11400000, guid: f0a190aa6df15e442b61079ba865e2b4, type: 2}
+  penStrokeSound: {fileID: 11400000, guid: 64766cd190e75364caba922ffc3fabc9, type: 2}
 --- !u!1 &8152031310939439029
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,7 +25,6 @@ namespace UserInterface
 
 		private string currentNumber = "";
 		private const int MAX_DIGITS = 10;
-		private Canvas parentCanvas;
 
 		private ISoundPlayer dialTonePlayer;
 
@@ -52,11 +51,7 @@ namespace UserInterface
 			ClearNumber();
 			dialTonePlayer?.Stop();
 		}
-
-        protected override void HandleCancel()
-        {
-            transform.gameObject.SetActive(false);
-        }
+		
 		public void OpenPanel()
 		{
 

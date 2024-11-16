@@ -25,7 +25,7 @@ namespace UserInterface
 		private Resolution[] resolutions;
 
 
-		private void Awake()
+		protected override void Awake()
 		{
 			ConfigureSliders();
 		}
@@ -38,7 +38,7 @@ namespace UserInterface
 			SetupResolutionDropdown();
 		}
 
-		protected override void HandleCancel()
+		public override void HandleCancel()
 		{
 			gameObject.SetActive(false);
 			pauseMenu.gameObject.SetActive(true);

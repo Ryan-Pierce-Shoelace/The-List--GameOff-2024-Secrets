@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using Horror.InputSystem;
+using Shoelace.Audio.XuulSound;
 using UnityEngine;
 
 namespace Horror.Chores.UI
@@ -22,9 +23,16 @@ namespace Horror.Chores.UI
 		//TODO set up math to auto set this up	
 		[SerializeField] private Vector2 hiddenPosition = new Vector2(0, -100);
 		[SerializeField] private Vector2 visiblePosition = new Vector2(0, 100);
-
-		[Header("Auto-close Settings")]
 		[SerializeField] private float autoCloseDelay = 2f;
+
+		[Header("Sounds")]
+		[SerializeField] private SoundConfig writingSound;
+
+		[SerializeField] private SoundConfig penStrokeSound;
+
+		private ISoundPlayer writingPlayer;
+		private ISoundPlayer penStrokePlayer; //TODO ask if one shot is right or if we hsould have a player?
+
 
 		private bool isInitializing = false;
 		private RectTransform rectTransform;
@@ -33,13 +41,23 @@ namespace Horror.Chores.UI
 		private Coroutine autoCloseCoroutine;
 
 		private Dictionary<string, ChoreListEntry> choreEntries;
-		
+		private Dictionary<string, (ChoreListEntry Entry, CanvasGroup Group)> tutorialEntries;
+
 		private void Awake()
 		{
 			rectTransform = GetComponent<RectTransform>();
-			rectTransform.anchoredPosition = hiddenPosition;
+			rectTransform.anchoredPosition = visiblePosition;
 			choreEntries = new Dictionary<string, ChoreListEntry>();
-			isVisible = false;
+			tutorialEntries = new Dictionary<string, (ChoreListEntry, CanvasGroup)>();
+			isVisible = true;
+
+			if (choreManager != null) return;
+
+			choreManager = FindObjectOfType<ChoreManager>();
+			if (choreManager == null)
+			{
+				Debug.LogError("No ChoreManager found in scene! ChoreListUI requires a ChoreManager to function.", this);
+			}
 		}
 
 		private void Start()
@@ -48,6 +66,8 @@ namespace Horror.Chores.UI
 			{
 				HandleDayPlanChanged(choreManager.CurrentDayPlan);
 			}
+
+			penStrokePlayer ??= AudioManager.Instance.CreateSound(penStrokeSound);
 		}
 
 		private void OnEnable()
@@ -58,18 +78,25 @@ namespace Horror.Chores.UI
 		private void OnDisable()
 		{
 			UnsubscribeFromEvents();
+			StopAllCoroutines();
 		}
-		
+
+
 		private void CreateChoreEntry(ChoreDataSO chore)
 		{
-			if (chore == null || choreEntries.ContainsKey(chore.ID))
+			if (!chore || choreEntries.ContainsKey(chore.ID))
 				return;
 
 			ChoreListEntry entry = Instantiate(listEntryPrefab, listEntryContainer);
 			entry.Initialize(chore);
 
+			if (chore.IsTutorialChore)
+			{
+				var canvasGroup = entry.gameObject.AddComponent<CanvasGroup>();
+				tutorialEntries[chore.ID] = (entry, canvasGroup);
+			}
 
-			if (choreManager != null)
+			if (choreManager)
 			{
 				ChoreState state = choreManager.GetChoreState(chore);
 				entry.SetState(state);
@@ -79,12 +106,13 @@ namespace Horror.Chores.UI
 			if (!isInitializing)
 			{
 				ShowTemporarily();
+				AudioManager.Instance.PlayOneShot(writingSound);
 			}
 		}
 
 		#region Pop up
 
-		private void ToggleList() //TODO
+		private void ToggleList()
 		{
 			if (isVisible)
 			{
@@ -190,22 +218,58 @@ namespace Horror.Chores.UI
 
 		private void HandleChoreCompleted(string choreId)
 		{
-			if (choreEntries.TryGetValue(choreId, out ChoreListEntry entry))
+			if (!choreEntries.TryGetValue(choreId, out ChoreListEntry entry)) return;
+
+			ShowTemporarily();
+
+			if (isVisible)
 			{
 				entry.SetState(ChoreState.Completed);
-				ShowTemporarily();
+				AudioManager.Instance.PlayOneShot(writingSound);
+
+				if (entry.IsTutorial && tutorialEntries.TryGetValue(choreId, out (ChoreListEntry Entry, CanvasGroup Group) tutorialEntry))
+				{
+					StartCoroutine(RemoveTutorialChore(choreId, tutorialEntry.Entry, tutorialEntry.Group));
+				}
+			}
+			else
+			{
+				StartCoroutine(DelayedChoreCompletion(entry));
 			}
 		}
+
+		private IEnumerator DelayedChoreCompletion(ChoreListEntry entry)
+		{
+			yield return new WaitForSeconds(animationDuration + .1f);
+			entry.SetState(ChoreState.Completed);
+			penStrokePlayer?.Play();
+		}
+
 
 		private void HandleChoreUnhidden(string choreId)
 		{
 			if (choreEntries.ContainsKey(choreId)) return;
 
 			ChoreDataSO chore = choreManager.GetChoreById(choreId);
-			if (chore != null)
+			if (chore)
 			{
 				CreateChoreEntry(chore);
 			}
+		}
+
+		private IEnumerator RemoveTutorialChore(string choreId, ChoreListEntry entry, CanvasGroup group)
+		{
+			yield return new WaitForSeconds(entry.StrikethroughDuration + 0.5f);
+
+			DOTween.Sequence()
+				.Append(entry.transform.DOScale(0, 0.3f))
+				.Join(group.DOFade(0, 0.3f))
+				.OnComplete(() =>
+				{
+					choreEntries.Remove(choreId);
+					tutorialEntries.Remove(choreId);
+					Destroy(entry.gameObject);
+				});
 		}
 
 		private void ClearList()

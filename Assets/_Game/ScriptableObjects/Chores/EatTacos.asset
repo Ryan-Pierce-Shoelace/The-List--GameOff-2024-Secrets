@@ -18,3 +18,4 @@ MonoBehaviour:
   ChoresToUnhide: []
   StartsHidden: 1
   RequiredCount: 1
+  isTutorialChore: 0

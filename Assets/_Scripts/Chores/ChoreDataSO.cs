@@ -16,7 +16,9 @@ namespace Horror.Chores
 
 		public int CurrentCount { get; private set; }
 		public int RequiredCount = 1;
-
+		
+		public bool IsTutorialChore => isTutorialChore;
+		[SerializeField] private bool isTutorialChore = false;
 
 		private void Awake()
 		{
