@@ -17,6 +17,6 @@ MonoBehaviour:
   RequiredChores: []
   ChoresToUnhide:
   - {fileID: 11400000, guid: 3e73712085ca9174d9f7e21633dc69d9, type: 2}
-  StartsHidden: 1
+  StartsHidden: 0
   RequiredCount: 1
   isTutorialChore: 1

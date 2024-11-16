@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: tutorialOThree
   ChoreName: Press E to Interact
-  RequiredChores: []
+  RequiredChores:
+  - {fileID: 11400000, guid: 3485cb70206fa724f8c5d1900d5fb949, type: 2}
   ChoresToUnhide:
   - {fileID: 11400000, guid: 49402d0e04b3d2d498d188d09b22ffed, type: 2}
   - {fileID: 11400000, guid: a107ff9ec64323f40bcb7a215fc82352, type: 2}

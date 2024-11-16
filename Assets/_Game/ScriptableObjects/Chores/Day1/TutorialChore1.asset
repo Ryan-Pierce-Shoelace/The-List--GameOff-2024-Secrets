@@ -15,8 +15,7 @@ MonoBehaviour:
   ID: tutorialOne
   ChoreName: Press TAB to Toggle List
   RequiredChores: []
-  ChoresToUnhide:
-  - {fileID: 11400000, guid: 3485cb70206fa724f8c5d1900d5fb949, type: 2}
+  ChoresToUnhide: []
   StartsHidden: 0
   RequiredCount: 1
   isTutorialChore: 1
