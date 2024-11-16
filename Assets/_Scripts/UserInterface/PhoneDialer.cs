@@ -53,6 +53,10 @@ namespace UserInterface
 			dialTonePlayer?.Stop();
 		}
 
+        protected override void HandleCancel()
+        {
+            transform.gameObject.SetActive(false);
+        }
 		public void OpenPanel()
 		{
 
