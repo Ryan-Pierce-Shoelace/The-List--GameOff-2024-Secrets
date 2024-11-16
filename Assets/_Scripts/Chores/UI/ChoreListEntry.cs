@@ -20,7 +20,7 @@ namespace Horror.Chores.UI
 
 		[Header("Animation Settings")]
 		[SerializeField] private float strikethroughDuration = 0.5f;
-		[SerializeField] private float strikethroughSkewAngle = 15f;
+		[SerializeField] private float randomSkewRange = 5f; 
 
 		private ChoreDataSO choreData;
 		private ChoreState currentState;
@@ -113,17 +113,24 @@ namespace Horror.Chores.UI
 		{
 			choreName.color = unavailableColor;
 			progressCounter.gameObject.SetActive(false);
-
+			
+			float randomOffset = Random.Range(-randomSkewRange, randomSkewRange);
+			
 			Sequence completionSequence = DOTween.Sequence();
 
 			completionSequence.Append(
-				strikethrough.transform.DORotate(new Vector3(0, 0, strikethroughSkewAngle), strikethroughDuration * 0.3f)
+				strikethrough.transform.DORotate(new Vector3(0, 0, randomOffset), strikethroughDuration * 0.3f)
 			);
 
 			completionSequence.Append(
 				DOTween.To(() => strikethrough.fillAmount, x => strikethrough.fillAmount = x, 1f, strikethroughDuration)
 					.SetEase(Ease.OutQuad)
 			);
+			
 		}
 	}
+	
+	
+	
+	
 }

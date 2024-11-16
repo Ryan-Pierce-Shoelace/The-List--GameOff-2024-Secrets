@@ -33,7 +33,7 @@ namespace Horror.Chores.UI
 		private Coroutine autoCloseCoroutine;
 
 		private Dictionary<string, ChoreListEntry> choreEntries;
-		
+
 		private void Awake()
 		{
 			rectTransform = GetComponent<RectTransform>();
@@ -58,8 +58,9 @@ namespace Horror.Chores.UI
 		private void OnDisable()
 		{
 			UnsubscribeFromEvents();
+			StopAllCoroutines();
 		}
-		
+
 		private void CreateChoreEntry(ChoreDataSO chore)
 		{
 			if (chore == null || choreEntries.ContainsKey(chore.ID))
@@ -84,7 +85,7 @@ namespace Horror.Chores.UI
 
 		#region Pop up
 
-		private void ToggleList() //TODO
+		private void ToggleList()
 		{
 			if (isVisible)
 			{
@@ -190,11 +191,25 @@ namespace Horror.Chores.UI
 
 		private void HandleChoreCompleted(string choreId)
 		{
-			if (choreEntries.TryGetValue(choreId, out ChoreListEntry entry))
+			if (!choreEntries.TryGetValue(choreId, out ChoreListEntry entry)) return;
+
+
+			ShowTemporarily();
+
+			if (isVisible)
 			{
 				entry.SetState(ChoreState.Completed);
-				ShowTemporarily();
 			}
+			else
+			{
+				StartCoroutine(DelayedChoreCompletion(entry));
+			}
+		}
+
+		private IEnumerator DelayedChoreCompletion(ChoreListEntry entry)
+		{
+			yield return new WaitForSeconds(animationDuration + .1f);
+			entry.SetState(ChoreState.Completed);
 		}
 
 		private void HandleChoreUnhidden(string choreId)
