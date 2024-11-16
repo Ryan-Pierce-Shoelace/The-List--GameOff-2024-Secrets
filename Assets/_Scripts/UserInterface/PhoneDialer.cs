@@ -3,6 +3,7 @@ using Shoelace.Audio.XuulSound;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Utilities;
 
 namespace UserInterface
 {
@@ -24,11 +25,13 @@ namespace UserInterface
 
 		private string currentNumber = "";
 		private const int MAX_DIGITS = 10;
+		private Canvas parentCanvas;
 
 		private ISoundPlayer dialTonePlayer;
 
 		private void Start()
 		{
+			parentCanvas = GetComponentInParent<Canvas>();
 			InitializeButtons();
 			UpdateDisplay();
 		}
@@ -54,8 +57,16 @@ namespace UserInterface
         {
             transform.gameObject.SetActive(false);
         }
+		public void OpenPanel()
+		{
 
-        private void InitializeButtons()
+			dialTonePlayer ??= AudioManager.Instance.CreateSound(dialToneSound);
+
+			dialTonePlayer?.Play();
+		}
+
+
+		private void InitializeButtons()
 		{
 			foreach (PhoneButton button in phoneButtons)
 			{

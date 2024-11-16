@@ -18,6 +18,7 @@ namespace Horror.InputSystem
 		public event UnityAction InteractEvent = delegate { };
 		public event UnityAction PauseEvent = delegate { };
 		public event UnityAction CancelEvent = delegate { };
+		public event UnityAction ToggleListEvent = delegate { };
 
 		#endregion
 
@@ -75,6 +76,12 @@ namespace Horror.InputSystem
 		{
 			if (context.performed)
 				PauseEvent?.Invoke();
+		}
+
+		public void OnToggleList(InputAction.CallbackContext context)
+		{
+			if (context.performed)
+				ToggleListEvent?.Invoke();
 		}
 
 		#endregion

@@ -55,6 +55,15 @@ namespace Project.Input
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleList"",
+                    ""type"": ""Button"",
+                    ""id"": ""24f5d2bf-8f85-453d-bc91-a1360e413cdf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +141,17 @@ namespace Project.Input
                     ""processors"": """",
                     ""groups"": ""KBM"",
                     ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2972f06f-46c3-4d8f-96e1-6dfad524982a"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KBM"",
+                    ""action"": ""ToggleList"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -720,6 +740,7 @@ namespace Project.Input
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
             m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
             m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+            m_Player_ToggleList = m_Player.FindAction("ToggleList", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -797,6 +818,7 @@ namespace Project.Input
         private readonly InputAction m_Player_Move;
         private readonly InputAction m_Player_Interact;
         private readonly InputAction m_Player_Pause;
+        private readonly InputAction m_Player_ToggleList;
         public struct PlayerActions
         {
             private @HorrorInput m_Wrapper;
@@ -804,6 +826,7 @@ namespace Project.Input
             public InputAction @Move => m_Wrapper.m_Player_Move;
             public InputAction @Interact => m_Wrapper.m_Player_Interact;
             public InputAction @Pause => m_Wrapper.m_Player_Pause;
+            public InputAction @ToggleList => m_Wrapper.m_Player_ToggleList;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -822,6 +845,9 @@ namespace Project.Input
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
+                @ToggleList.started += instance.OnToggleList;
+                @ToggleList.performed += instance.OnToggleList;
+                @ToggleList.canceled += instance.OnToggleList;
             }
 
             private void UnregisterCallbacks(IPlayerActions instance)
@@ -835,6 +861,9 @@ namespace Project.Input
                 @Pause.started -= instance.OnPause;
                 @Pause.performed -= instance.OnPause;
                 @Pause.canceled -= instance.OnPause;
+                @ToggleList.started -= instance.OnToggleList;
+                @ToggleList.performed -= instance.OnToggleList;
+                @ToggleList.canceled -= instance.OnToggleList;
             }
 
             public void RemoveCallbacks(IPlayerActions instance)
@@ -1001,6 +1030,7 @@ namespace Project.Input
             void OnMove(InputAction.CallbackContext context);
             void OnInteract(InputAction.CallbackContext context);
             void OnPause(InputAction.CallbackContext context);
+            void OnToggleList(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {
