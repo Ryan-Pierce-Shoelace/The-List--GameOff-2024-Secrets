@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60c6871f2e160a4f9083038b39ef3f7, type: 3}
   m_Name: Phone
   m_EditorClassIdentifier: 
-  animationString: 
-  interactionTime: 0
+  AnimationName: Interact
+  InteractionTime: 0.5
