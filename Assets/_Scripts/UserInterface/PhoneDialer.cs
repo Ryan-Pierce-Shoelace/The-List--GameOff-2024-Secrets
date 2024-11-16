@@ -50,8 +50,12 @@ namespace UserInterface
 			dialTonePlayer?.Stop();
 		}
 
+        protected override void HandleCancel()
+        {
+            transform.gameObject.SetActive(false);
+        }
 
-		private void InitializeButtons()
+        private void InitializeButtons()
 		{
 			foreach (PhoneButton button in phoneButtons)
 			{

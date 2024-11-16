@@ -19,6 +19,9 @@ namespace Interaction.PlayerInteraction
 
         private void TryInteracting()
         {
+            if (currentInteractable == null)
+                return;
+
             if(currentInteractable.CanInteract())
             {
                 currentInteractable.Interact();
