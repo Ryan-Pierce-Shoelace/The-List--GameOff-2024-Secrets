@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: FeedTheDog
   ChoreName: Feed The Dog
-  RequiredChores: []
-  ChoresToUnhide: []
+  requiredChores:
+  - {fileID: 11400000, guid: a94fedcb10bfe88418197aa5fb861980, type: 2}
+  choresToUnhide: []
   StartsHidden: 1
   RequiredCount: 1
   isTutorialChore: 0

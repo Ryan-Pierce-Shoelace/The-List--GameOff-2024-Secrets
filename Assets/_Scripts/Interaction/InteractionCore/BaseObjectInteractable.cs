@@ -61,7 +61,13 @@ namespace Interaction.InteractionCore
 			choreProgressor?.ProgressChore();
 		}
 
-		public void ToggleHighlight(bool toggleOn) => highlightObject.SetActive(toggleOn);
+		public void ToggleHighlight(bool toggleOn)
+		{
+			if(highlightObject != null)
+			{
+                highlightObject.SetActive(toggleOn);
+            }
+		}
 		public InteractObjectSO GetInteractableObject() => interactObjectSO;
 
 		public virtual void TriggerFailedInteractionThought()
@@ -85,5 +91,10 @@ namespace Interaction.InteractionCore
 
 			StaticEvents.TriggerThought("Im a failure");
 		}
-	}
+
+        public virtual bool IsActive()
+        {
+			return enabled;
+        }
+    }
 }

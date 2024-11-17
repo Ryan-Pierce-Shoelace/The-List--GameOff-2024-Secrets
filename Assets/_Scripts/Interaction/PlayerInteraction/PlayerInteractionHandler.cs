@@ -89,6 +89,12 @@ namespace Interaction.PlayerInteraction
 
             if(col.TryGetComponent(out IInteractable interactable))
             {
+                if(!interactable.IsActive())
+                {
+                    ClearInteractable();
+                    return;
+                }
+
                 SetInteractable(interactable);
             }
             else
@@ -100,8 +106,9 @@ namespace Interaction.PlayerInteraction
         private void SetInteractable(IInteractable newInteractable)
         {
             if (currentInteractable != null && currentInteractable != newInteractable)
+            {
                 currentInteractable.ToggleHighlight(false);
-
+            }
             currentInteractable = newInteractable;
             currentInteractable.ToggleHighlight(true);
             StaticEvents.DisplayInteractable(currentInteractable.GetInteractableObject().name);
