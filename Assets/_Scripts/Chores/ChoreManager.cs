@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Codice.CM.WorkspaceServer.Tree.Changes;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -9,16 +10,16 @@ namespace Horror.Chores
 	public class ChoreManager : MonoBehaviour
 	{
 		public static ChoreManager Instance;
-		
+
 		[FormerlySerializedAs("currentDayPlan")] [SerializeField]
 		public DayPlan CurrentDayPlan;
 
-		private Dictionary<ChoreDataSO, ChoreState> choreStates;
+		private Dictionary<string, ChoreState> choreStates;
 		private Dictionary<string, ChoreDataSO> choreIdLookup;
 
 		private void Awake()
 		{
-			choreStates = new Dictionary<ChoreDataSO, ChoreState>();
+			choreStates = new Dictionary<string, ChoreState>();
 			choreIdLookup = new Dictionary<string, ChoreDataSO>();
 
 			SubscribeToEvents();
@@ -67,9 +68,15 @@ namespace Horror.Chores
 			foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
 			{
 				chore.Reset();
-				bool hasUncompletedRequirements = HasUncompletedRequirements(chore);
-				choreStates[chore] = hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available;
 				choreIdLookup[chore.ID] = chore;
+			}
+
+			foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
+			{
+				bool hasUncompletedRequirements = HasUncompletedRequirements(chore);
+				ChoreState initialState = chore.StartsHidden ? ChoreState.Hidden : (hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available);
+
+				choreStates[chore.ID] = initialState;
 			}
 		}
 
@@ -80,18 +87,18 @@ namespace Horror.Chores
 		{
 			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
 
-			choreStates[chore] = ChoreState.Completed;
-	
+			choreStates[chore.ID] = ChoreState.Completed;
+
 			UpdateChoreStates();
 		}
 
 		private void HandleChoreUnhidden(string choreId)
 		{
 			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
-			if (choreStates[chore] != ChoreState.Hidden) return;
+			if (choreStates[chore.ID] != ChoreState.Hidden) return;
 
 			bool hasUncompletedRequirements = HasUncompletedRequirements(chore);
-			choreStates[chore] = hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available;
+			choreStates[chore.ID] = hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available;
 			UpdateChoreStates();
 		}
 
@@ -99,7 +106,7 @@ namespace Horror.Chores
 		{
 			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
 
-			if (choreStates[chore] != ChoreState.Available) return;
+			if (choreStates[chore.ID] != ChoreState.Available) return;
 
 			chore.Increment();
 		}
@@ -109,12 +116,26 @@ namespace Horror.Chores
 
 		private void UpdateChoreStates()
 		{
-			foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
+			bool statesChanged;
+			do
 			{
-				if (choreStates[chore] == ChoreState.Completed) continue;
+				statesChanged = false;
+				foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
+				{
+					if (choreStates[chore.ID] == ChoreState.Completed ||
+					    choreStates[chore.ID] == ChoreState.Hidden)
+						continue;
 
-				choreStates[chore] = HasUncompletedRequirements(chore) ? ChoreState.Locked : ChoreState.Available;
-			}
+					ChoreState oldState = choreStates[chore.ID];
+					ChoreState newState = HasUncompletedRequirements(chore) ? ChoreState.Locked : ChoreState.Available;
+
+					if (oldState != newState)
+					{
+						choreStates[chore.ID] = newState;
+						statesChanged = true;
+					}
+				}
+			} while (statesChanged);
 		}
 
 		private bool HasUncompletedRequirements(ChoreDataSO chore)
@@ -127,23 +148,22 @@ namespace Horror.Chores
 			return chore.RequiredChores.Any(requiredChore =>
 				!requiredChore ||
 				!choreIdLookup.ContainsKey(requiredChore.ID) ||
-				choreStates[choreIdLookup[requiredChore.ID]] != ChoreState.Completed);
+				choreStates[requiredChore.ID] != ChoreState.Completed);
 		}
 
 		private void ResetChores() => InitializeChores();
 
 		public ChoreState GetChoreState(ChoreDataSO chore)
 		{
-			if (!chore)
+			if (!chore || choreStates == null)
 			{
 				return ChoreState.Locked;
 			}
 
-			if (choreStates != null && choreStates.TryGetValue(chore, out ChoreState state))
+			if (choreStates != null && choreStates.TryGetValue(chore.ID, out ChoreState state))
 			{
 				return state;
 			}
-
 
 			return ChoreState.Locked;
 		}

@@ -8,11 +8,15 @@ namespace Horror.Chores
 
 	    public ChoreState GetChoreState()
 	    {
-		   return ChoreManager.Instance.GetChoreState(chore);
+		    return chore == null ? ChoreState.Hidden : ChoreManager.Instance.GetChoreState(chore);
 	    }
 
 	    public void ProgressChore()
 	    {
+		    if (!chore)
+		    {
+			    return;
+		    }
 		    ChoreEvents.AdvanceChore(chore.ID);
 	    }
     }

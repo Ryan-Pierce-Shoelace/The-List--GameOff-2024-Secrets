@@ -36,7 +36,7 @@ namespace Interaction.PlayerInteraction
             }
             else
             {
-                StaticEvents.TriggerThought(currentInteractable.GetFailedInteractionThought());
+                currentInteractable.TriggerFailedInteractionThought();
             }
         }
 

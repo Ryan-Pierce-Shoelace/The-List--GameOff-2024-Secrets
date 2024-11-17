@@ -7,7 +7,7 @@ using Shoelace.Audio.XuulSound;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace DayManagement
+namespace Horror.DayManagement
 {
 	public class DoorTrigger : MonoBehaviour
 	{

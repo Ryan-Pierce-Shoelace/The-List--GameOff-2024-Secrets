@@ -5,7 +5,7 @@ namespace Interaction.InteractionCore
         bool CanInteract();
         void Interact();
         InteractObjectSO GetInteractableObject();
-        string GetFailedInteractionThought();
+        void TriggerFailedInteractionThought();
         void ToggleHighlight(bool toggle);
     }
 }

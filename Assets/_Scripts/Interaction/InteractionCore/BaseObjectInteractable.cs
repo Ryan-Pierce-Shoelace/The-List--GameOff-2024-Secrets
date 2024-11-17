@@ -1,68 +1,89 @@
 using System.Linq;
+using DayManagement;
 using Horror.Chores;
 using RyanPierce.Events;
 using UnityEngine;
+using Utilities;
 
 namespace Interaction.InteractionCore
 {
-    public abstract class BaseObjectInteractable : MonoBehaviour, IInteractable
-    {
-        [SerializeField] protected InteractObjectSO interactObjectSO;
-        [SerializeField] protected GameObject highlightObject;
+	public abstract class BaseObjectInteractable : MonoBehaviour, IInteractable
+	{
+		[SerializeField] protected InteractObjectSO interactObjectSO;
+		[SerializeField] protected GameObject highlightObject;
 
-        [SerializeField] protected VoidEvent interactionEvent;
+		[SerializeField] protected VoidEvent interactionEvent;
 
-        [SerializeField] protected InteractionManager interactionManager;
-        [SerializeField] protected InteractObjectSO[] inventoryRequirements;
+		[SerializeField] protected InteractionManager interactionManager;
+		[SerializeField] protected InteractObjectSO[] inventoryRequirements;
 
-        private ChoreProgressor choreProgressor;
+		[SerializeField] protected DynamicThoughtSO failThought;
 
-        protected virtual void Start()
-        {
-            ToggleHighlight(false);
-            choreProgressor = GetComponent<ChoreProgressor>();
-        }
-        public virtual bool CanInteract()
-        {
-            if(interactionManager == null)
-            {
-                Debug.LogError(transform.name + " doesnt have an interaction manager assigned");
-                return false;
-            }
-            if(interactObjectSO == null)
-            {
-                Debug.LogError(transform.name + " Has a null Interaction Object");
-                return false;
-            }
+		private ChoreProgressor choreProgressor;
 
-            bool isChoreStateValid = choreProgressor.GetChoreState() == ChoreState.Available || choreProgressor.GetChoreState() == ChoreState.Completed;
+		protected virtual void Start()
+		{
+			ToggleHighlight(false);
+			choreProgressor = GetComponent<ChoreProgressor>();
+		}
 
-            if (choreProgressor != null && isChoreStateValid)
-            {
-                return inventoryRequirements.All(t => interactionManager.HasObject(t));
-            }
+		public virtual bool CanInteract()
+		{
+			if (interactionManager == null)
+			{
+				Debug.LogError(transform.name + " doesnt have an interaction manager assigned");
+				return false;
+			}
 
-            return false;
-        }
-        public virtual void Interact()
-        {
-            interactionEvent?.Raise();
-            choreProgressor?.ProgressChore();
-        }
-        public void ToggleHighlight(bool toggleOn) => highlightObject.SetActive(toggleOn);
-        public InteractObjectSO GetInteractableObject() => interactObjectSO;
+			if (interactObjectSO == null)
+			{
+				Debug.LogError(transform.name + " Has a null Interaction Object");
+				return false;
+			}
 
-        public virtual string GetFailedInteractionThought()
-        {
-            foreach (InteractObjectSO t in inventoryRequirements)
-            {
-                if (!interactionManager.HasObject(t))
-                {
-                    return $"I dont have the {t.name}"; // did not have item
-                }
-            }
+			if (choreProgressor == null) return true;
+			
+			bool isChoreStateValid = choreProgressor.GetChoreState() == ChoreState.Available || choreProgressor.GetChoreState() == ChoreState.Completed;
 
-            return "Im a failure";
-        }
-    }
+			Debug.Log(choreProgressor?.GetChoreState());
+			if (choreProgressor != null && isChoreStateValid)
+			{
+				return inventoryRequirements.All(t => interactionManager.HasObject(t));
+			}
+
+
+			return true;
+		}
+
+		public virtual void Interact()
+		{
+			interactionEvent?.Raise();
+			choreProgressor?.ProgressChore();
+		}
+
+		public void ToggleHighlight(bool toggleOn) => highlightObject.SetActive(toggleOn);
+		public InteractObjectSO GetInteractableObject() => interactObjectSO;
+
+		public virtual void TriggerFailedInteractionThought()
+		{
+			if (failThought != null)
+			{
+				failThought.PlayThought();
+				return;
+			}
+			else
+			{
+				foreach (InteractObjectSO t in inventoryRequirements)
+				{
+					if (interactionManager.HasObject(t)) continue;
+
+					StaticEvents.TriggerThought($"I dont have the {t.name}");
+					return;
+				}
+			}
+
+
+			StaticEvents.TriggerThought("Im a failure");
+		}
+	}
 }
