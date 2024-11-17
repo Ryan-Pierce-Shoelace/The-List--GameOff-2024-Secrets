@@ -1,4 +1,5 @@
 using Interaction.InteractionCore;
+using Shoelace.Audio.XuulSound;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,9 @@ namespace Interaction
     {
         [SerializeField] private GameObject target;
         [SerializeField] private bool cycle;
+
+        [SerializeField] private SoundConfig unToggleSFX;
+
         public override void Interact()
         {
             base.Interact();
@@ -17,6 +21,21 @@ namespace Interaction
             if(cycle == false)
             {
                 this.enabled = false;
+            }
+        }
+
+        protected override void TryPlaySFX()
+        {
+            if(target.activeInHierarchy)
+            {
+                base.TryPlaySFX();
+            }
+            else
+            {
+                if(unToggleSFX != null)
+                {
+                    AudioManager.Instance.PlayOneShot(unToggleSFX);
+                }
             }
         }
     }

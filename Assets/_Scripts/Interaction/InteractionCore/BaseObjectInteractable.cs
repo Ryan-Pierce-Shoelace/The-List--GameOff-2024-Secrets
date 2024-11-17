@@ -1,6 +1,7 @@
 using System.Linq;
 using Horror.Chores;
 using RyanPierce.Events;
+using Shoelace.Audio.XuulSound;
 using UI.Thoughts;
 using UnityEngine;
 using Utilities;
@@ -18,6 +19,8 @@ namespace Interaction.InteractionCore
 		[SerializeField] protected InteractObjectSO[] inventoryRequirements;
 
 		[SerializeField] protected DynamicThoughtSO failThought;
+
+		[SerializeField] protected SoundConfig interactSFX;
 
 		private ChoreProgressor choreProgressor;
 
@@ -59,7 +62,16 @@ namespace Interaction.InteractionCore
 		{
 			interactionEvent?.Raise();
 			choreProgressor?.ProgressChore();
+			TryPlaySFX();
 		}
+
+		protected virtual void TryPlaySFX()
+		{
+            if (interactSFX != null)
+            {
+                AudioManager.Instance.PlayOneShot(interactSFX);
+            }
+        }
 
 		public void ToggleHighlight(bool toggleOn)
 		{
