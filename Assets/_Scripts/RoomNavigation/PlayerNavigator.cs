@@ -75,6 +75,7 @@ namespace Horror.RoomNavigation
 
             await Task.WhenAll(moveIntoRoom);
 
+            newRoom.OnEnterRoom();
             movement.ToggleInput(true);
             input.EnableGameplayInput();
             transitioning = false;

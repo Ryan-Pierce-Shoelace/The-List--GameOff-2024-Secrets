@@ -27,7 +27,11 @@ namespace Interaction
                 targetRenderer.sprite = newSprite;
 
                 if(!repeatCycle)
+                {
+                    ToggleHighlight(false);
                     this.enabled = false;
+                }
+                    
 
             }
             else if(repeatCycle)

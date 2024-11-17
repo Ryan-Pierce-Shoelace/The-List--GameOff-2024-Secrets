@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Horror.RoomNavigation
@@ -11,6 +9,8 @@ namespace Horror.RoomNavigation
 
         [SerializeField] private Transform exitPoint;
         [SerializeField] private GameObject closedDoor;
+
+        
 
         public Vector2 DoorExitPos => exitPoint.position;
         public bool IsDoorClosed => closedDoor.activeSelf;
@@ -29,6 +29,7 @@ namespace Horror.RoomNavigation
                 navigator.CurrentDoorway = null;
             }
         }
+
         
 
         public void SetDoorActiveState(bool state)

@@ -1,4 +1,5 @@
 using Cinemachine;
+using Horror.Chores;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,8 @@ namespace Horror.RoomNavigation
 
         [SerializeField] private int tempTestNumberOfRoomChores;
         [SerializeField] private CinemachineVirtualCamera roomCamera;
+        [SerializeField] private ChoreProgressor enterRoomChoreProgressor;
+
         public Dictionary<string, bool> roomChores;
 
         private void Start()
@@ -19,6 +22,17 @@ namespace Horror.RoomNavigation
             for (int i = 0; i < tempTestNumberOfRoomChores; i++)
             {
                 roomChores.Add($"chore{i}", false);
+            }
+        }
+        public void OnEnterRoom()
+        {
+            if (enterRoomChoreProgressor == null) return;
+
+            bool isChoreStateValid = enterRoomChoreProgressor.GetChoreState() == ChoreState.Available || enterRoomChoreProgressor.GetChoreState() == ChoreState.Completed;
+
+            if (enterRoomChoreProgressor != null && isChoreStateValid)
+            {
+                enterRoomChoreProgressor?.ProgressChore();
             }
         }
 
