@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8685941994757673970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/DialTone
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/DialTone
+  Guid:
+    Data1: -265650732
+    Data2: 1335658594
+    Data3: 1820111490
+    Data4: 1536188913
+  Banks:
+  - {fileID: 1952323982715942730}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14256
+--- !u!114 &-8429360146581296137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/PhoneButtonPressed
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/PhoneButtonPressed
+  Guid:
+    Data1: -1476306724
+    Data2: 1302007415
+    Data3: -2077746533
+    Data4: 1446974758
+  Banks:
+  - {fileID: 1952323982715942730}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 200
 --- !u!114 &-8114974933586623256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,6 +94,60 @@ MonoBehaviour:
   - Name: Desktop
     Value: 728832
   Exists: 1
+--- !u!114 &-7792522815082058078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Misc/Heartbeat
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Misc/Heartbeat
+  Guid:
+    Data1: 84313716
+    Data2: 1225134907
+    Data3: -237297474
+    Data4: 68016445
+  Banks:
+  - {fileID: 1952323982715942730}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8045
+--- !u!114 &-6416257560912553468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Notebook/PencilStroke
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Notebook/PencilStroke
+  Guid:
+    Data1: -2055399428
+    Data2: 1205259439
+    Data3: -1762957433
+    Data4: 1446783017
+  Banks:
+  - {fileID: 1952323982715942730}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &-6304911513771571874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +168,53 @@ MonoBehaviour:
     Data4: 1446783017
   Banks:
   - {fileID: 1621732825041300321}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &-5213327746837597326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambient.bank
+  m_EditorClassIdentifier: 
+  Path: secrets-fmod-project/Build/Desktop/Ambient.bank
+  Name: Ambient
+  StudioPath: bank:/Ambient
+  lastModified: 638673538588358356
+  FileSizes:
+  - Name: Desktop
+    Value: 728832
+  Exists: 1
+--- !u!114 &-4980508108102168660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Notebook/Writing
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Notebook/Writing
+  Guid:
+    Data1: 1225885700
+    Data2: 1243244750
+    Data3: 687646098
+    Data4: 86257419
+  Banks:
+  - {fileID: 1952323982715942730}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -141,6 +296,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1306
   Exists: 1
+--- !u!114 &-1980107183083807727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Door/DoorOpen
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Door/DoorOpen
+  Guid:
+    Data1: 1545697002
+    Data2: 1290030089
+    Data3: 2014070974
+    Data4: 119658808
+  Banks:
+  - {fileID: 1952323982715942730}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-437412818487720875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,24 +356,27 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -2302897444097025451}
-  - {fileID: -437412818487720875}
-  - {fileID: 1621732825041300321}
-  - {fileID: -8114974933586623256}
+  - {fileID: 8194533627953500299}
+  - {fileID: -5213327746837597326}
+  - {fileID: 5927059152536829483}
+  - {fileID: 1952323982715942730}
   EditorEvents:
-  - {fileID: 3518389984227549864}
-  - {fileID: 4565529804936185935}
-  - {fileID: -4632199487778577204}
-  - {fileID: 9014604801636822337}
-  - {fileID: -4572933540888698407}
-  - {fileID: 332972471928162209}
-  - {fileID: -6304911513771571874}
+  - {fileID: 5355911311975638777}
+  - {fileID: -4980508108102168660}
+  - {fileID: -7792522815082058078}
+  - {fileID: 6962156174885907114}
+  - {fileID: -8685941994757673970}
+  - {fileID: -8429360146581296137}
+  - {fileID: -6416257560912553468}
+  - {fileID: 2165480694701673173}
+  - {fileID: 7033231004461372283}
+  - {fileID: -1980107183083807727}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -437412818487720875}
+  - {fileID: 5927059152536829483}
   StringsBanks:
-  - {fileID: -2302897444097025451}
-  cacheTime: 638673717412203646
+  - {fileID: 8194533627953500299}
+  cacheTime: 638673726653709830
   cacheVersion: 131620
 --- !u!114 &332972471928162209
 MonoBehaviour:
@@ -240,6 +425,53 @@ MonoBehaviour:
   - Name: Desktop
     Value: 341728
   Exists: 1
+--- !u!114 &1952323982715942730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: secrets-fmod-project/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638673726653709830
+  FileSizes:
+  - Name: Desktop
+    Value: 445440
+  Exists: 1
+--- !u!114 &2165480694701673173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Door/DoorClose
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Door/DoorClose
+  Guid:
+    Data1: -1745712367
+    Data2: 1266850266
+    Data3: 1396266385
+    Data4: -527908691
+  Banks:
+  - {fileID: 1952323982715942730}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3518389984227549864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +553,53 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 365
+--- !u!114 &5355911311975638777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/CreepyNote
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/CreepyNote
+  Guid:
+    Data1: -957653926
+    Data2: 1262266076
+    Data3: 1088787593
+    Data4: -1692349601
+  Banks:
+  - {fileID: -5213327746837597326}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 83069
+--- !u!114 &5927059152536829483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: secrets-fmod-project/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638673726652315744
+  FileSizes:
+  - Name: Desktop
+    Value: 1486
+  Exists: 1
 --- !u!114 &6062495317262126012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +627,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 83069
+--- !u!114 &6962156174885907114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerFootsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerFootsteps
+  Guid:
+    Data1: -460332647
+    Data2: 1121309330
+    Data3: 204147618
+    Data4: -1794748145
+  Banks:
+  - {fileID: 1952323982715942730}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 365
+--- !u!114 &7033231004461372283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Door/DoorSlam
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Door/DoorSlam
+  Guid:
+    Data1: 920815845
+    Data2: 1151739623
+    Data3: 602070196
+    Data4: 720669457
+  Banks:
+  - {fileID: 1952323982715942730}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1400
 --- !u!114 &7816831685820971315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,6 +708,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+--- !u!114 &8194533627953500299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: secrets-fmod-project/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638673726652315744
+  FileSizes:
+  - Name: Desktop
+    Value: 1434
+  Exists: 1
 --- !u!114 &9014604801636822337
 MonoBehaviour:
   m_ObjectHideFlags: 0

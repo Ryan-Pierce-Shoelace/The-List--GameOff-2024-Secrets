@@ -8,7 +8,7 @@ namespace Horror.Chores
 	public class ChoreDataSO : ScriptableObject
 	{
 		public string ID;
-		public string ChoreName;
+		public string ChoreName = "Chore Name Not Found";
 		public List<ChoreDataSO> RequiredChores;
 		
 		public List<ChoreDataSO> ChoresToUnhide; 

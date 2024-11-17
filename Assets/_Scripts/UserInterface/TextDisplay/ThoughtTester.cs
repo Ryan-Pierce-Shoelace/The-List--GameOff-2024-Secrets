@@ -1,7 +1,7 @@
 using UnityEngine;
 using Utilities;
 
-namespace UserInterface.Text_Display
+namespace Horror.UserInterface.TextDisplay
 {
 	public class ThoughtTester : MonoBehaviour
 	{

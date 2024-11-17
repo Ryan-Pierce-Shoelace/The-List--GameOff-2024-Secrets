@@ -49,8 +49,7 @@ namespace Interaction.PlayerInteraction
         private async Task RunInteractAnimation(string animationName, float duration)
         {
             animator.Play(animationName);
-
-
+            
             // Calculate playback speed to fit the desired duration
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
             float originalDuration = stateInfo.length;

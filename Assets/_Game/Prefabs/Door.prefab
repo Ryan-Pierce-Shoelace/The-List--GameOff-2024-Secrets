@@ -50,6 +50,7 @@ MonoBehaviour:
   RootRoom: {fileID: 0}
   LinkKey: {fileID: 0}
   exitPoint: {fileID: 2081519391431098995}
+  closedDoor: {fileID: 8339808175320638023}
 --- !u!61 &1046657317466752441
 BoxCollider2D:
   m_ObjectHideFlags: 0

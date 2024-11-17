@@ -10,8 +10,10 @@ namespace Horror.RoomNavigation
         public RoomLinkKey LinkKey;
 
         [SerializeField] private Transform exitPoint;
+        [SerializeField] private GameObject closedDoor;
 
         public Vector2 DoorExitPos => exitPoint.position;
+        public bool IsDoorClosed => closedDoor.activeSelf;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -26,6 +28,12 @@ namespace Horror.RoomNavigation
             {
                 navigator.CurrentDoorway = null;
             }
+        }
+        
+
+        public void SetDoorActiveState(bool state)
+        {
+            closedDoor.SetActive(state);
         }
     }
 }
