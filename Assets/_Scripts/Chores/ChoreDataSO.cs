@@ -10,15 +10,16 @@ namespace Horror.Chores
 		public string ID;
 		public string ChoreName = "Chore Name Not Found";
 		public List<ChoreDataSO> RequiredChores;
-		
-		public List<ChoreDataSO> ChoresToUnhide; 
+
+		public List<ChoreDataSO> ChoresToUnhide;
 		public bool StartsHidden = false;
 
 		public int CurrentCount { get; private set; }
 		public int RequiredCount = 1;
-		
+
 		public bool IsTutorialChore => isTutorialChore;
 		[SerializeField] private bool isTutorialChore = false;
+
 
 		private void Awake()
 		{
@@ -26,11 +27,12 @@ namespace Horror.Chores
 			ChoresToUnhide = new List<ChoreDataSO>();
 			Reset();
 		}
-		
+
 		public void Reset()
 		{
 			CurrentCount = 0;
 		}
+
 
 		public void SetRequiredCount(int count)
 		{
@@ -47,7 +49,7 @@ namespace Horror.Chores
 			{
 				ChoreEvents.CompleteChore(ID);
 				if (ChoresToUnhide is not { Count: > 0 }) return;
-				
+
 				foreach (ChoreDataSO chore in ChoresToUnhide)
 				{
 					ChoreEvents.UnhideChore(chore.ID);

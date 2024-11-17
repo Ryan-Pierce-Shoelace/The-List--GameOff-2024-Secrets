@@ -1,3 +1,4 @@
+using System.Linq;
 using Horror.Chores;
 using RyanPierce.Events;
 using UnityEngine;
@@ -34,15 +35,14 @@ namespace Interaction.InteractionCore
                 return false;
             }
 
-            for(int i = 0; i < inventoryRequirements.Length; i++)
+            bool isChoreStateValid = choreProgressor.GetChoreState() == ChoreState.Available || choreProgressor.GetChoreState() == ChoreState.Completed;
+
+            if (choreProgressor != null && isChoreStateValid)
             {
-                if (!interactionManager.HasObject(inventoryRequirements[i]))
-                {
-                    return false; // did not have item
-                }
+                return inventoryRequirements.All(t => interactionManager.HasObject(t));
             }
 
-            return true;
+            return false;
         }
         public virtual void Interact()
         {

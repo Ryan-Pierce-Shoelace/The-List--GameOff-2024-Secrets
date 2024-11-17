@@ -8,6 +8,8 @@ namespace Horror.Chores
 {
 	public class ChoreManager : MonoBehaviour
 	{
+		public static ChoreManager Instance;
+		
 		[FormerlySerializedAs("currentDayPlan")] [SerializeField]
 		public DayPlan CurrentDayPlan;
 
@@ -24,6 +26,11 @@ namespace Horror.Chores
 			{
 				SetDayPlan(CurrentDayPlan);
 			}
+
+			if (Instance == null)
+			{
+				Instance = this;
+			}
 		}
 
 		private void SubscribeToEvents()
@@ -31,7 +38,7 @@ namespace Horror.Chores
 			ChoreEvents.OnChoreCompleted += HandleChoreCompleted;
 			ChoreEvents.OnChoreAdvanced += ProgressChore;
 			ChoreEvents.OnDayReset += ResetChores;
-			ChoreEvents.OnChoreUnhidden += HandleChoreUnhidden; 
+			ChoreEvents.OnChoreUnhidden += HandleChoreUnhidden;
 		}
 
 		private void UnsubscribeToEvents()
@@ -39,7 +46,7 @@ namespace Horror.Chores
 			ChoreEvents.OnChoreCompleted -= HandleChoreCompleted;
 			ChoreEvents.OnChoreAdvanced -= ProgressChore;
 			ChoreEvents.OnDayReset -= ResetChores;
-			ChoreEvents.OnChoreUnhidden -= HandleChoreUnhidden; 
+			ChoreEvents.OnChoreUnhidden -= HandleChoreUnhidden;
 		}
 
 
@@ -68,14 +75,17 @@ namespace Horror.Chores
 
 
 		#region State Handlers
+
 		private void HandleChoreCompleted(string choreId)
 		{
 			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
 
 			choreStates[chore] = ChoreState.Completed;
+	
 			UpdateChoreStates();
 		}
-		private void HandleChoreUnhidden(string choreId) 
+
+		private void HandleChoreUnhidden(string choreId)
 		{
 			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
 			if (choreStates[chore] != ChoreState.Hidden) return;
@@ -84,6 +94,7 @@ namespace Horror.Chores
 			choreStates[chore] = hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available;
 			UpdateChoreStates();
 		}
+
 		private void ProgressChore(string choreId)
 		{
 			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
@@ -95,11 +106,6 @@ namespace Horror.Chores
 
 		#endregion
 
-	
-
-		
-		
-		
 
 		private void UpdateChoreStates()
 		{
@@ -118,9 +124,9 @@ namespace Horror.Chores
 				return false;
 			}
 
-			return chore.RequiredChores.Any(requiredChore => 
-				!requiredChore || 
-				!choreIdLookup.ContainsKey(requiredChore.ID) || 
+			return chore.RequiredChores.Any(requiredChore =>
+				!requiredChore ||
+				!choreIdLookup.ContainsKey(requiredChore.ID) ||
 				choreStates[choreIdLookup[requiredChore.ID]] != ChoreState.Completed);
 		}
 
