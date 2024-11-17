@@ -110,12 +110,25 @@ namespace Horror.Chores
 
 		private void UpdateChoreStates()
 		{
-			foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
+			bool statesChanged;
+			do
 			{
-				if (choreStates[chore.ID] == ChoreState.Completed) continue;
+				statesChanged = false;
+				foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
+				{
+					if (choreStates[chore.ID] == ChoreState.Completed)
+						continue;
 
-				choreStates[chore.ID] = HasUncompletedRequirements(chore) ? ChoreState.Locked : ChoreState.Available;
-			}
+					ChoreState oldState = choreStates[chore.ID];
+					ChoreState newState = HasUncompletedRequirements(chore) ? ChoreState.Locked : ChoreState.Available;
+
+					if (oldState != newState)
+					{
+						choreStates[chore.ID] = newState;
+						statesChanged = true;
+					}
+				}
+			} while (statesChanged);
 		}
 
 

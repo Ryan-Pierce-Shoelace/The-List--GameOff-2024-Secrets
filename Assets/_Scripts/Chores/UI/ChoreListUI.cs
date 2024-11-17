@@ -222,20 +222,17 @@ namespace Horror.Chores.UI
 
 			ShowTemporarily();
 
-			if (isVisible)
-			{
-				entry.SetState(ChoreState.Completed);
-				AudioManager.Instance.PlayOneShot(writingSound);
+	
+			entry.SetState(ChoreState.Completed);
+			AudioManager.Instance.PlayOneShot(writingSound);
 
-				if (entry.IsTutorial && tutorialEntries.TryGetValue(choreId, out var tutorialEntry))
-				{
-					processingTutorials.Add(choreId);
-					StartCoroutine(RemoveTutorialChore(choreId, tutorialEntry.Entry, tutorialEntry.Group));
-				}
-			}
-			else
+		
+			UpdateAllEntryStates();
+
+			if (entry.IsTutorial && tutorialEntries.TryGetValue(choreId, out var tutorialEntry))
 			{
-				StartCoroutine(DelayedChoreCompletion(entry));
+				processingTutorials.Add(choreId);
+				StartCoroutine(RemoveTutorialChore(choreId, tutorialEntry.Entry, tutorialEntry.Group));
 			}
 		}
 
@@ -245,29 +242,40 @@ namespace Horror.Chores.UI
 			entry.SetState(ChoreState.Completed);
 			penStrokePlayer?.Play();
 		}
+		
+		private void UpdateAllEntryStates()
+		{
+			foreach ((string choreId, ChoreListEntry entry) in choreEntries)
+			{
+				if (choreManager.GetChoreById(choreId) is not { } chore) continue;
+				ChoreState state = choreManager.GetChoreState(chore);
+				entry.SetState(state);
+			}
+		}
+
 
 
 		private void HandleChoreUnhidden(string choreId)
 		{
-			ChoreDataSO chore;
 			if (choreEntries.ContainsKey(choreId))
 			{
 				if (choreEntries.TryGetValue(choreId, out ChoreListEntry entry))
 				{
-					chore = choreManager.GetChoreById(choreId);
+					var chore = choreManager.GetChoreById(choreId);
 					if (chore)
 					{
 						entry.SetState(choreManager.GetChoreState(chore));
+						UpdateAllEntryStates(); 
 					}
 				}
-
 				return;
 			}
 
-			chore = choreManager.GetChoreById(choreId);
-			if (chore)
+			var unhiddenChore = choreManager.GetChoreById(choreId);
+			if (unhiddenChore)
 			{
-				CreateChoreEntry(chore);
+				CreateChoreEntry(unhiddenChore);
+				UpdateAllEntryStates();
 			}
 		}
 
