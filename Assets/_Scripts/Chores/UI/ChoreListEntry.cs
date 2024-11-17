@@ -32,6 +32,7 @@ namespace Horror.Chores.UI
 		private Color originalColor;
 		private Vector3 orignalPosition;
 		private Sequence horrorSequence;
+		private bool crossedOff;
 
 		private void Awake()
 		{
@@ -39,6 +40,7 @@ namespace Horror.Chores.UI
 
 			strikethrough.fillAmount = 0;
 			strikethrough.transform.localRotation = Quaternion.identity;
+			crossedOff = false;
 		}
 
 		private void OnEnable()
@@ -92,7 +94,10 @@ namespace Horror.Chores.UI
 					HandleAvailableState();
 					break;
 				case ChoreState.Completed:
-					HandleCompletedState();
+					if(!crossedOff)
+					{
+                        HandleCompletedState();
+                    }
 					break;
 			}
 		}
@@ -132,12 +137,13 @@ namespace Horror.Chores.UI
 			completionSequence.Append(
 				strikethrough.transform.DORotate(new Vector3(0, 0, randomOffset), strikethroughDuration * 0.3f)
 			);
-
 			completionSequence.Append(
 				DOTween.To(() => strikethrough.fillAmount, x => strikethrough.fillAmount = x, 1f, strikethroughDuration)
 					.SetEase(Ease.OutQuad)
 			);
-		}
+
+            crossedOff = true;
+        }
 		
 		private void HandleHorrorEffect(string choreId, HorrorEffectData effectData)
 		{
