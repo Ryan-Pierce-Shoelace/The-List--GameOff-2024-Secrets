@@ -8,10 +8,20 @@ namespace Interaction.PlayerInteraction
     {
         [SerializeField] private InteractionManager interactionManager;
 
-        [SerializeField] private List<InteractObjectSO> dayOneObjects;
         private void Start()
         {
-            interactionManager.InitDailyInventory(dayOneObjects);
+            PickupInteractable[] pickups = FindObjectsOfType<PickupInteractable>();
+            List<InteractObjectSO> scenePickups = new List<InteractObjectSO>();
+
+            for (int i = 0; i < pickups.Length; i++)
+            {
+                if (scenePickups.Contains(pickups[i].GetInteractableObject()))
+                    continue;
+
+                scenePickups.Add(pickups[i].GetInteractableObject());
+            }
+
+            interactionManager.InitDailyInventory(scenePickups);
         }
     }
 }

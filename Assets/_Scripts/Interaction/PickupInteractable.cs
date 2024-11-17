@@ -4,6 +4,8 @@ namespace Interaction
 {
     public class PickupInteractable : CleanInteractable
     {
+
+
         [SerializeField] private bool removeOnPickup;
         public override void Interact()
         {

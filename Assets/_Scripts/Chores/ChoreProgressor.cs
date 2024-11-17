@@ -6,6 +6,7 @@ namespace Horror.Chores
     {
 	    [SerializeField] private ChoreDataSO chore;
 
+		public string GetChoreID() => chore.ID;
 	    public ChoreState GetChoreState()
 	    {
 		    return chore == null ? ChoreState.Hidden : ChoreManager.Instance.GetChoreState(chore);

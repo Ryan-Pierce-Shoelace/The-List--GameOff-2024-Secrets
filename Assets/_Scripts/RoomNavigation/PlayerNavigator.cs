@@ -63,8 +63,11 @@ namespace Horror.RoomNavigation
             transform.position = nextDoor.DoorExitPos + (Vector2.up * doorWayDepth);
 
             RoomData newRoom = nextDoor.RootRoom;
+
+            newRoom.OnEnterRoom();
             newRoom.GetRoomCompletion(out int completed, out int total);
             StaticEvents.DisplayRoomData(newRoom.RoomName, completed, total);
+
 
             Task fadeIn = FadeTransition.Instance.ToggleFadeTransition(false, .3f);
             Task walkIn = movement.AutoWalkToPosition(nextDoor.DoorExitPos);
@@ -75,7 +78,7 @@ namespace Horror.RoomNavigation
 
             await Task.WhenAll(moveIntoRoom);
 
-            newRoom.OnEnterRoom();
+            
             movement.ToggleInput(true);
             input.EnableGameplayInput();
             transitioning = false;
