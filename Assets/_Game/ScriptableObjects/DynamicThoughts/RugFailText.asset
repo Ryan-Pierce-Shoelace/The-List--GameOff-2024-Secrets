@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2f4a74dbf71b64597e140f45b1bc24, type: 3}
   m_Name: RugFailText
   m_EditorClassIdentifier: 
-  possibleThoughts: []
+  possibleThoughts:
+  - It is not time to fix this.
+  - I need to get my bearings first.
+  - This isnt on my list.
