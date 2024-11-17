@@ -4,6 +4,7 @@ using RyanPierce.Events;
 using System.Collections.Generic;
 using UI.Thoughts;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Horror.RoomNavigation
 {
@@ -13,10 +14,10 @@ namespace Horror.RoomNavigation
         public class RoomEntryTrigger
         {
             public ChoreDataSO[] ChoresRequiredForActivation;
-            public VoidEvent activateEvent;
-            public DynamicThoughtSO dynamicThought;
-            public ChoreProgressor choreProgressor;
-            public bool triggerOneShot = false;
+            [FormerlySerializedAs("activateEvent")] public VoidEvent ActivateEvent;
+            [FormerlySerializedAs("dynamicThought")] public DynamicThoughtSO DynamicThought;
+            [FormerlySerializedAs("choreProgressor")] public ChoreProgressor ChoreProgressor;
+            [FormerlySerializedAs("triggerOneShot")] public bool TriggerOneShot = false;
         }
 
         public string RoomName;
@@ -59,30 +60,30 @@ namespace Horror.RoomNavigation
                 if (!allChoresFinished)
                     continue;
 
-                if (currentTriggers[i].activateEvent != null)
+                if (currentTriggers[i].ActivateEvent != null)
                 {
-                    currentTriggers[i].activateEvent?.Raise();
+                    currentTriggers[i].ActivateEvent?.Raise();
                 }
 
-                if (currentTriggers[i].choreProgressor != null)
+                if (currentTriggers[i].ChoreProgressor != null)
                 {
-                    ChoreState progressorState = currentTriggers[i].choreProgressor.GetChoreState();
+                    ChoreState progressorState = currentTriggers[i].ChoreProgressor.GetChoreState();
                     bool isChoreStateValid = progressorState == ChoreState.Available || progressorState == ChoreState.Completed;
 
                     if (isChoreStateValid)
                     {
-                        currentTriggers[i].choreProgressor?.ProgressChore();
+                        currentTriggers[i].ChoreProgressor?.ProgressChore();
                     }
                 }
 
-                if (currentTriggers[i].dynamicThought != null)
+                if (currentTriggers[i].DynamicThought != null)
                 {
-                    currentTriggers[i].dynamicThought.PlayThought();
+                    currentTriggers[i].DynamicThought.PlayThought();
                 }
 
                 SearchRoomChores();
 
-                if (currentTriggers[i].triggerOneShot)
+                if (currentTriggers[i].TriggerOneShot)
                 {
                     currentTriggers.RemoveAt(i);
                 }
@@ -95,16 +96,16 @@ namespace Horror.RoomNavigation
             numChoresComplete = 0;
             numTotalChores = 0;
 
-            for (int i = 0; i < roomChores.Length; i++)
+            foreach (ChoreProgressor t in roomChores)
             {
-                if (searchedChoreID.Contains(roomChores[i].GetChoreID()))
+                if (searchedChoreID.Contains(t.GetChoreID()))
                 {
                     continue;
                 }
 
-                searchedChoreID.Add(roomChores[i].GetChoreID());
+                searchedChoreID.Add(t.GetChoreID());
                 
-                switch (roomChores[i].GetChoreState())
+                switch (t.GetChoreState())
                 {
                     case ChoreState.Available:
                         numTotalChores++;

@@ -39,6 +39,7 @@ namespace Horror.Chores.UI
 		private bool isVisible;
 		private Tween currentTween;
 		private Coroutine autoCloseCoroutine;
+		private IEnumerator delayFinishCoroutine;
 
 		private Dictionary<string, ChoreListEntry> choreEntries;
 		private Dictionary<string, (ChoreListEntry Entry, CanvasGroup Group)> tutorialEntries;
@@ -220,29 +221,35 @@ namespace Horror.Chores.UI
 		{
 			if (!choreEntries.TryGetValue(choreId, out ChoreListEntry entry)) return;
 
-			ShowTemporarily();
-
-	
-			entry.SetState(ChoreState.Completed);
-			AudioManager.Instance.PlayOneShot(writingSound);
-
-		
-			UpdateAllEntryStates();
-
-			if (entry.IsTutorial && tutorialEntries.TryGetValue(choreId, out var tutorialEntry))
+			if (entry.IsTutorial)
 			{
+				ShowTemporarily();
+
+				tutorialEntries.TryGetValue(choreId, out (ChoreListEntry Entry, CanvasGroup Group) tutorialEntry);
+
+				entry.SetState(ChoreState.Completed);
+				penStrokePlayer?.Play();
+				UpdateAllEntryStates();
 				processingTutorials.Add(choreId);
 				StartCoroutine(RemoveTutorialChore(choreId, tutorialEntry.Entry, tutorialEntry.Group));
+				return;
 			}
+
+			StartCoroutine(CompleteChore(entry, choreId));
 		}
 
-		private IEnumerator DelayedChoreCompletion(ChoreListEntry entry)
+		private IEnumerator CompleteChore(ChoreListEntry choreEntry, string choreId)
 		{
-			yield return new WaitForSeconds(animationDuration + .1f);
-			entry.SetState(ChoreState.Completed);
+			ShowTemporarily();
+
+			yield return new WaitForSeconds(animationDuration + 1f);
+
+			choreEntry.SetState(ChoreState.Completed);
 			penStrokePlayer?.Play();
+			UpdateAllEntryStates();
 		}
-		
+
+
 		private void UpdateAllEntryStates()
 		{
 			foreach ((string choreId, ChoreListEntry entry) in choreEntries)
@@ -254,32 +261,29 @@ namespace Horror.Chores.UI
 		}
 
 
-
 		private void HandleChoreUnhidden(string choreId)
 		{
 			if (choreEntries.ContainsKey(choreId))
 			{
 				if (choreEntries.TryGetValue(choreId, out ChoreListEntry entry))
 				{
-					var chore = choreManager.GetChoreById(choreId);
-					if (chore)
-					{
-						entry.SetState(choreManager.GetChoreState(chore));
-						UpdateAllEntryStates(); 
-					}
+					ChoreDataSO chore = choreManager.GetChoreById(choreId);
+					if (!chore) return;
+					entry.SetState(choreManager.GetChoreState(chore));
+					UpdateAllEntryStates();
 				}
+
 				return;
 			}
 
-			var unhiddenChore = choreManager.GetChoreById(choreId);
-			if (unhiddenChore)
-			{
-				CreateChoreEntry(unhiddenChore);
-				UpdateAllEntryStates();
-			}
+			ChoreDataSO unhiddenChore = choreManager.GetChoreById(choreId);
+			if (!unhiddenChore) return;
+
+			CreateChoreEntry(unhiddenChore);
+			UpdateAllEntryStates();
 		}
 
-        private IEnumerator RemoveTutorialChore(string choreId, ChoreListEntry entry, CanvasGroup group)
+		private IEnumerator RemoveTutorialChore(string choreId, ChoreListEntry entry, CanvasGroup group)
 		{
 			if (!entry)
 			{
@@ -358,7 +362,5 @@ namespace Horror.Chores.UI
 				input.ToggleListEvent -= ToggleList;
 			}
 		}
-
-        
-    }
+	}
 }

@@ -63,7 +63,7 @@ namespace Horror.UserInterface.TextDisplay
 
         private void DisplayInteractable(string interactableName)
         {
-            if (interactableNameText == null)
+            if (!interactableNameText)
                 return;
 
             interactableNameText.alpha = string.IsNullOrEmpty(interactableName) ? 0f : 1f;
@@ -122,7 +122,7 @@ namespace Horror.UserInterface.TextDisplay
 
         private void DisplayThought(string thought)
         {
-            if (thoughtText == null) return;
+            if (!thoughtText) return;
 
             if (currentThoughtDisplayCoroutine != null)
             {

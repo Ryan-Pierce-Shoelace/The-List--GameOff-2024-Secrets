@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{51e8a570-c5e3-4503-8faf-df5fdcdf70bd}">
 		<property name="assetPath">
-			<value>Pouring Cereal.mp3</value>
+			<value>FX/Objects/Pouring Cereal.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

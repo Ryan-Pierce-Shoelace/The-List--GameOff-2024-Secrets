@@ -7,6 +7,9 @@ namespace Interaction.InteractionCore
         void Interact();
         InteractObjectSO GetInteractableObject();
         void TriggerFailedInteractionThought();
+
+        void TryTriggerSuccessInteractionThought();
+        
         void ToggleHighlight(bool toggle);
     }
 }

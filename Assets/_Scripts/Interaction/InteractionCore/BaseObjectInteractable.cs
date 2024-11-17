@@ -18,6 +18,7 @@ namespace Interaction.InteractionCore
 		[SerializeField] protected InteractionManager interactionManager;
 		[SerializeField] protected InteractObjectSO[] inventoryRequirements;
 
+		[SerializeField] protected DynamicThoughtSO successThought;
 		[SerializeField] protected DynamicThoughtSO failThought;
 
 		[SerializeField] protected SoundConfig interactSFX;
@@ -75,12 +76,21 @@ namespace Interaction.InteractionCore
 
 		public void ToggleHighlight(bool toggleOn)
 		{
-			if(highlightObject != null)
+			if(highlightObject)
 			{
                 highlightObject.SetActive(toggleOn);
             }
 		}
 		public InteractObjectSO GetInteractableObject() => interactObjectSO;
+
+		public virtual void TryTriggerSuccessInteractionThought()
+		{
+			if (successThought != null)
+			{
+				successThought.PlayThought();
+				return;
+			}
+		}
 
 		public virtual void TriggerFailedInteractionThought()
 		{

@@ -182,6 +182,7 @@ MonoBehaviour:
   interactionManager: {fileID: 0}
   inventoryRequirements: []
   failThought: {fileID: 0}
+  interactSFX: {fileID: 0}
   triggerThought: {fileID: 0}
   triggerSFX: {fileID: 11400000, guid: 9fb6442f79f66754d883be8e75c6d566, type: 2}
 --- !u!1 &7323395706735197080
