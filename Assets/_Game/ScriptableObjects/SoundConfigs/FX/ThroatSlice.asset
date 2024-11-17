@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6e7505549698d943a0ac22063159310, type: 3}
-  m_Name: PlayerFootSteps
+  m_Name: ThroatSlice
   m_EditorClassIdentifier: 
   eventReference:
     Guid:
-      Data1: -460332647
-      Data2: 1121309330
-      Data3: 204147618
-      Data4: -1794748145
-    Path: event:/SFX/Player/PlayerFootsteps
+      Data1: -57273606
+      Data2: 1153738769
+      Data3: -13234261
+      Data4: -1443540255
+    Path: event:/SFX/Misc/ThroatSlice
   is3D: 0
-  defaultVolume: 0.8
+  defaultVolume: 1
   parameters: []

@@ -40,6 +40,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 728832
   Exists: 1
+--- !u!114 &-7886376912823586996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: secrets-fmod-project/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638673881255355939
+  FileSizes:
+  - Name: Desktop
+    Value: 282144
+  Exists: 1
 --- !u!114 &-6304911513771571874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +141,53 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 83069
+--- !u!114 &-4229814199882077851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/PhoneButtonPressed
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/PhoneButtonPressed
+  Guid:
+    Data1: -1476306724
+    Data2: 1302007415
+    Data3: -2077746533
+    Data4: 1446974758
+  Banks:
+  - {fileID: -7886376912823586996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 200
+--- !u!114 &-3297174340202047225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: secrets-fmod-project/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638673881251876205
+  FileSizes:
+  - Name: Desktop
+    Value: 1486
+  Exists: 1
 --- !u!114 &-2302897444097025451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +207,26 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1306
+  Exists: 1
+--- !u!114 &-1913249926369430793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: secrets-fmod-project/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638673881251881319
+  FileSizes:
+  - Name: Desktop
+    Value: 1158
   Exists: 1
 --- !u!114 &-437412818487720875
 MonoBehaviour:
@@ -174,24 +261,21 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -2302897444097025451}
-  - {fileID: -437412818487720875}
-  - {fileID: 1621732825041300321}
-  - {fileID: -8114974933586623256}
+  - {fileID: -1913249926369430793}
+  - {fileID: -3297174340202047225}
+  - {fileID: -7886376912823586996}
   EditorEvents:
-  - {fileID: 3518389984227549864}
-  - {fileID: 4565529804936185935}
-  - {fileID: -4632199487778577204}
-  - {fileID: 9014604801636822337}
-  - {fileID: -4572933540888698407}
-  - {fileID: 332972471928162209}
-  - {fileID: -6304911513771571874}
+  - {fileID: 6602938727515415648}
+  - {fileID: 1080880339347947720}
+  - {fileID: 4833244902732723733}
+  - {fileID: -4229814199882077851}
+  - {fileID: 5073583346468117750}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -437412818487720875}
+  - {fileID: -3297174340202047225}
   StringsBanks:
-  - {fileID: -2302897444097025451}
-  cacheTime: 638673717412203646
+  - {fileID: -1913249926369430793}
+  cacheTime: 638673881255355939
   cacheVersion: 131620
 --- !u!114 &332972471928162209
 MonoBehaviour:
@@ -220,6 +304,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+--- !u!114 &1080880339347947720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerFootsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerFootsteps
+  Guid:
+    Data1: -460332647
+    Data2: 1121309330
+    Data3: 204147618
+    Data4: -1794748145
+  Banks:
+  - {fileID: -7886376912823586996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 365
 --- !u!114 &1621732825041300321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +432,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 365
+--- !u!114 &4833244902732723733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/DialTone
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/DialTone
+  Guid:
+    Data1: -265650732
+    Data2: 1335658594
+    Data3: 1820111490
+    Data4: 1536188913
+  Banks:
+  - {fileID: -7886376912823586996}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14256
+--- !u!114 &5073583346468117750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Misc/ThroatSlice
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Misc/ThroatSlice
+  Guid:
+    Data1: -57273606
+    Data2: 1153738769
+    Data3: -13234261
+    Data4: -1443540255
+  Banks:
+  - {fileID: -7886376912823586996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
 --- !u!114 &6062495317262126012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +513,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 83069
+--- !u!114 &6602938727515415648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Misc/Heartbeat
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Misc/Heartbeat
+  Guid:
+    Data1: 84313716
+    Data2: 1225134907
+    Data3: -237297474
+    Data4: 68016445
+  Banks:
+  - {fileID: -7886376912823586996}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8045
 --- !u!114 &7816831685820971315
 MonoBehaviour:
   m_ObjectHideFlags: 0
