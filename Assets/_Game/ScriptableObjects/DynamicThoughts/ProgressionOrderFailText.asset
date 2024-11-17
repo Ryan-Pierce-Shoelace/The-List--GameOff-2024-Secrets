@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2f4a74dbf71b64597e140f45b1bc24, type: 3}
+  m_Name: ProgressionOrderFailText
+  m_EditorClassIdentifier: 
+  possibleThoughts:
+  - One step at a time. Like the footsteps that live above.
+  - Some tasks need to wait until their time.
+  - Not yet. The list keeps us safe. It keeps us sane.
+  - This comes later. Everything will come in due time..
+  - I finished this task earlier, no need to do it again. Or did I?
+  - Something is stopping me? But what.
