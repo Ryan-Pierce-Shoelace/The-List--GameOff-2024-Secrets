@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: PickUpBeer
   ChoreName: Clean Up Beer Bottles
-  RequiredChores:
+  requiredChores:
   - {fileID: 11400000, guid: f15b09040c01f084d83a648abe336844, type: 2}
-  ChoresToUnhide: []
+  choresToUnhide: []
   StartsHidden: 1
   RequiredCount: 3
   isTutorialChore: 0

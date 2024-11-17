@@ -9,9 +9,13 @@ namespace Horror.Chores
 	{
 		public string ID;
 		public string ChoreName = "Chore Name Not Found";
-		[SerializeField] public List<ChoreDataSO> RequiredChores;
-
-		[SerializeField] public List<ChoreDataSO> ChoresToUnhide;
+		[SerializeField] private List<ChoreDataSO> requiredChores;
+		[SerializeField] private List<ChoreDataSO> choresToUnhide;
+		
+		public List<ChoreDataSO> RequiredChores => requiredChores;
+		public List<ChoreDataSO> ChoresToUnhide => choresToUnhide;
+		
+		
 		public bool StartsHidden = false;
 
 		public int CurrentCount { get; private set; }

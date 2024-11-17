@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: FixRug
   ChoreName: Fix The Rug
-  RequiredChores:
-  - {fileID: 11400000, guid: 3485cb70206fa724f8c5d1900d5fb949, type: 2}
+  requiredChores:
   - {fileID: 11400000, guid: a613dcd481c36884c906a8aa90c9e4fe, type: 2}
-  ChoresToUnhide:
+  - {fileID: 11400000, guid: 3485cb70206fa724f8c5d1900d5fb949, type: 2}
+  choresToUnhide:
   - {fileID: 11400000, guid: 49402d0e04b3d2d498d188d09b22ffed, type: 2}
   StartsHidden: 0
   RequiredCount: 1
