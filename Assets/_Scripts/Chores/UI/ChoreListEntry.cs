@@ -1,5 +1,6 @@
 using DG.Tweening;
 using Horror.Chores.HorrorEffect;
+using Shoelace.Audio.XuulSound;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -141,13 +142,13 @@ namespace Horror.Chores.UI
 				DOTween.To(() => strikethrough.fillAmount, x => strikethrough.fillAmount = x, 1f, strikethroughDuration)
 					.SetEase(Ease.OutQuad)
 			);
-
+			
             crossedOff = true;
         }
 		
 		private void HandleHorrorEffect(string choreId, HorrorEffectData effectData)
 		{
-			if (choreData == null || choreData.ID != choreId) return;
+			if (!choreData || choreData.ID != choreId) return;
 			
 			if (string.IsNullOrEmpty(originalText))
 			{

@@ -15,9 +15,9 @@ namespace Horror
             if(requiredChores.Count > 0)
             {
                 bool allComplete = true;
-                for(int i = 0; i < requiredChores.Count; i++)
+                foreach (ChoreDataSO t in requiredChores)
                 {
-                    if (!requiredChores[i].IsCompleted())
+                    if (!t.IsCompleted())
                     {
                         allComplete = false;
                     }
@@ -28,9 +28,9 @@ namespace Horror
             }
 
 
-            for(int i = 0;i < choresToUnhide.Count; i++)
+            foreach (ChoreDataSO t in choresToUnhide)
             {
-                ChoreEvents.UnhideChore(choresToUnhide[i].ID);
+                ChoreEvents.UnhideChore(t.ID);
             }
         }
     }

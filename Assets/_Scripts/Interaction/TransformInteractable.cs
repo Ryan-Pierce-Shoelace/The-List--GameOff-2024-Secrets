@@ -1,58 +1,78 @@
 using DG.Tweening;
 using Interaction.InteractionCore;
+using UI.Thoughts;
 using UnityEngine;
+
 namespace Interaction
 {
-    public class TransformInteractable : BaseObjectInteractable
-    {
-        [SerializeField] private Transform target;
-        [SerializeField] private float transformSpeed = .5f;
-        [SerializeField] private Ease transformEasing = Ease.Linear;
+	public class TransformInteractable : BaseObjectInteractable
+	{
+		[SerializeField] private Transform target;
+		[SerializeField] private float transformSpeed = .5f;
+		[SerializeField] private Ease transformEasing = Ease.Linear;
 
-        [SerializeField] private bool cycle = false;
+		[Header("Cycle Settings")]
+		[SerializeField] protected DynamicThoughtSO unDoThoughtSO;
 
-        bool used;
+		[SerializeField] private bool cycle = false;
 
-        [SerializeField] private Vector3 newPosition;
-        [SerializeField] private Vector3 newEulerRotation;
-        [SerializeField] private Vector3 newScale;
+		bool used;
 
-        private Vector3 oldPosition;
-        private Vector3 oldEulerRotation;
-        private Vector3 oldScale;
+		[SerializeField] private Vector3 newPosition;
+		[SerializeField] private Vector3 newEulerRotation;
+		[SerializeField] private Vector3 newScale;
 
-        protected override void Start()
-        {
-            base.Start();
+		private Vector3 oldPosition;
+		private Vector3 oldEulerRotation;
+		private Vector3 oldScale;
 
-            oldPosition = target.localPosition;
-            oldEulerRotation = target.localEulerAngles;
-            oldScale = target.localScale;
+		protected override void Start()
+		{
+			base.Start();
 
-            used = false;
-        }
+			oldPosition = target.localPosition;
+			oldEulerRotation = target.localEulerAngles;
+			oldScale = target.localScale;
 
-        public override void Interact()
-        {
-            base.Interact();
+			used = false;
+		}
 
-            if(!used)
-            {
-                target.DOLocalMove(newPosition, transformSpeed).SetEase(transformEasing);
-                target.DOLocalRotate(newEulerRotation, transformSpeed).SetEase(transformEasing);
-                target.DOScale(newScale, transformSpeed).SetEase(transformEasing);
+		public override void Interact()
+		{
+			base.Interact();
 
-                if(!cycle)
-                    this.enabled = false;
-            }
-            else
-            {
-                target.DOLocalMove(oldPosition, transformSpeed).SetEase(transformEasing);
-                target.DOLocalRotate(oldEulerRotation, transformSpeed).SetEase(transformEasing);
-                target.DOScale(oldScale, transformSpeed).SetEase(transformEasing);
-            }
+			if (!used)
+			{
+				target.DOLocalMove(newPosition, transformSpeed).SetEase(transformEasing);
+				target.DOLocalRotate(newEulerRotation, transformSpeed).SetEase(transformEasing);
+				target.DOScale(newScale, transformSpeed).SetEase(transformEasing);
 
-            used = !used;
-        }
-    }
+				if (!cycle)
+					this.enabled = false;
+			}
+			else
+			{
+				target.DOLocalMove(oldPosition, transformSpeed).SetEase(transformEasing);
+				target.DOLocalRotate(oldEulerRotation, transformSpeed).SetEase(transformEasing);
+				target.DOScale(oldScale, transformSpeed).SetEase(transformEasing);
+			}
+
+			used = !used;
+		}
+
+		public override void TryTriggerSuccessInteractionThought()
+		{
+			if (!used)
+			{
+				base.TryTriggerSuccessInteractionThought();
+			}
+			else
+			{
+				if (unDoThoughtSO != null)
+				{
+					unDoThoughtSO.PlayThought();
+				}
+			}
+		}
+	}
 }

@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 477071484144116161, guid: 5b4293d59a48583439755a68f87de1f7, type: 3}
       propertyPath: m_Name
-      value: Interactable Variant
+      value: BeerBottle
       objectReference: {fileID: 0}
     - target: {fileID: 8193287473900788176, guid: 5b4293d59a48583439755a68f87de1f7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,6 +82,8 @@ MonoBehaviour:
   interactionEvent: {fileID: 0}
   interactionManager: {fileID: 11400000, guid: a7940d8b40bdaa84494e0547c161beb3, type: 2}
   inventoryRequirements: []
+  failThought: {fileID: 11400000, guid: 3b541c8489506ab42b3d84948889d35c, type: 2}
+  interactSFX: {fileID: 11400000, guid: d4af0ff22fb7755448067eb03116fa31, type: 2}
 --- !u!1 &7391244013739505388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8330931655863149914, guid: 5b4293d59a48583439755a68f87de1f7, type: 3}

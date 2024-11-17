@@ -33,6 +33,7 @@ namespace Interaction.PlayerInteraction
             if(currentInteractable.CanInteract())
             {
                 InteractTarget(currentInteractable);
+                currentInteractable.TryTriggerSuccessInteractionThought();
             }
             else
             {

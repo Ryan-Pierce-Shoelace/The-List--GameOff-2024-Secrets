@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Dog Bowl
   m_EditorClassIdentifier: 
   AnimationName: Interact
-  InteractionTime: 1
+  InteractionTime: 3

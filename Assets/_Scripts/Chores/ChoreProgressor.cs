@@ -10,7 +10,7 @@ namespace Horror.Chores
 		public string GetChoreID() => chore.ID;
 	    public ChoreState GetChoreState()
 	    {
-		    return chore == null ? ChoreState.Hidden : ChoreManager.Instance.GetChoreState(chore);
+		    return !chore ? ChoreState.Hidden : ChoreManager.Instance.GetChoreState(chore);
 	    }
 
 	    public void ProgressChore()
