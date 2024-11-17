@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Horror;
 using Interaction.InteractionCore;
 using UnityEngine;
 
@@ -10,15 +11,16 @@ namespace Interaction.PlayerInteraction
 
         private void Start()
         {
-            PickupInteractable[] pickups = FindObjectsOfType<PickupInteractable>();
+            PickupInteractable[] groundPickups = FindObjectsOfType<PickupInteractable>();
+            GUIItemPickup[] uiPickups = FindObjectsOfType<GUIItemPickup>();
             List<InteractObjectSO> scenePickups = new List<InteractObjectSO>();
 
-            for (int i = 0; i < pickups.Length; i++)
+            for (int i = 0; i < groundPickups.Length; i++)
             {
-                if (scenePickups.Contains(pickups[i].GetInteractableObject()))
+                if (scenePickups.Contains(groundPickups[i].GetInteractableObject()))
                     continue;
 
-                scenePickups.Add(pickups[i].GetInteractableObject());
+                scenePickups.Add(groundPickups[i].GetInteractableObject());
             }
 
             interactionManager.InitDailyInventory(scenePickups);

@@ -25,9 +25,9 @@ namespace Interaction
         {
             base.Start();
 
-            oldPosition = transform.localPosition;
-            oldEulerRotation = transform.localEulerAngles;
-            oldScale = transform.localScale;
+            oldPosition = target.localPosition;
+            oldEulerRotation = target.localEulerAngles;
+            oldScale = target.localScale;
 
             used = false;
         }

@@ -42,11 +42,13 @@ namespace Horror.Chores
 			ChoreEvents.OnChoreUnhidden += HandleChoreUnhidden;
 		}
 
-		private void UnsubscribeToEvents()
+        
+
+        private void UnsubscribeToEvents()
 		{
 			ChoreEvents.OnChoreCompleted -= HandleChoreCompleted;
 			ChoreEvents.OnChoreAdvanced -= ProgressChore;
-			ChoreEvents.OnDayReset -= ResetChores;
+            ChoreEvents.OnDayReset -= ResetChores;
 			ChoreEvents.OnChoreUnhidden -= HandleChoreUnhidden;
 		}
 
@@ -104,11 +106,10 @@ namespace Horror.Chores
 
 			chore.Increment();
 		}
+        #endregion
 
-		#endregion
 
-
-		private void UpdateChoreStates()
+        private void UpdateChoreStates()
 		{
 			bool statesChanged;
 			do

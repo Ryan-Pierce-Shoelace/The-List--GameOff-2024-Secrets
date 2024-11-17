@@ -279,7 +279,7 @@ namespace Horror.Chores.UI
 			}
 		}
 
-		private IEnumerator RemoveTutorialChore(string choreId, ChoreListEntry entry, CanvasGroup group)
+        private IEnumerator RemoveTutorialChore(string choreId, ChoreListEntry entry, CanvasGroup group)
 		{
 			if (!entry)
 			{
@@ -358,5 +358,7 @@ namespace Horror.Chores.UI
 				input.ToggleListEvent -= ToggleList;
 			}
 		}
-	}
+
+        
+    }
 }

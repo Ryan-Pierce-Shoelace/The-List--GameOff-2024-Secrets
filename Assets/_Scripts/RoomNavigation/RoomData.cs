@@ -1,5 +1,6 @@
 using Cinemachine;
 using Horror.Chores;
+using RyanPierce.Events;
 using System.Collections.Generic;
 using UI.Thoughts;
 using UnityEngine;
@@ -11,9 +12,11 @@ namespace Horror.RoomNavigation
         [System.Serializable]
         public class RoomEntryTrigger
         {
-            public ChoreDataSO ChoreRequiredForActivation;
+            public ChoreDataSO[] ChoresRequiredForActivation;
+            public VoidEvent activateEvent;
             public DynamicThoughtSO dynamicThought;
             public ChoreProgressor choreProgressor;
+            public bool triggerOneShot = false;
         }
 
         public string RoomName;
@@ -28,8 +31,13 @@ namespace Horror.RoomNavigation
 
         private void Start()
         {
-            roomChores = GetComponentsInChildren<ChoreProgressor>();
+            SearchRoomChores();
             currentTriggers = new List<RoomEntryTrigger>(enterRoomTriggers);
+        }
+
+        private void SearchRoomChores()
+        {
+            roomChores = GetComponentsInChildren<ChoreProgressor>(false);
         }
         public void OnEnterRoom()
         {
@@ -38,10 +46,23 @@ namespace Horror.RoomNavigation
                 if (currentTriggers[i] == null)
                     continue;
 
-                ChoreState requiredChoreState = ChoreManager.Instance.GetChoreState(currentTriggers[i].ChoreRequiredForActivation);
 
-                if (requiredChoreState != ChoreState.Completed)
+                bool allChoresFinished = true;
+                for (int j = 0; j < currentTriggers[i].ChoresRequiredForActivation.Length; j++)
+                {
+                    ChoreState requiredChoreState = ChoreManager.Instance.GetChoreState(currentTriggers[i].ChoresRequiredForActivation[j]);
+
+                    if (requiredChoreState != ChoreState.Completed)
+                        allChoresFinished = false;
+                }
+
+                if (!allChoresFinished)
                     continue;
+
+                if (currentTriggers[i].activateEvent != null)
+                {
+                    currentTriggers[i].activateEvent?.Raise();
+                }
 
                 if (currentTriggers[i].choreProgressor != null)
                 {
@@ -57,6 +78,13 @@ namespace Horror.RoomNavigation
                 if (currentTriggers[i].dynamicThought != null)
                 {
                     currentTriggers[i].dynamicThought.PlayThought();
+                }
+
+                SearchRoomChores();
+
+                if (currentTriggers[i].triggerOneShot)
+                {
+                    currentTriggers.RemoveAt(i);
                 }
             }
         }

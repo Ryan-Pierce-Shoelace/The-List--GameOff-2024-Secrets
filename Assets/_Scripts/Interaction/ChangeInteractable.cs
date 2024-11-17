@@ -39,7 +39,5 @@ namespace Interaction
                 targetRenderer.sprite = oldSprite;
             }
         }
-
-
     }
 }

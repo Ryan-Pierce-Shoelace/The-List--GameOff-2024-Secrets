@@ -14,11 +14,13 @@ namespace Horror.Chores
 
 		public static void CompleteChore(string choreId) => OnChoreCompleted?.Invoke(choreId);
 		public static void AdvanceChore(string choreId) => OnChoreAdvanced?.Invoke(choreId);
-		public static void ResetDay() => OnDayReset?.Invoke();
+        public static void ResetDay() => OnDayReset?.Invoke();
 		public static void ChangeDayPlan(DayPlan plan) => OnDayPlanChanged?.Invoke(plan);  
 		public static void UnhideChore(string choreId) => OnChoreUnhidden?.Invoke(choreId);
 		
 		public static void TriggerHorrorEffect(string choreId, HorrorEffectData effectData) 
 			=> OnChoreHorrorEffect?.Invoke(choreId, effectData);
-	}
+
+        
+    }
 }
