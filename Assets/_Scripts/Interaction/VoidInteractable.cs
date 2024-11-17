@@ -1,6 +1,6 @@
-using DayManagement;
 using Interaction.InteractionCore;
 using Shoelace.Audio.XuulSound;
+using UI.Thoughts;
 using UnityEngine;
 
 namespace Interaction

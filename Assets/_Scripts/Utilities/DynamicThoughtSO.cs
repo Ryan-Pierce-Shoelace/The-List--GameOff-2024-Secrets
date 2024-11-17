@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Utilities;
 
-namespace DayManagement
+namespace UI.Thoughts
 {
 	[CreateAssetMenu(fileName = "New Dynamic Thought", menuName = "HorrorGame/DynamicThought")]
 	public class DynamicThoughtSO : ScriptableObject

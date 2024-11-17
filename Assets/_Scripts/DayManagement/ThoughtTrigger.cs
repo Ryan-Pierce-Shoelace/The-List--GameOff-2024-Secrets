@@ -1,5 +1,6 @@
 using System;
 using Horror.RoomNavigation;
+using UI.Thoughts;
 using UnityEngine;
 
 namespace DayManagement

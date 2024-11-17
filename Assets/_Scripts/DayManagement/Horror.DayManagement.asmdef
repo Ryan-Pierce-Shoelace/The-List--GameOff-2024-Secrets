@@ -2,10 +2,10 @@
     "name": "Horror.DayManagement",
     "rootNamespace": "Horror",
     "references": [
-        "GUID:38430a1f53e9b784eaefbbb57d049b14",
         "GUID:87c40a64c6458204891c77fe6ee9e908",
         "GUID:473c160db7568e84aa33e314c9c090d9",
-        "GUID:446643001075db5438661ce9d9763d84"
+        "GUID:446643001075db5438661ce9d9763d84",
+        "GUID:38430a1f53e9b784eaefbbb57d049b14"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

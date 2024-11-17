@@ -1,7 +1,7 @@
 using System.Linq;
-using DayManagement;
 using Horror.Chores;
 using RyanPierce.Events;
+using UI.Thoughts;
 using UnityEngine;
 using Utilities;
 
