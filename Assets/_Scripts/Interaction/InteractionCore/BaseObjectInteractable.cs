@@ -52,7 +52,7 @@ namespace Interaction.InteractionCore
 			}
 
 
-			return true;
+			return false;
 		}
 
 		public virtual void Interact()
