@@ -12,14 +12,7 @@ namespace Horror.Chores.HorrorEffect
 
 		private void Awake()
 		{
-			horrorEffect = new HorrorEffectData
-			{
-				OverrideText = horrorText,
-				Duration = 3f,
-				TextColor = Color.red,
-				ShakeAmount = 5f,
-				ShakeVibrato = 10
-			};
+			horrorEffect = new HorrorEffectData(horrorText, 3f);
 		}
 
 		[Button]

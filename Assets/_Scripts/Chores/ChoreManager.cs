@@ -1,21 +1,32 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Codice.Client.Common.Connection;
 using Codice.CM.WorkspaceServer.Tree.Changes;
+using Horror.Chores.HorrorEffect;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 namespace Horror.Chores
 {
 	public class ChoreManager : MonoBehaviour
 	{
-		public static ChoreManager Instance;
+		public static ChoreManager Instance; 
+		public DayPlan CurrentDayPlan => currentDayPlan;
 
-		[FormerlySerializedAs("currentDayPlan")] [SerializeField]
-		public DayPlan CurrentDayPlan;
+		[Header("Day Plan")]
+		[SerializeField] private DayPlan currentDayPlan;
+		
+		[Header("Horror Effect Settings")]
+		[SerializeField] private float interval = 10f;
 
 		private Dictionary<string, ChoreState> choreStates;
 		private Dictionary<string, ChoreDataSO> choreIdLookup;
+
+		private float nextCheckTime = 30f;
+
+		
 
 		private void Awake()
 		{
@@ -32,6 +43,8 @@ namespace Horror.Chores
 			{
 				Instance = this;
 			}
+			
+			
 		}
 
 		private void SubscribeToEvents()
@@ -57,7 +70,7 @@ namespace Horror.Chores
 		{
 			if (newPlan == null) throw new ArgumentNullException(nameof(newPlan));
 
-			CurrentDayPlan = newPlan;
+			currentDayPlan = newPlan;
 			InitializeChores();
 			ChoreEvents.ChangeDayPlan(CurrentDayPlan);
 		}
@@ -65,6 +78,7 @@ namespace Horror.Chores
 
 		private void InitializeChores()
 		{
+			nextCheckTime = 45f;
 			choreStates.Clear();
 			choreIdLookup.Clear();
 			foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
@@ -75,6 +89,42 @@ namespace Horror.Chores
 				choreIdLookup[chore.ID] = chore;
 			}
 		}
+
+		private void Update()
+		{
+			nextCheckTime -= Time.deltaTime;
+
+			if (!(nextCheckTime <= 0f)) return;
+			
+			CheckHorrorEffects();
+			nextCheckTime = 10f;
+		}
+
+		#region HorrorEffextText
+
+		private bool RollForScaryText(HorrorEffectData effectData)
+		{
+			return Random.value < effectData.LikelyHood;
+		}
+
+		private void CheckHorrorEffects()
+		{
+			foreach (KeyValuePair<ChoreDataSO, HorrorEffectData> kvp in currentDayPlan.DailyHorrorEffects)
+			{
+				ChoreDataSO chore = kvp.Key;
+				HorrorEffectData data = kvp.Value;
+				ChoreState currentState = GetChoreState(chore);
+				
+				if(currentState is not ChoreState.Available or ChoreState.Completed) return;
+				
+				if(RollForScaryText(data))
+				{
+					ChoreEvents.TriggerHorrorEffect(chore.ID, data);
+				}
+			}
+		}
+
+		#endregion
 
 
 		#region State Handlers

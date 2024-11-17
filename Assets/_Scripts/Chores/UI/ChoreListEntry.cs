@@ -171,7 +171,7 @@ namespace Horror.Chores.UI
 				choreName.transform.DOShakePosition(
 					effectData.Duration, 
 					strength: effectData.ShakeAmount,
-					vibrato: effectData.ShakeVibrato,
+					vibrato: effectData.ShakeVibraton,
 					randomness: 90,
 					snapping: false,
 					fadeOut: true)

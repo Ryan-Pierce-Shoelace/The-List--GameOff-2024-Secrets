@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{eec9ba67-0f17-479e-a824-d3b20041ad78}">
+		<property name="assetPath">
+			<value>FX/Notebook/PenScribble-07.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.59791383219954652</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{72461692-d837-4f33-b0b2-b457889a5b43}</destination>
+		</relationship>
+	</object>
+</objects>
