@@ -19,13 +19,14 @@ namespace Horror.Chores
 		[SerializeField] private DayPlan currentDayPlan;
 		
 		[Header("Horror Effect Settings")]
-		[SerializeField] private float interval = 10f;
+        [SerializeField] private float startHorrorDelay = 10f;
+        [SerializeField] private float interval = 10f;
 
 		private Dictionary<string, ChoreState> choreStates;
 		private Dictionary<string, ChoreDataSO> choreIdLookup;
 
-		private float nextCheckTime = 30f;
 
+		private float nextCheckTime;
 		
 
 		private void Awake()
@@ -78,7 +79,7 @@ namespace Horror.Chores
 
 		private void InitializeChores()
 		{
-			nextCheckTime = 45f;
+			nextCheckTime = startHorrorDelay;
 			choreStates.Clear();
 			choreIdLookup.Clear();
 			foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
@@ -97,7 +98,7 @@ namespace Horror.Chores
 			if (!(nextCheckTime <= 0f)) return;
 			
 			CheckHorrorEffects();
-			nextCheckTime = 10f;
+			nextCheckTime = interval;
 		}
 
 		#region HorrorEffextText
@@ -115,7 +116,7 @@ namespace Horror.Chores
 				HorrorEffectData data = kvp.Value;
 				ChoreState currentState = GetChoreState(chore);
 				
-				if(currentState is not ChoreState.Available or ChoreState.Completed) return;
+				if(currentState is not ChoreState.Available or ChoreState.Completed) continue;
 				
 				if(RollForScaryText(data))
 				{

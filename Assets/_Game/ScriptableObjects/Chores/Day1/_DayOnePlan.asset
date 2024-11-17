@@ -20,6 +20,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a94fedcb10bfe88418197aa5fb861980, type: 2}
   - {fileID: 11400000, guid: 49402d0e04b3d2d498d188d09b22ffed, type: 2}
   - {fileID: 11400000, guid: a107ff9ec64323f40bcb7a215fc82352, type: 2}
+  - {fileID: 11400000, guid: fff8fb00a2fd4f045853075037371a7f, type: 2}
+  - {fileID: 11400000, guid: d1ce58af0507ef84bbf3881c2729daa2, type: 2}
+  - {fileID: 11400000, guid: ce723fb3bc794884990c8b45e9447fb4, type: 2}
+  - {fileID: 11400000, guid: 9e654a8068580fd4eaf350304cbcb997, type: 2}
   horrorChoreText:
     keyData:
     - {fileID: 11400000, guid: 4998a0a7cc4a3cd4b93e6b468bac36d1, type: 2}
@@ -29,5 +33,5 @@ MonoBehaviour:
       Duration: 3
       LikelyHood: 0.2
     - ScaryText: There is no dog.
-      Duration: 2
+      Duration: 0.5
       LikelyHood: 0.4
