@@ -68,15 +68,9 @@ namespace Horror.Chores
 			foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
 			{
 				chore.Reset();
-				choreIdLookup[chore.ID] = chore;
-			}
-
-			foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
-			{
 				bool hasUncompletedRequirements = HasUncompletedRequirements(chore);
-				ChoreState initialState = chore.StartsHidden ? ChoreState.Hidden : (hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available);
-
-				choreStates[chore.ID] = initialState;
+				choreStates[chore.ID] = hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available;
+				choreIdLookup[chore.ID] = chore;
 			}
 		}
 
@@ -116,27 +110,14 @@ namespace Horror.Chores
 
 		private void UpdateChoreStates()
 		{
-			bool statesChanged;
-			do
+			foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
 			{
-				statesChanged = false;
-				foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
-				{
-					if (choreStates[chore.ID] == ChoreState.Completed ||
-					    choreStates[chore.ID] == ChoreState.Hidden)
-						continue;
+				if (choreStates[chore.ID] == ChoreState.Completed) continue;
 
-					ChoreState oldState = choreStates[chore.ID];
-					ChoreState newState = HasUncompletedRequirements(chore) ? ChoreState.Locked : ChoreState.Available;
-
-					if (oldState != newState)
-					{
-						choreStates[chore.ID] = newState;
-						statesChanged = true;
-					}
-				}
-			} while (statesChanged);
+				choreStates[chore.ID] = HasUncompletedRequirements(chore) ? ChoreState.Locked : ChoreState.Available;
+			}
 		}
+
 
 		private bool HasUncompletedRequirements(ChoreDataSO chore)
 		{

@@ -45,7 +45,7 @@ namespace Interaction.InteractionCore
 			
 			bool isChoreStateValid = choreProgressor.GetChoreState() == ChoreState.Available || choreProgressor.GetChoreState() == ChoreState.Completed;
 
-			Debug.Log(choreProgressor?.GetChoreState());
+		
 			if (choreProgressor != null && isChoreStateValid)
 			{
 				return inventoryRequirements.All(t => interactionManager.HasObject(t));
