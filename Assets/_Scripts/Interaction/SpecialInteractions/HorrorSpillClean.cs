@@ -1,7 +1,5 @@
 using Horror.InputSystem;
 using Shoelace.Audio.XuulSound;
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 namespace Interaction

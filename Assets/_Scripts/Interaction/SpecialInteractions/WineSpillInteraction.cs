@@ -1,13 +1,8 @@
 using Horror;
-using Horror.InputSystem;
 using Interaction.InteractionCore;
 using Shoelace.Audio.XuulSound;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Interaction
 {

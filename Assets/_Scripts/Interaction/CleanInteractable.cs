@@ -1,4 +1,3 @@
-using Horror.Chores;
 using Interaction.InteractionCore;
 
 namespace Interaction

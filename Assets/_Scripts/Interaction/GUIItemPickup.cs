@@ -1,7 +1,5 @@
 using Horror.Chores;
-using Interaction.InteractionCore;
 using Shoelace.Audio.XuulSound;
-using System;
 using UI.Thoughts;
 using UnityEngine;
 using UnityEngine.UI;

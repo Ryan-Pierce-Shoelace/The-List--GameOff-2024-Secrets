@@ -1,7 +1,5 @@
 using Interaction.InteractionCore;
 using Shoelace.Audio.XuulSound;
-using System.Collections;
-using System.Collections.Generic;
 using UI.Thoughts;
 using UnityEngine;
 

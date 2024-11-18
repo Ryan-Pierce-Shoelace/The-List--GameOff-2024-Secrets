@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Horror;
 using Interaction.InteractionCore;
 using UnityEngine;
 
