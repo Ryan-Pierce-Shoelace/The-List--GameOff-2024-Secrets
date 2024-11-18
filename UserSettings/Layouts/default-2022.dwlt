@@ -19,11 +19,7 @@ MonoBehaviour:
     width: 2048
     height: 1060.8
   m_ShowMode: 4
-<<<<<<< HEAD
-  m_Title: Hierarchy
-=======
   m_Title: Console
->>>>>>> origin/Ryan/DoorImprovements
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -123,11 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-<<<<<<< HEAD
-  controlID: 251
-=======
-  controlID: 3455
->>>>>>> origin/Ryan/DoorImprovements
+  controlID: 106437
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -148,21 +140,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 2027
-    height: 1299
-  m_MinSize: {x: 300, y: 100}
-  m_MaxSize: {x: 24288, y: 16192}
-  vertical: 1
-  controlID: 58
-=======
-    width: 1526.4
+    width: 1598.4
     height: 1010.80005
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 3456
->>>>>>> origin/Ryan/DoorImprovements
+  controlID: 106438
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -184,21 +167,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 2027
-    height: 924
+    width: 1598.4
+    height: 412.8
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 59
-=======
-    width: 1526.4
-    height: 658.4
-  m_MinSize: {x: 300, y: 50}
-  m_MaxSize: {x: 24288, y: 8096}
-  vertical: 0
-  controlID: 3457
->>>>>>> origin/Ryan/DoorImprovements
+  controlID: 106439
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -217,13 +191,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 310
-    height: 924
-=======
-    width: 324
-    height: 658.4
->>>>>>> origin/Ryan/DoorImprovements
+    width: 342.4
+    height: 412.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
@@ -246,23 +215,13 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 310
+    x: 342.4
     y: 0
-    width: 768
-    height: 924
+    width: 258.4
+    height: 412.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 21}
-=======
-    x: 324
-    y: 0
-    width: 100
-    height: 658.4
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
->>>>>>> origin/Ryan/DoorImprovements
   m_Panes:
   - {fileID: 18}
   m_Selected: 0
@@ -282,25 +241,16 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1078
+    x: 600.8
     y: 0
-    width: 949
-    height: 924
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-=======
-    x: 424
-    y: 0
-    width: 1102.4
-    height: 658.4
+    width: 997.60004
+    height: 412.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
->>>>>>> origin/Ryan/DoorImprovements
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 19}
   - {fileID: 16}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &11
@@ -322,23 +272,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 924
-    width: 2027
-    height: 375
+    y: 412.8
+    width: 1598.4
+    height: 598.00006
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 156
-=======
-    y: 658.4
-    width: 1526.4
-    height: 352.40002
-  m_MinSize: {x: 300, y: 50}
-  m_MaxSize: {x: 24288, y: 8096}
-  vertical: 0
-  controlID: 3591
->>>>>>> origin/Ryan/DoorImprovements
+  controlID: 106585
   draggingID: 0
 --- !u!114 &12
 MonoBehaviour:
@@ -357,13 +297,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 529
-    height: 375
-=======
-    width: 520
-    height: 352.40002
->>>>>>> origin/Ryan/DoorImprovements
+    width: 521.6
+    height: 598.00006
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 20}
@@ -386,17 +321,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 529
+    x: 521.6
     y: 0
-    width: 720
-    height: 375
-=======
-    x: 520
-    y: 0
-    width: 529.6
-    height: 352.40002
->>>>>>> origin/Ryan/DoorImprovements
+    width: 798.4
+    height: 598.00006
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 21}
@@ -419,23 +347,13 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1249
+    x: 1320
     y: 0
-    width: 778
-    height: 375
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 24}
-=======
-    x: 1049.6
-    y: 0
-    width: 476.80005
-    height: 352.40002
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 278.40002
+    height: 598.00006
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 22}
->>>>>>> origin/Ryan/DoorImprovements
   m_Panes:
   - {fileID: 22}
   - {fileID: 23}
@@ -458,23 +376,13 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 2027
+    x: 1598.4
     y: 0
-    width: 533
-    height: 1299
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 27}
-=======
-    x: 1526.4
-    y: 0
-    width: 521.6
+    width: 449.59998
     height: 1010.80005
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 26}
->>>>>>> origin/Ryan/DoorImprovements
   m_Panes:
   - {fileID: 26}
   - {fileID: 27}
@@ -490,280 +398,6 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-<<<<<<< HEAD
-  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_TitleContent:
-    m_Text: Project
-    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 499
-    y: 883
-    width: 664
-    height: 468
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_SearchFilter:
-    m_NameFilter: 
-    m_ClassNames: []
-    m_AssetLabels: []
-    m_AssetBundleNames: []
-    m_ReferencingInstanceIDs: 
-    m_SceneHandles: 
-    m_ShowAllHits: 0
-    m_SkipHidden: 0
-    m_SearchArea: 1
-    m_Folders:
-    - Assets/Fonts/Pangolin
-    m_Globs: []
-    m_OriginalText: 
-    m_ImportLogFlags: 0
-    m_FilterByTypeIntersection: 0
-  m_ViewMode: 1
-  m_StartGridSize: 16
-  m_LastFolders:
-  - Assets/Fonts/Pangolin
-  m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Projects\Secrets-Gamejam
-  m_LockTracker:
-    m_IsLocked: 1
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9c870000
-    m_LastClickedID: 34716
-    m_ExpandedIDs: 00000000788a0000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000788a0000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 227f0000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 13}
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-    m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 16
-  m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 200
---- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-=======
->>>>>>> origin/Ryan/DoorImprovements
-  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Animator
-    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 488
-    y: 73.6
-    width: 1039.6
-    height: 563.8
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_ViewTransforms:
-    m_KeySerializationHelper:
-    - {fileID: 2880599051890995698, guid: 058a6b5738ef12d47b2212ec74476a7a, type: 2}
-    - {fileID: -3028218360270965273, guid: 0eb8d381a96946b4fb49ab69eeb975ad, type: 2}
-    m_ValueSerializationHelper:
-    - e00: 0.41557896
-      e01: 0
-      e02: 0
-      e03: -5.778946
-      e10: 0
-      e11: 0.41557896
-      e12: 0
-      e13: 224.9979
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.83587766
-      e01: 0
-      e02: 0
-      e03: -0.3499266
-      e10: 0
-      e11: 0.83587766
-      e12: 0
-      e13: 199.16592
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-  m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 0eb8d381a96946b4fb49ab69eeb975ad, type: 2}
-  m_BreadCrumbs:
-  - m_Target: {fileID: -3028218360270965273, guid: 0eb8d381a96946b4fb49ab69eeb975ad, type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
-  stateMachineGraph: {fileID: 0}
-  stateMachineGraphGUI: {fileID: 0}
-  blendTreeGraph: {fileID: 0}
-  blendTreeGraphGUI: {fileID: 0}
-  m_AutoLiveLink: 1
-  m_MiniTool: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_CurrentEditor: 1
-  m_LayerEditor:
-    m_SelectedLayerIndex: 0
-<<<<<<< HEAD
---- !u!114 &18
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Animation
-    m_Image: {fileID: -8166618308981325432, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 815.2
-    y: 796.8
-    width: 824.39996
-    height: 266.60004
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_LockTracker:
-    m_IsLocked: 0
-  m_LastSelectedObjectID: -29742
---- !u!114 &19
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -772,14 +406,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1078
-    y: 73
-    width: 947
-    height: 903
+    x: 600.8
+    y: 73.6
+    width: 995.60004
+    height: 391.8
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -805,16 +439,16 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -960
-    m_HBaseRangeMax: 960
-    m_VBaseRangeMin: -540
-    m_VBaseRangeMax: 540
+    m_HBaseRangeMin: -768
+    m_HBaseRangeMax: 768
+    m_VBaseRangeMin: -432
+    m_VBaseRangeMax: 432
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -832,32 +466,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 947
-      height: 882
-    m_Scale: {x: 0.49322918, y: 0.49322918}
-    m_Translation: {x: 473.5, y: 441}
+      width: 995.60004
+      height: 370.8
+    m_Scale: {x: 0.42916662, y: 0.42916664}
+    m_Translation: {x: 497.80002, y: 185.4}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -960
-      y: -894.10767
-      width: 1920
-      height: 1788.2153
+      x: -1159.9225
+      y: -432
+      width: 2319.845
+      height: 864
     m_MinimalGUI: 1
-  m_defaultScale: 0.49322918
-  m_LastWindowPixelSize: {x: 947, y: 903}
+  m_defaultScale: 0.42916664
+  m_LastWindowPixelSize: {x: 1244.5, y: 489.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &20
-=======
 --- !u!114 &17
->>>>>>> origin/Ryan/DoorImprovements
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -878,15 +509,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 73
-    width: 309
-    height: 903
-=======
     y: 73.6
-    width: 323
-    height: 637.4
->>>>>>> origin/Ryan/DoorImprovements
+    width: 341.4
+    height: 391.8
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -899,17 +524,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-<<<<<<< HEAD
-      scrollPos: {x: 0, y: 302}
-      m_SelectedIDs: c0ef0000
-      m_LastClickedID: 61376
-      m_ExpandedIDs: 8c5ffeff4c1effffca25ffff0844ffffda8bfffff28bfffffa8bffffc09bffff6a9cffff749cffff009dffff269dffff929dffff7c9fffffa69fffff36f8ffff4ef8ffff54f8ffffcefaffff467c00006c7c0000987d00006aef0000c0ef0000ceef0000e2ef00009cf00000b2f00000c4f00000e0f00000f8f0000014f10000cef1000098f200009cf20000a2f2000098f30000ccf30000
-=======
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 22b9fcff
-      m_LastClickedID: -214750
-      m_ExpandedIDs: a014fcff0e7efcff827ffcffa87ffcffce7ffcff968cfcff0a8dfcff4e9bfcffca9bfcff20b4fcff38b4fcff3eb4fcff6cb4fcff76b4fcffe8b4fcff32b5fcff56b5fcff5cb5fcff84b5fcffb2b5fcffbcb5fcff22b9fcff4af7fcff7a0efdff0e2ffdff182ffdff6830fdffe659fdffe859fdffea59fdffc6fefdff2807feff0608feff660bfeff6c0bfeff321cfefffc3ffeff8eedfeffe61cffff3624ffff2048ffff22f7ffff2ef8ffff88faffffda7c0000fe7c0000267d0000b07d0000e47d0000f27d0000fa7d00002c7e0000527e00009a7f00009e7f000092800000c68000008207020090070200a8070200240802005208020066080200820902008e090200dc380200a6630200ea63020012650200c665020028970200369702004e97020058970200d4970200e4970200ec970200169802008a980200be980200309902003c99020046990200f6990200
->>>>>>> origin/Ryan/DoorImprovements
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: e839fcff303afcff8c47fcffb250fcff4053fcff1a62fcff6262fcffe66ffcff0c79fcffde7bfcffdc97fcff0e99fcffca80fdff3cd4fdffda37feff383bfeff944bfeffba92feffdc95feff3ebcfefffcc6feff04f9feff2a2cffff2c2cffffd492ffff0aaeffff5cc1ffff62c8ffff44c9ffffa4cbffffaecbffff0eccffff16ccffff16ceffff18ceffffa8ddffff28edffff6afaffff0c7e0000b87f00005e9100009e910000e692000072930000f098000030990000729a000026a0000028a0000036a000004ca0000076a0000082a00000e4a000001aa1000072a2000078a200002ea3000062a300002a64010030640100446401004c64010072640100766401000e65010022650100ba650100186601001c66010086660100be6601001667010052670100dc6e0300e66e0300
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -953,17 +571,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 310
-    y: 73
-    width: 766
-    height: 903
-=======
-    x: 324
+    x: 342.4
     y: 73.6
-    width: 98
-    height: 637.4
->>>>>>> origin/Ryan/DoorImprovements
+    width: 256.4
+    height: 391.8
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -992,7 +603,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -138, y: -125}
-      snapOffsetDelta: {x: 39.600006, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: unity-grid-and-snap-toolbar
       index: 1
@@ -1413,15 +1024,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
-    m_Target: {x: 960, y: 540, z: 0}
+    m_Target: {x: -18.665106, y: -1.9263293, z: -0.0026156004}
     speed: 2
-    m_Value: {x: 959.9998, y: 539.9999, z: 0}
-=======
-    m_Target: {x: 3.1574242, y: 0.1521835, z: 0}
-    speed: 2
-    m_Value: {x: 3.1574242, y: 0.1521835, z: 0}
->>>>>>> origin/Ryan/DoorImprovements
+    m_Value: {x: -18.665106, y: -1.9263293, z: -0.0026156004}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1471,15 +1076,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-<<<<<<< HEAD
-    m_Target: 1101.4536
+    m_Target: 98.8966
     speed: 2
-    m_Value: 1101.4534
-=======
-    m_Target: 0.14142129
-    speed: 2
-    m_Value: 0.14142129
->>>>>>> origin/Ryan/DoorImprovements
+    m_Value: 98.8966
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1512,22 +1111,22 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Animator
+    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 424
+    x: 800
     y: 73.6
-    width: 1100.4
-    height: 637.4
+    width: 558.80005
+    height: 639
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1538,70 +1137,76 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1920, y: 1080}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
-  m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -768
-    m_HBaseRangeMax: 768
-    m_VBaseRangeMin: -432
-    m_VBaseRangeMax: 432
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 1100.4
-      height: 616.4
-    m_Scale: {x: 0.71342593, y: 0.71342593}
-    m_Translation: {x: 550.2, y: 308.2}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -771.2083
-      y: -432
-      width: 1542.4166
-      height: 864
-    m_MinimalGUI: 1
-  m_defaultScale: 0.71342593
-  m_LastWindowPixelSize: {x: 1375.5, y: 796.75}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
+  m_ViewTransforms:
+    m_KeySerializationHelper:
+    - {fileID: -5934565766765983283, guid: c92821b71b173274393c6545665dc5e9, type: 2}
+    - {fileID: -8003221524028478693, guid: 06088030a2018384d8a511c4f379b18a, type: 2}
+    - {fileID: -5934565766765983283, guid: 70897fa8b52427744a951dd878742a35, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 0.5772632
+      e01: 0
+      e02: 0
+      e03: -13.863159
+      e10: 0
+      e11: 0.5772632
+      e12: 0
+      e13: 216.72842
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.5772632
+      e01: 0
+      e02: 0
+      e03: -13.863159
+      e10: 0
+      e11: 0.5772632
+      e12: 0
+      e13: 219.61475
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.5772632
+      e01: 0
+      e02: 0
+      e03: -13.863159
+      e10: 0
+      e11: 0.5772632
+      e12: 0
+      e13: 219.61475
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 9100000, guid: 70897fa8b52427744a951dd878742a35, type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: -5934565766765983283, guid: 70897fa8b52427744a951dd878742a35, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 0
+  m_MiniTool: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentEditor: 0
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1623,15 +1228,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 997
-    width: 528
-    height: 354
-=======
-    y: 732
-    width: 519
-    height: 331.40002
->>>>>>> origin/Ryan/DoorImprovements
+    y: 486.4
+    width: 520.6
+    height: 577.00006
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1653,11 +1252,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-<<<<<<< HEAD
-    - Assets/_Game/ScriptableObjects/Chores/Day1
-=======
-    - Assets/_Game/ScriptableObjects/DynamicThoughts
->>>>>>> origin/Ryan/DoorImprovements
+    - Assets/TextMesh Pro/Examples & Extras
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1665,26 +1260,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-<<<<<<< HEAD
-  - Assets/_Game/ScriptableObjects/Chores/Day1
-=======
-  - Assets/_Game/ScriptableObjects/DynamicThoughts
->>>>>>> origin/Ryan/DoorImprovements
+  - Assets/TextMesh Pro/Examples & Extras/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity Projects\Secrets GameJam - Horror Chores
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-<<<<<<< HEAD
-    m_SelectedIDs: 348b0000
-    m_LastClickedID: 35636
-    m_ExpandedIDs: 00000000788a0000908a0000928a0000948a0000d88a0000de8a0000e08a0000ee8a0000f48a00006e11010000ca9a3bffffff7f
-=======
-    m_SelectedIDs: 32060200
-    m_LastClickedID: 132658
-    m_ExpandedIDs: 00000000e6890000e8890000ea890000ec890000ee890000f0890000f28900000a8a00000c8a00005a8a00005e8a000000ca9a3b
->>>>>>> origin/Ryan/DoorImprovements
+    scrollPos: {x: 0, y: 594.99994}
+    m_SelectedIDs: 86a30300
+    m_LastClickedID: 238470
+    m_ExpandedIDs: 000000003a8f00003c8f00003e8f0000408f0000428f0000448f0000468f0000488f00004a8f00004c8f00004e8f0000508f0000528f0000548f0000568f0000588f00005a8f00005c8f0000e68f000086a3030000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1712,11 +1297,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000788a0000
-=======
-    m_ExpandedIDs: 00000000e6890000e8890000ea890000ec890000ee890000f0890000f289000000ca9a3b
->>>>>>> origin/Ryan/DoorImprovements
+    m_ExpandedIDs: 000000003a8f00003c8f00003e8f0000408f0000428f0000448f0000468f0000488f00004a8f00004c8f00004e8f0000508f0000528f0000548f0000568f0000588f00005a8f00005c8f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1747,24 +1328,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c623000012ac000036e3020032f002004c680100f2630100365e0100ae5d0100a85e0100da5f0100ec640100dc1a010028640100e86401001864010016640100f4640100f01a010006650100f66301001e010100ce54010038a20100d2ba0100cad50000e864040000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-<<<<<<< HEAD
-      m_Name: TutorialChore1
-      m_OriginalName: TutorialChore1
-=======
       m_Name: 
       m_OriginalName: 
->>>>>>> origin/Ryan/DoorImprovements
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-<<<<<<< HEAD
-      m_UserData: 31648
-=======
       m_UserData: 0
->>>>>>> origin/Ryan/DoorImprovements
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 11
@@ -1780,13 +1352,8 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
-<<<<<<< HEAD
-  m_DirectoriesAreaWidth: 130
---- !u!114 &23
-=======
   m_DirectoriesAreaWidth: 50
 --- !u!114 &21
->>>>>>> origin/Ryan/DoorImprovements
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1806,17 +1373,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 529
-    y: 997
-    width: 718
-    height: 354
-=======
-    x: 520
-    y: 732
-    width: 527.6
-    height: 331.40002
->>>>>>> origin/Ryan/DoorImprovements
+    x: 521.60004
+    y: 486.4
+    width: 796.4
+    height: 577.00006
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1828,7 +1388,7 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_SearchFilter:
-    m_NameFilter: baseob
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -1838,39 +1398,24 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-<<<<<<< HEAD
-    - Assets/_Scripts/Chores/UI
-=======
-    - Assets/_Scripts/Interaction/InteractionCore
->>>>>>> origin/Ryan/DoorImprovements
+    - Assets
     m_Globs: []
-    m_OriginalText: baseob
+    m_OriginalText: 
     m_ImportLogFlags: 0
     m_FilterByTypeIntersection: 0
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-<<<<<<< HEAD
-  - Assets/_Scripts/Chores/UI
-=======
-  - Assets/_Scripts/Interaction/InteractionCore
->>>>>>> origin/Ryan/DoorImprovements
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity Projects\Secrets GameJam - Horror Chores
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-<<<<<<< HEAD
-    scrollPos: {x: 0, y: 218}
-    m_SelectedIDs: ea8a0000
-    m_LastClickedID: 35562
-    m_ExpandedIDs: 00000000788a0000908a0000928a0000968a0000d88a0000dc8a0000de8a0000e48a0000e88a0000f68a00008e11010000ca9a3bffffff7f
-=======
-    scrollPos: {x: 0, y: 248.59998}
-    m_SelectedIDs: 46950000
-    m_LastClickedID: 38214
-    m_ExpandedIDs: 00000000e6890000e8890000ea890000ec890000ee890000f0890000f28900000a8a00000c8a0000128a0000248a00005a8a00005e8a0000e0e90000e2e90000f6e90000d0b00100d2b0010000ca9a3b
->>>>>>> origin/Ryan/DoorImprovements
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 3a8f0000
+    m_LastClickedID: 36666
+    m_ExpandedIDs: 000000003a8f00003c8f00003e8f0000408f0000428f0000448f0000468f0000488f00004a8f00004c8f00004e8f0000508f0000528f0000548f0000568f0000588f00005a8f00005c8f0000888f0000da8f0000dc8f0000e48f0000e68f000086a30300a4a30300a6a3030000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1898,11 +1443,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000788a0000
-=======
-    m_ExpandedIDs: 00000000e6890000e8890000ea890000ec890000ee890000f0890000f289000000ca9a3b
->>>>>>> origin/Ryan/DoorImprovements
+    m_ExpandedIDs: 000000003a8f00003c8f00003e8f0000408f0000428f0000448f0000468f0000488f00004a8f00004c8f00004e8f0000508f0000528f0000548f0000568f0000588f00005a8f00005c8f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1930,21 +1471,21 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 12e2000062e60000b4e80000ced70000741a0000e29d0000f20700003e1905004e060100701b01005608010054db020036e30200789f000072b3000086b100004c280100fabe0000903b0100b8a5000042c201001e3c0200dc7e0000dc1a010018640100c4a500005aa60000c40b0100867305000caf00000ef20000ba420300f0430300ae460300ba47030086ac000010730300aa9f03009e44030056440300c2540100ee54010078a10100cad5000034a8000050a9000022aa0000e8640400587100000079000092a5ffffc687ffffe0730000be56ffff706f0000746f00006e6f00002078000004700000000000001074000098fc000006290100d6aa00007837010050820000f00302000011020010c4000004ce00007c4702000ab502009a8a0000b28200002e020100703601006c3601009ee90100
+    m_ExpandedInstanceIDs: 12e2000062e60000b4e80000ced70000741a0000e29d0000f20700003e1905004e060100701b01005608010054db020036e30200789f000072b3000086b100004c280100fabe0000903b0100b8a5000042c201001e3c0200dc7e0000dc1a010018640100c4a500005aa60000c40b0100867305000caf00000ef20000ba420300f0430300ae460300ba47030086ac000010730300aa9f03009e44030056440300c2540100ee54010078a10100cad5000034a8000050a90000e8640400587100000079000092a5ffffc687ffffe0730000be56ffff706f0000746f00006e6f00002078000004700000000000001074000098fc000006290100d6aa00007837010050820000f00302000011020010c4000004ce00007c4702000ab502009a8a0000b28200002e020100703601006c3601009ee9010022aa0000748a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Main
+      m_OriginalName: Main
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 36842
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 13}
     m_CreateAssetUtility:
@@ -1957,13 +1498,8 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 1
-<<<<<<< HEAD
-  m_DirectoriesAreaWidth: 194
---- !u!114 &24
-=======
   m_DirectoriesAreaWidth: 50
 --- !u!114 &22
->>>>>>> origin/Ryan/DoorImprovements
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1983,17 +1519,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1249
-    y: 997
-    width: 776
-    height: 354
-=======
-    x: 1049.6
-    y: 732
-    width: 474.80005
-    height: 331.40002
->>>>>>> origin/Ryan/DoorImprovements
+    x: 1320
+    y: 486.4
+    width: 276.40002
+    height: 577.00006
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2024,10 +1553,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 908.8
-    y: 658.4
-    width: 618.8
-    height: 405.00006
+    x: 946.4
+    y: 733.60004
+    width: 412.40002
+    height: 329.80005
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2040,7 +1569,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 170444
+  m_LastSelectedObjectID: -133964
 --- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -3139,9 +2668,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1526.4
+    x: 1598.4
     y: 73.6
-    width: 520.6
+    width: 448.59998
     height: 989.80005
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -3156,7 +2685,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 172.79999
+    m_CachedPref: -172.79999
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -3186,17 +2715,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 2027
-    y: 73
-    width: 532
-    height: 1278
-=======
-    x: 1530.4
+    x: 1360.8
     y: 73.6
-    width: 516.6
+    width: 686.19995
     height: 989.80005
->>>>>>> origin/Ryan/DoorImprovements
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -3213,7 +2735,7 @@ MonoBehaviour:
     m_CachedPref: -345
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 170444
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -3228,56 +2750,6 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-<<<<<<< HEAD
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1716.8
-    y: 73.6
-    width: 330.19995
-    height: 989.80005
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: -345
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -29742
-  m_LastVerticalScrollValue: 0
-  m_GlobalObjectId: 
-  m_InspectorMode: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}
---- !u!114 &29
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-=======
->>>>>>> origin/Ryan/DoorImprovements
   m_EditorHideFlags: 0
   m_Script: {fileID: 13854, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -3290,9 +2762,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1529.6
+    x: 1586.4
     y: 73.6
-    width: 517.4
+    width: 460.59998
     height: 989.80005
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -3305,14 +2777,14 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_PosLeft: {x: 0, y: 0}
-  m_PosRight: {x: 0, y: 422}
+  m_PosRight: {x: 0, y: 0}
   m_Scope: 1
-  m_SplitterFlex: 0.1943958
+  m_SplitterFlex: 0
   m_SearchText: 
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a73eced7
-    m_LastClickedID: -674349401
+    m_SelectedIDs: 53336be2
+    m_LastClickedID: -496290989
     m_ExpandedIDs: a01a5fa653336be200000000c53aba5a
     m_RenameOverlay:
       m_UserAcceptedRename: 0
