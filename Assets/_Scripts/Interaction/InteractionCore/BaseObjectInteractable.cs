@@ -23,7 +23,7 @@ namespace Interaction.InteractionCore
 
 		[SerializeField] protected SoundConfig interactSFX;
 
-		private ChoreProgressor choreProgressor;
+		protected ChoreProgressor choreProgressor;
 
 		protected virtual void Start()
 		{

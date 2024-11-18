@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 581c0b928eb0a6149becd91fd6ee4871, type: 3}
-  m_Name: Clean the Wine
+  m_Name: CleanTheSpill
   m_EditorClassIdentifier: 
-  ID: day2CleanTheMess
-  ChoreName: Clean the spilt wine
+  ID: Day2CleanTheSpill
+  ChoreName: Clean the Wine Spill
   requiredChores:
   - {fileID: 11400000, guid: 5e357bb61bc557c4295e17ad19f8ccc6, type: 2}
-  choresToUnhide: []
+  choresToUnhide:
+  - {fileID: 11400000, guid: 4a5c1cb8d899d4349a308d104acda2b5, type: 2}
   StartsHidden: 1
   RequiredCount: 1
   isTutorialChore: 0

@@ -14,7 +14,6 @@ namespace Interaction
     public class WineSpillInteraction : BaseObjectInteractable
     {
         [SerializeField] private Animator wineAnim, eyesAnim;
-        [SerializeField] private ChoreRevealer postWineShatterRevealer;
         [SerializeField] private SoundConfig shatterSFX;
         private AudioManager audioManager;
 
@@ -34,14 +33,18 @@ namespace Interaction
         {
             wineAnim.Play("WineSpill");
             eyesAnim.Play("CreepyEyes");
-            await Task.Delay(4000);
-            postWineShatterRevealer.TryRevealNewChores();
+
             
-            spillGameObject.SetActive(true);
+
+            await Task.Delay(4000);
 
             ToggleHighlight(false);
             gameObject.SetActive(false);
             this.enabled = false;
+
+            choreProgressor?.ProgressChore();
+            spillGameObject.SetActive(true);
+            
         }
 
         public void PlayShatterSFX()

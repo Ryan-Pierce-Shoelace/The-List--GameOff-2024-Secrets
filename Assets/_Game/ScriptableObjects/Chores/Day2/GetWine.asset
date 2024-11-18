@@ -16,7 +16,8 @@ MonoBehaviour:
   ChoreName: Get the Expensive Wine
   requiredChores:
   - {fileID: 11400000, guid: 2c57d4af8503de648b8ca181e17233f8, type: 2}
-  choresToUnhide: []
+  choresToUnhide:
+  - {fileID: 11400000, guid: 5e357bb61bc557c4295e17ad19f8ccc6, type: 2}
   StartsHidden: 1
   RequiredCount: 1
   isTutorialChore: 0
