@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Shoelace.Audio.XuulSound;
 using UI.Thoughts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,6 +19,7 @@ namespace Horror.UserInterface.MainMenu
 
 		[SerializeField] private GameObject settingsPanel;
 		[SerializeField] private GameObject shadeOverlay;
+		[SerializeField] private GameObject thoughtsPanel;
 
 		[Header("Thoughts")]
 		[SerializeField] private DynamicThoughtSO thoughts;
@@ -57,11 +59,26 @@ namespace Horror.UserInterface.MainMenu
 		{
 			DisableAllButtons();
 			isLoading = true;
-
+			thoughtsPanel.SetActive(false);
+			Sequence transitionSequence = DOTween.Sequence();
+			
 			if (fadePanel != null)
 			{
 				fadePanel.DOFade(1f, fadeOutDuration)
 					.OnComplete((() => SceneManager.LoadScene(gameSceneName)));
+				
+				if (AudioManager.Instance != null)
+				{
+					float currentVolume = AudioManager.Instance.MasterVolume;
+					transitionSequence.Join(
+						DOTween.To(
+							() => AudioManager.Instance.MasterVolume,
+							value => AudioManager.Instance.MasterVolume = value,
+							0f,
+							fadeOutDuration
+						).SetEase(Ease.InOutQuad)
+					);
+				}
 			}
 			else
 			{
