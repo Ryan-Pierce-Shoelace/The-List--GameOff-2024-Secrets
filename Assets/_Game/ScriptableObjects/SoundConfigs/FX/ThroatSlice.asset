@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventReference:
     Guid:
-      Data1: -57273606
-      Data2: 1153738769
-      Data3: -13234261
-      Data4: -1443540255
-    Path: event:/SFX/Misc/ThroatSlice
+      Data1: -1690663437
+      Data2: 1308217395
+      Data3: 556141710
+      Data4: 2086988194
+    Path: event:/SFX/Misc/Slice
   is3D: 0
   defaultVolume: 1
   parameters: []
