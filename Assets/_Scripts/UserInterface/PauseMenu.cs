@@ -1,5 +1,8 @@
+using DG.Tweening;
 using Horror.InputSystem;
+using Shoelace.Audio.XuulSound;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace UserInterface
@@ -12,6 +15,11 @@ namespace UserInterface
 		[SerializeField] private GameObject shadeOverlay;
 		[SerializeField] private GameObject pauseMenuUI;
 		[SerializeField] private GameObject settingsMenuUI;
+
+		[Header("Scene Settings")]
+		[SerializeField] private string gameSceneName = "Game";
+
+		[SerializeField] private float fadeOutDuration = 1f;
 
 		[Header("Buttons")]
 		[SerializeField] private Button resumeButton;
@@ -28,6 +36,8 @@ namespace UserInterface
 
 			resumeButton.onClick.AddListener(HandleCancel);
 			settingsButton.onClick.AddListener(OpenSettings);
+
+			AudioManager.Instance.MasterVolume = 1f;
 		}
 
 		protected override void OnEnable()
@@ -73,7 +83,7 @@ namespace UserInterface
 		public void OpenSettings()
 		{
 			settingsMenuUI.SetActive(true);
-			pauseMenuUI.SetActive(false);
+			// pauseMenuUI.SetActive(false);
 		}
 
 		public void QuitGame()
@@ -127,6 +137,26 @@ namespace UserInterface
 		{
 			settingsMenuUI.SetActive(false);
 			pauseMenuUI.SetActive(true);
+		}
+
+		public void QuitToMenu()
+		{
+			// Sequence transitionSequence = DOTween.Sequence();
+			// if (AudioManager.Instance != null)
+			// {
+			// 	float currentVolume = AudioManager.Instance.MasterVolume;
+			// 	transitionSequence.Join(
+			// 		DOTween.To(
+			// 			() => AudioManager.Instance.MasterVolume,
+			// 			value => AudioManager.Instance.MasterVolume = value,
+			// 			0f,
+			// 			fadeOutDuration
+			// 		).SetEase(Ease.InOutQuad)
+			// 	);
+			// }
+
+
+			SceneManager.LoadScene(gameSceneName);
 		}
 	}
 }

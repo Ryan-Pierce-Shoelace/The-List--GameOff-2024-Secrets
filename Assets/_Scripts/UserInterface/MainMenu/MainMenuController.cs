@@ -61,12 +61,12 @@ namespace Horror.UserInterface.MainMenu
 			isLoading = true;
 			thoughtsPanel.SetActive(false);
 			Sequence transitionSequence = DOTween.Sequence();
-			
+
 			if (fadePanel != null)
 			{
 				fadePanel.DOFade(1f, fadeOutDuration)
 					.OnComplete((() => SceneManager.LoadScene(gameSceneName)));
-				
+
 				if (AudioManager.Instance != null)
 				{
 					float currentVolume = AudioManager.Instance.MasterVolume;

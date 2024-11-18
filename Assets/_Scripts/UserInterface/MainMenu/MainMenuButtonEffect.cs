@@ -1,9 +1,10 @@
+using System;
 using DG.Tweening;
 using Shoelace.Audio.XuulSound;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace Horror.UserInterface.MainMenu
 {
@@ -11,16 +12,47 @@ namespace Horror.UserInterface.MainMenu
 	{
 		[Header("Animation Settings")]
 		[SerializeField] private float strikethroughDuration = 0.5f;
-
 		[SerializeField] private float randomSkewRange = 5f;
 		[SerializeField] private Image strikethrough;
 
+		[SerializeField] private bool isMainMenu = false;
+
 		[SerializeField] private SoundConfig scratchOffSound;
 		private bool crossedOff = false;
+		private bool canStrike = false;
+		private float startTime;
+		
+		[Header("Scene Settings")]
+		[SerializeField] private string gameSceneName = "Game";
+
+		private void Start()
+		{
+			if (isMainMenu)
+			{
+				canStrike = false;
+				startTime = Time.time;
+			}
+			else
+			{
+				canStrike = true;
+			}
+		}
+
 
 		public void OnPointerEnter(PointerEventData eventData)
 		{
-			StrikeOffList();
+			if (isMainMenu)
+			{
+				if (Time.time - startTime >= 1f)
+				{
+					canStrike = true;
+				}
+			}
+            
+			if (canStrike)
+			{
+				StrikeOffList();
+			}
 		}
 
 		public void OnPointerExit(PointerEventData eventData)
