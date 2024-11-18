@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74141902e0b0e6b4583b3b0066e88d3b, type: 3}
+  m_Name: Day2Plan-KitchenCleanup
+  m_EditorClassIdentifier: 
+  DayName: Day 2
+  Chores:
+  - {fileID: 11400000, guid: 2312310ea21bf4d428070649cb2bdc43, type: 2}
+  - {fileID: 11400000, guid: 4a5c1cb8d899d4349a308d104acda2b5, type: 2}
+  - {fileID: 11400000, guid: 539afb9a76ef58c40bb1ebd0ad71d0e6, type: 2}
+  - {fileID: 11400000, guid: e56f1487346dc9044b3e2000e20b934a, type: 2}
+  - {fileID: 11400000, guid: 5e357bb61bc557c4295e17ad19f8ccc6, type: 2}
+  - {fileID: 11400000, guid: 2c57d4af8503de648b8ca181e17233f8, type: 2}
+  - {fileID: 11400000, guid: 87483d9d2cc28654e9481321aff77377, type: 2}
+  horrorChoreText:
+    keyData:
+    - {fileID: 11400000, guid: 2c57d4af8503de648b8ca181e17233f8, type: 2}
+    - {fileID: 11400000, guid: 2312310ea21bf4d428070649cb2bdc43, type: 2}
+    - {fileID: 11400000, guid: 539afb9a76ef58c40bb1ebd0ad71d0e6, type: 2}
+    - {fileID: 11400000, guid: 4a5c1cb8d899d4349a308d104acda2b5, type: 2}
+    valueData:
+    - ScaryText: Set the table for me
+      Duration: 1
+      LikelyHood: 0.5
+    - ScaryText: Clean away your mess
+      Duration: 0.1
+      LikelyHood: 0.9
+    - ScaryText: Grab their last meal
+      Duration: 0.4
+      LikelyHood: 0.3
+    - ScaryText: Give them another excuse
+      Duration: 1
+      LikelyHood: 0.7

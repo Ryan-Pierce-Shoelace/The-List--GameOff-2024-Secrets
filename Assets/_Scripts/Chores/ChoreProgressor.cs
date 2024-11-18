@@ -6,8 +6,8 @@ namespace Horror.Chores
     public class ChoreProgressor : MonoBehaviour
     {
 	    [SerializeField] private ChoreDataSO chore;
-
-		public string GetChoreID() => chore.ID;
+		[SerializeField] private ChoreRevealer revealOnComplete;
+        public string GetChoreID() => chore.ID;
 	    public ChoreState GetChoreState()
 	    {
 		    return !chore ? ChoreState.Hidden : ChoreManager.Instance.GetChoreState(chore);
@@ -20,6 +20,17 @@ namespace Horror.Chores
 			    return;
 		    }
 		    ChoreEvents.AdvanceChore(chore.ID);
+
+			if (revealOnComplete == null)
+			{
+                return;
+            }
+            if (ChoreManager.Instance.GetChoreState(chore) != ChoreState.Completed)
+			{
+				return;
+			}
+
+			revealOnComplete.TryRevealNewChores();
 	    }
     }
 }
