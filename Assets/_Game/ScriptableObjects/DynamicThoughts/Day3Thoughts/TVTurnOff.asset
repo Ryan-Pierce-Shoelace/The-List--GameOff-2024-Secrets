@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2f4a74dbf71b64597e140f45b1bc24, type: 3}
+  m_Name: TVTurnOff
+  m_EditorClassIdentifier: 
+  possibleThoughts:
+  - If only I could turn off so simply.
+  - The voices didn't stop.
+  - Why did you make me do this.
+  - The silence is worse than the voices.
+  - The last moments replay in the darkness.
+  - The void behind the glass knows.
+  - Empty screen. Empty house. Empty father.
+  - I can see a little creature inside the glass. It is hunting me.
