@@ -21,10 +21,10 @@ namespace Shoelace.Audio.XuulSound
 		private Bus sfxBus;
 		private Bus ambientBus;
 
-		[SerializeField] private float masterVolume = 1f;
-		[SerializeField] private float musicVolume = 1f;
-		[SerializeField] private float sfxVolume = 1f;
-		[SerializeField] private float ambientVolume = 1f;
+		[SerializeField] [Range(0, 1)] private float masterVolume = 1f;
+		[SerializeField] [Range(0, 1)] private float musicVolume = 1f;
+		[SerializeField] [Range(0, 1)] private float sfxVolume = 1f;
+		[SerializeField] [Range(0, 1)] private float ambientVolume = 1f;
 
 		[Header("Fade Settings")]
 		[SerializeField] private float defaultFadeTime = 2f;
@@ -64,11 +64,6 @@ namespace Shoelace.Audio.XuulSound
 			activeSounds = new Dictionary<string, ISoundPlayer>();
 			activeEmitters = new HashSet<SoundEmitter>();
 			musicSystem = new MusicSystem();
-			//
-			// masterVolume = PlayerPrefs.GetFloat("MasterVolume", 1f);
-			// musicVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
-			// sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
-			// ambientVolume = PlayerPrefs.GetFloat("AmbientVolume", 1f);
 
 			masterBus = RuntimeManager.GetBus("bus:/");
 			musicBus = RuntimeManager.GetBus("bus:/Music");
@@ -81,6 +76,27 @@ namespace Shoelace.Audio.XuulSound
 		#endregion
 
 		#region Volume Controls
+
+		public void SetMasterVolume(float value)
+		{
+			masterBus.setVolume(masterVolume);
+		}
+
+		public void SetMusicVolume(float value)
+		{
+			musicBus.setVolume(musicVolume);
+		}
+
+		public void SetSFXVolume(float value)
+		{
+			sfxBus.setVolume(sfxVolume);
+		}
+
+		public void SetAmbientVolume(float value)
+		{
+			ambientBus.setVolume(ambientVolume);
+		}
+
 
 		public float MasterVolume
 		{
@@ -133,25 +149,10 @@ namespace Shoelace.Audio.XuulSound
 
 		private void UpdateAllVolumes()
 		{
-			try
-			{
-				float masterVolumeDB = ConvertToFMODVolume(masterVolume);
-				float musicVolumeDB = ConvertToFMODVolume(musicVolume);
-				float sfxVolumeDB = ConvertToFMODVolume(sfxVolume);
-				float ambientVolumeDB = ConvertToFMODVolume(ambientVolume);
-
-				masterBus.setVolume(masterVolumeDB);
-				musicBus.setVolume(musicVolumeDB);
-				sfxBus.setVolume(sfxVolumeDB);
-				ambientBus.setVolume(ambientVolumeDB);
-
-				// Debug.Log($"Updated volumes - Master: {masterVolumeDB}, Music: {musicVolumeDB}, " +
-				//           $"SFX: {sfxVolumeDB}, Ambient: {ambientVolumeDB}");
-			}
-			catch (Exception e)
-			{
-				Debug.LogError($"Error setting FMOD volumes: {e.Message}");
-			}
+			masterBus.setVolume(masterVolume);
+			musicBus.setVolume(musicVolume);
+			sfxBus.setVolume(sfxVolume);
+			ambientBus.setVolume(ambientVolume);
 		}
 
 		private float ConvertToFMODVolume(float sliderValue)

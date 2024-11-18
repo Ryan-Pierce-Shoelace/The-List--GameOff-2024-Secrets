@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2f4a74dbf71b64597e140f45b1bc24, type: 3}
+  m_Name: MainMenuThoughts
+  m_EditorClassIdentifier: 
+  possibleThoughts:
+  - Another task. They appear when I am asleep
+  - I don't remeber writing this one down.
+  - The list is all that holds me together.
+  - She used to make the lists. Not anymore.
+  - They keep coming back.
+  - The list helps me remember. It helps me to forget.
+  - Some tasks repeat until they make sense
+  - I should not look in the mirror.
+  - The handwriting isn't mine.
+  - Time moves differently when there is nothing on the list.
+  - The medicine isn't working like it used to.
+  - 'Check the locks... check the locks... '
+  - Sometimes I think I can hear it.
+  - Empty rooms can fill the pages.
+  - Without the list, the memories would return.
+  - The list knows what is and isn't real
+  - Tasks complete me, and I complete them.
+  - It needs me.
+  - The List. The List. The List.The List.The List.The List.
+  - It will inherit everything when I am gone
+  - My hands shake without The List.
+  - I think it has a list too....
+  - Something is missing from my list.

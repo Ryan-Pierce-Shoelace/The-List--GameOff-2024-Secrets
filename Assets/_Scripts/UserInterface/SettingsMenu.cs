@@ -3,12 +3,14 @@ using Shoelace.Audio.XuulSound;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UserInterface;
 
-namespace UserInterface
+namespace Horror.UserInterface
 {
 	public class SettingsMenu : UIScreen
 	{
 		[SerializeField] private GameObject pauseMenu;
+		[SerializeField] private bool isMainMenuScreen = false;
 
 		[Header("Toggles")]
 		[SerializeField] private TMP_Dropdown resolutionDropdown;
@@ -27,6 +29,7 @@ namespace UserInterface
 
 		protected override void Awake()
 		{
+			parentCanvas = GetComponentInParent<Canvas>();
 			ConfigureSliders();
 		}
 
@@ -34,14 +37,22 @@ namespace UserInterface
 		{
 			base.OnEnable();
 			SetupListeners();
-			SetupVolumeControls();
+			LoadAndApplyAudioSettings();
 			SetupResolutionDropdown();
 		}
 
 		public override void HandleCancel()
 		{
-			gameObject.SetActive(false);
-			pauseMenu.gameObject.SetActive(true);
+			if (isMainMenuScreen)
+			{
+				parentCanvas.gameObject.SetActive(false);
+				return;
+			}
+			else
+			{
+				gameObject.SetActive(false);
+				pauseMenu.gameObject.SetActive(true);
+			}
 		}
 
 
@@ -63,24 +74,22 @@ namespace UserInterface
 
 		private void ConfigureSliders()
 		{
-			masterVolumeSlider.minValue = 0f;
-			masterVolumeSlider.maxValue = 1f;
-			masterVolumeSlider.value = 1f;
-
-			musicVolumeSlider.minValue = 0f;
-			musicVolumeSlider.maxValue = 1f;
-			musicVolumeSlider.value = 1f;
-
-			sfxVolumeSlider.minValue = 0f;
-			sfxVolumeSlider.maxValue = 1f;
-			sfxVolumeSlider.value = 1f;
-
-			ambienceVolumeSlider.minValue = 0f;
-			ambienceVolumeSlider.maxValue = 1f;
-			ambienceVolumeSlider.value = 1f;
+			SetupSlider(masterVolumeSlider);
+			SetupSlider(musicVolumeSlider);
+			SetupSlider(sfxVolumeSlider);
+			SetupSlider(ambienceVolumeSlider);
 		}
 
-		private void SetupVolumeControls()
+		private void SetupSlider(Slider slider)
+		{
+			if (slider == null) return;
+
+			slider.minValue = 0f;
+			slider.maxValue = 1f;
+			slider.value = 1f;
+		}
+
+		private void LoadAndApplyAudioSettings()
 		{
 			if (AudioManager.Instance == null)
 			{
@@ -88,20 +97,67 @@ namespace UserInterface
 				return;
 			}
 
-			masterVolumeSlider.value = AudioManager.Instance.MasterVolume;
-			musicVolumeSlider.value = AudioManager.Instance.MusicVolume;
-			sfxVolumeSlider.value = AudioManager.Instance.SFXVolume;
-			ambienceVolumeSlider.value = AudioManager.Instance.AmbientVolume;
+			if (masterVolumeSlider != null)
+			{
+				masterVolumeSlider.value = AudioManager.Instance.MasterVolume;
+				masterVolumeSlider.onValueChanged.RemoveAllListeners();
+				masterVolumeSlider.onValueChanged.AddListener(OnMasterVolumeChanged);
+			}
 
-			masterVolumeSlider.onValueChanged.RemoveAllListeners();
-			musicVolumeSlider.onValueChanged.RemoveAllListeners();
-			sfxVolumeSlider.onValueChanged.RemoveAllListeners();
-			ambienceVolumeSlider.onValueChanged.RemoveAllListeners();
+			if (musicVolumeSlider != null)
+			{
+				musicVolumeSlider.value = AudioManager.Instance.MusicVolume;
+				musicVolumeSlider.onValueChanged.RemoveAllListeners();
+				musicVolumeSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
+			}
 
-			masterVolumeSlider.onValueChanged.AddListener((value) => AudioManager.Instance.MasterVolume = value);
-			musicVolumeSlider.onValueChanged.AddListener((value) => AudioManager.Instance.MusicVolume = value);
-			sfxVolumeSlider.onValueChanged.AddListener((value) => AudioManager.Instance.SFXVolume = value);
-			ambienceVolumeSlider.onValueChanged.AddListener((value) => AudioManager.Instance.AmbientVolume = value);
+			if (sfxVolumeSlider != null)
+			{
+				sfxVolumeSlider.value = AudioManager.Instance.SFXVolume;
+				sfxVolumeSlider.onValueChanged.RemoveAllListeners();
+				sfxVolumeSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
+			}
+
+
+			if (ambienceVolumeSlider != null)
+			{
+				ambienceVolumeSlider.value = AudioManager.Instance.AmbientVolume;
+				ambienceVolumeSlider.onValueChanged.RemoveAllListeners();
+				ambienceVolumeSlider.onValueChanged.AddListener(OnAmbienceVolumeChanged);
+			}
+		}
+
+
+		private void OnMasterVolumeChanged(float value)
+		{
+			if (AudioManager.Instance != null)
+			{
+				AudioManager.Instance.MasterVolume = value;
+			}
+		}
+
+		private void OnMusicVolumeChanged(float value)
+		{
+			if (AudioManager.Instance != null)
+			{
+				AudioManager.Instance.MusicVolume = value;
+			}
+		}
+
+		private void OnSFXVolumeChanged(float value)
+		{
+			if (AudioManager.Instance != null)
+			{
+				AudioManager.Instance.SFXVolume = value;
+			}
+		}
+
+		private void OnAmbienceVolumeChanged(float value)
+		{
+			if (AudioManager.Instance != null)
+			{
+				AudioManager.Instance.AmbientVolume = value;
+			}
 		}
 
 
@@ -153,8 +209,16 @@ namespace UserInterface
 
 		public void CloseSettings()
 		{
-			this.gameObject.SetActive(false);
-			pauseMenu.gameObject.SetActive(true);
+			if (isMainMenuScreen)
+			{
+				parentCanvas.gameObject.SetActive(false);
+				return;
+			}
+			else
+			{
+				gameObject.SetActive(false);
+				pauseMenu.gameObject.SetActive(true);
+			}
 		}
 	}
 }
