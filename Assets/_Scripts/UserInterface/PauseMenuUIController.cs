@@ -6,7 +6,7 @@ namespace UserInterface
 	public class PauseController : MonoBehaviour
 	{
 		[SerializeField] private InputReader inputReader;
-		[SerializeField] private PauseMenu pauseMenuScreen;
+		[SerializeField] private GameObject pauseMenuScreen;
 
 		private void Start()
 		{
