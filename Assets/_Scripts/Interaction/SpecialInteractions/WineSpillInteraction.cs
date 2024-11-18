@@ -1,18 +1,67 @@
+using Horror.InputSystem;
+using Interaction.InteractionCore;
+using Shoelace.Audio.XuulSound;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class WineSpillInteraction : MonoBehaviour
+namespace Interaction
 {
-    // Start is called before the first frame update
-    void Start()
+    public class WineSpillInteraction : CleanInteractable
     {
-        
-    }
+        [SerializeField] private InputReader playerInput;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField] private Animator wineAnim, eyesAnim;
+
+        [SerializeField] private SoundConfig bottleSFX, shatterSFX, mopSFX, horrorSFX;
+        private AudioManager audioManager;
+
+        private bool used;
+
+        private TaskCompletionSource<bool> shatterTaskSource;
+
+        protected override void Start()
+        {
+            base.Start();
+            audioManager = AudioManager.Instance;
+        }
+        public override void Interact()
+        {
+            if(!used)
+            {
+                used = true;
+                RunSpillSequence();
+            }
+            else
+            {
+                base.Interact();
+            }
+        }
+
+
+
+        private async void RunSpillSequence()
+        {
+
+        }
+
+        public void PlayShatterSFX()
+        {
+            audioManager.PlayOneShot(shatterSFX);
+        }
+
+        public void ActivateReturnHorror()
+        {
+            RunBodyHorrorSequence();
+        }
+
+        private async void RunBodyHorrorSequence()
+        {
+            await Task.Delay(1000);
+        }
+
     }
 }
