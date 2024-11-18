@@ -1,3 +1,4 @@
+using Horror;
 using Horror.InputSystem;
 using Interaction.InteractionCore;
 using Shoelace.Audio.XuulSound;
@@ -10,18 +11,14 @@ using UnityEngine.UI;
 
 namespace Interaction
 {
-    public class WineSpillInteraction : CleanInteractable
+    public class WineSpillInteraction : BaseObjectInteractable
     {
-        [SerializeField] private InputReader playerInput;
-
         [SerializeField] private Animator wineAnim, eyesAnim;
-
-        [SerializeField] private SoundConfig bottleSFX, shatterSFX, mopSFX, horrorSFX;
+        [SerializeField] private ChoreRevealer postWineShatterRevealer;
+        [SerializeField] private SoundConfig shatterSFX;
         private AudioManager audioManager;
 
-        private bool used;
-
-        private TaskCompletionSource<bool> shatterTaskSource;
+        [SerializeField] private GameObject spillGameObject;
 
         protected override void Start()
         {
@@ -30,22 +27,17 @@ namespace Interaction
         }
         public override void Interact()
         {
-            if(!used)
-            {
-                used = true;
-                RunSpillSequence();
-            }
-            else
-            {
-                base.Interact();
-            }
+            RunSpillSequence();
         }
-
-
 
         private async void RunSpillSequence()
         {
-
+            wineAnim.Play("WineSpill");
+            eyesAnim.Play("CreepyEyes");
+            await Task.Delay(4000);
+            postWineShatterRevealer.TryRevealNewChores();
+            gameObject.SetActive(false);
+            spillGameObject.SetActive(true);
         }
 
         public void PlayShatterSFX()
@@ -53,15 +45,7 @@ namespace Interaction
             audioManager.PlayOneShot(shatterSFX);
         }
 
-        public void ActivateReturnHorror()
-        {
-            RunBodyHorrorSequence();
-        }
-
-        private async void RunBodyHorrorSequence()
-        {
-            await Task.Delay(1000);
-        }
+        
 
     }
 }

@@ -1,6 +1,7 @@
 using Horror.Chores;
 using Interaction.InteractionCore;
 using Shoelace.Audio.XuulSound;
+using System;
 using UI.Thoughts;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,8 +22,7 @@ namespace Interaction.InteractionCore
         [SerializeField] private ChoreProgressor choreProgressor;
         [SerializeField] private DynamicThoughtSO choreFailThought;
 
-        public InteractObjectSO GetItemPickup() => pickUpObject;
-
+        public InteractObjectSO GetInteractableObject() => pickUpObject;
         private void Start()
         {
             clickableButton.image.alphaHitTestMinimumThreshold = alphaHitThreshold;
@@ -62,6 +62,6 @@ namespace Interaction.InteractionCore
             
         }
 
-
+        
     }
 }

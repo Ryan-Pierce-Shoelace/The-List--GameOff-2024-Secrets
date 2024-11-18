@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: day2GrabMop
   ChoreName: Go grab the mop in the hall
-  requiredChores:
-  - {fileID: 11400000, guid: e56f1487346dc9044b3e2000e20b934a, type: 2}
+  requiredChores: []
   choresToUnhide:
   - {fileID: 11400000, guid: 2312310ea21bf4d428070649cb2bdc43, type: 2}
   StartsHidden: 1

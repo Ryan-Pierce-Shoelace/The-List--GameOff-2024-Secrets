@@ -22,7 +22,13 @@ namespace Interaction.PlayerInteraction
 
                 scenePickups.Add(groundPickups[i].GetInteractableObject());
             }
+            for (int i = 0; i < uiPickups.Length; i++)
+            {
+                if (scenePickups.Contains(uiPickups[i].GetInteractableObject()))
+                    continue;
 
+                scenePickups.Add(uiPickups[i].GetInteractableObject());
+            }
             interactionManager.InitDailyInventory(scenePickups);
         }
     }
