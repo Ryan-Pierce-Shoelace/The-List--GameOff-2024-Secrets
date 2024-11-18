@@ -20,5 +20,5 @@ MonoBehaviour:
       Data4: 547274408
     Path: event:/SFX/Horror/SuddenNote
   is3D: 0
-  defaultVolume: 1
+  defaultVolume: 0.8
   parameters: []

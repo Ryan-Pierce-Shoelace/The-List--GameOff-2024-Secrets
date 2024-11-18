@@ -36,8 +36,12 @@ namespace Interaction
             eyesAnim.Play("CreepyEyes");
             await Task.Delay(4000);
             postWineShatterRevealer.TryRevealNewChores();
-            gameObject.SetActive(false);
+            
             spillGameObject.SetActive(true);
+
+            ToggleHighlight(false);
+            gameObject.SetActive(false);
+            this.enabled = false;
         }
 
         public void PlayShatterSFX()

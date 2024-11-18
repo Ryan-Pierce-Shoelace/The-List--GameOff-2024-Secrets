@@ -268,7 +268,7 @@ MonoBehaviour:
   inventoryRequirements: []
   successThought: {fileID: 0}
   failThought: {fileID: 0}
-  interactSFX: {fileID: 0}
+  interactSFX: {fileID: 11400000, guid: cfb50cb3fce948847bd1f54a87fa5bb5, type: 2}
   target: {fileID: 8659581055423525272}
   transformSpeed: 0.5
   transformEasing: 18
@@ -325,3 +325,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chore: {fileID: 11400000, guid: 87483d9d2cc28654e9481321aff77377, type: 2}
+  revealOnComplete: {fileID: 0}
