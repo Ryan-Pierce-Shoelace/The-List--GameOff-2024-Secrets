@@ -1,0 +1,52 @@
+{76256e03-095d-4733-8e46-a40688cdbe6d} bank:/Ambient
+{74a69df0-47ad-4a00-aebb-dae46ed229fd} bank:/Master
+{ecbbbd24-36d6-0642-28f2-501a9f212f65} bank:/Master.strings
+{08f6e95d-6e73-4833-839c-de84ff3570ae} bank:/Music
+{a5cdec78-6ee9-4579-8ac3-66b5491389ed} bank:/SFX
+{de7c8c9e-a7af-4a7b-9e2e-62914026a9a2} bus:/
+{4de36687-7078-4ac8-9aed-324ce8eeec62} bus:/Ambience
+{3d7447df-866b-43e5-9783-b94de0c5523e} bus:/Music
+{35f8e83a-d890-4067-916b-1815c08e0fd3} bus:/Reverb
+{7b81d8ef-da4b-4901-9261-8051ffb2111c} bus:/SFX
+{c6eb5c5a-a6dc-4b3c-8994-e5405fcb209b} event:/Ambience/CreepyNote
+{07f3ecc4-d8b6-4edb-9d81-849f9a55c877} event:/Ambience/FridgeHum
+{22b23f05-562b-4b4f-960f-8ca0b6f18248} event:/Ambience/Tension
+{4bd8e90e-a369-4f7b-a0f1-a97790b80ffc} event:/Music/Awkward Meeting
+{a7a89627-302c-4f98-a630-f05ca5cbd650} event:/Music/Comfortable Mystery 4
+{056e1e4b-a62c-4697-937c-883c88c51ab8} event:/Music/Fairytale Waltz
+{2babbb84-04d8-41aa-b4e9-bf007d0270ad} event:/Music/Phantasm
+{97f28b11-99da-4b82-9155-3953adc088e0} event:/SFX/Door/DoorClose
+{89508057-4236-48f3-b1b1-7297216d61be} event:/SFX/Door/DoorJiggle
+{5c2176ea-4c09-4ce4-be48-0c7838d92107} event:/SFX/Door/DoorOpen
+{36e288e5-26e7-44a6-b4dc-e223118bf42a} event:/SFX/Door/DoorSlam
+{2c469368-0e24-407d-beba-924bb72686b2} event:/SFX/Horror/ScaryVoice
+{d55c76ee-d9be-4fdf-b58e-0bd99d8d5198} event:/SFX/Horror/StaticBurst
+{25e10983-26d0-4d4d-ba01-e01cc018ff9a} event:/SFX/Horror/SuddenCensor
+{2330e9de-427b-4b4d-bc37-1b7ea8be9e20} event:/SFX/Horror/SuddenNote
+{687e0496-b079-4ed1-b841-c04b86f845f1} event:/SFX/Horror/SuddenNote 2
+{05068674-133b-4906-be20-dbf13dd90d04} event:/SFX/Misc/Heartbeat
+{9b3a85f3-d033-4df9-8e0c-2621a2e9647c} event:/SFX/Misc/Slice
+{fc9612fa-a811-44c4-ab0f-36ffe152f5a9} event:/SFX/Misc/ThroatSlice
+{857d17fc-ccaf-47d6-8767-eb9629283c56} event:/SFX/Notebook/PencilStroke
+{49118804-68ce-4a1a-92a5-fc280b2f2405} event:/SFX/Notebook/Writing
+{695f2ddd-d53a-4c3b-b2c4-66be08243866} event:/SFX/Objects/BottleClink
+{629715ad-4ec7-491c-a3d6-4c475e7c11ca} event:/SFX/Objects/ClothDrop
+{8362938c-5586-45e1-95b2-3afec5c38df0} event:/SFX/Objects/ClothNoise
+{0ace70b2-bfaa-43ce-b181-821d31c85367} event:/SFX/Objects/ClothRustling
+{f74955e5-35a3-4c56-ac5c-e1538767406e} event:/SFX/Objects/FridgeDoor
+{f3d02685-50d3-40c4-89fa-7fa891609591} event:/SFX/Objects/FridgeMiscObjects
+{c7843d2d-3b9a-4fd7-9b89-9f320ef42cb2} event:/SFX/Objects/GlassBreak
+{df92c472-84e2-4dfd-bec4-7b343637da60} event:/SFX/Objects/GlassBreak 2
+{e7ed0da1-eb23-43bc-a57b-6f5658d2cc6b} event:/SFX/Objects/GlassBreak 3
+{37bad160-089d-4f87-9617-30e30e390d7d} event:/SFX/Objects/GlassClink
+{39d2c6f4-ae8d-4827-bc50-d31fab79383a} event:/SFX/Objects/GlassClink 2
+{94480507-99d2-4e5c-a05a-767bacbdc9a7} event:/SFX/Objects/GlassClink 3
+{de400674-6816-4c71-a06d-72c9ecdf4bee} event:/SFX/Objects/PourDogFood
+{27a09e0e-4b81-4b06-9fe1-ec0ef663e789} event:/SFX/Objects/TVOn
+{d6c99d5c-c3c9-4c09-9cea-3c465aa5afdc} event:/SFX/Objects/ToggleSwitch
+{c66c4cad-80b8-4570-937d-c5105f4d7f9d} event:/SFX/Objects/WoodDrag
+{4d2d81e2-7ed5-4f48-8031-bef17247f0fb} event:/SFX/Phone/Call Failed
+{f02a7dd4-8862-4f9c-82b2-7c6cf161905b} event:/SFX/Phone/DialTone
+{a80158dc-0e77-4d9b-9b1a-288426153f56} event:/SFX/Phone/PhoneButtonPressed
+{cea8768e-188b-4454-a1d1-2da4696e953e} event:/SFX/Phone/SuccessfulCallVoices
+{e48fe199-d292-42d5-a20b-2b0c0f510695} event:/SFX/Player/PlayerFootsteps

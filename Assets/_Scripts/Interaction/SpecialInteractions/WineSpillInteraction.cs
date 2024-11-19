@@ -29,14 +29,11 @@ namespace Interaction
             wineAnim.Play("WineSpill");
             eyesAnim.Play("CreepyEyes");
 
-            
-
-            await Task.Delay(4000);
+            await Task.Delay(1000);
 
             ToggleHighlight(false);
             gameObject.SetActive(false);
             this.enabled = false;
-
             choreProgressor?.ProgressChore();
             spillGameObject.SetActive(true);
             

@@ -12,6 +12,6 @@ namespace Utilities
 		public static void TriggerThought(string text) => OnThoughtTriggered?.Invoke(text);
 		public static void DisplayRoomData(string roomName, int completedChores, int totalChores) => OnRoomEntered?.Invoke(roomName, completedChores, totalChores);
 		public static void DisplayInteractable(string text) => OnInteractableHovered?.Invoke(text);
-		public static void DialPhone(string text) => OnNumberDialed?.Invoke(text);
+		//public static void DialPhone(string text) => OnNumberDialed?.Invoke(text);
 	}
 }
