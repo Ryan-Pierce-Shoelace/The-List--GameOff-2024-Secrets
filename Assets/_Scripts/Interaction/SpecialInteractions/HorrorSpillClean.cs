@@ -11,6 +11,8 @@ namespace Interaction
         [SerializeField] private Animator horrorAnim;
         [SerializeField] private SoundConfig horrorSFX;
 
+        private TaskCompletionSource<bool> horrorHitSource;
+
         public void ActivateReturnHorror()
         {
             RunBodyHorrorSequence();
@@ -20,13 +22,22 @@ namespace Interaction
         {
             horrorAnim.gameObject.SetActive(true);
             horrorAnim.Play("WineBodyHorror");
-            await Task.Delay(2000);
+
+            horrorHitSource = new TaskCompletionSource<bool>();
+
+            await horrorHitSource.Task;
+
+
+            await Task.Delay(3000);
+            playerInput.EnableGameplayInput();
+            horrorAnim.Play("SpillIdle");
+        }
+
+        public void ActivateHorrorHit()
+        {
             AudioManager.Instance.PlayOneShot(horrorSFX);
             playerInput.DisableAllInput();
-            await Task.Delay(1000);
-            playerInput.EnableGameplayInput();
-            await Task.Delay(2000);
-            horrorAnim.Play("SpillIdle");
+            horrorHitSource?.TrySetResult(true);
         }
     }
 }

@@ -582,7 +582,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638674595029208977
+  lastModified: 638674737203418583
   FileSizes:
   - Name: Desktop
     Value: 5257568
@@ -1645,7 +1645,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Ambient.bank
   Name: Ambient
   StudioPath: bank:/Ambient
-  lastModified: 638674595028801606
+  lastModified: 638674737203017106
   FileSizes:
   - Name: Desktop
     Value: 1066656
