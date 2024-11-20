@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 581c0b928eb0a6149becd91fd6ee4871, type: 3}
-  m_Name: FindTheNumber
+  m_Name: ExamineTheMarksOnTheWall
   m_EditorClassIdentifier: 
-  ID: FindTheNumber
-  ChoreName: Find the Phone Number
+  ID: phoneSickToWork
+  ChoreName: Phone in sick to work.
   requiredChores: []
   choresToUnhide: []
   StartsHidden: 0
