@@ -9,13 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 581c0b928eb0a6149becd91fd6ee4871, type: 3}
-  m_Name: CleanTheMarksOnTheWall
+  m_Script: {fileID: 11500000, guid: d60c6871f2e160a4f9083038b39ef3f7, type: 3}
+  m_Name: PaintBucket
   m_EditorClassIdentifier: 
-  ID: bakcTothemirror
-  ChoreName: Go Back to The Mirror
-  requiredChores: []
-  choresToUnhide: []
-  StartsHidden: 0
-  RequiredCount: 1
-  isTutorialChore: 0
+  AnimationName: Interact
+  InteractionTime: 1

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2f4a74dbf71b64597e140f45b1bc24, type: 3}
+  m_Name: ExaminingPainBucket
+  m_EditorClassIdentifier: 
+  possibleThoughts:
+  - The paint's still fresh. Always fresh. Like the memories I'm not supposed to
+    have.
+  - White paint to cover white walls. Why does it look pink when I stir it? Just
+    tricks of the light.
+  - The thickness feels wrong today. Too thick.
+  - The fumes make me dizzy. Or maybe it's the scratching behind the walls. Paint.
+    Must paint.
+  - The paint remembers every color it's ever been. I hear them mixing.

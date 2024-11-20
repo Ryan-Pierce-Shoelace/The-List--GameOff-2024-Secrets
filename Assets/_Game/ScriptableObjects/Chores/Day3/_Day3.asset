@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: _Day3
   m_EditorClassIdentifier: 
   DayName: 
-  Chores: []
+  Chores:
+  - {fileID: 11400000, guid: e5cb74be817f85546afcf1716dd68229, type: 2}
+  - {fileID: 11400000, guid: a90dd85cfe98fec4d83c56e23cf5a9af, type: 2}
+  - {fileID: 11400000, guid: 3d6da0c6faf4b0747a2c1d39134e48b6, type: 2}
+  - {fileID: 11400000, guid: 2d2d769779aa93d4399e34a24e8341c2, type: 2}
   horrorChoreText:
     keyData: []
     valueData: []

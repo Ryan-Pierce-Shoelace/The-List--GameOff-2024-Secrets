@@ -2,16 +2,15 @@ using UnityEngine;
 
 namespace Interaction
 {
-    public class PickupInteractable : CleanInteractable
-    {
+	public class PickupInteractable : CleanInteractable
+	{
+		[SerializeField] private bool removeOnPickup;
 
-
-        [SerializeField] private bool removeOnPickup;
-        public override void Interact()
-        {
-            interactionManager.CollectObject(interactObjectSO);
-            if(removeOnPickup)
-                base.Interact();
-        }
-    }
+		public override void Interact()
+		{
+			interactionManager.CollectObject(interactObjectSO);
+			if (removeOnPickup)
+				base.Interact();
+		}
+	}
 }
