@@ -23,12 +23,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5e357bb61bc557c4295e17ad19f8ccc6, type: 2}
   - {fileID: 11400000, guid: 2c57d4af8503de648b8ca181e17233f8, type: 2}
   - {fileID: 11400000, guid: 87483d9d2cc28654e9481321aff77377, type: 2}
+  - {fileID: 11400000, guid: 4caac19b2e8058d4b992e948201c5de3, type: 2}
+  - {fileID: 11400000, guid: 3158503ff3354194d99f88300b6d992a, type: 2}
+  - {fileID: 11400000, guid: a2843b8c90278af45becf096142f0bf8, type: 2}
+  - {fileID: 11400000, guid: f00ee820d3325a245972c0afb182be86, type: 2}
   horrorChoreText:
     keyData:
     - {fileID: 11400000, guid: 2c57d4af8503de648b8ca181e17233f8, type: 2}
     - {fileID: 11400000, guid: 539afb9a76ef58c40bb1ebd0ad71d0e6, type: 2}
     - {fileID: 11400000, guid: 4a5c1cb8d899d4349a308d104acda2b5, type: 2}
     - {fileID: 11400000, guid: bc9a10ec9164a2c4d96b68ea6b0fa1a1, type: 2}
+    - {fileID: 11400000, guid: f00ee820d3325a245972c0afb182be86, type: 2}
+    - {fileID: 11400000, guid: a2843b8c90278af45becf096142f0bf8, type: 2}
+    - {fileID: 11400000, guid: 3158503ff3354194d99f88300b6d992a, type: 2}
+    - {fileID: 11400000, guid: 4caac19b2e8058d4b992e948201c5de3, type: 2}
     valueData:
     - ScaryText: Set the table for me
       Duration: 1
@@ -42,3 +50,15 @@ MonoBehaviour:
     - ScaryText: Clean the mess
       Duration: 0.2
       LikelyHood: 0.9
+    - ScaryText: Get rid of them
+      Duration: 0.5
+      LikelyHood: 0.5
+    - ScaryText: Burn
+      Duration: 0.2
+      LikelyHood: 0.3
+    - ScaryText: Remove them
+      Duration: 1
+      LikelyHood: 0.8
+    - ScaryText: BURN BURN BURN
+      Duration: 0.8
+      LikelyHood: 1
