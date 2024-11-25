@@ -582,7 +582,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638676354037122363
+  lastModified: 638676315830088906
   FileSizes:
   - Name: Desktop
     Value: 5257568
@@ -1229,7 +1229,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638676396256727202
+  lastModified: 638676315789947569
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -1374,7 +1374,7 @@ MonoBehaviour:
   - {fileID: -1383803080125453110}
   StringsBanks:
   - {fileID: 7919756391725561758}
-  cacheTime: 638676396257317391
+  cacheTime: 638680736418839935
   cacheVersion: 131620
 --- !u!114 &195675695103457140
 MonoBehaviour:
@@ -1647,7 +1647,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Ambient.bank
   Name: Ambient
   StudioPath: bank:/Ambient
-  lastModified: 638676354036495258
+  lastModified: 638676315789882941
   FileSizes:
   - Name: Desktop
     Value: 1066656
@@ -2456,7 +2456,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638676396256737230
+  lastModified: 638676315789957582
   FileSizes:
   - Name: Desktop
     Value: 2944
@@ -2577,7 +2577,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638676396257317391
+  lastModified: 638680736418839935
   FileSizes:
   - Name: Desktop
     Value: 3839232
