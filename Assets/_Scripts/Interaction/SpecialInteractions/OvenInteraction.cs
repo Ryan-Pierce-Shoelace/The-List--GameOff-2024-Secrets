@@ -82,10 +82,11 @@ namespace Interaction
             hotOvenImage.DOFade(1f, heatTime);
             await Task.Delay((int)(heatTime * 1000f));
             smokeParticles.Play();
-            smokeOverlayCanvas.gameObject.SetActive(true);
-            smokeOverlay.DOFade(1f, 20f);
+            
             await Task.Delay(7000);
             fireAlarm.sprite = activeFireAlarmSprite;
+            smokeOverlayCanvas.gameObject.SetActive(true);
+            smokeOverlay.DOFade(1f, 13f);
             AudioManager.Instance.PlayOneShot(fireAlarmSound);
             await Task.Delay(13000);
 

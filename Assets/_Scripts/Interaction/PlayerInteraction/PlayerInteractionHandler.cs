@@ -74,6 +74,11 @@ namespace Interaction.PlayerInteraction
 
         private void LateUpdate()
         {
+            if (input.IsDisabled())
+            {
+                ClearInteractable();
+                return;
+            }
             FindClosestInteractable();
         }
 

@@ -1,4 +1,5 @@
 using Project.Input;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -53,7 +54,12 @@ namespace Horror.InputSystem
 			input.UI.Enable();
 		}
 
-		public void DisableAllInput()
+        public bool IsDisabled()
+        {
+			return !input.Player.enabled && !input.UI.enabled;
+        }
+
+        public void DisableAllInput()
 		{
 			input.Player.Disable();
 			input.UI.Disable();
@@ -130,6 +136,8 @@ namespace Horror.InputSystem
 		public void OnTrackedDeviceOrientation(InputAction.CallbackContext context)
 		{
 		}
-		#endregion
-	}
+
+        
+        #endregion
+    }
 }
