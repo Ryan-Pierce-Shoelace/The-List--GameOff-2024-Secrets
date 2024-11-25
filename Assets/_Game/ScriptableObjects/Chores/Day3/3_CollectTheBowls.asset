@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 581c0b928eb0a6149becd91fd6ee4871, type: 3}
-  m_Name: FindTheNumber
+  m_Name: 3_CollectTheBowls
   m_EditorClassIdentifier: 
-  ID: FindTheNumber
-  ChoreName: Find the Phone Number
-  requiredChores: []
+  ID: collectTheBowls
+  ChoreName: CollectTheBowls
+  requiredChores:
+  - {fileID: 11400000, guid: 2d2d769779aa93d4399e34a24e8341c2, type: 2}
   choresToUnhide: []
-  StartsHidden: 0
-  RequiredCount: 1
+  StartsHidden: 1
+  RequiredCount: 5
   isTutorialChore: 0

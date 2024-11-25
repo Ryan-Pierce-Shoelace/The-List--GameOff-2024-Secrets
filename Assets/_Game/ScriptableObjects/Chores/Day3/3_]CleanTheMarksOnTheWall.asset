@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 581c0b928eb0a6149becd91fd6ee4871, type: 3}
-  m_Name: ForgeYourWay
+  m_Name: 3_]CleanTheMarksOnTheWall
   m_EditorClassIdentifier: 
-  ID: ForgeYourWay
-  ChoreName: Forge Your Way
-  RequiredChores: []
-  ChoresToUnhide: []
+  ID: cleanTheMarks
+  ChoreName: Clean The Marks On The Wall
+  requiredChores: []
+  choresToUnhide: []
   StartsHidden: 0
   RequiredCount: 1
+  isTutorialChore: 0

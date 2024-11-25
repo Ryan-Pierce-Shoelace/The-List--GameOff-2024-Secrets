@@ -5,7 +5,7 @@
 			<value>StaticBurst</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{0d5b6371-fec0-4c86-8a49-2bb4c82a21b6}</destination>
@@ -93,7 +93,7 @@
 			<value>0.26000000000000001</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>0.040000000000000001</value>
+			<value>0.046000000000000006</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{79118ccd-d98f-4c6a-9ee2-b974e85e528b}</destination>
@@ -126,9 +126,11 @@
 	<object class="MixerBusEffectChain" id="{d6cece4a-10e8-4a05-a854-919bc177271f}">
 		<relationship name="effects">
 			<destination>{1ee98b42-b606-4b6c-a637-34400e244f83}</destination>
+			<destination>{7ccc17db-74f1-4087-b212-04acc0aa53a7}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c3180c51-2473-4953-9184-9321e25d195a}" />
 	<object class="MixerBusFader" id="{181e4a0d-00a7-42bb-a127-15e1ab18d1aa}" />
 	<object class="MixerBusFader" id="{1ee98b42-b606-4b6c-a637-34400e244f83}" />
+	<object class="SpatialiserEffect" id="{7ccc17db-74f1-4087-b212-04acc0aa53a7}" />
 </objects>

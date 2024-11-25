@@ -1,44 +1,39 @@
 using System.Collections.Generic;
-using Shoelace.Audio.XuulSound;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UserInterface;
+using Shoelace.Audio.XuulSound;
 
 namespace Horror.UserInterface
 {
 	public class SettingsMenu : UIScreen
 	{
 		[SerializeField] private GameObject pauseMenu;
-		[SerializeField] private bool isMainMenuScreen = false;
-
-		[Header("Toggles")]
+		[SerializeField] private bool isMainMenuScreen;
 		[SerializeField] private TMP_Dropdown resolutionDropdown;
-
 		[SerializeField] private Toggle fullScreenToggle;
 		[SerializeField] private Button closeButton;
-
 		[SerializeField] private Slider masterVolumeSlider;
 		[SerializeField] private Slider musicVolumeSlider;
 		[SerializeField] private Slider sfxVolumeSlider;
 		[SerializeField] private Slider ambienceVolumeSlider;
 
-
-		private Resolution[] resolutions;
-
+		private List<Vector2Int> availableResolutions;
 
 		protected override void Awake()
 		{
 			parentCanvas = GetComponentInParent<Canvas>();
-			ConfigureSliders();
+			SetupAudioSliders();
 		}
 
 		protected override void OnEnable()
 		{
 			base.OnEnable();
-			SetupListeners();
-			LoadAndApplyAudioSettings();
-			SetupResolutionDropdown();
+			InitializeUI();
+			LoadAudioSettings();
+			InitializeResolutions();
 		}
 
 		public override void HandleCancel()
@@ -48,177 +43,106 @@ namespace Horror.UserInterface
 				parentCanvas.gameObject.SetActive(false);
 				return;
 			}
-			else
-			{
-				gameObject.SetActive(false);
-				pauseMenu.gameObject.SetActive(true);
-			}
+
+			gameObject.SetActive(false);
+			pauseMenu.gameObject.SetActive(true);
 		}
 
-
-		private void SetupListeners()
+		private void InitializeUI()
 		{
 			closeButton.onClick.RemoveAllListeners();
 			closeButton.onClick.AddListener(HandleCancel);
 
 			if (fullScreenToggle != null)
 			{
+				fullScreenToggle.isOn = Screen.fullScreenMode != FullScreenMode.Windowed;
 				fullScreenToggle.onValueChanged.RemoveAllListeners();
-				fullScreenToggle.onValueChanged.AddListener(SetFullScreen);
+				fullScreenToggle.onValueChanged.AddListener(UpdateScreenMode);
 			}
-
-
-			resolutionDropdown.onValueChanged.RemoveAllListeners();
-			resolutionDropdown.onValueChanged.AddListener(ChangeResolution);
 		}
 
-		private void ConfigureSliders()
+		private void SetupAudioSliders()
 		{
-			SetupSlider(masterVolumeSlider);
-			SetupSlider(musicVolumeSlider);
-			SetupSlider(sfxVolumeSlider);
-			SetupSlider(ambienceVolumeSlider);
+			foreach (var slider in new[] { masterVolumeSlider, musicVolumeSlider, sfxVolumeSlider, ambienceVolumeSlider })
+			{
+				if (slider != null)
+				{
+					slider.minValue = 0f;
+					slider.maxValue = 1f;
+					slider.value = 1f;
+				}
+			}
 		}
 
-		private void SetupSlider(Slider slider)
+		private void LoadAudioSettings()
+		{
+			if (!AudioManager.Instance) return;
+
+			SetupAudioSlider(masterVolumeSlider, AudioManager.Instance.MasterVolume, OnMasterVolumeChanged);
+			SetupAudioSlider(musicVolumeSlider, AudioManager.Instance.MusicVolume, OnMusicVolumeChanged);
+			SetupAudioSlider(sfxVolumeSlider, AudioManager.Instance.SFXVolume, OnSFXVolumeChanged);
+			SetupAudioSlider(ambienceVolumeSlider, AudioManager.Instance.AmbientVolume, OnAmbienceVolumeChanged);
+		}
+
+		private void SetupAudioSlider(Slider slider, float initialValue, UnityEngine.Events.UnityAction<float> callback)
 		{
 			if (slider == null) return;
-
-			slider.minValue = 0f;
-			slider.maxValue = 1f;
-			slider.value = 1f;
+			slider.value = initialValue;
+			slider.onValueChanged.RemoveAllListeners();
+			slider.onValueChanged.AddListener(callback);
 		}
 
-		private void LoadAndApplyAudioSettings()
+		private void InitializeResolutions()
 		{
-			if (AudioManager.Instance == null)
-			{
-				Debug.LogError("AudioManager instance not found!");
-				return;
-			}
+			availableResolutions = Screen.resolutions
+				.Select(r => new Vector2Int(r.width, r.height))
+				.Distinct()
+				.OrderByDescending(r => r.x * r.y)
+				.ToList();
 
-			if (masterVolumeSlider != null)
-			{
-				masterVolumeSlider.value = AudioManager.Instance.MasterVolume;
-				masterVolumeSlider.onValueChanged.RemoveAllListeners();
-				masterVolumeSlider.onValueChanged.AddListener(OnMasterVolumeChanged);
-			}
+			resolutionDropdown.ClearOptions();
 
-			if (musicVolumeSlider != null)
-			{
-				musicVolumeSlider.value = AudioManager.Instance.MusicVolume;
-				musicVolumeSlider.onValueChanged.RemoveAllListeners();
-				musicVolumeSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
-			}
+			var options = availableResolutions.Select(r => $"{r.x} x {r.y}").ToList();
+			resolutionDropdown.AddOptions(options);
 
-			if (sfxVolumeSlider != null)
-			{
-				sfxVolumeSlider.value = AudioManager.Instance.SFXVolume;
-				sfxVolumeSlider.onValueChanged.RemoveAllListeners();
-				sfxVolumeSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
-			}
+			var currentResolution = new Vector2Int(Screen.width, Screen.height);
+			var currentIndex = availableResolutions.FindIndex(r => r == currentResolution);
+			resolutionDropdown.value = currentIndex;
 
-
-			if (ambienceVolumeSlider != null)
-			{
-				ambienceVolumeSlider.value = AudioManager.Instance.AmbientVolume;
-				ambienceVolumeSlider.onValueChanged.RemoveAllListeners();
-				ambienceVolumeSlider.onValueChanged.AddListener(OnAmbienceVolumeChanged);
-			}
+			resolutionDropdown.onValueChanged.RemoveAllListeners();
+			resolutionDropdown.onValueChanged.AddListener(UpdateResolution);
 		}
 
+		private void UpdateResolution(int index)
+		{
+			if (index < 0 || index >= availableResolutions.Count) return;
+			var newResolution = availableResolutions[index];
+			Screen.SetResolution(newResolution.x, newResolution.y, Screen.fullScreenMode);
+		}
+
+		private void UpdateScreenMode(bool isFullScreen)
+		{
+			Screen.fullScreenMode = isFullScreen ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed;
+		}
 
 		private void OnMasterVolumeChanged(float value)
 		{
-			if (AudioManager.Instance != null)
-			{
-				AudioManager.Instance.MasterVolume = value;
-			}
+			if (AudioManager.Instance) AudioManager.Instance.MasterVolume = value;
 		}
 
 		private void OnMusicVolumeChanged(float value)
 		{
-			if (AudioManager.Instance != null)
-			{
-				AudioManager.Instance.MusicVolume = value;
-			}
+			if (AudioManager.Instance) AudioManager.Instance.MusicVolume = value;
 		}
 
 		private void OnSFXVolumeChanged(float value)
 		{
-			if (AudioManager.Instance != null)
-			{
-				AudioManager.Instance.SFXVolume = value;
-			}
+			if (AudioManager.Instance) AudioManager.Instance.SFXVolume = value;
 		}
 
 		private void OnAmbienceVolumeChanged(float value)
 		{
-			if (AudioManager.Instance != null)
-			{
-				AudioManager.Instance.AmbientVolume = value;
-			}
-		}
-
-
-		private void SetupResolutionDropdown()
-		{
-			resolutions = Screen.resolutions;
-
-			resolutionDropdown.ClearOptions();
-
-			List<string> options = new List<string>();
-			int currentResolutionIndex = 0;
-			for (int i = 0; i < resolutions.Length; i++)
-			{
-				string option = resolutions[i].width + " x " + resolutions[i].height;
-				options.Add(option);
-
-				if (resolutions[i].width == Screen.currentResolution.width &&
-				    resolutions[i].height == Screen.currentResolution.height)
-				{
-					currentResolutionIndex = i;
-				}
-			}
-
-			options = RemoveDuplicates(options);
-
-			resolutionDropdown.AddOptions(options);
-			resolutionDropdown.value = currentResolutionIndex;
-			resolutionDropdown.RefreshShownValue();
-		}
-
-		private List<string> RemoveDuplicates(List<string> options)
-		{
-			HashSet<string> uniqueOptions = new HashSet<string>(options);
-			return new List<string>(uniqueOptions);
-		}
-
-
-		private void ChangeResolution(int index)
-		{
-			Resolution resolution = resolutions[index];
-			Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-		}
-
-		public void SetFullScreen(bool isFullScreen)
-		{
-			Screen.fullScreen = isFullScreen;
-		}
-
-
-		public void CloseSettings()
-		{
-			if (isMainMenuScreen)
-			{
-				parentCanvas.gameObject.SetActive(false);
-				return;
-			}
-			else
-			{
-				gameObject.SetActive(false);
-				pauseMenu.gameObject.SetActive(true);
-			}
+			if (AudioManager.Instance) AudioManager.Instance.AmbientVolume = value;
 		}
 	}
 }

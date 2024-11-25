@@ -4,75 +4,81 @@ using UnityEngine;
 
 namespace Horror.DayManagement
 {
-	public class ObjectToggler : MonoBehaviour
-	{
-		[SerializeField] private GameObject targetObject;
-		[SerializeField] private float enabledDuration = 1f;
-		[SerializeField] private float disabledDuration = 0.5f;
-		[SerializeField] private bool startEnabled = true;
+    public class ObjectToggler : MonoBehaviour 
+    {
+        [SerializeField] private GameObject targetObject;
+        [SerializeField] private float enabledDuration = 1f;
+        [SerializeField] private float disabledDuration = 0.5f;
+        [SerializeField] private bool startEnabled = true;
 
-		[Header("Audio")]
-		[SerializeField] private SoundConfig enableSound;
+        [Header("Audio")]
+        [SerializeField] private SoundEmitter enableSoundEmitter;
+        [SerializeField] private SoundEmitter disableSoundEmitter;
 
-		[SerializeField] private SoundConfig disableSound;
+        private void Start()
+        {
+            if (targetObject == null)
+            {
+                targetObject = gameObject;
+            }
 
-		private ISoundPlayer enableSoundPlayer;
-		private ISoundPlayer disableSoundPlayer;
+      
+            if (enableSoundEmitter == null)
+            {
+                Debug.LogWarning("Enable sound emitter not assigned on ObjectToggler: " + gameObject.name);
+            }
+            
+            if (disableSoundEmitter == null)
+            {
+                Debug.LogWarning("Disable sound emitter not assigned on ObjectToggler: " + gameObject.name);
+            }
 
-		private void Start()
-		{
-			if (targetObject == null)
-			{
-				targetObject = gameObject;
-			}
+            targetObject.SetActive(startEnabled);
+            StartCoroutine(ToggleRoutine());
+        }
 
-			if (enableSound)
-			{
-				enableSoundPlayer = new SimpleSoundPlayer(enableSound);
-			}
+        private IEnumerator ToggleRoutine()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(targetObject.activeSelf ? enabledDuration : disabledDuration);
+                bool newState = !targetObject.activeSelf;
+                targetObject.SetActive(newState);
 
-			if (disableSound)
-			{
-				disableSoundPlayer = new SimpleSoundPlayer(disableSound);
-			}
+                if (newState)
+                {
+                    enableSoundEmitter?.Play();
+                }
+                else
+                {
+                    disableSoundEmitter?.Play();
+                }
+            }
+        }
 
-			targetObject.SetActive(startEnabled);
-			StartCoroutine(ToggleRoutine());
-		}
+        public void RestartFlicker()
+        {
+            StopAllCoroutines();
+            StartCoroutine(ToggleRoutine());
+        }
 
-		private IEnumerator ToggleRoutine()
-		{
-			while (true)
-			{
-				yield return new WaitForSeconds(targetObject.activeSelf ? enabledDuration : disabledDuration);
-				bool newState = !targetObject.activeSelf;
-				targetObject.SetActive(newState);
+        public void StopFlicker()
+        {
+            StopAllCoroutines();
+        }
 
-				if (newState)
-				{
-					enableSoundPlayer?.Play();
-				}
-				else
-				{
-					disableSoundPlayer?.Play();
-				}
-			}
-		}
-
-		public void RestartFlicker()
-		{
-			StopAllCoroutines();
-			StartCoroutine(ToggleRoutine());
-		}
-
-		public void StopFlicker()
-		{
-			StopAllCoroutines();
-		}
-
-		public void SetActive(bool state)
-		{
-			targetObject.SetActive(state);
-		}
-	}
+        public void SetActive(bool state)
+        {
+            targetObject.SetActive(state);
+            
+            if (state)
+            {
+                enableSoundEmitter?.Play();
+            }
+            else
+            {
+                disableSoundEmitter?.Play();
+            }
+        }
+    }
 }

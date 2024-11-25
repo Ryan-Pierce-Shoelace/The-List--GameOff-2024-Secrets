@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2f4a74dbf71b64597e140f45b1bc24, type: 3}
+  m_Name: ExaminingWallMarks
+  m_EditorClassIdentifier: 
+  possibleThoughts:
+  - Another mark... when did this get here?
+  - The stain looks like a handprint today. Yesterday it was just a smudge
+  - The list tells me to clean this stain. Again.
+  - It's forming words now. But I cannot read them.
+  - The mark pulses like a heart under wallpaper. Paint will still it. Paint must
+    still it.
+  - The mark whispers a lullaby I've never heard, but my hands remember singing it.
