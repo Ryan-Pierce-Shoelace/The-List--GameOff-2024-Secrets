@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: day2OpenTheOven
   ChoreName: Open the Oven
   requiredChores:
-  - {fileID: 11400000, guid: f00ee820d3325a245972c0afb182be86, type: 2}
+  - {fileID: 11400000, guid: 2949b86126530c345a19327dbd377ad9, type: 2}
   choresToUnhide:
   - {fileID: 11400000, guid: 3158503ff3354194d99f88300b6d992a, type: 2}
   StartsHidden: 1

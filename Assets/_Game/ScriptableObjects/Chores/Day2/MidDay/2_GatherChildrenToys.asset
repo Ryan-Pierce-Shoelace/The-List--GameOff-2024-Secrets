@@ -15,7 +15,8 @@ MonoBehaviour:
   ID: day2GatherToys
   ChoreName: Gather the toys
   requiredChores: []
-  choresToUnhide: []
+  choresToUnhide:
+  - {fileID: 11400000, guid: a2843b8c90278af45becf096142f0bf8, type: 2}
   StartsHidden: 1
   RequiredCount: 6
   isTutorialChore: 0
