@@ -5,7 +5,7 @@
 			<value>PourDogFood</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{37470a81-9310-4f96-bbc6-31437e6c7427}</destination>
@@ -60,7 +60,7 @@
 	<object class="MarkerTrack" id="{45dc1578-bcfe-472e-961d-d646f51889de}" />
 	<object class="GroupTrack" id="{03675278-874e-4b1f-869c-8adb0bba0665}">
 		<relationship name="modules">
-			<destination>{808c9227-c471-49f9-a749-96b6c6497e1b}</destination>
+			<destination>{072e1cb5-8e0c-40ce-ae50-7b07d29f8610}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{cc224b11-04e9-4008-a341-da6e045169d5}</destination>
@@ -68,7 +68,7 @@
 	</object>
 	<object class="Timeline" id="{169925fb-39a8-4908-b1e3-5e5d04b73fbc}">
 		<relationship name="modules">
-			<destination>{808c9227-c471-49f9-a749-96b6c6497e1b}</destination>
+			<destination>{072e1cb5-8e0c-40ce-ae50-7b07d29f8610}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{e5f7fb1b-2ed0-43c5-a2ad-77c963d4459b}">
@@ -88,12 +88,12 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f648e076-9106-4f2e-8e06-73476b128497}" />
-	<object class="SingleSound" id="{808c9227-c471-49f9-a749-96b6c6497e1b}">
+	<object class="SingleSound" id="{072e1cb5-8e0c-40ce-ae50-7b07d29f8610}">
 		<property name="length">
-			<value>3.6240000000000001</value>
+			<value>1.3500000000000001</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{51e8a570-c5e3-4503-8faf-df5fdcdf70bd}</destination>
+			<destination>{5296a7b1-6dd5-4cac-aa65-96a37f4beb45}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{cc224b11-04e9-4008-a341-da6e045169d5}">
