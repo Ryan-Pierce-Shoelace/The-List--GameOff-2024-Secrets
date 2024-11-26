@@ -135,6 +135,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5200
+--- !u!114 &-8603972518950144652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Paint/PaintBrush
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Paint/PaintBrush
+  Guid:
+    Data1: -1445542397
+    Data2: 1299912565
+    Data3: -1012193899
+    Data4: -1919033441
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1896
 --- !u!114 &-8471302020020351995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +270,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1420
+--- !u!114 &-7465161697011212001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Oven/StartingAFire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Oven/StartingAFire
+  Guid:
+    Data1: -1660802073
+    Data2: 1131645605
+    Data3: -2005134198
+    Data4: 1434278971
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11000
 --- !u!114 &-7363322044946232379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,7 +636,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638676315830088906
+  lastModified: 638676354037122363
   FileSizes:
   - Name: Desktop
     Value: 5257568
@@ -715,6 +769,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 13516
+--- !u!114 &-4790145181169093889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/PlacingItem
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/PlacingItem
+  Guid:
+    Data1: -403231000
+    Data2: 1115398514
+    Data3: -511075957
+    Data4: -2016542044
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 444
 --- !u!114 &-4697706820752441999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -971,6 +1052,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 83069
+--- !u!114 &-3260869563182028581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Oven/OvenDoor
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Oven/OvenDoor
+  Guid:
+    Data1: 576652089
+    Data2: 1332992268
+    Data3: 1074546843
+    Data4: -507704395
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2040
+--- !u!114 &-2862509233156962274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/PlacementClink
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/PlacementClink
+  Guid:
+    Data1: 633232185
+    Data2: 1110096062
+    Data3: 783553668
+    Data4: -273591813
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 574
 --- !u!114 &-2778892832003363044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,6 +1322,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 90000
+--- !u!114 &-1488310261659004229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Misc/Clinking
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Misc/Clinking
+  Guid:
+    Data1: -1524596601
+    Data2: 1124425483
+    Data3: 1147473581
+    Data4: 1525605694
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1384
 --- !u!114 &-1470646271827964005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1229,7 +1391,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638676315789947569
+  lastModified: 638681630514718136
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -1281,6 +1443,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 90000
+--- !u!114 &-373027373548041932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Oven/FireStarter
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Oven/FireStarter
+  Guid:
+    Data1: -592728732
+    Data2: 1130469433
+    Data3: 391393707
+    Data4: -1887380268
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 835
 --- !u!114 &-370593214880146878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1308,6 +1497,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1400
+--- !u!114 &-327769237768524748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Door/HatchDoorOpening
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Door/HatchDoorOpening
+  Guid:
+    Data1: -101074082
+    Data2: 1222802969
+    Data3: 236856964
+    Data4: 1910453633
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2496
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1369,12 +1585,26 @@ MonoBehaviour:
   - {fileID: 8790737927056614178}
   - {fileID: 7769103890498354763}
   - {fileID: 5258930036934444184}
+  - {fileID: -8603972518950144652}
+  - {fileID: -3260869563182028581}
+  - {fileID: -2862509233156962274}
+  - {fileID: 7536797482786143119}
+  - {fileID: 6552712269647856120}
+  - {fileID: -327769237768524748}
+  - {fileID: -373027373548041932}
+  - {fileID: 2261543519251431796}
+  - {fileID: 1970097114570003517}
+  - {fileID: 8036769771587507910}
+  - {fileID: -1488310261659004229}
+  - {fileID: 7262751903988576708}
+  - {fileID: -7465161697011212001}
+  - {fileID: -4790145181169093889}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1383803080125453110}
   StringsBanks:
   - {fileID: 7919756391725561758}
-  cacheTime: 638680736418839935
+  cacheTime: 638681630518659370
   cacheVersion: 131620
 --- !u!114 &195675695103457140
 MonoBehaviour:
@@ -1557,7 +1787,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3624
+  Length: 1350
 --- !u!114 &1024848555284662914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1647,7 +1877,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Ambient.bank
   Name: Ambient
   StudioPath: bank:/Ambient
-  lastModified: 638676315789882941
+  lastModified: 638676354036495258
   FileSizes:
   - Name: Desktop
     Value: 1066656
@@ -1679,6 +1909,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 600
+--- !u!114 &1970097114570003517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Oven/ItemBurning
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Oven/ItemBurning
+  Guid:
+    Data1: 953709681
+    Data2: 1208360282
+    Data3: -1640787819
+    Data4: 1908911252
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &2223974182158857249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1706,6 +1963,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 216000
+--- !u!114 &2261543519251431796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SmokeAlarm/SmokeAlarmToFizzle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SmokeAlarm/SmokeAlarmToFizzle
+  Guid:
+    Data1: 1401951337
+    Data2: 1159905072
+    Data3: -1226567800
+    Data4: -1566389670
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9000
 --- !u!114 &2272902342772919817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2259,6 +2543,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1049
+--- !u!114 &6552712269647856120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Oven/Fire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Oven/Fire
+  Guid:
+    Data1: -1763289008
+    Data2: 1170352796
+    Data3: -67097194
+    Data4: 237062529
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 15203
 --- !u!114 &6919056655272700603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2387,6 +2698,60 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1066656
   Exists: 1
+--- !u!114 &7262751903988576708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Paint/PaintBucket
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Paint/PaintBucket
+  Guid:
+    Data1: -1109591664
+    Data2: 1247223205
+    Data3: 495912341
+    Data4: -1036953497
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1824
+--- !u!114 &7536797482786143119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SmokeAlarm/SmokeAlarmBeep
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SmokeAlarm/SmokeAlarmBeep
+  Guid:
+    Data1: 44005449
+    Data2: 1094837237
+    Data3: 1769148290
+    Data4: -373431160
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3072
 --- !u!114 &7613305292999087231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2456,10 +2821,10 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638676315789957582
+  lastModified: 638681630514728142
   FileSizes:
   - Name: Desktop
-    Value: 2944
+    Value: 3624
   Exists: 1
 --- !u!114 &7948316562538175551
 MonoBehaviour:
@@ -2488,6 +2853,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8045
+--- !u!114 &8036769771587507910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SmokeAlarm/SmokeAlarmFizzle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SmokeAlarm/SmokeAlarmFizzle
+  Guid:
+    Data1: -315064702
+    Data2: 1296905339
+    Data3: 1373761667
+    Data4: -779606884
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4200
 --- !u!114 &8229933173429487392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2577,10 +2969,10 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638680736418839935
+  lastModified: 638681630518659370
   FileSizes:
   - Name: Desktop
-    Value: 3839232
+    Value: 4349952
   Exists: 1
 --- !u!114 &8790737927056614178
 MonoBehaviour:

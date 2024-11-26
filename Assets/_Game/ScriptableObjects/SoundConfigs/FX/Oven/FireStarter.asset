@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e7505549698d943a0ac22063159310, type: 3}
+  m_Name: FireStarter
+  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: -592728732
+      Data2: 1130469433
+      Data3: 391393707
+      Data4: -1887380268
+    Path: event:/SFX/Oven/FireStarter
+  is3D: 0
+  defaultVolume: 1
+  parameters: []
