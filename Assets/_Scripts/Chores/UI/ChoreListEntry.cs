@@ -105,7 +105,7 @@ namespace Horror.Chores.UI
 
 		private void HandleChoreAdvanced(string choreId)
 		{
-			if (choreData && choreData.ID == choreId)
+			if (choreData && choreData.name == choreId)
 			{
 				UpdateProgressCounter();
 			}
@@ -148,7 +148,7 @@ namespace Horror.Chores.UI
 		
 		private void HandleHorrorEffect(string choreId, HorrorEffectData effectData)
 		{
-			if (!choreData || choreData.ID != choreId) return;
+			if (!choreData || choreData.name != choreId) return;
 			
 			if (string.IsNullOrEmpty(originalText))
 			{

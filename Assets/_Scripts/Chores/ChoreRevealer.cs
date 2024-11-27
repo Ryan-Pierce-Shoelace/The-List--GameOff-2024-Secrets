@@ -36,7 +36,7 @@ namespace Horror
 
             foreach (ChoreDataSO t in choresToUnhide)
             {
-                ChoreEvents.UnhideChore(t.ID);
+                ChoreEvents.UnhideChore(t.name);
             }
             if(revealEvent != null)
             {

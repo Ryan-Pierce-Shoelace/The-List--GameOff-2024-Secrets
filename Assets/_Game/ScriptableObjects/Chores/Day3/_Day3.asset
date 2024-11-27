@@ -12,12 +12,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74141902e0b0e6b4583b3b0066e88d3b, type: 3}
   m_Name: _Day3
   m_EditorClassIdentifier: 
-  DayName: 
+  DayName: Day 3
   Chores:
-  - {fileID: 11400000, guid: e5cb74be817f85546afcf1716dd68229, type: 2}
-  - {fileID: 11400000, guid: a90dd85cfe98fec4d83c56e23cf5a9af, type: 2}
-  - {fileID: 11400000, guid: 3d6da0c6faf4b0747a2c1d39134e48b6, type: 2}
-  - {fileID: 11400000, guid: 2d2d769779aa93d4399e34a24e8341c2, type: 2}
+  - {fileID: 11400000, guid: b2cadad4fc99bd5428fd087f49c1fd6e, type: 2}
+  - {fileID: 11400000, guid: 12766a888e8894541941278a0055e2ba, type: 2}
+  - {fileID: 11400000, guid: e95aef15115c5934aa2d37f041da19aa, type: 2}
+  - {fileID: 11400000, guid: 7778add708b7e3b4799bb8ccf33fe60f, type: 2}
+  - {fileID: 11400000, guid: eb1e1955694bc7744975f4f18bc0dd80, type: 2}
+  - {fileID: 11400000, guid: a16fbe2ed3aedb54688514d6349d4649, type: 2}
+  - {fileID: 11400000, guid: 2e958d1ac59acea44bbdd5871fa5ea4b, type: 2}
+  - {fileID: 11400000, guid: 08c1ee238b6b55647bc01b8d2ee0b12f, type: 2}
+  - {fileID: 11400000, guid: 34a872bfdd2bd3b49a9c87835e9b8003, type: 2}
+  - {fileID: 11400000, guid: 84f2e5507b507484eab3d10bdb8efb40, type: 2}
+  - {fileID: 11400000, guid: cfa58c937461df743a439d11f2c66525, type: 2}
+  - {fileID: 11400000, guid: 3ea0e8e7739257043893b2597eaf83ad, type: 2}
+  - {fileID: 11400000, guid: be1d6e6780bd1164f9bc201e50cfc23b, type: 2}
+  - {fileID: 11400000, guid: 1daad4385bb96bd4c9e223d9c418bab3, type: 2}
   horrorChoreText:
-    keyData: []
-    valueData: []
+    keyData:
+    - {fileID: 11400000, guid: b2cadad4fc99bd5428fd087f49c1fd6e, type: 2}
+    - {fileID: 11400000, guid: e95aef15115c5934aa2d37f041da19aa, type: 2}
+    - {fileID: 11400000, guid: 7778add708b7e3b4799bb8ccf33fe60f, type: 2}
+    - {fileID: 11400000, guid: eb1e1955694bc7744975f4f18bc0dd80, type: 2}
+    - {fileID: 11400000, guid: a16fbe2ed3aedb54688514d6349d4649, type: 2}
+    - {fileID: 11400000, guid: 08c1ee238b6b55647bc01b8d2ee0b12f, type: 2}
+    - {fileID: 11400000, guid: 34a872bfdd2bd3b49a9c87835e9b8003, type: 2}
+    - {fileID: 11400000, guid: cfa58c937461df743a439d11f2c66525, type: 2}
+    - {fileID: 11400000, guid: 3ea0e8e7739257043893b2597eaf83ad, type: 2}
+    - {fileID: 11400000, guid: be1d6e6780bd1164f9bc201e50cfc23b, type: 2}
+    - {fileID: 11400000, guid: 1daad4385bb96bd4c9e223d9c418bab3, type: 2}
+    valueData:
+    - ScaryText: See what you couldn't before
+      Duration: 1
+      LikelyHood: 0.6
+    - ScaryText: Hide your crimes
+      Duration: 0.5
+      LikelyHood: 0.2
+    - ScaryText: Remember
+      Duration: 1
+      LikelyHood: 1
+    - ScaryText: Forget
+      Duration: 0.5
+      LikelyHood: 1
+    - ScaryText: What else can't you see?
+      Duration: 1
+      LikelyHood: 1
+    - ScaryText: Forget
+      Duration: 3
+      LikelyHood: 0.8
+    - ScaryText: You know where the dog is
+      Duration: 1
+      LikelyHood: 0.7
+    - ScaryText: Where is the knife?
+      Duration: 0.5
+      LikelyHood: 0.6
+    - ScaryText: Uncover your sins
+      Duration: 2
+      LikelyHood: 0.9
+    - ScaryText: Do it
+      Duration: 1
+      LikelyHood: 1
+    - ScaryText: Call 911
+      Duration: 0.7
+      LikelyHood: 1

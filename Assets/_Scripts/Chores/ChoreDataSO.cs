@@ -1,3 +1,4 @@
+using RyanPierce.Events;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,11 +8,10 @@ namespace Horror.Chores
 	[CreateAssetMenu(fileName = "New Chore", menuName = "Chores/Chore")]
 	public class ChoreDataSO : ScriptableObject
 	{
-		public string ID;
 		public string ChoreName = "Chore Name Not Found";
 		[SerializeField] private List<ChoreDataSO> requiredChores;
 		[SerializeField] private List<ChoreDataSO> choresToUnhide;
-		
+		[SerializeField] private VoidEvent completeEvent;
 		public List<ChoreDataSO> RequiredChores => requiredChores;
 		public List<ChoreDataSO> ChoresToUnhide => choresToUnhide;
 		
@@ -51,12 +51,18 @@ namespace Horror.Chores
 			CurrentCount++;
 			if (IsCompleted())
 			{
-				ChoreEvents.CompleteChore(ID);
+				ChoreEvents.CompleteChore(this.name);
+				
+				if(completeEvent != null)
+				{
+					completeEvent?.Raise();
+				}
+
 				if (ChoresToUnhide is not { Count: > 0 }) return;
 
 				foreach (ChoreDataSO chore in ChoresToUnhide)
 				{
-					ChoreEvents.UnhideChore(chore.ID);
+					ChoreEvents.UnhideChore(chore.name);
 				}
 			}
 		}

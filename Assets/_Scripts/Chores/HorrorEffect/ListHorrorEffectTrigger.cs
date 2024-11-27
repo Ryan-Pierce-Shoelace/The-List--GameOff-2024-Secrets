@@ -20,7 +20,7 @@ namespace Horror.Chores.HorrorEffect
 		{
 			horrorEffect.Duration = duration;
 
-			ChoreEvents.TriggerHorrorEffect(choreData.ID, horrorEffect);
+			ChoreEvents.TriggerHorrorEffect(choreData.name, horrorEffect);
 		}
 	}
 }

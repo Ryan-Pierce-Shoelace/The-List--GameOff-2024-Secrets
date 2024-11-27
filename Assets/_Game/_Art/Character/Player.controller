@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventName: OnMove
-  TriggerTime: 0.05
+  TriggerTime: 0.85
   RepeatOnLoop: 1
 --- !u!1101 &-5434967085299685406
 AnimatorStateTransition:
@@ -45,7 +45,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Walk
-  m_Speed: 0.8
+  m_Speed: 0.9
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3669334557630055196}
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventName: Interact
-  TriggerTime: 0.516
+  TriggerTime: 0.61
   RepeatOnLoop: 1
 --- !u!1102 &-1163872325120472406
 AnimatorState:
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventName: OnMove
-  TriggerTime: 0.518
+  TriggerTime: 0.28
   RepeatOnLoop: 1
 --- !u!1101 &2767376073112380815
 AnimatorStateTransition:

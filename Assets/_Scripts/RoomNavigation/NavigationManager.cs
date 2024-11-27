@@ -10,7 +10,7 @@ namespace Horror.RoomNavigation
 
         private void Start()
         {
-            Doorway[] allDoors = FindObjectsOfType<Doorway>();
+            Doorway[] allDoors = FindObjectsOfType<Doorway>(true);
 
             HouseNavigation = new Dictionary<RoomLinkKey, RoomConnection>();
             for (int i = 0; i < allDoors.Length; i++)

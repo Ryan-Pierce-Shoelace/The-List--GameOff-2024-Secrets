@@ -67,7 +67,7 @@ namespace Interaction.PlayerInteraction
             animator.speed = 1.0f;
         }
 
-        public void InteractAnimationComplete()
+        public void AnimationComplete()
         {
             animCompleteSource?.TrySetResult(true);
         }

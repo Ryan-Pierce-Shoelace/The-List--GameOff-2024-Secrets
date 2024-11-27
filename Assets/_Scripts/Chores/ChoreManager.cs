@@ -83,8 +83,8 @@ namespace Horror.Chores
 			{
 				chore.Reset();
 				bool hasUncompletedRequirements = HasUncompletedRequirements(chore);
-				choreStates[chore.ID] = hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available;
-				choreIdLookup[chore.ID] = chore;
+				choreStates[chore.name] = hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available;
+				choreIdLookup[chore.name] = chore;
 			}
 		}
 
@@ -117,7 +117,7 @@ namespace Horror.Chores
 				
 				if(RollForScaryText(data))
 				{
-					ChoreEvents.TriggerHorrorEffect(chore.ID, data);
+					ChoreEvents.TriggerHorrorEffect(chore.name, data);
 				}
 			}
 		}
@@ -131,7 +131,7 @@ namespace Horror.Chores
 		{
 			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
 
-			choreStates[chore.ID] = ChoreState.Completed;
+			choreStates[chore.name] = ChoreState.Completed;
 
 			UpdateChoreStates();
 		}
@@ -139,10 +139,10 @@ namespace Horror.Chores
 		private void HandleChoreUnhidden(string choreId)
 		{
 			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
-			if (choreStates[chore.ID] != ChoreState.Hidden) return;
+			if (choreStates[chore.name] != ChoreState.Hidden) return;
 
 			bool hasUncompletedRequirements = HasUncompletedRequirements(chore);
-			choreStates[chore.ID] = hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available;
+			choreStates[chore.name] = hasUncompletedRequirements ? ChoreState.Locked : ChoreState.Available;
 			UpdateChoreStates();
 		}
 
@@ -150,7 +150,7 @@ namespace Horror.Chores
 		{
 			if (!choreIdLookup.TryGetValue(choreId, out ChoreDataSO chore)) return;
 
-			if (choreStates[chore.ID] != ChoreState.Available) return;
+			if (choreStates[chore.name] != ChoreState.Available) return;
 
 			chore.Increment();
 		}
@@ -165,15 +165,15 @@ namespace Horror.Chores
 				statesChanged = false;
 				foreach (ChoreDataSO chore in CurrentDayPlan.Chores)
 				{
-					if (choreStates[chore.ID] == ChoreState.Completed)
+					if (choreStates[chore.name] == ChoreState.Completed)
 						continue;
 
-					ChoreState oldState = choreStates[chore.ID];
+					ChoreState oldState = choreStates[chore.name];
 					ChoreState newState = HasUncompletedRequirements(chore) ? ChoreState.Locked : ChoreState.Available;
 
 					if (oldState != newState)
 					{
-						choreStates[chore.ID] = newState;
+						choreStates[chore.name] = newState;
 						statesChanged = true;
 					}
 				}
@@ -190,8 +190,8 @@ namespace Horror.Chores
 
 			return chore.RequiredChores.Any(requiredChore =>
 				!requiredChore ||
-				!choreIdLookup.ContainsKey(requiredChore.ID) ||
-				choreStates[requiredChore.ID] != ChoreState.Completed);
+				!choreIdLookup.ContainsKey(requiredChore.name) ||
+				choreStates[requiredChore.name] != ChoreState.Completed);
 		}
 
 		private void ResetChores() => InitializeChores();
@@ -203,7 +203,7 @@ namespace Horror.Chores
 				return ChoreState.Locked;
 			}
 
-			if (choreStates != null && choreStates.TryGetValue(chore.ID, out ChoreState state))
+			if (choreStates != null && choreStates.TryGetValue(chore.name, out ChoreState state))
 			{
 				return state;
 			}

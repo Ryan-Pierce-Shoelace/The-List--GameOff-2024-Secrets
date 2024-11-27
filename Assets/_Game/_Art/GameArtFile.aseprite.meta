@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: GameArtFile_Frame_0
     originalName: 
-    pivot: {x: 0.48490566, y: -0.3148148}
+    pivot: {x: 0.76862746, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 530
-      height: 432
+      width: 255
+      height: 315
     spriteID: ecb93e710218c354e8c72efd12fa5372
     spriteBone: []
     spriteOutline: []
@@ -143,15 +143,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: GameArtFile_Frame_1
     originalName: 
-    pivot: {x: 2.024691, y: -0.53351957}
+    pivot: {x: 0.7772511, y: -0.63137263}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1472
-      y: 4
-      width: 81
-      height: 358
+      x: 4
+      y: 591
+      width: 211
+      height: 255
     spriteID: c436f965af5d2bb408bed7fae3df507b
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1472, y: 4}
+    uvTransform: {x: 4, y: 591}
   - name: GameArtFile_Frame_2
     originalName: 
-    pivot: {x: 0.86531985, y: -0.24942793}
+    pivot: {x: 0.77358484, y: -0.62890625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 444
-      width: 297
-      height: 437
+      y: 327
+      width: 212
+      height: 256
     spriteID: e19391960f9f25f44bb16d3e1fba1cba
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 444}
+    uvTransform: {x: 4, y: 327}
   - name: GameArtFile_Frame_3
     originalName: 
-    pivot: {x: 0.80392146, y: -0.41818184}
+    pivot: {x: 0.769953, y: -0.8051948}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 542
-      y: 4
-      width: 204
-      height: 385
+      x: 709
+      y: 247
+      width: 213
+      height: 231
     spriteID: 21dc4aee4c5b01e409d2bed0ce0fda2c
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 542, y: 4}
+    uvTransform: {x: 709, y: 247}
   - name: GameArtFile_Frame_3
     originalName: 
-    pivot: {x: 1.1468531, y: -0.51666665}
+    pivot: {x: 0.75925916, y: -0.8414097}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 754
-      y: 4
-      width: 143
-      height: 360
+      x: 709
+      y: 486
+      width: 216
+      height: 227
     spriteID: 2d47a5df3832f8e47be13d67681d7a27
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 754, y: 4}
+    uvTransform: {x: 709, y: 486}
   - name: GameArtFile_Frame_4
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 0.7557603, y: -0.7829787}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1561
+      x: 709
       y: 4
-      width: 81
-      height: 355
+      width: 217
+      height: 235
     spriteID: 7a42dd245f3188345900cbfcd0b2b9c0
     spriteBone: []
     spriteOutline: []
@@ -240,18 +240,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1561, y: 4}
+    uvTransform: {x: 709, y: 4}
   - name: GameArtFile_Frame_5
     originalName: 
-    pivot: {x: 2.024691, y: -0.5082873}
+    pivot: {x: 0.7557603, y: -0.76470596}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1383
-      y: 4
-      width: 81
-      height: 362
+      x: 267
+      y: 769
+      width: 217
+      height: 238
     spriteID: 1731e185d0c00784ea198793304f6d2d
     spriteBone: []
     spriteOutline: []
@@ -260,18 +260,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1383, y: 4}
+    uvTransform: {x: 267, y: 769}
   - name: GameArtFile_Frame_6
     originalName: 
-    pivot: {x: 2.024691, y: -0.5}
+    pivot: {x: 0.7557603, y: -0.71020406}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1294
+      x: 267
       y: 4
-      width: 81
-      height: 364
+      width: 217
+      height: 245
     spriteID: 501403db1363d4b459c7222c8a17ccfa
     spriteBone: []
     spriteOutline: []
@@ -280,18 +280,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1294, y: 4}
+    uvTransform: {x: 267, y: 4}
   - name: GameArtFile_Frame_7
     originalName: 
-    pivot: {x: 2.024691, y: -0.46774194}
+    pivot: {x: 0.78468895, y: -0.6733871}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1205
-      y: 4
-      width: 81
-      height: 372
+      x: 267
+      y: 257
+      width: 209
+      height: 248
     spriteID: ac3aa80150879464485766fa11ee335f
     spriteBone: []
     spriteOutline: []
@@ -300,18 +300,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1205, y: 4}
+    uvTransform: {x: 267, y: 257}
   - name: GameArtFile_Frame_8
     originalName: 
-    pivot: {x: 1.7826085, y: -0.44063324}
+    pivot: {x: 0.78468895, y: -0.6733871}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 905
-      y: 4
-      width: 92
-      height: 379
+      x: 267
+      y: 513
+      width: 209
+      height: 248
     spriteID: fd673f97aedc18749bb0230d780c78a2
     spriteBone: []
     spriteOutline: []
@@ -320,18 +320,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 905, y: 4}
+    uvTransform: {x: 267, y: 513}
   - name: GameArtFile_Frame_9
     originalName: 
-    pivot: {x: 1.7826085, y: -0.44063324}
+    pivot: {x: 0.78468895, y: -0.6869919}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1005
+      x: 492
       y: 4
-      width: 92
-      height: 379
+      width: 209
+      height: 246
     spriteID: a13a49ca1617ca74ab6fba93dd7009fe
     spriteBone: []
     spriteOutline: []
@@ -340,18 +340,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1005, y: 4}
+    uvTransform: {x: 492, y: 4}
   - name: GameArtFile_Frame_10
     originalName: 
-    pivot: {x: 1.7826085, y: -0.44827586}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1105
-      y: 4
-      width: 92
-      height: 377
+      x: 930
+      y: 247
+      width: 81
+      height: 39
     spriteID: 43d041f30a952614296416f84ac1af72
     spriteBone: []
     spriteOutline: []
@@ -360,18 +360,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1105, y: 4}
+    uvTransform: {x: 930, y: 247}
   - name: GameArtFile_Frame_11
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1650
-      y: 4
+      x: 930
+      y: 294
       width: 81
-      height: 355
+      height: 39
     spriteID: abf00de95ab014b4c88bad664a8c7b22
     spriteBone: []
     spriteOutline: []
@@ -380,18 +380,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1650, y: 4}
+    uvTransform: {x: 930, y: 294}
   - name: GameArtFile_Frame_12
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1739
-      y: 4
+      x: 930
+      y: 341
       width: 81
-      height: 355
+      height: 39
     spriteID: 723166cb0b3e4ad44b530ef1d05f4dc2
     spriteBone: []
     spriteOutline: []
@@ -400,18 +400,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1739, y: 4}
+    uvTransform: {x: 930, y: 341}
   - name: GameArtFile_Frame_13
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1828
-      y: 4
+      x: 930
+      y: 388
       width: 81
-      height: 355
+      height: 39
     spriteID: cc9d6e43065b66e46bf7154e4a22e129
     spriteBone: []
     spriteOutline: []
@@ -420,18 +420,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1828, y: 4}
+    uvTransform: {x: 930, y: 388}
   - name: GameArtFile_Frame_14
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1917
-      y: 4
+      x: 930
+      y: 435
       width: 81
-      height: 355
+      height: 39
     spriteID: 28b82ea35b024b64bab4408fcb07c400
     spriteBone: []
     spriteOutline: []
@@ -440,18 +440,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1917, y: 4}
+    uvTransform: {x: 930, y: 435}
   - name: GameArtFile_Frame_15
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 309
-      y: 444
+      x: 934
+      y: 4
       width: 81
-      height: 355
+      height: 39
     spriteID: 9880c38f8fba1134ba6dbd6054e19b92
     spriteBone: []
     spriteOutline: []
@@ -460,18 +460,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 309, y: 444}
+    uvTransform: {x: 934, y: 4}
   - name: GameArtFile_Frame_16
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 398
-      y: 444
+      x: 934
+      y: 51
       width: 81
-      height: 355
+      height: 39
     spriteID: d0d9277edf07afa448d77d4e22862c8d
     spriteBone: []
     spriteOutline: []
@@ -480,18 +480,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 398, y: 444}
+    uvTransform: {x: 934, y: 51}
   - name: GameArtFile_Frame_17
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 487
-      y: 444
+      x: 934
+      y: 98
       width: 81
-      height: 355
+      height: 39
     spriteID: 8f14dc15166d2434d994222855e1f10d
     spriteBone: []
     spriteOutline: []
@@ -500,18 +500,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 487, y: 444}
+    uvTransform: {x: 934, y: 98}
   - name: GameArtFile_Frame_18
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 576
-      y: 444
+      x: 934
+      y: 145
       width: 81
-      height: 355
+      height: 39
     spriteID: 3a95a632bf2faf64ab02f12033a6ba50
     spriteBone: []
     spriteOutline: []
@@ -520,18 +520,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 576, y: 444}
+    uvTransform: {x: 934, y: 145}
   - name: GameArtFile_Frame_19
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 665
-      y: 444
+      x: 934
+      y: 192
       width: 81
-      height: 355
+      height: 39
     spriteID: a26ebc6f78a53a245a51b08db4e821dd
     spriteBone: []
     spriteOutline: []
@@ -540,18 +540,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 665, y: 444}
+    uvTransform: {x: 934, y: 192}
   - name: GameArtFile_Frame_20
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 754
-      y: 444
+      x: 4
+      y: 854
       width: 81
-      height: 355
+      height: 39
     spriteID: 1b69ebd3d27737144a67fb53a65f220b
     spriteBone: []
     spriteOutline: []
@@ -560,18 +560,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 754, y: 444}
+    uvTransform: {x: 4, y: 854}
   - name: GameArtFile_Frame_21
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 843
-      y: 444
+      x: 93
+      y: 854
       width: 81
-      height: 355
+      height: 39
     spriteID: a2ccdd26d590d914392dca777fb246a9
     spriteBone: []
     spriteOutline: []
@@ -580,18 +580,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 843, y: 444}
+    uvTransform: {x: 93, y: 854}
   - name: GameArtFile_Frame_22
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 932
-      y: 444
+      x: 4
+      y: 901
       width: 81
-      height: 355
+      height: 39
     spriteID: 95de56ce363c6be46b15909ef428cff6
     spriteBone: []
     spriteOutline: []
@@ -600,18 +600,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 932, y: 444}
+    uvTransform: {x: 4, y: 901}
   - name: GameArtFile_Frame_23
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1021
-      y: 444
+      x: 93
+      y: 901
       width: 81
-      height: 355
+      height: 39
     spriteID: 5b219b8d607a11748ad333b63fecff44
     spriteBone: []
     spriteOutline: []
@@ -620,18 +620,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1021, y: 444}
+    uvTransform: {x: 93, y: 901}
   - name: GameArtFile_Frame_24
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1110
-      y: 444
+      x: 4
+      y: 948
       width: 81
-      height: 355
+      height: 39
     spriteID: bf0d328680d797f4bbb87e62fe314948
     spriteBone: []
     spriteOutline: []
@@ -640,18 +640,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1110, y: 444}
+    uvTransform: {x: 4, y: 948}
   - name: GameArtFile_Frame_25
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1199
-      y: 444
+      x: 93
+      y: 948
       width: 81
-      height: 355
+      height: 39
     spriteID: 42e51ef7de5dfa0458d694cce663cd0b
     spriteBone: []
     spriteOutline: []
@@ -660,18 +660,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1199, y: 444}
+    uvTransform: {x: 93, y: 948}
   - name: GameArtFile_Frame_26
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1288
-      y: 444
+      x: 709
+      y: 721
       width: 81
-      height: 355
+      height: 39
     spriteID: 9c34de60656388045a467bf0cb3207f7
     spriteBone: []
     spriteOutline: []
@@ -680,18 +680,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1288, y: 444}
+    uvTransform: {x: 709, y: 721}
   - name: GameArtFile_Frame_27
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1377
-      y: 444
+      x: 709
+      y: 768
       width: 81
-      height: 355
+      height: 39
     spriteID: aa392870d32aca44a97cda0815352986
     spriteBone: []
     spriteOutline: []
@@ -700,18 +700,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1377, y: 444}
+    uvTransform: {x: 709, y: 768}
   - name: GameArtFile_Frame_28
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1466
-      y: 444
+      x: 709
+      y: 815
       width: 81
-      height: 355
+      height: 39
     spriteID: 7787483597c0d064abbac34c0915ea1d
     spriteBone: []
     spriteOutline: []
@@ -720,18 +720,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1466, y: 444}
+    uvTransform: {x: 709, y: 815}
   - name: GameArtFile_Frame_29
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1555
-      y: 444
+      x: 709
+      y: 862
       width: 81
-      height: 355
+      height: 39
     spriteID: d1c886968982eb946a185ee973bc9f6a
     spriteBone: []
     spriteOutline: []
@@ -740,18 +740,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1555, y: 444}
+    uvTransform: {x: 709, y: 862}
   - name: GameArtFile_Frame_30
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1644
-      y: 444
+      x: 709
+      y: 909
       width: 81
-      height: 355
+      height: 39
     spriteID: 59850a4a2e527ee4b85eea6a5e60c0c5
     spriteBone: []
     spriteOutline: []
@@ -760,18 +760,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1644, y: 444}
+    uvTransform: {x: 709, y: 909}
   - name: GameArtFile_Frame_31
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1733
-      y: 444
+      x: 709
+      y: 956
       width: 81
-      height: 355
+      height: 39
     spriteID: 297eda9d3e7ce5b45836e5275f57f25c
     spriteBone: []
     spriteOutline: []
@@ -780,18 +780,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1733, y: 444}
+    uvTransform: {x: 709, y: 956}
   - name: GameArtFile_Frame_32
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1822
-      y: 444
+      x: 798
+      y: 721
       width: 81
-      height: 355
+      height: 39
     spriteID: 3ceb3c0e1f18d0f469cdc4253a9e8da5
     spriteBone: []
     spriteOutline: []
@@ -800,18 +800,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1822, y: 444}
+    uvTransform: {x: 798, y: 721}
   - name: GameArtFile_Frame_33
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1911
-      y: 444
+      x: 798
+      y: 768
       width: 81
-      height: 355
+      height: 39
     spriteID: 5bebad6d534ce0b4eb2e0d50ca31ff7d
     spriteBone: []
     spriteOutline: []
@@ -820,18 +820,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1911, y: 444}
+    uvTransform: {x: 798, y: 768}
   - name: GameArtFile_Frame_34
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 889
+      x: 798
+      y: 815
       width: 81
-      height: 355
+      height: 39
     spriteID: bbc730ff573d4a54b8ef99c4b3d60545
     spriteBone: []
     spriteOutline: []
@@ -840,18 +840,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 889}
+    uvTransform: {x: 798, y: 815}
   - name: GameArtFile_Frame_35
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1252
+      x: 798
+      y: 862
       width: 81
-      height: 355
+      height: 39
     spriteID: 2e82dc3b2baaeca4a834352b1b6bfb26
     spriteBone: []
     spriteOutline: []
@@ -860,18 +860,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1252}
+    uvTransform: {x: 798, y: 862}
   - name: GameArtFile_Frame_36
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1615
+      x: 798
+      y: 909
       width: 81
-      height: 355
+      height: 39
     spriteID: 2ed4855af648d34448494fadb92d0b80
     spriteBone: []
     spriteOutline: []
@@ -880,18 +880,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1615}
+    uvTransform: {x: 798, y: 909}
   - name: GameArtFile_Frame_37
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 93
-      y: 889
+      x: 798
+      y: 956
       width: 81
-      height: 355
+      height: 39
     spriteID: 57ed1b5ee52014f478aceb2bc0fedcab
     spriteBone: []
     spriteOutline: []
@@ -900,18 +900,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 93, y: 889}
+    uvTransform: {x: 798, y: 956}
   - name: GameArtFile_Frame_38
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 93
-      y: 1252
+      x: 933
+      y: 486
       width: 81
-      height: 355
+      height: 39
     spriteID: 09920d748449fb54485a4dbb98cda3e6
     spriteBone: []
     spriteOutline: []
@@ -920,18 +920,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 93, y: 1252}
+    uvTransform: {x: 933, y: 486}
   - name: GameArtFile_Frame_39
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 93
-      y: 1615
+      x: 933
+      y: 533
       width: 81
-      height: 355
+      height: 39
     spriteID: 445dc544c526f414d89df3989847218f
     spriteBone: []
     spriteOutline: []
@@ -940,18 +940,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 93, y: 1615}
+    uvTransform: {x: 933, y: 533}
   - name: GameArtFile_Frame_40
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 182
-      y: 889
+      x: 933
+      y: 580
       width: 81
-      height: 355
+      height: 39
     spriteID: e820d09e82600244cbb1e0d02c9b23de
     spriteBone: []
     spriteOutline: []
@@ -960,18 +960,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 182, y: 889}
+    uvTransform: {x: 933, y: 580}
   - name: GameArtFile_Frame_41
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 182
-      y: 1252
+      x: 933
+      y: 627
       width: 81
-      height: 355
+      height: 39
     spriteID: 5a316f0b0221e13409257764552439af
     spriteBone: []
     spriteOutline: []
@@ -980,18 +980,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 182, y: 1252}
+    uvTransform: {x: 933, y: 627}
   - name: GameArtFile_Frame_42
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 182
-      y: 1615
+      x: 933
+      y: 674
       width: 81
-      height: 355
+      height: 39
     spriteID: e35558caca756864da125d935f166c8c
     spriteBone: []
     spriteOutline: []
@@ -1000,18 +1000,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 182, y: 1615}
+    uvTransform: {x: 933, y: 674}
   - name: GameArtFile_Frame_43
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 271
-      y: 889
+      x: 933
+      y: 721
       width: 81
-      height: 355
+      height: 39
     spriteID: 5f3aa54134cf49c40b093c9d8c468d48
     spriteBone: []
     spriteOutline: []
@@ -1020,18 +1020,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 271, y: 889}
+    uvTransform: {x: 933, y: 721}
   - name: GameArtFile_Frame_44
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 271
-      y: 1252
+      x: 933
+      y: 768
       width: 81
-      height: 355
+      height: 39
     spriteID: 0858c52a6be3c0c4fb50a7afa0a4aa0c
     spriteBone: []
     spriteOutline: []
@@ -1040,18 +1040,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 271, y: 1252}
+    uvTransform: {x: 933, y: 768}
   - name: GameArtFile_Frame_45
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 271
-      y: 1615
+      x: 933
+      y: 815
       width: 81
-      height: 355
+      height: 39
     spriteID: 344fd6a1a4180f14396ed0e56fd4dca8
     spriteBone: []
     spriteOutline: []
@@ -1060,18 +1060,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 271, y: 1615}
+    uvTransform: {x: 933, y: 815}
   - name: GameArtFile_Frame_46
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 360
-      y: 889
+      x: 933
+      y: 862
       width: 81
-      height: 355
+      height: 39
     spriteID: 3b6d16d7778bbd842a45dbe0f6029bf0
     spriteBone: []
     spriteOutline: []
@@ -1080,18 +1080,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 360, y: 889}
+    uvTransform: {x: 933, y: 862}
   - name: GameArtFile_Frame_47
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 360
-      y: 1252
+      x: 933
+      y: 909
       width: 81
-      height: 355
+      height: 39
     spriteID: 1f0768a1edf51f44580c139c6c781d3f
     spriteBone: []
     spriteOutline: []
@@ -1100,18 +1100,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 360, y: 1252}
+    uvTransform: {x: 933, y: 909}
   - name: GameArtFile_Frame_48
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 360
-      y: 1615
+      x: 933
+      y: 956
       width: 81
-      height: 355
+      height: 39
     spriteID: d05d11f213a16ec4e91ecda6341fd28f
     spriteBone: []
     spriteOutline: []
@@ -1120,18 +1120,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 360, y: 1615}
+    uvTransform: {x: 933, y: 956}
   - name: GameArtFile_Frame_49
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 449
-      y: 889
+      x: 492
+      y: 258
       width: 81
-      height: 355
+      height: 39
     spriteID: dcaa8a8dc0422c5429d72717c5df50aa
     spriteBone: []
     spriteOutline: []
@@ -1140,18 +1140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 449, y: 889}
+    uvTransform: {x: 492, y: 258}
   - name: GameArtFile_Frame_50
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 449
-      y: 1252
+      x: 492
+      y: 305
       width: 81
-      height: 355
+      height: 39
     spriteID: dd51aa1708350684c80395adbd0e3fc4
     spriteBone: []
     spriteOutline: []
@@ -1160,18 +1160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 449, y: 1252}
+    uvTransform: {x: 492, y: 305}
   - name: GameArtFile_Frame_51
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 449
-      y: 1615
+      x: 492
+      y: 352
       width: 81
-      height: 355
+      height: 39
     spriteID: bcb0392a5556ee64e82c9613fd688f7d
     spriteBone: []
     spriteOutline: []
@@ -1180,18 +1180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 449, y: 1615}
+    uvTransform: {x: 492, y: 352}
   - name: GameArtFile_Frame_52
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 538
-      y: 889
+      x: 492
+      y: 399
       width: 81
-      height: 355
+      height: 39
     spriteID: 9500c6dec11df2e4bb9cd84993124193
     spriteBone: []
     spriteOutline: []
@@ -1200,18 +1200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 538, y: 889}
+    uvTransform: {x: 492, y: 399}
   - name: GameArtFile_Frame_53
     originalName: 
-    pivot: {x: 2.024691, y: -0.5380282}
+    pivot: {x: 2.024691, y: -4.8974357}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 538
-      y: 1252
+      x: 492
+      y: 446
       width: 81
-      height: 355
+      height: 39
     spriteID: f08c5578e8316f84f9cbdad7f2e5ae5a
     spriteBone: []
     spriteOutline: []
@@ -1220,7 +1220,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 538, y: 1252}
+    uvTransform: {x: 492, y: 446}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -1234,110 +1234,101 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 43
-        y: 136
-        width: 530
-        height: 432
+        x: 104
+        y: 105
+        width: 255
+        height: 315
       spriteId: ecb93e710218c354e8c72efd12fa5372
-    - name: GameArtFile_Frame_54
-      frameIndex: 54
-      additiveSortOrder: 0
-      cellRect:
-        x: 136
-        y: 191
-        width: 81
-        height: 358
-      spriteId: c436f965af5d2bb408bed7fae3df507b
     - name: GameArtFile_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 43
-        y: 109
-        width: 297
-        height: 437
-      spriteId: e19391960f9f25f44bb16d3e1fba1cba
+        x: 136
+        y: 161
+        width: 211
+        height: 255
+      spriteId: c436f965af5d2bb408bed7fae3df507b
     - name: GameArtFile_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
         x: 136
         y: 161
-        width: 204
-        height: 385
-      spriteId: 21dc4aee4c5b01e409d2bed0ce0fda2c
+        width: 212
+        height: 256
+      spriteId: e19391960f9f25f44bb16d3e1fba1cba
     - name: GameArtFile_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
         x: 136
         y: 186
-        width: 143
-        height: 360
-      spriteId: 2d47a5df3832f8e47be13d67681d7a27
+        width: 213
+        height: 231
+      spriteId: 21dc4aee4c5b01e409d2bed0ce0fda2c
     - name: GameArtFile_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
         x: 136
         y: 191
-        width: 81
-        height: 355
-      spriteId: 7a42dd245f3188345900cbfcd0b2b9c0
+        width: 216
+        height: 227
+      spriteId: 2d47a5df3832f8e47be13d67681d7a27
     - name: GameArtFile_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
         x: 136
         y: 184
-        width: 81
-        height: 362
-      spriteId: 1731e185d0c00784ea198793304f6d2d
+        width: 217
+        height: 235
+      spriteId: 7a42dd245f3188345900cbfcd0b2b9c0
     - name: GameArtFile_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
         x: 136
         y: 182
-        width: 81
-        height: 364
-      spriteId: 501403db1363d4b459c7222c8a17ccfa
+        width: 217
+        height: 238
+      spriteId: 1731e185d0c00784ea198793304f6d2d
     - name: GameArtFile_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
         x: 136
         y: 174
-        width: 81
-        height: 372
-      spriteId: ac3aa80150879464485766fa11ee335f
+        width: 217
+        height: 245
+      spriteId: 501403db1363d4b459c7222c8a17ccfa
     - name: GameArtFile_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
         x: 136
         y: 167
-        width: 92
-        height: 379
-      spriteId: fd673f97aedc18749bb0230d780c78a2
+        width: 209
+        height: 248
+      spriteId: ac3aa80150879464485766fa11ee335f
     - name: GameArtFile_Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
         x: 136
         y: 167
-        width: 92
-        height: 379
-      spriteId: a13a49ca1617ca74ab6fba93dd7009fe
+        width: 209
+        height: 248
+      spriteId: fd673f97aedc18749bb0230d780c78a2
     - name: GameArtFile_Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
         x: 136
         y: 169
-        width: 92
-        height: 377
-      spriteId: 43d041f30a952614296416f84ac1af72
+        width: 209
+        height: 246
+      spriteId: a13a49ca1617ca74ab6fba93dd7009fe
     - name: GameArtFile_Frame_11
       frameIndex: 11
       additiveSortOrder: 0
@@ -1345,8 +1336,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: abf00de95ab014b4c88bad664a8c7b22
+        height: 39
+      spriteId: 43d041f30a952614296416f84ac1af72
     - name: GameArtFile_Frame_12
       frameIndex: 12
       additiveSortOrder: 0
@@ -1354,8 +1345,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 723166cb0b3e4ad44b530ef1d05f4dc2
+        height: 39
+      spriteId: abf00de95ab014b4c88bad664a8c7b22
     - name: GameArtFile_Frame_13
       frameIndex: 13
       additiveSortOrder: 0
@@ -1363,8 +1354,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: cc9d6e43065b66e46bf7154e4a22e129
+        height: 39
+      spriteId: 723166cb0b3e4ad44b530ef1d05f4dc2
     - name: GameArtFile_Frame_14
       frameIndex: 14
       additiveSortOrder: 0
@@ -1372,8 +1363,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 28b82ea35b024b64bab4408fcb07c400
+        height: 39
+      spriteId: cc9d6e43065b66e46bf7154e4a22e129
     - name: GameArtFile_Frame_15
       frameIndex: 15
       additiveSortOrder: 0
@@ -1381,8 +1372,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 9880c38f8fba1134ba6dbd6054e19b92
+        height: 39
+      spriteId: 28b82ea35b024b64bab4408fcb07c400
     - name: GameArtFile_Frame_16
       frameIndex: 16
       additiveSortOrder: 0
@@ -1390,8 +1381,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: d0d9277edf07afa448d77d4e22862c8d
+        height: 39
+      spriteId: 9880c38f8fba1134ba6dbd6054e19b92
     - name: GameArtFile_Frame_17
       frameIndex: 17
       additiveSortOrder: 0
@@ -1399,8 +1390,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 8f14dc15166d2434d994222855e1f10d
+        height: 39
+      spriteId: d0d9277edf07afa448d77d4e22862c8d
     - name: GameArtFile_Frame_18
       frameIndex: 18
       additiveSortOrder: 0
@@ -1408,8 +1399,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 3a95a632bf2faf64ab02f12033a6ba50
+        height: 39
+      spriteId: 8f14dc15166d2434d994222855e1f10d
     - name: GameArtFile_Frame_19
       frameIndex: 19
       additiveSortOrder: 0
@@ -1417,8 +1408,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: a26ebc6f78a53a245a51b08db4e821dd
+        height: 39
+      spriteId: 3a95a632bf2faf64ab02f12033a6ba50
     - name: GameArtFile_Frame_20
       frameIndex: 20
       additiveSortOrder: 0
@@ -1426,8 +1417,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 1b69ebd3d27737144a67fb53a65f220b
+        height: 39
+      spriteId: a26ebc6f78a53a245a51b08db4e821dd
     - name: GameArtFile_Frame_21
       frameIndex: 21
       additiveSortOrder: 0
@@ -1435,8 +1426,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: a2ccdd26d590d914392dca777fb246a9
+        height: 39
+      spriteId: 1b69ebd3d27737144a67fb53a65f220b
     - name: GameArtFile_Frame_22
       frameIndex: 22
       additiveSortOrder: 0
@@ -1444,8 +1435,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 95de56ce363c6be46b15909ef428cff6
+        height: 39
+      spriteId: a2ccdd26d590d914392dca777fb246a9
     - name: GameArtFile_Frame_23
       frameIndex: 23
       additiveSortOrder: 0
@@ -1453,8 +1444,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 5b219b8d607a11748ad333b63fecff44
+        height: 39
+      spriteId: 95de56ce363c6be46b15909ef428cff6
     - name: GameArtFile_Frame_24
       frameIndex: 24
       additiveSortOrder: 0
@@ -1462,8 +1453,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: bf0d328680d797f4bbb87e62fe314948
+        height: 39
+      spriteId: 5b219b8d607a11748ad333b63fecff44
     - name: GameArtFile_Frame_25
       frameIndex: 25
       additiveSortOrder: 0
@@ -1471,8 +1462,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 42e51ef7de5dfa0458d694cce663cd0b
+        height: 39
+      spriteId: bf0d328680d797f4bbb87e62fe314948
     - name: GameArtFile_Frame_26
       frameIndex: 26
       additiveSortOrder: 0
@@ -1480,8 +1471,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 9c34de60656388045a467bf0cb3207f7
+        height: 39
+      spriteId: 42e51ef7de5dfa0458d694cce663cd0b
     - name: GameArtFile_Frame_27
       frameIndex: 27
       additiveSortOrder: 0
@@ -1489,8 +1480,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: aa392870d32aca44a97cda0815352986
+        height: 39
+      spriteId: 9c34de60656388045a467bf0cb3207f7
     - name: GameArtFile_Frame_28
       frameIndex: 28
       additiveSortOrder: 0
@@ -1498,8 +1489,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 7787483597c0d064abbac34c0915ea1d
+        height: 39
+      spriteId: aa392870d32aca44a97cda0815352986
     - name: GameArtFile_Frame_29
       frameIndex: 29
       additiveSortOrder: 0
@@ -1507,8 +1498,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: d1c886968982eb946a185ee973bc9f6a
+        height: 39
+      spriteId: 7787483597c0d064abbac34c0915ea1d
     - name: GameArtFile_Frame_30
       frameIndex: 30
       additiveSortOrder: 0
@@ -1516,8 +1507,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 59850a4a2e527ee4b85eea6a5e60c0c5
+        height: 39
+      spriteId: d1c886968982eb946a185ee973bc9f6a
     - name: GameArtFile_Frame_31
       frameIndex: 31
       additiveSortOrder: 0
@@ -1525,8 +1516,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 297eda9d3e7ce5b45836e5275f57f25c
+        height: 39
+      spriteId: 59850a4a2e527ee4b85eea6a5e60c0c5
     - name: GameArtFile_Frame_32
       frameIndex: 32
       additiveSortOrder: 0
@@ -1534,8 +1525,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 3ceb3c0e1f18d0f469cdc4253a9e8da5
+        height: 39
+      spriteId: 297eda9d3e7ce5b45836e5275f57f25c
     - name: GameArtFile_Frame_33
       frameIndex: 33
       additiveSortOrder: 0
@@ -1543,8 +1534,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 5bebad6d534ce0b4eb2e0d50ca31ff7d
+        height: 39
+      spriteId: 3ceb3c0e1f18d0f469cdc4253a9e8da5
     - name: GameArtFile_Frame_34
       frameIndex: 34
       additiveSortOrder: 0
@@ -1552,8 +1543,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: bbc730ff573d4a54b8ef99c4b3d60545
+        height: 39
+      spriteId: 5bebad6d534ce0b4eb2e0d50ca31ff7d
     - name: GameArtFile_Frame_35
       frameIndex: 35
       additiveSortOrder: 0
@@ -1561,8 +1552,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 2e82dc3b2baaeca4a834352b1b6bfb26
+        height: 39
+      spriteId: bbc730ff573d4a54b8ef99c4b3d60545
     - name: GameArtFile_Frame_36
       frameIndex: 36
       additiveSortOrder: 0
@@ -1570,8 +1561,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 2ed4855af648d34448494fadb92d0b80
+        height: 39
+      spriteId: 2e82dc3b2baaeca4a834352b1b6bfb26
     - name: GameArtFile_Frame_37
       frameIndex: 37
       additiveSortOrder: 0
@@ -1579,8 +1570,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 57ed1b5ee52014f478aceb2bc0fedcab
+        height: 39
+      spriteId: 2ed4855af648d34448494fadb92d0b80
     - name: GameArtFile_Frame_38
       frameIndex: 38
       additiveSortOrder: 0
@@ -1588,8 +1579,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 09920d748449fb54485a4dbb98cda3e6
+        height: 39
+      spriteId: 57ed1b5ee52014f478aceb2bc0fedcab
     - name: GameArtFile_Frame_39
       frameIndex: 39
       additiveSortOrder: 0
@@ -1597,8 +1588,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 445dc544c526f414d89df3989847218f
+        height: 39
+      spriteId: 09920d748449fb54485a4dbb98cda3e6
     - name: GameArtFile_Frame_40
       frameIndex: 40
       additiveSortOrder: 0
@@ -1606,8 +1597,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: e820d09e82600244cbb1e0d02c9b23de
+        height: 39
+      spriteId: 445dc544c526f414d89df3989847218f
     - name: GameArtFile_Frame_41
       frameIndex: 41
       additiveSortOrder: 0
@@ -1615,8 +1606,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 5a316f0b0221e13409257764552439af
+        height: 39
+      spriteId: e820d09e82600244cbb1e0d02c9b23de
     - name: GameArtFile_Frame_42
       frameIndex: 42
       additiveSortOrder: 0
@@ -1624,8 +1615,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: e35558caca756864da125d935f166c8c
+        height: 39
+      spriteId: 5a316f0b0221e13409257764552439af
     - name: GameArtFile_Frame_43
       frameIndex: 43
       additiveSortOrder: 0
@@ -1633,8 +1624,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 5f3aa54134cf49c40b093c9d8c468d48
+        height: 39
+      spriteId: e35558caca756864da125d935f166c8c
     - name: GameArtFile_Frame_44
       frameIndex: 44
       additiveSortOrder: 0
@@ -1642,8 +1633,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 0858c52a6be3c0c4fb50a7afa0a4aa0c
+        height: 39
+      spriteId: 5f3aa54134cf49c40b093c9d8c468d48
     - name: GameArtFile_Frame_45
       frameIndex: 45
       additiveSortOrder: 0
@@ -1651,8 +1642,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 344fd6a1a4180f14396ed0e56fd4dca8
+        height: 39
+      spriteId: 0858c52a6be3c0c4fb50a7afa0a4aa0c
     - name: GameArtFile_Frame_46
       frameIndex: 46
       additiveSortOrder: 0
@@ -1660,8 +1651,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 3b6d16d7778bbd842a45dbe0f6029bf0
+        height: 39
+      spriteId: 344fd6a1a4180f14396ed0e56fd4dca8
     - name: GameArtFile_Frame_47
       frameIndex: 47
       additiveSortOrder: 0
@@ -1669,8 +1660,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 1f0768a1edf51f44580c139c6c781d3f
+        height: 39
+      spriteId: 3b6d16d7778bbd842a45dbe0f6029bf0
     - name: GameArtFile_Frame_48
       frameIndex: 48
       additiveSortOrder: 0
@@ -1678,8 +1669,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: d05d11f213a16ec4e91ecda6341fd28f
+        height: 39
+      spriteId: 1f0768a1edf51f44580c139c6c781d3f
     - name: GameArtFile_Frame_49
       frameIndex: 49
       additiveSortOrder: 0
@@ -1687,8 +1678,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: dcaa8a8dc0422c5429d72717c5df50aa
+        height: 39
+      spriteId: d05d11f213a16ec4e91ecda6341fd28f
     - name: GameArtFile_Frame_50
       frameIndex: 50
       additiveSortOrder: 0
@@ -1696,8 +1687,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: dd51aa1708350684c80395adbd0e3fc4
+        height: 39
+      spriteId: dcaa8a8dc0422c5429d72717c5df50aa
     - name: GameArtFile_Frame_51
       frameIndex: 51
       additiveSortOrder: 0
@@ -1705,8 +1696,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: bcb0392a5556ee64e82c9613fd688f7d
+        height: 39
+      spriteId: dd51aa1708350684c80395adbd0e3fc4
     - name: GameArtFile_Frame_52
       frameIndex: 52
       additiveSortOrder: 0
@@ -1714,8 +1705,8 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
-      spriteId: 9500c6dec11df2e4bb9cd84993124193
+        height: 39
+      spriteId: bcb0392a5556ee64e82c9613fd688f7d
     - name: GameArtFile_Frame_53
       frameIndex: 53
       additiveSortOrder: 0
@@ -1723,7 +1714,16 @@ ScriptedImporter:
         x: 136
         y: 191
         width: 81
-        height: 355
+        height: 39
+      spriteId: 9500c6dec11df2e4bb9cd84993124193
+    - name: GameArtFile_Frame_54
+      frameIndex: 54
+      additiveSortOrder: 0
+      cellRect:
+        x: 136
+        y: 191
+        width: 81
+        height: 39
       spriteId: f08c5578e8316f84f9cbdad7f2e5ae5a
     linkedCells: []
     parentIndex: -1

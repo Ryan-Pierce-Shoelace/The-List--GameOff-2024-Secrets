@@ -161,9 +161,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionManager: {fileID: 11400000, guid: a7940d8b40bdaa84494e0547c161beb3, type: 2}
-  dayOneObjects:
-  - {fileID: 11400000, guid: d8f5ea89c659fb94b8c9e0e4013cc969, type: 2}
-  - {fileID: 11400000, guid: 07433c358bf77f34495f4c20fc361d76, type: 2}
 --- !u!114 &1568609569310348782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +286,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 242012140, guid: fdb9d16a450b02740ba16c7f5af7c52b, type: 3}
+  m_Sprite: {fileID: -926209613, guid: 49cf1e6172c8a2748b77f36230f579c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

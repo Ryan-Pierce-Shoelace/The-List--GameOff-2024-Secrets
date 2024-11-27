@@ -88,7 +88,7 @@ namespace Horror.Chores.UI
 
 		private void CreateChoreEntry(ChoreDataSO chore)
 		{
-			if (!chore || choreEntries.ContainsKey(chore.ID))
+			if (!chore || choreEntries.ContainsKey(chore.name))
 				return;
 
 			ChoreListEntry entry = Instantiate(listEntryPrefab, listEntryContainer);
@@ -98,10 +98,10 @@ namespace Horror.Chores.UI
 			if (chore.IsTutorialChore)
 			{
 				CanvasGroup canvasGroup = entry.gameObject.AddComponent<CanvasGroup>();
-				tutorialEntries[chore.ID] = (entry, canvasGroup);
+				tutorialEntries[chore.name] = (entry, canvasGroup);
 			}
 
-			choreEntries[chore.ID] = entry;
+			choreEntries[chore.name] = entry;
 			entry.SetState(state);
 
 			if (!isInitializing)

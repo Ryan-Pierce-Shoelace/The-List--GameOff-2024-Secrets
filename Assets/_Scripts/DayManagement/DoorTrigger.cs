@@ -96,7 +96,7 @@ namespace Horror.DayManagement
 		public StateToSet DoorActionToDo;
 		public bool WillTriggerImmediately;
 
-		public string ID => ChoreRequiredForActivation.ID;
+		public string ID => ChoreRequiredForActivation.name;
 	}
 
 	public enum StateToSet

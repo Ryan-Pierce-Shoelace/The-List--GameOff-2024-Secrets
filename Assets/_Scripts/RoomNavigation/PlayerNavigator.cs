@@ -83,5 +83,32 @@ namespace Horror.RoomNavigation
             input.EnableGameplayInput();
             transitioning = false;
         }
+
+        public async void ForceMoveToNewRoom(Doorway escapeDoor)
+        {
+            transitioning = true;
+
+            Doorway dest = NavigationManager.HouseNavigation[escapeDoor.LinkKey].GetOtherDoor(escapeDoor);
+
+            await FadeTransition.Instance.ToggleFadeTransition(true, .3f);
+
+            escapeDoor.RootRoom.ToggleRoomCamera(false);
+            dest.RootRoom.ToggleRoomCamera(true);
+
+            transform.position = dest.DoorExitPos;
+
+            RoomData newRoom = dest.RootRoom;
+
+            newRoom.OnEnterRoom();
+            newRoom.GetRoomCompletion(out int completed, out int total);
+            StaticEvents.DisplayRoomData(newRoom.RoomName, completed, total);
+
+
+            await FadeTransition.Instance.ToggleFadeTransition(false, .3f);
+
+            movement.ToggleInput(true);
+            input.EnableGameplayInput();
+            transitioning = false;
+        }
     }
 }

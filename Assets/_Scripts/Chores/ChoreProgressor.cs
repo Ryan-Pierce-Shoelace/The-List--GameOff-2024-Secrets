@@ -7,7 +7,7 @@ namespace Horror.Chores
     {
 	    [SerializeField] private ChoreDataSO chore;
 		[SerializeField] private ChoreRevealer revealOnComplete;
-        public string GetChoreID() => chore.ID;
+        public string GetChoreID() => chore.name;
 	    public ChoreState GetChoreState()
 	    {
 		    return !chore ? ChoreState.Hidden : ChoreManager.Instance.GetChoreState(chore);
@@ -19,7 +19,7 @@ namespace Horror.Chores
 		    {
 			    return;
 		    }
-		    ChoreEvents.AdvanceChore(chore.ID);
+		    ChoreEvents.AdvanceChore(chore.name);
 
 			if (revealOnComplete == null)
 			{
