@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -20,7 +21,8 @@ namespace Horror.UserInterface
 		[SerializeField] private Slider sfxVolumeSlider;
 		[SerializeField] private Slider ambienceVolumeSlider;
 
-		private List<Vector2Int> availableResolutions;
+		private Resolution[] resolutions;
+		private List<Resolution> filteredResolutions;
 
 		protected override void Awake()
 		{
@@ -28,12 +30,43 @@ namespace Horror.UserInterface
 			SetupAudioSliders();
 		}
 
+		private void Start()
+		{
+			resolutions = Screen.resolutions;
+			filteredResolutions = resolutions.Distinct().ToList();
+			resolutionDropdown.ClearOptions();
+			List<string> options = new List<string>();
+
+			int currentResolutionIndex = 0;
+
+
+			for (int i = 0; i < filteredResolutions.Count; i++)
+			{
+				string option = $"{filteredResolutions[i].width} x {filteredResolutions[i].height} @ {filteredResolutions[i].refreshRate}Hz";
+				options.Add(option);
+
+
+				if (filteredResolutions[i].width == Screen.currentResolution.width &&
+				    filteredResolutions[i].height == Screen.currentResolution.height)
+				{
+					currentResolutionIndex = i;
+				}
+			}
+
+
+			resolutionDropdown.AddOptions(options);
+			resolutionDropdown.value = currentResolutionIndex;
+			resolutionDropdown.RefreshShownValue();
+
+
+			resolutionDropdown.onValueChanged.AddListener(OnResolutionChanged);
+		}
+
 		protected override void OnEnable()
 		{
 			base.OnEnable();
 			InitializeUI();
 			LoadAudioSettings();
-			InitializeResolutions();
 		}
 
 		public override void HandleCancel()
@@ -92,32 +125,28 @@ namespace Horror.UserInterface
 			slider.onValueChanged.AddListener(callback);
 		}
 
-		private void InitializeResolutions()
+		private void OnResolutionChanged(int index)
 		{
-			availableResolutions = Screen.resolutions
-				.Select(r => new Vector2Int(r.width, r.height))
-				.Distinct()
-				.OrderByDescending(r => r.x * r.y)
-				.ToList();
+			Resolution resolution = filteredResolutions[index];
+			Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
 
-			resolutionDropdown.ClearOptions();
 
-			var options = availableResolutions.Select(r => $"{r.x} x {r.y}").ToList();
-			resolutionDropdown.AddOptions(options);
-
-			var currentResolution = new Vector2Int(Screen.width, Screen.height);
-			var currentIndex = availableResolutions.FindIndex(r => r == currentResolution);
-			resolutionDropdown.value = currentIndex;
-
-			resolutionDropdown.onValueChanged.RemoveAllListeners();
-			resolutionDropdown.onValueChanged.AddListener(UpdateResolution);
+			PlayerPrefs.SetInt("ResolutionIndex", index);
+			PlayerPrefs.Save();
 		}
 
-		private void UpdateResolution(int index)
+
+		private void LoadSavedResolution()
 		{
-			if (index < 0 || index >= availableResolutions.Count) return;
-			var newResolution = availableResolutions[index];
-			Screen.SetResolution(newResolution.x, newResolution.y, Screen.fullScreenMode);
+			if (PlayerPrefs.HasKey("ResolutionIndex"))
+			{
+				int savedIndex = PlayerPrefs.GetInt("ResolutionIndex");
+				if (savedIndex < filteredResolutions.Count)
+				{
+					resolutionDropdown.value = savedIndex;
+					OnResolutionChanged(savedIndex);
+				}
+			}
 		}
 
 		private void UpdateScreenMode(bool isFullScreen)
