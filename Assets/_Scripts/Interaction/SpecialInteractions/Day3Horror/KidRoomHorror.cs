@@ -42,7 +42,7 @@ public class KidRoomHorror : MonoBehaviour
         revealer.TryRevealNewChores();
     }
 
-    public void InteractAnimationComplete()
+    public void AnimationComplete()
     {
         toyAnimCompletion?.TrySetResult(true);
     }
