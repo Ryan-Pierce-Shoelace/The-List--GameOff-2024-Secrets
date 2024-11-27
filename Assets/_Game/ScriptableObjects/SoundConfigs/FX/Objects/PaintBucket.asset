@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6e7505549698d943a0ac22063159310, type: 3}
-  m_Name: BottleClink
+  m_Name: PaintBucket
   m_EditorClassIdentifier: 
   eventReference:
     Guid:
-      Data1: 1767845341
-      Data2: 1278989626
-      Data3: -1100561230
-      Data4: 1714955272
-    Path: event:/SFX/Objects/BottleClink
+      Data1: -1109591664
+      Data2: 1247223205
+      Data3: 495912341
+      Data4: -1036953497
+    Path: event:/SFX/Paint/PaintBucket
   is3D: 0
-  defaultVolume: 0.8
+  defaultVolume: 1
   parameters: []

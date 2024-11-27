@@ -354,7 +354,7 @@ MonoBehaviour:
         - m_Target: {fileID: 1568609569310348782}
           m_TargetAssemblyTypeName: Interaction.PlayerInteraction.PlayerInteractionHandler,
             Horror.Interaction
-          m_MethodName: InteractAnimationComplete
+          m_MethodName: AnimationComplete
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

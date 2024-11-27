@@ -27,10 +27,20 @@ EditorUserSettings:
       value: 5b55025007050b090b5f5b71407a0f44474f4e7278292735797f4c63bab2636f
       flags: 0
     RecentlyUsedSceneGuid-7:
+<<<<<<< HEAD
       value: 01050302560658590b0b097316750b4413164a7b282a27657b7c1f6ab2e3326e
       flags: 0
     RecentlyUsedSceneGuid-8:
       value: 555700055551580e55595c7b49775c444115487f752b23347d7a4d37e1e66c3c
+=======
+      value: 555700055551580e55595c7b49775c444115487f752b23347d7a4d37e1e66c3c
+      flags: 0
+    RecentlyUsedSceneGuid-8:
+      value: 0200515651035e0a5a5f0a7142250944424f4c2e2a7c7e65787f4c30e1b56c3b
+      flags: 0
+    RecentlyUsedSceneGuid-9:
+      value: 01050302560658590b0b097316750b4413164a7b282a27657b7c1f6ab2e3326e
+>>>>>>> origin/Ryan/GameFinalization
       flags: 0
     RecentlyUsedSceneGuid-9:
       value: 0200515651035e0a5a5f0a7142250944424f4c2e2a7c7e65787f4c30e1b56c3b

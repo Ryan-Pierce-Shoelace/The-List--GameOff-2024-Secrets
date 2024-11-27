@@ -17,13 +17,17 @@ public class KidRoomHorror : MonoBehaviour
 
     [SerializeField] private PlayerNavigator navigator;
     [SerializeField] private Doorway escapeDoor;
-    [SerializeField] private DoorTrigger doorTrigger;
+    [SerializeField] private DoorTrigger kidsRoomDoor;
+    [SerializeField] private DoorTrigger halldoorTrigger;
 
     [SerializeField] private ChoreRevealer revealer;
 
     private TaskCompletionSource<bool> toyAnimCompletion;
     public async void RunHorrorSequence()
     {
+        await Task.Delay(1000);
+        kidsRoomDoor.CloseDoorway();
+
         playerInput.DisableAllInput();
         kidsRoomOverlay.DOFade(1f, 6f);
         kidToyAnim.SetTrigger("Horror");
@@ -35,14 +39,16 @@ public class KidRoomHorror : MonoBehaviour
         AudioManager.Instance.PlayOneShot(horrorNoise);
 
         await Task.Delay(100);
-        doorTrigger.SlamDoorway();
+        halldoorTrigger.SlamDoorway();
         await Task.Delay(100);
         
         navigator.ForceMoveToNewRoom(escapeDoor);
+
+        kidsRoomOverlay.DOFade(0f, 1f).OnComplete(() => kidsRoomOverlay.gameObject.SetActive(false));
         revealer.TryRevealNewChores();
     }
 
-    public void InteractAnimationComplete()
+    public void AnimationComplete()
     {
         toyAnimCompletion?.TrySetResult(true);
     }
