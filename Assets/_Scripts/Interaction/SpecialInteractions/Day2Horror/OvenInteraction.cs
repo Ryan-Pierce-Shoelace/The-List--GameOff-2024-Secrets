@@ -17,7 +17,7 @@ namespace Interaction
         [SerializeField] private InputReader playerInput;
         [SerializeField] private GameObject highlight;
 
-        public enum OvenState { Closed, Open, Filled }
+        public enum OvenState { Closed, Open, Filled, Burning }
         [SerializeField] private OvenState state;
 
         [SerializeField] private DynamicThoughtSO notReadyToCookThought, burnThought;
@@ -60,6 +60,9 @@ namespace Interaction
                     openOven.gameObject.SetActive(false);
                     return;
                 case OvenState.Filled:
+
+                    state = OvenState.Burning;
+
                     burn?.ProgressChore();
                     AudioManager.Instance.PlayOneShot(heatSFX);
                     

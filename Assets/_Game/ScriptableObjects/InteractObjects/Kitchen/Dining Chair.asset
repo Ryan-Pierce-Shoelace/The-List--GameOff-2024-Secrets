@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Dining Chair
   m_EditorClassIdentifier: 
   AnimationName: Interact
-  InteractionTime: 1
+  InteractionTime: 0.5
