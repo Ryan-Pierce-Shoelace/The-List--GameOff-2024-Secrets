@@ -7,7 +7,7 @@ namespace Horror.Chores
     {
 	    [SerializeField] private ChoreDataSO chore;
 		[SerializeField] private ChoreRevealer revealOnComplete;
-        public string GetChoreID() => chore.name;
+        public string GetChoreID() => chore != null ? chore.name : $"{transform.name} has a progressor but no chore assigned to it";
 	    public ChoreState GetChoreState()
 	    {
 		    return !chore ? ChoreState.Hidden : ChoreManager.Instance.GetChoreState(chore);
