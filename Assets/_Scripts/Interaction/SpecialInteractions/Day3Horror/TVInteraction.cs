@@ -1,7 +1,9 @@
 using DG.Tweening;
+using Horror;
 using Horror.Chores;
 using Horror.InputSystem;
 using RyanPierce.Events;
+using Shoelace.Audio.XuulSound;
 using System.Threading.Tasks;
 using UI.Thoughts;
 using UnityEngine;
@@ -29,7 +31,10 @@ namespace Interaction.InteractionCore
 
         [Header("Horror Sequence")]
         [SerializeField] private RawImage drunkOverlay;
+        [SerializeField] private SoundConfig drinkSFX;
         [SerializeField] private Animator tvAnimation;
+        [SerializeField] private SoundConfig crackSFX;
+        [SerializeField] private ChoreRevealer revealChores;
 
         [SerializeField] private GameObject[] revealObjects, hideObjects;
 
@@ -56,6 +61,7 @@ namespace Interaction.InteractionCore
             if(isWatchingTV)
             {
                 drinkToForget.ProgressChore();
+                AudioManager.Instance.PlayOneShot(drinkSFX);
                 drunkOverlay.color = new Color(1f, 1f, 1f, drinkToForget.GetChoreProgress());
 
                 if (drinkToForget.GetChoreState() == ChoreState.Completed)
@@ -93,7 +99,11 @@ namespace Interaction.InteractionCore
             tvAnimComplete = new TaskCompletionSource<bool>();
             await tvAnimComplete.Task;
 
+            AudioManager.Instance.PlayOneShot(crackSFX);
+
+
             await FadeTransition.Instance.ToggleFadeTransition(true, .2f);
+            ChoreEvents.ClearList();
             foreach (var item in revealObjects)
             {
                 item.SetActive(true);
@@ -106,6 +116,7 @@ namespace Interaction.InteractionCore
             drunkOverlay.DOFade(0f, 1f);
             await Task.Delay(1000);
 
+            revealChores?.TryRevealNewChores();
             inputReader.EnableGameplayInput();
             playerMovementToggle?.Raise(true);
             playerSprite.color = Color.white;

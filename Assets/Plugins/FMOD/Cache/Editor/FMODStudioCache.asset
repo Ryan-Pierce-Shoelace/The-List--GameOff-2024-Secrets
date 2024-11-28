@@ -216,6 +216,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 410
+--- !u!114 &-8013378660188148207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Misc/Drinking
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Misc/Drinking
+  Guid:
+    Data1: 741448156
+    Data2: 1214169215
+    Data3: -36896879
+    Data4: -1199636040
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1584
+--- !u!114 &-7914306432836115437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/PlacementClink 2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/PlacementClink 2
+  Guid:
+    Data1: -1390862542
+    Data2: 1123245333
+    Data3: -704042351
+    Data4: -820093664
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 574
 --- !u!114 &-7800864166092769150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,6 +351,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 11000
+--- !u!114 &-7370978986295656688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/BeerOpen
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/BeerOpen
+  Guid:
+    Data1: 2133177663
+    Data2: 1304246366
+    Data3: 159003551
+    Data4: -1149589900
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 800
 --- !u!114 &-7363322044946232379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,6 +702,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 600
+--- !u!114 &-5578810195731913809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Misc/DrinkingDone
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Misc/DrinkingDone
+  Guid:
+    Data1: 1045331638
+    Data2: 1280866729
+    Data3: -741558877
+    Data4: -855196653
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 680
 --- !u!114 &-5453995743115546463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1599,12 +1707,18 @@ MonoBehaviour:
   - {fileID: 7262751903988576708}
   - {fileID: -7465161697011212001}
   - {fileID: -4790145181169093889}
+  - {fileID: -7914306432836115437}
+  - {fileID: 6053993310254330749}
+  - {fileID: -7370978986295656688}
+  - {fileID: 5412454467255640424}
+  - {fileID: -5578810195731913809}
+  - {fileID: -8013378660188148207}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1383803080125453110}
   StringsBanks:
   - {fileID: 7919756391725561758}
-  cacheTime: 638682559797053990
+  cacheTime: 638683915175858933
   cacheVersion: 131620
 --- !u!114 &195675695103457140
 MonoBehaviour:
@@ -2408,6 +2522,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1486
   Exists: 1
+--- !u!114 &5412454467255640424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Misc/DrinkingWithAhhh
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Misc/DrinkingWithAhhh
+  Guid:
+    Data1: 1495428007
+    Data2: 1240016415
+    Data3: 346189702
+    Data4: -954915475
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2472
 --- !u!114 &5418108180004008739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2543,6 +2684,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1049
+--- !u!114 &6053993310254330749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/PlacingItem 2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/PlacingItem 2
+  Guid:
+    Data1: -1960032205
+    Data2: 1276493107
+    Data3: 1766511499
+    Data4: -405832513
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 444
 --- !u!114 &6552712269647856120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2821,10 +2989,10 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638682196518104472
+  lastModified: 638683915175539255
   FileSizes:
   - Name: Desktop
-    Value: 3624
+    Value: 3886
   Exists: 1
 --- !u!114 &7948316562538175551
 MonoBehaviour:
@@ -2969,10 +3137,10 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638682559797053990
+  lastModified: 638683915175858933
   FileSizes:
   - Name: Desktop
-    Value: 4622016
+    Value: 4669568
   Exists: 1
 --- !u!114 &8790737927056614178
 MonoBehaviour:

@@ -14,10 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChoreName: Drink to forget
   requiredChores: []
-  choresToUnhide:
-  - {fileID: 11400000, guid: 34a872bfdd2bd3b49a9c87835e9b8003, type: 2}
-  - {fileID: 11400000, guid: 84f2e5507b507484eab3d10bdb8efb40, type: 2}
-  - {fileID: 11400000, guid: cfa58c937461df743a439d11f2c66525, type: 2}
+  choresToUnhide: []
   completeEvent: {fileID: 11400000, guid: 42266e68e92eb2240afc8962aee1d7d5, type: 2}
   StartsHidden: 1
   RequiredCount: 6

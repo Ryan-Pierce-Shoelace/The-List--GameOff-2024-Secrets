@@ -342,6 +342,7 @@ namespace Horror.Chores.UI
 			ChoreEvents.OnChoreAdvanced += HandleChoreAdvanced;
 			ChoreEvents.OnChoreUnhidden += HandleChoreUnhidden;
 			ChoreEvents.OnDayReset += ClearList;
+			ChoreEvents.OnHardClearList += ClearList;
 
 			if (input != null)
 			{
@@ -356,8 +357,9 @@ namespace Horror.Chores.UI
 			ChoreEvents.OnChoreAdvanced -= HandleChoreAdvanced;
 			ChoreEvents.OnChoreUnhidden -= HandleChoreUnhidden;
 			ChoreEvents.OnDayReset -= ClearList;
+            ChoreEvents.OnHardClearList -= ClearList;
 
-			if (input != null)
+            if (input != null)
 			{
 				input.ToggleListEvent -= ToggleList;
 			}

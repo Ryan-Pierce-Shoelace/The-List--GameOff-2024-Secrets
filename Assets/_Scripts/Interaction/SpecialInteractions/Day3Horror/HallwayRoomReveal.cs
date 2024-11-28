@@ -15,7 +15,6 @@ public class HallwayRoomReveal : MonoBehaviour
 
     [SerializeField] private RawImage hallwayRevealOverlay;
     [SerializeField] private SoundConfig suspenseSFX;
-    [SerializeField] private SoundConfig revealSFX;
 
     [SerializeField] private ChoreRevealer revealChore;
 
@@ -40,7 +39,6 @@ public class HallwayRoomReveal : MonoBehaviour
         hallwayRevealOverlay.DOKill();
 
         hallwayRevealOverlay.DOFade(0f, 1f);
-        AudioManager.Instance.PlayOneShot(revealSFX);
         await Task.Delay(1000);
         hallwayRevealOverlay.gameObject.SetActive(false);
         playerInput.EnableGameplayInput();

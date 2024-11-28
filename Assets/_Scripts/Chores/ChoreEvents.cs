@@ -11,6 +11,7 @@ namespace Horror.Chores
 		public static event Action<DayPlan> OnDayPlanChanged;
 		public static event Action<string> OnChoreUnhidden;  
 		public static event Action<string, HorrorEffectData> OnChoreHorrorEffect;
+		public static event Action OnHardClearList;
 
 		public static void CompleteChore(string choreId) => OnChoreCompleted?.Invoke(choreId);
 		public static void AdvanceChore(string choreId) => OnChoreAdvanced?.Invoke(choreId);
@@ -21,6 +22,6 @@ namespace Horror.Chores
 		public static void TriggerHorrorEffect(string choreId, HorrorEffectData effectData) 
 			=> OnChoreHorrorEffect?.Invoke(choreId, effectData);
 
-        
+        public static void ClearList() => OnHardClearList?.Invoke();
     }
 }
