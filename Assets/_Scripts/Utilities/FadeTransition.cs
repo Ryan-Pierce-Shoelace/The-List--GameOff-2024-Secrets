@@ -53,6 +53,8 @@ public class FadeTransition : MonoBehaviour
     {
         AudioManager.Instance.PlayMusic(endMusic);
         await FadeCanvasGroup(endScreenCG, true, 2f);
+        fadeOutCG.alpha = 0f;
+        await Task.Delay(1000);
         SceneManager.LoadScene(mainMenu);
         await FadeCanvasGroup(endScreenCG, false, 1f);
     }

@@ -229,23 +229,24 @@ namespace Shoelace.Audio.XuulSound
 			if (Instance == this)
 			{
 				Instance = null;
+
+
+				foreach (ISoundPlayer sound in activeSounds.Values)
+				{
+					sound.Dispose();
+				}
+
+				activeSounds.Clear();
+
+				foreach (SoundEmitter emitter in activeEmitters.Where(emitter => emitter != null))
+				{
+					Destroy(emitter.gameObject);
+				}
+
+				activeEmitters.Clear();
+
+				musicSystem?.Dispose();
 			}
-
-			foreach (ISoundPlayer sound in activeSounds.Values)
-			{
-				sound.Dispose();
-			}
-
-			activeSounds.Clear();
-
-			foreach (SoundEmitter emitter in activeEmitters.Where(emitter => emitter != null))
-			{
-				Destroy(emitter.gameObject);
-			}
-
-			activeEmitters.Clear();
-
-			musicSystem?.Dispose();
 		}
 
 		#endregion
