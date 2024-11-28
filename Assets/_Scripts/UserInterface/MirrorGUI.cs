@@ -15,6 +15,7 @@ namespace UserInterface
 
         [SerializeField] private SoundConfig SliceSFX;
 
+        [SerializeField] private SceneField nextDay;
         protected override void OnEnable()
         {
             overlayEffect.color = Color.clear;
@@ -39,9 +40,7 @@ namespace UserInterface
             horrorAnimation.Play("HorrorMirror");
             await Task.Delay(4000);
             overlayEffect.color = Color.white;
-            await Task.Delay(2000);
-
-            FinishHorrorSequence();
+            FadeTransition.Instance.ChangeDay(nextDay, "Day 2");
         }
 
         public void SliceThroat()
@@ -49,12 +48,5 @@ namespace UserInterface
             AudioManager.Instance.PlayOneShot(SliceSFX);
         }
 
-        private void FinishHorrorSequence()
-        {
-            overlayEffect.color = Color.clear;
-            exitbutton.interactable = true; 
-
-            HandleCancel();
-        }
     }
 }

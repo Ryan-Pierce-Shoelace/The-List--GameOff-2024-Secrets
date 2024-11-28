@@ -744,7 +744,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638682196519696865
+  lastModified: 638684051200718660
   FileSizes:
   - Name: Desktop
     Value: 5257568
@@ -1322,6 +1322,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3624
+--- !u!114 &-2069539218737186771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Misc/GunEnding
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Misc/GunEnding
+  Guid:
+    Data1: 1802386189
+    Data2: 1080417097
+    Data3: 49664391
+    Data4: 705625113
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7368
 --- !u!114 &-1952735227298298402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,7 +1526,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638682196518094381
+  lastModified: 638684051198761961
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -1713,12 +1740,14 @@ MonoBehaviour:
   - {fileID: 5412454467255640424}
   - {fileID: -5578810195731913809}
   - {fileID: -8013378660188148207}
+  - {fileID: -2069539218737186771}
+  - {fileID: 5952017260453882398}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1383803080125453110}
   StringsBanks:
   - {fileID: 7919756391725561758}
-  cacheTime: 638683915175858933
+  cacheTime: 638684051211930120
   cacheVersion: 131620
 --- !u!114 &195675695103457140
 MonoBehaviour:
@@ -1991,7 +2020,7 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Ambient.bank
   Name: Ambient
   StudioPath: bank:/Ambient
-  lastModified: 638682196517962025
+  lastModified: 638684051198691527
   FileSizes:
   - Name: Desktop
     Value: 1066656
@@ -2630,6 +2659,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 365
+--- !u!114 &5952017260453882398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phone/SuccessfulCallPolice
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phone/SuccessfulCallPolice
+  Guid:
+    Data1: -667758941
+    Data2: 1101915780
+    Data3: -1155727488
+    Data4: 1357099665
+  Banks:
+  - {fileID: 8703224056438191240}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16800
 --- !u!114 &6011962696462938289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2989,10 +3045,10 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638683915175539255
+  lastModified: 638684051198761961
   FileSizes:
   - Name: Desktop
-    Value: 3886
+    Value: 3974
   Exists: 1
 --- !u!114 &7948316562538175551
 MonoBehaviour:
@@ -3137,10 +3193,10 @@ MonoBehaviour:
   Path: secrets-fmod-project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638683915175858933
+  lastModified: 638684051211930120
   FileSizes:
   - Name: Desktop
-    Value: 4669568
+    Value: 4967584
   Exists: 1
 --- !u!114 &8790737927056614178
 MonoBehaviour:

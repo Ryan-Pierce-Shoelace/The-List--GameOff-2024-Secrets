@@ -10,13 +10,10 @@ namespace Horror.UserInterface.MainMenu
 	public class MainMenuController : MonoBehaviour
 	{
 		[Header("Scene Settings")]
-		[SerializeField] private string gameSceneName = "Game";
-
-		[SerializeField] private float fadeOutDuration = 1f;
+		[SerializeField] private SceneField levelOne;
+		[SerializeField] private SoundConfig gameplayMusic;
 
 		[Header("UI References")]
-		[SerializeField] private Image fadePanel;
-
 		[SerializeField] private GameObject settingsPanel;
 		[SerializeField] private GameObject shadeOverlay;
 		[SerializeField] private GameObject thoughtsPanel;
@@ -30,11 +27,11 @@ namespace Horror.UserInterface.MainMenu
 
 		private void Start()
 		{
-			if (fadePanel != null)
-			{
-				fadePanel.gameObject.SetActive(true);
-				fadePanel.color = new Color(0, 0, 0, 0);
-			}
+			//if (fadePanel != null)
+			//{
+			//	fadePanel.gameObject.SetActive(true);
+			//	fadePanel.color = new Color(0, 0, 0, 0);
+			//}
 
 			if (settingsPanel != null)
 			{
@@ -60,30 +57,34 @@ namespace Horror.UserInterface.MainMenu
 			DisableAllButtons();
 			isLoading = true;
 			thoughtsPanel.SetActive(false);
-			Sequence transitionSequence = DOTween.Sequence();
+			//Sequence transitionSequence = DOTween.Sequence();
 
-			if (fadePanel != null)
-			{
-				fadePanel.DOFade(1f, fadeOutDuration)
-					.OnComplete((() => SceneManager.LoadScene(gameSceneName)));
 
-				if (AudioManager.Instance != null)
-				{
-					float currentVolume = AudioManager.Instance.MasterVolume;
-					transitionSequence.Join(
-						DOTween.To(
-							() => AudioManager.Instance.MasterVolume,
-							value => AudioManager.Instance.MasterVolume = value,
-							0f,
-							fadeOutDuration
-						).SetEase(Ease.InOutQuad)
-					);
-				}
-			}
-			else
-			{
-				SceneManager.LoadScene(gameSceneName);
-			}
+			FadeTransition.Instance.ChangeDay(levelOne, "Day 1");
+			AudioManager.Instance.PlayMusic(gameplayMusic);
+
+			//if (fadePanel != null)
+			//{
+			//	fadePanel.DOFade(1f, fadeOutDuration)
+			//		.OnComplete((() => SceneManager.LoadScene(gameSceneName)));
+
+			//	if (AudioManager.Instance != null)
+			//	{
+			//		float currentVolume = AudioManager.Instance.MasterVolume;
+			//		transitionSequence.Join(
+			//			DOTween.To(
+			//				() => AudioManager.Instance.MasterVolume,
+			//				value => AudioManager.Instance.MasterVolume = value,
+			//				0f,
+			//				fadeOutDuration
+			//			).SetEase(Ease.InOutQuad)
+			//		);
+			//	}
+			//}
+			//else
+			//{
+			//	SceneManager.LoadScene(gameSceneName);
+			//}
 		}
 
 

@@ -26,7 +26,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9e654a8068580fd4eaf350304cbcb997, type: 2}
   horrorChoreText:
     keyData:
-    - {fileID: 11400000, guid: 4998a0a7cc4a3cd4b93e6b468bac36d1, type: 2}
+    - {fileID: 11400000, guid: 9e654a8068580fd4eaf350304cbcb997, type: 2}
     - {fileID: 11400000, guid: a107ff9ec64323f40bcb7a215fc82352, type: 2}
     valueData:
     - ScaryText: Don't Look in the Mirror

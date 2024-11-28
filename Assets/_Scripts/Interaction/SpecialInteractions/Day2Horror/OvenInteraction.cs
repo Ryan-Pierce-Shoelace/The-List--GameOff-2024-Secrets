@@ -40,6 +40,8 @@ namespace Interaction
 
         [SerializeField] DoorTrigger doorTrigger;
 
+        [SerializeField] private SceneField nextDayScene;
+
         public void Interact()
         {
             switch (state)
@@ -95,7 +97,7 @@ namespace Interaction
             AudioManager.Instance.PlayOneShot(fireAlarmSound);
             await Task.Delay(13000);
 
-            Debug.Log("Next Day");
+            FadeTransition.Instance.ChangeDay(nextDayScene, "Day 3");
         }
 
         public bool IsActive()

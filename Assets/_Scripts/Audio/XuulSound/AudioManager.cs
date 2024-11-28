@@ -11,6 +11,8 @@ namespace Shoelace.Audio.XuulSound
 	{
 		public static AudioManager Instance { get; private set; }
 
+		
+
 		[Header("Initial Setup")]
 		[SerializeField] private SoundConfig startingMusic;
 
@@ -34,7 +36,6 @@ namespace Shoelace.Audio.XuulSound
 		private MusicSystem musicSystem;
 
 		#region Setup
-
 		private void Awake()
 		{
 			if (Instance != null)

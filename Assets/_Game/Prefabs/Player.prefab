@@ -178,7 +178,7 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64
-  searchRadius: 2
+  searchRadius: 0.3
   animator: {fileID: 3726515657096588943}
 --- !u!114 &5039940490863942321
 MonoBehaviour:
@@ -192,7 +192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9483fa14a280f8746b552473ee834bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentDoorway: {fileID: 0}
   input: {fileID: 11400000, guid: bf44ea509f8e4bb439384f2ae0bac319, type: 2}
   doorWayDepth: 0.5
   playerSprite: {fileID: 2150690133049590697}

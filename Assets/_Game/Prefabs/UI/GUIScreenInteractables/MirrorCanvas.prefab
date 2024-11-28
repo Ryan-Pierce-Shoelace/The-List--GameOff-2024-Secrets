@@ -350,6 +350,9 @@ MonoBehaviour:
   overlayEffect: {fileID: 7754956543985799832}
   horrorAnimation: {fileID: 1316261818822284342}
   SliceSFX: {fileID: 11400000, guid: e6ec72b0bb8a8224a900e61ab9cabfa2, type: 2}
+  nextDay:
+    m_SceneAsset: {fileID: 102900000, guid: b47d331bfee1f644ea21dba565b90cf6, type: 3}
+    m_SceneName: R_Day2
 --- !u!1 &5409090978406044818
 GameObject:
   m_ObjectHideFlags: 0
