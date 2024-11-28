@@ -15,6 +15,7 @@ MonoBehaviour:
   ChoreName: Collect other dishes
   requiredChores: []
   choresToUnhide: []
+  completeEvent: {fileID: 0}
   StartsHidden: 1
-  RequiredCount: 1
+  RequiredCount: 3
   isTutorialChore: 0

@@ -25,9 +25,9 @@ public class KidRoomHorror : MonoBehaviour
     private TaskCompletionSource<bool> toyAnimCompletion;
     public async void RunHorrorSequence()
     {
-        await Task.Delay(1000);
+        await Task.Delay(300);
         kidsRoomDoor.CloseDoorway();
-
+        await Task.Delay(2000);
         playerInput.DisableAllInput();
         kidsRoomOverlay.DOFade(1f, 6f);
         kidToyAnim.SetTrigger("Horror");

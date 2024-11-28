@@ -299,8 +299,8 @@ MonoBehaviour:
   input: {fileID: 11400000, guid: bf44ea509f8e4bb439384f2ae0bac319, type: 2}
   choreManager: {fileID: 0}
   animationDuration: 0.5
-  hiddenPosition: {x: 120, y: -600}
-  visiblePosition: {x: 120, y: 0}
+  hiddenPosition: {x: 0, y: -600}
+  visiblePosition: {x: 0, y: 0}
   autoCloseDelay: 2
   writingSound: {fileID: 11400000, guid: f0a190aa6df15e442b61079ba865e2b4, type: 2}
   penStrokeSound: {fileID: 11400000, guid: 64766cd190e75364caba922ffc3fabc9, type: 2}
@@ -338,7 +338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.85}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -8.956421}
+  m_AnchoredPosition: {x: 0, y: -8.956543}
   m_SizeDelta: {x: 0, y: -17.917}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3941433794339327443

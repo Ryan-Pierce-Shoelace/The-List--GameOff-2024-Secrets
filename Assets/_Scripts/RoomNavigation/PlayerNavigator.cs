@@ -9,7 +9,21 @@ namespace Horror.RoomNavigation
 {
     public class PlayerNavigator : MonoBehaviour
     {
-        [ReadOnly] public Doorway CurrentDoorway;
+        private Doorway current;
+        [ReadOnly] public Doorway CurrentDoorway
+        {
+            get
+            {
+                return current;
+            }
+            set
+            {
+                if (current != null && value == null)
+                    playerSprite.color = Color.white;
+
+                current = value;
+            }
+        }
 
         [SerializeField] private InputReader input;
 
@@ -21,11 +35,7 @@ namespace Horror.RoomNavigation
 
         private void LateUpdate()
         {
-            if (CurrentDoorway == null)
-            {
-                playerSprite.color = Color.white;
-            }
-            else
+            if (CurrentDoorway != null)
             {
                 CalculateNavigationProgress();
             }

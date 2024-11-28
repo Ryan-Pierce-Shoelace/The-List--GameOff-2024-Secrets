@@ -12,6 +12,10 @@ namespace Horror.Chores
 	    {
 		    return !chore ? ChoreState.Hidden : ChoreManager.Instance.GetChoreState(chore);
 	    }
+		public float GetChoreProgress()
+		{
+			return (float)chore.CurrentCount / (float)chore.RequiredCount;
+		}
 
 	    public void ProgressChore()
 	    {

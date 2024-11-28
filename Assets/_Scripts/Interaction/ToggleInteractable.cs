@@ -1,5 +1,6 @@
 using Interaction.InteractionCore;
 using Shoelace.Audio.XuulSound;
+using System;
 using UI.Thoughts;
 using UnityEngine;
 
@@ -26,8 +27,13 @@ namespace Interaction
 				this.enabled = false;
 			}
 		}
+        public void ForceToggle(bool toggle)
+        {
+            target.SetActive(toggle);
+			TryPlaySFX();
+        }
 
-		protected override void TryPlaySFX()
+        protected override void TryPlaySFX()
 		{
 			if (target.activeInHierarchy)
 			{
@@ -56,5 +62,7 @@ namespace Interaction
 				}
 			}
 		}
-	}
+
+        
+    }
 }

@@ -17,7 +17,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 34a872bfdd2bd3b49a9c87835e9b8003, type: 2}
   - {fileID: 11400000, guid: 84f2e5507b507484eab3d10bdb8efb40, type: 2}
   choresToUnhide:
-  - {fileID: 11400000, guid: 3ea0e8e7739257043893b2597eaf83ad, type: 2}
+  - {fileID: 11400000, guid: 07e802d5eb9d3ba43b474ef4d5cb3495, type: 2}
+  completeEvent: {fileID: 11400000, guid: 5928f15a3d82c9f42bced723ac6b001a, type: 2}
   StartsHidden: 1
   RequiredCount: 1
   isTutorialChore: 0

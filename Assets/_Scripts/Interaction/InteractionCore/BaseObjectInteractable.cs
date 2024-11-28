@@ -31,7 +31,12 @@ namespace Interaction.InteractionCore
 			choreProgressor = GetComponent<ChoreProgressor>();
 		}
 
-		public virtual bool CanInteract()
+        protected void OnDisable()
+        {
+			ToggleHighlight(false);
+        }
+
+        public virtual bool CanInteract()
 		{
 			if (interactionManager == null)
 			{
