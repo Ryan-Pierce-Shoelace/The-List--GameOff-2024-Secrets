@@ -40,7 +40,7 @@ namespace UserInterface
             horrorAnimation.Play("HorrorMirror");
             await Task.Delay(4000);
             overlayEffect.color = Color.white;
-            FadeTransition.Instance.ChangeDay(nextDay, "Day 2");
+            FadeTransition.Instance.ChangeDay(nextDay, "Saturday, December 28th, 2002");
         }
 
         public void SliceThroat()

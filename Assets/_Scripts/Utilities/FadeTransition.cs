@@ -70,7 +70,7 @@ public class FadeTransition : MonoBehaviour
     {
 
         dayChangeText.text = displayText;
-        await FadeCanvasGroup(dayChangeCG, true, 2f);
+        await FadeCanvasGroup(dayChangeCG, true, 3f);
         AsyncOperation load = SceneManager.LoadSceneAsync(scene);
         load.allowSceneActivation = false;
 
@@ -82,6 +82,6 @@ public class FadeTransition : MonoBehaviour
             await Task.Yield();
         }
 
-        await FadeCanvasGroup(dayChangeCG, false, 2f);
+        await FadeCanvasGroup(dayChangeCG, false, 3f);
     }
 }

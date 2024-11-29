@@ -96,7 +96,7 @@ namespace Interaction
             smokeOverlay.DOFade(1f, 13f);
             AudioManager.Instance.PlayOneShot(fireAlarmSound);
             await Task.Delay(13000);
-            FadeTransition.Instance.ChangeDay(nextDayScene, "Day 3");
+            FadeTransition.Instance.ChangeDay(nextDayScene, "Monday, January 7th, 2003");
         }
 
         public bool IsActive()

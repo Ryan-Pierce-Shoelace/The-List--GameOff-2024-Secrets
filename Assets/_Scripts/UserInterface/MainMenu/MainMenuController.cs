@@ -60,7 +60,7 @@ namespace Horror.UserInterface.MainMenu
 			//Sequence transitionSequence = DOTween.Sequence();
 
 
-			FadeTransition.Instance.ChangeDay(levelOne, "Day 1");
+			FadeTransition.Instance.ChangeDay(levelOne, "Tuesday, December 24th, 2002");
 			AudioManager.Instance.PlayMusic(gameplayMusic);
 
 			//if (fadePanel != null)
