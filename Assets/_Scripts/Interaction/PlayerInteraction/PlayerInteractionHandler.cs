@@ -43,28 +43,17 @@ namespace Interaction.PlayerInteraction
 
         private async void InteractTarget(IInteractable target)
         {
-            await RunInteractAnimation(target.GetInteractableObject().AnimationName, target.GetInteractableObject().InteractionTime);
+            await RunInteractAnimation("Interact"); //In the future we can add more animations but for now. Just hard pass Interact
             target.Interact();
         }
 
-        private async Task RunInteractAnimation(string animationName, float duration)
+        private async Task RunInteractAnimation(string animationName)
         {
-            animator.Play(animationName);
-            
-            // Calculate playback speed to fit the desired duration
-            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-            float originalDuration = stateInfo.length;
-            animator.speed = duration > 0 ? originalDuration / duration : 1f;
-
-            
+            animator.Play(animationName);        
             // Initialize the TaskCompletionSource
             animCompleteSource = new TaskCompletionSource<bool>();
-
             // Wait for the event to complete the Task
             await animCompleteSource.Task;
-
-            // Reset the animator speed after the animation is finished
-            animator.speed = 1.0f;
         }
 
         public void AnimationComplete()

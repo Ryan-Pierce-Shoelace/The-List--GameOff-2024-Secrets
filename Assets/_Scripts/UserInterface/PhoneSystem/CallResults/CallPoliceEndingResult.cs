@@ -1,3 +1,4 @@
+using Horror.InputSystem;
 using Shoelace.Audio.XuulSound;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,8 +10,10 @@ namespace Horror
     public class CallPoliceEndingResult : PhoneCallResult
     {
         [SerializeField] private SoundConfig arrestSFX;
+        [SerializeField] private InputReader input;
         public override void CallNumber()
         {
+            input.DisableAllInput();
             ArrestSequence();
         }
 
@@ -20,7 +23,7 @@ namespace Horror
             await FadeTransition.Instance.ToggleFadeTransition(true, 8f);
 
             await Task.Delay(8000);
-
+            input.EnableUIInput();
             FadeTransition.Instance.EndScreen();
         }
     }

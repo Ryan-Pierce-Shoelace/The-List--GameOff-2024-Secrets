@@ -50,10 +50,10 @@ namespace Interaction.InteractionCore
             {
                 item.SetActive(false);
             }
-            foreach (var item in hideObjects)
-            {
-                item.SetActive(true);
-            }
+            //foreach (var item in hideObjects)
+            //{
+            //    item.SetActive(true);
+            //}
         }
 
         public void Interact()

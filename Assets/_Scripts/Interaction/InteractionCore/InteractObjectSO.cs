@@ -7,6 +7,5 @@ namespace Interaction.InteractionCore
     public class InteractObjectSO : ScriptableObject
     {
         [FormerlySerializedAs("animationString")] public string AnimationName = "Interact";
-        [FormerlySerializedAs("interactionTime")] public float InteractionTime = 1f;
     }
 }

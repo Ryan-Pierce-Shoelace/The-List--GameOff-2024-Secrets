@@ -40,7 +40,7 @@ namespace Shoelace.Audio.XuulSound
 		{
 			if (Instance != null)
 			{
-				Debug.LogError("More than one audio manager in the scene");
+				//Debug.LogError("More than one audio manager in the scene");
 				Destroy(gameObject);
 				return;
 			}
