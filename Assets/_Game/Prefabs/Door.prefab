@@ -179,8 +179,9 @@ MonoBehaviour:
   interactObjectSO: {fileID: 11400000, guid: d34272cbf3e2dd54e86450f0e84c1811, type: 2}
   highlightObject: {fileID: 0}
   interactionEvent: {fileID: 0}
-  interactionManager: {fileID: 0}
+  interactionManager: {fileID: 11400000, guid: a7940d8b40bdaa84494e0547c161beb3, type: 2}
   inventoryRequirements: []
+  successThought: {fileID: 0}
   failThought: {fileID: 0}
   interactSFX: {fileID: 0}
   triggerThought: {fileID: 0}

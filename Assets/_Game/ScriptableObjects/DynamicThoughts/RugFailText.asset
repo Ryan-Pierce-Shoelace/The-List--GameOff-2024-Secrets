@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: RugFailText
   m_EditorClassIdentifier: 
   possibleThoughts:
-  - It is not time to fix this.
   - I need to get my bearings first.
   - This isnt on my list.
+  - I must follow the list
