@@ -33,4 +33,6 @@ The development process taught us valuable lessons about scope management and th
 
 We did most of the work on this gamejam in a single weekend with a lot more polish after that, this pushed us to focus on core mechanics and atmospheric storytelling rather than complex features. 
 
-The wildcards this year also really helped us find a tone for our project. Making everything black, white and grey really improved the atmosphere, and helped with getting an art style that felt cohesive. Special thansks to Shramper  https://shramper.itch.io/ for improving the player sprite
+The wildcards this year also really helped us find a tone for our project. Making everything black, white and grey really improved the atmosphere, and helped with getting an art style that felt cohesive. 
+
+Special thanks to Shramper for providing us with an upgraded player sprite. Check out their work : https://shramper.itch.io/ 
