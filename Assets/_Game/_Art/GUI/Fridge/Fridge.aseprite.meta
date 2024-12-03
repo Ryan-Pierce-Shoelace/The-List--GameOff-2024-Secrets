@@ -192,7 +192,6 @@ ScriptedImporter:
     cells:
     - name: Fridge_Frame_0
       frameIndex: 0
-      additiveSortOrder: 0
       cellRect:
         x: 70
         y: 74
@@ -201,7 +200,6 @@ ScriptedImporter:
       spriteId: 3db30d8eceabc964f955a8246ea3bba1
     - name: Fridge_Frame_1
       frameIndex: 1
-      additiveSortOrder: 0
       cellRect:
         x: 77
         y: 111
@@ -210,7 +208,6 @@ ScriptedImporter:
       spriteId: c0474dd44720925448cec8efb1418c96
     - name: Fridge_Frame_2
       frameIndex: 2
-      additiveSortOrder: 0
       cellRect:
         x: 77
         y: 111

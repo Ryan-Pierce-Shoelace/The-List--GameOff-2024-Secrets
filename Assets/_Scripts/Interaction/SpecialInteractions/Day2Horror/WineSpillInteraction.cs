@@ -1,7 +1,6 @@
 using Horror;
 using Interaction.InteractionCore;
 using Shoelace.Audio.XuulSound;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Interaction
@@ -29,7 +28,7 @@ namespace Interaction
             wineAnim.Play("WineSpill");
             eyesAnim.Play("CreepyEyes");
 
-            await Task.Delay(1000);
+            await Awaitable.WaitForSecondsAsync(1f);
 
             ToggleHighlight(false);
             gameObject.SetActive(false);

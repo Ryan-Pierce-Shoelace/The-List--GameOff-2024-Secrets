@@ -1,8 +1,5 @@
 using Horror.InputSystem;
 using Shoelace.Audio.XuulSound;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Horror
@@ -22,7 +19,7 @@ namespace Horror
             AudioManager.Instance.PlayOneShot(arrestSFX);
             await FadeTransition.Instance.ToggleFadeTransition(true, 8f);
 
-            await Task.Delay(8000);
+            await Awaitable.WaitForSecondsAsync(8f);
             input.EnableUIInput();
             FadeTransition.Instance.EndScreen();
         }

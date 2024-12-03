@@ -1232,7 +1232,6 @@ ScriptedImporter:
     cells:
     - name: GameArtFile_Frame_0
       frameIndex: 0
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 105
@@ -1241,7 +1240,6 @@ ScriptedImporter:
       spriteId: ecb93e710218c354e8c72efd12fa5372
     - name: GameArtFile_Frame_54
       frameIndex: 54
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1250,7 +1248,6 @@ ScriptedImporter:
       spriteId: c436f965af5d2bb408bed7fae3df507b
     - name: GameArtFile_Frame_1
       frameIndex: 1
-      additiveSortOrder: 0
       cellRect:
         x: 12
         y: 136
@@ -1259,7 +1256,6 @@ ScriptedImporter:
       spriteId: e19391960f9f25f44bb16d3e1fba1cba
     - name: GameArtFile_Frame_2
       frameIndex: 2
-      additiveSortOrder: 0
       cellRect:
         x: 12
         y: 136
@@ -1268,7 +1264,6 @@ ScriptedImporter:
       spriteId: 21dc4aee4c5b01e409d2bed0ce0fda2c
     - name: GameArtFile_Frame_3
       frameIndex: 3
-      additiveSortOrder: 0
       cellRect:
         x: 12
         y: 136
@@ -1277,7 +1272,6 @@ ScriptedImporter:
       spriteId: 2d47a5df3832f8e47be13d67681d7a27
     - name: GameArtFile_Frame_4
       frameIndex: 4
-      additiveSortOrder: 0
       cellRect:
         x: 12
         y: 136
@@ -1286,7 +1280,6 @@ ScriptedImporter:
       spriteId: 7a42dd245f3188345900cbfcd0b2b9c0
     - name: GameArtFile_Frame_5
       frameIndex: 5
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1295,7 +1288,6 @@ ScriptedImporter:
       spriteId: 1731e185d0c00784ea198793304f6d2d
     - name: GameArtFile_Frame_6
       frameIndex: 6
-      additiveSortOrder: 0
       cellRect:
         x: 12
         y: 136
@@ -1304,7 +1296,6 @@ ScriptedImporter:
       spriteId: 501403db1363d4b459c7222c8a17ccfa
     - name: GameArtFile_Frame_7
       frameIndex: 7
-      additiveSortOrder: 0
       cellRect:
         x: 12
         y: 136
@@ -1313,7 +1304,6 @@ ScriptedImporter:
       spriteId: ac3aa80150879464485766fa11ee335f
     - name: GameArtFile_Frame_8
       frameIndex: 8
-      additiveSortOrder: 0
       cellRect:
         x: 12
         y: 136
@@ -1322,7 +1312,6 @@ ScriptedImporter:
       spriteId: fd673f97aedc18749bb0230d780c78a2
     - name: GameArtFile_Frame_9
       frameIndex: 9
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1331,7 +1320,6 @@ ScriptedImporter:
       spriteId: a13a49ca1617ca74ab6fba93dd7009fe
     - name: GameArtFile_Frame_10
       frameIndex: 10
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1340,7 +1328,6 @@ ScriptedImporter:
       spriteId: 43d041f30a952614296416f84ac1af72
     - name: GameArtFile_Frame_11
       frameIndex: 11
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1349,7 +1336,6 @@ ScriptedImporter:
       spriteId: abf00de95ab014b4c88bad664a8c7b22
     - name: GameArtFile_Frame_12
       frameIndex: 12
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1358,7 +1344,6 @@ ScriptedImporter:
       spriteId: 723166cb0b3e4ad44b530ef1d05f4dc2
     - name: GameArtFile_Frame_13
       frameIndex: 13
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1367,7 +1352,6 @@ ScriptedImporter:
       spriteId: cc9d6e43065b66e46bf7154e4a22e129
     - name: GameArtFile_Frame_14
       frameIndex: 14
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1376,7 +1360,6 @@ ScriptedImporter:
       spriteId: 28b82ea35b024b64bab4408fcb07c400
     - name: GameArtFile_Frame_15
       frameIndex: 15
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1385,7 +1368,6 @@ ScriptedImporter:
       spriteId: 9880c38f8fba1134ba6dbd6054e19b92
     - name: GameArtFile_Frame_16
       frameIndex: 16
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1394,7 +1376,6 @@ ScriptedImporter:
       spriteId: d0d9277edf07afa448d77d4e22862c8d
     - name: GameArtFile_Frame_17
       frameIndex: 17
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1403,7 +1384,6 @@ ScriptedImporter:
       spriteId: 8f14dc15166d2434d994222855e1f10d
     - name: GameArtFile_Frame_18
       frameIndex: 18
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1412,7 +1392,6 @@ ScriptedImporter:
       spriteId: 3a95a632bf2faf64ab02f12033a6ba50
     - name: GameArtFile_Frame_19
       frameIndex: 19
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1421,7 +1400,6 @@ ScriptedImporter:
       spriteId: a26ebc6f78a53a245a51b08db4e821dd
     - name: GameArtFile_Frame_20
       frameIndex: 20
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1430,7 +1408,6 @@ ScriptedImporter:
       spriteId: 1b69ebd3d27737144a67fb53a65f220b
     - name: GameArtFile_Frame_21
       frameIndex: 21
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1439,7 +1416,6 @@ ScriptedImporter:
       spriteId: a2ccdd26d590d914392dca777fb246a9
     - name: GameArtFile_Frame_22
       frameIndex: 22
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1448,7 +1424,6 @@ ScriptedImporter:
       spriteId: 95de56ce363c6be46b15909ef428cff6
     - name: GameArtFile_Frame_23
       frameIndex: 23
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1457,7 +1432,6 @@ ScriptedImporter:
       spriteId: 5b219b8d607a11748ad333b63fecff44
     - name: GameArtFile_Frame_24
       frameIndex: 24
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1466,7 +1440,6 @@ ScriptedImporter:
       spriteId: bf0d328680d797f4bbb87e62fe314948
     - name: GameArtFile_Frame_25
       frameIndex: 25
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1475,7 +1448,6 @@ ScriptedImporter:
       spriteId: 42e51ef7de5dfa0458d694cce663cd0b
     - name: GameArtFile_Frame_26
       frameIndex: 26
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1484,7 +1456,6 @@ ScriptedImporter:
       spriteId: 9c34de60656388045a467bf0cb3207f7
     - name: GameArtFile_Frame_27
       frameIndex: 27
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1493,7 +1464,6 @@ ScriptedImporter:
       spriteId: aa392870d32aca44a97cda0815352986
     - name: GameArtFile_Frame_28
       frameIndex: 28
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1502,7 +1472,6 @@ ScriptedImporter:
       spriteId: 7787483597c0d064abbac34c0915ea1d
     - name: GameArtFile_Frame_29
       frameIndex: 29
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1511,7 +1480,6 @@ ScriptedImporter:
       spriteId: d1c886968982eb946a185ee973bc9f6a
     - name: GameArtFile_Frame_30
       frameIndex: 30
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1520,7 +1488,6 @@ ScriptedImporter:
       spriteId: 59850a4a2e527ee4b85eea6a5e60c0c5
     - name: GameArtFile_Frame_31
       frameIndex: 31
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1529,7 +1496,6 @@ ScriptedImporter:
       spriteId: 297eda9d3e7ce5b45836e5275f57f25c
     - name: GameArtFile_Frame_32
       frameIndex: 32
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1538,7 +1504,6 @@ ScriptedImporter:
       spriteId: 3ceb3c0e1f18d0f469cdc4253a9e8da5
     - name: GameArtFile_Frame_33
       frameIndex: 33
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1547,7 +1512,6 @@ ScriptedImporter:
       spriteId: 5bebad6d534ce0b4eb2e0d50ca31ff7d
     - name: GameArtFile_Frame_34
       frameIndex: 34
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1556,7 +1520,6 @@ ScriptedImporter:
       spriteId: bbc730ff573d4a54b8ef99c4b3d60545
     - name: GameArtFile_Frame_35
       frameIndex: 35
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1565,7 +1528,6 @@ ScriptedImporter:
       spriteId: 2e82dc3b2baaeca4a834352b1b6bfb26
     - name: GameArtFile_Frame_36
       frameIndex: 36
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1574,7 +1536,6 @@ ScriptedImporter:
       spriteId: 2ed4855af648d34448494fadb92d0b80
     - name: GameArtFile_Frame_37
       frameIndex: 37
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1583,7 +1544,6 @@ ScriptedImporter:
       spriteId: 57ed1b5ee52014f478aceb2bc0fedcab
     - name: GameArtFile_Frame_38
       frameIndex: 38
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1592,7 +1552,6 @@ ScriptedImporter:
       spriteId: 09920d748449fb54485a4dbb98cda3e6
     - name: GameArtFile_Frame_39
       frameIndex: 39
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1601,7 +1560,6 @@ ScriptedImporter:
       spriteId: 445dc544c526f414d89df3989847218f
     - name: GameArtFile_Frame_40
       frameIndex: 40
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1610,7 +1568,6 @@ ScriptedImporter:
       spriteId: e820d09e82600244cbb1e0d02c9b23de
     - name: GameArtFile_Frame_41
       frameIndex: 41
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1619,7 +1576,6 @@ ScriptedImporter:
       spriteId: 5a316f0b0221e13409257764552439af
     - name: GameArtFile_Frame_42
       frameIndex: 42
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1628,7 +1584,6 @@ ScriptedImporter:
       spriteId: e35558caca756864da125d935f166c8c
     - name: GameArtFile_Frame_43
       frameIndex: 43
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1637,7 +1592,6 @@ ScriptedImporter:
       spriteId: 5f3aa54134cf49c40b093c9d8c468d48
     - name: GameArtFile_Frame_44
       frameIndex: 44
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1646,7 +1600,6 @@ ScriptedImporter:
       spriteId: 0858c52a6be3c0c4fb50a7afa0a4aa0c
     - name: GameArtFile_Frame_45
       frameIndex: 45
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1655,7 +1608,6 @@ ScriptedImporter:
       spriteId: 344fd6a1a4180f14396ed0e56fd4dca8
     - name: GameArtFile_Frame_46
       frameIndex: 46
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1664,7 +1616,6 @@ ScriptedImporter:
       spriteId: 3b6d16d7778bbd842a45dbe0f6029bf0
     - name: GameArtFile_Frame_47
       frameIndex: 47
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1673,7 +1624,6 @@ ScriptedImporter:
       spriteId: 1f0768a1edf51f44580c139c6c781d3f
     - name: GameArtFile_Frame_48
       frameIndex: 48
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1682,7 +1632,6 @@ ScriptedImporter:
       spriteId: d05d11f213a16ec4e91ecda6341fd28f
     - name: GameArtFile_Frame_49
       frameIndex: 49
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1691,7 +1640,6 @@ ScriptedImporter:
       spriteId: dcaa8a8dc0422c5429d72717c5df50aa
     - name: GameArtFile_Frame_50
       frameIndex: 50
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1700,7 +1648,6 @@ ScriptedImporter:
       spriteId: dd51aa1708350684c80395adbd0e3fc4
     - name: GameArtFile_Frame_51
       frameIndex: 51
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1709,7 +1656,6 @@ ScriptedImporter:
       spriteId: bcb0392a5556ee64e82c9613fd688f7d
     - name: GameArtFile_Frame_52
       frameIndex: 52
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136
@@ -1718,7 +1664,6 @@ ScriptedImporter:
       spriteId: 9500c6dec11df2e4bb9cd84993124193
     - name: GameArtFile_Frame_53
       frameIndex: 53
-      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 136

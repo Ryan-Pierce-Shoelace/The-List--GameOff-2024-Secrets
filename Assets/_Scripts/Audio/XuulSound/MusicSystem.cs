@@ -29,7 +29,6 @@ namespace Shoelace.Audio.XuulSound
         private bool isValid = true;
         
         private const float UPDATE_INTERVAL = 0.02f;
-        private const int FADE_STEP_MS = 20;
 
         public async void PlayMusic(SoundConfig config, float fadeTime)
         {
@@ -56,7 +55,7 @@ namespace Shoelace.Audio.XuulSound
             return currentConfig == config && currentMusic.isValid();
         }
 
-        private async System.Threading.Tasks.Task CrossfadeToNewMusic(SoundConfig config, float fadeTime)
+        private async Awaitable CrossfadeToNewMusic(SoundConfig config, float fadeTime)
         {
             try 
             {
@@ -85,7 +84,7 @@ namespace Shoelace.Audio.XuulSound
             }
         }
 
-        private async System.Threading.Tasks.Task PerformCrossfade(float fadeTime)
+        private async Awaitable PerformCrossfade(float fadeTime)
         {
             float elapsed = 0;
 
@@ -94,8 +93,8 @@ namespace Shoelace.Audio.XuulSound
                 float t = elapsed / fadeTime;
                 if (currentMusic.isValid()) currentMusic.setVolume(1 - t);
                 if (nextMusic.isValid()) nextMusic.setVolume(t);
-            
-                await System.Threading.Tasks.Task.Delay(FADE_STEP_MS);
+
+                await Awaitable.WaitForSecondsAsync(.02f);
                 elapsed += UPDATE_INTERVAL;
             }
         }
@@ -127,7 +126,7 @@ namespace Shoelace.Audio.XuulSound
                 while (elapsed < fadeTime && currentMusic.isValid())
                 {
                     currentMusic.setVolume(1 - (elapsed / fadeTime));
-                    await System.Threading.Tasks.Task.Delay(FADE_STEP_MS);
+                    await Awaitable.WaitForSecondsAsync(.02f);
                     elapsed += UPDATE_INTERVAL;
                 }
 

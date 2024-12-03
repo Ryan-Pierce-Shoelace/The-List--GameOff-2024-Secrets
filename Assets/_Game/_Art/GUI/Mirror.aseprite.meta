@@ -632,7 +632,6 @@ ScriptedImporter:
     cells:
     - name: Mirror_Frame_0
       frameIndex: 0
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -641,7 +640,6 @@ ScriptedImporter:
       spriteId: 275041ba5fb5e4d4e88599ab3aef8b6b
     - name: Mirror_Frame_1
       frameIndex: 1
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -650,7 +648,6 @@ ScriptedImporter:
       spriteId: 59dcf1e700bea644699924e96f7bdbc5
     - name: Mirror_Frame_2
       frameIndex: 2
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -659,7 +656,6 @@ ScriptedImporter:
       spriteId: 080c0b121112508479df369c9c0c3306
     - name: Mirror_Frame_3
       frameIndex: 3
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -668,7 +664,6 @@ ScriptedImporter:
       spriteId: f2dc7955862053549bdc513a462ec49a
     - name: Mirror_Frame_4
       frameIndex: 4
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -677,7 +672,6 @@ ScriptedImporter:
       spriteId: 2e5749357fc8f5845965674e61291267
     - name: Mirror_Frame_5
       frameIndex: 5
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -686,7 +680,6 @@ ScriptedImporter:
       spriteId: 89e6e74a22b30c748904d9dd3453b8f2
     - name: Mirror_Frame_6
       frameIndex: 6
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -695,7 +688,6 @@ ScriptedImporter:
       spriteId: d7f4e98fce49b60479e5ac1f9193e881
     - name: Mirror_Frame_7
       frameIndex: 7
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -704,7 +696,6 @@ ScriptedImporter:
       spriteId: baac2ef56efe97e41af6cf1ec71e5cb1
     - name: Mirror_Frame_8
       frameIndex: 8
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -713,7 +704,6 @@ ScriptedImporter:
       spriteId: 51daf43c6f85a0e4ab4f5bf688bc1785
     - name: Mirror_Frame_9
       frameIndex: 9
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -722,7 +712,6 @@ ScriptedImporter:
       spriteId: f32bd79ffd494de47b78bd8cb1c2a22c
     - name: Mirror_Frame_10
       frameIndex: 10
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -731,7 +720,6 @@ ScriptedImporter:
       spriteId: f63fb356c77b0bc4ab97a41edb7de1a2
     - name: Mirror_Frame_11
       frameIndex: 11
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -740,7 +728,6 @@ ScriptedImporter:
       spriteId: 66769d2f3e4b9234784a1ecefd9f6382
     - name: Mirror_Frame_12
       frameIndex: 12
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -749,7 +736,6 @@ ScriptedImporter:
       spriteId: 3ad88d36e1329e74abbde8421e6aed15
     - name: Mirror_Frame_13
       frameIndex: 13
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -758,7 +744,6 @@ ScriptedImporter:
       spriteId: 5ceb31a178e7bc241a4578b15ec69cac
     - name: Mirror_Frame_14
       frameIndex: 14
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -767,7 +752,6 @@ ScriptedImporter:
       spriteId: a54114fa3023e2b4898d1f997e586aed
     - name: Mirror_Frame_15
       frameIndex: 15
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -776,7 +760,6 @@ ScriptedImporter:
       spriteId: 49269ac555649bc488f8a3144348f932
     - name: Mirror_Frame_16
       frameIndex: 16
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -785,7 +768,6 @@ ScriptedImporter:
       spriteId: 6db77d03e1148ad4fbca091d1b1aed1f
     - name: Mirror_Frame_17
       frameIndex: 17
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -794,7 +776,6 @@ ScriptedImporter:
       spriteId: c4ab8aa4ec3fe934db4b04889af3d086
     - name: Mirror_Frame_18
       frameIndex: 18
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -803,7 +784,6 @@ ScriptedImporter:
       spriteId: 330a34e180f82354aab31e954d2b06e7
     - name: Mirror_Frame_19
       frameIndex: 19
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -812,7 +792,6 @@ ScriptedImporter:
       spriteId: 9a8d6bbe48d851842be9f9b5ff3c63ef
     - name: Mirror_Frame_20
       frameIndex: 20
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -821,7 +800,6 @@ ScriptedImporter:
       spriteId: 25fc0cd3702a0384897c031852b12da2
     - name: Mirror_Frame_21
       frameIndex: 21
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -830,7 +808,6 @@ ScriptedImporter:
       spriteId: 96140a845407c8944b1d43bf97f20acc
     - name: Mirror_Frame_22
       frameIndex: 22
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -839,7 +816,6 @@ ScriptedImporter:
       spriteId: 16cf69eca33aba94a801242392cff3bd
     - name: Mirror_Frame_23
       frameIndex: 23
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -848,7 +824,6 @@ ScriptedImporter:
       spriteId: bd6db4ed052083f4088469a255aef395
     - name: Mirror_Frame_24
       frameIndex: 24
-      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0

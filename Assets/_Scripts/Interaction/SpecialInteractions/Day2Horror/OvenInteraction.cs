@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using DG.Tweening;
 using Horror.Chores;
 using Horror.DayManagement;
@@ -81,21 +80,22 @@ namespace Interaction
 
         private async void RunBurnHorrorSequence()
         {
-            await Task.Delay(500);
+            await Awaitable.WaitForSecondsAsync(.5f);
+
             playerInput.DisableAllInput();
             doorTrigger.SlamDoorway();
 
             hotOvenImage.DOFade(1f, heatTime);
-            await Task.Delay((int)(heatTime * 1000f));
+            await Awaitable.WaitForSecondsAsync(heatTime);
             smokeParticles.Play();
-            
-            await Task.Delay(7000);
+
+            await Awaitable.WaitForSecondsAsync(7f);
             fireAlarm.sprite = activeFireAlarmSprite;
             fireAlarmLight.SetActive(true);
             smokeOverlayCanvas.gameObject.SetActive(true);
-            smokeOverlay.DOFade(1f, 13f);
+            smokeOverlay.DOFade(1f, 10f);
             AudioManager.Instance.PlayOneShot(fireAlarmSound);
-            await Task.Delay(13000);
+            await Awaitable.WaitForSecondsAsync(10f);
             FadeTransition.Instance.ChangeDay(nextDayScene, "Monday, January 7th, 2003");
         }
 

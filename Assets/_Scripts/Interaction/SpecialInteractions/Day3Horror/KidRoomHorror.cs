@@ -4,7 +4,6 @@ using Horror.DayManagement;
 using Horror.InputSystem;
 using Horror.RoomNavigation;
 using Shoelace.Audio.XuulSound;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,26 +21,26 @@ public class KidRoomHorror : MonoBehaviour
 
     [SerializeField] private ChoreRevealer revealer;
 
-    private TaskCompletionSource<bool> toyAnimCompletion;
+    private AwaitableCompletionSource<bool> toyAnimCompletion;
     public async void RunHorrorSequence()
     {
-        await Task.Delay(300);
+        await Awaitable.WaitForSecondsAsync(.3f);
         kidsRoomDoor.CloseDoorway();
-        await Task.Delay(2000);
+        await Awaitable.WaitForSecondsAsync(2f);
         playerInput.DisableAllInput();
         kidsRoomOverlay.DOFade(1f, 6f);
         kidToyAnim.SetTrigger("Horror");
 
-        toyAnimCompletion = new TaskCompletionSource<bool>();
+        toyAnimCompletion = new AwaitableCompletionSource<bool>();
 
-        await toyAnimCompletion.Task;
+        await toyAnimCompletion.Awaitable;
 
         AudioManager.Instance.PlayOneShot(horrorNoise);
 
-        await Task.Delay(100);
+        await Awaitable.WaitForSecondsAsync(.1f);
         halldoorTrigger.SlamDoorway();
-        await Task.Delay(100);
-        
+        await Awaitable.WaitForSecondsAsync(.1f);
+
         navigator.ForceMoveToNewRoom(escapeDoor);
 
         kidsRoomOverlay.DOFade(0f, 1f).OnComplete(() => kidsRoomOverlay.gameObject.SetActive(false));

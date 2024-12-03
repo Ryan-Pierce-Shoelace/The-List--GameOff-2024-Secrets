@@ -2,7 +2,6 @@ using DG.Tweening;
 using Horror;
 using Horror.InputSystem;
 using Shoelace.Audio.XuulSound;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,14 +23,14 @@ public class HallwayRoomReveal : MonoBehaviour
        
         hallwayRevealOverlay.gameObject.SetActive(true);
         hallwayRevealOverlay.DOFade(1f, 5f);
-        await Task.Delay(3000);
+        await Awaitable.WaitForSecondsAsync(3f);
 
         for (int i = 0; i < revealFlicker; i++)
         {
             normalHallway.SetActive(!normalHallway.activeInHierarchy);
             revealHallway.SetActive(!revealHallway.activeInHierarchy);
             AudioManager.Instance.PlayOneShot(suspenseSFX);
-            await Task.Delay(250);
+            await Awaitable.WaitForSecondsAsync(.25f);
         }
 
         normalHallway.SetActive(false);
@@ -39,7 +38,7 @@ public class HallwayRoomReveal : MonoBehaviour
         hallwayRevealOverlay.DOKill();
 
         hallwayRevealOverlay.DOFade(0f, 1f);
-        await Task.Delay(1000);
+        await Awaitable.WaitForSecondsAsync(1f);
         hallwayRevealOverlay.gameObject.SetActive(false);
         playerInput.EnableGameplayInput();
         revealChore.TryRevealNewChores();

@@ -85,7 +85,7 @@ namespace Horror.RoomNavigation
             {
                 fadeIn, walkIn
             };
-
+            
             await Task.WhenAll(moveIntoRoom);
 
             

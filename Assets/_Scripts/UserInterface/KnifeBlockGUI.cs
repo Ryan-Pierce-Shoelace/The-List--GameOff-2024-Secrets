@@ -3,7 +3,6 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using UserInterface;
-using System.Threading.Tasks;
 using Horror.Chores;
 using UI.Thoughts;
 
@@ -37,10 +36,10 @@ namespace Horror
             guiAnimation.gameObject.SetActive(true);
             guiAnimation.Play("Horror");
 
-            await Task.Delay(3000);
+            await Awaitable.WaitForSecondsAsync(3f);
             overlayEffect.DOColor(Color.white, 1f);
             AudioManager.Instance.PlayOneShot(suspenseSFX);
-            await Task.Delay(1000);
+            await Awaitable.WaitForSecondsAsync(1f);
             overlayEffect.color = Color.white;
 
             await FadeTransition.Instance.ToggleFadeTransition(true, .5f);

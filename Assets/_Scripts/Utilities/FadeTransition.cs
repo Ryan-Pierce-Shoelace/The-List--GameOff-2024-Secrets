@@ -29,7 +29,7 @@ public class FadeTransition : MonoBehaviour
         await FadeCanvasGroup(fadeOutCG, fadeOut, duration);
     }
 
-    private async Task FadeCanvasGroup(CanvasGroup target, bool fadeOut, float duration)
+    private async Awaitable FadeCanvasGroup(CanvasGroup target, bool fadeOut, float duration)
     {
         target.alpha = fadeOut ? 0f : 1f;
 
@@ -39,7 +39,7 @@ public class FadeTransition : MonoBehaviour
         {
             target.alpha = Mathf.Lerp(fadeOut ? 0f : 1f, fadeOut ? 1f : 0f, fade);
             fade += t;
-            await Task.Yield();
+            await Awaitable.NextFrameAsync();
         }
 
         target.alpha = fadeOut ? 1f : 0f;
@@ -54,7 +54,7 @@ public class FadeTransition : MonoBehaviour
         AudioManager.Instance.PlayMusic(endMusic);
         await FadeCanvasGroup(endScreenCG, true, 2f);
         fadeOutCG.alpha = 0f;
-        await Task.Delay(1000);
+        await Awaitable.WaitForSecondsAsync(1f);
         SceneManager.LoadScene(mainMenu);
         await FadeCanvasGroup(endScreenCG, false, 1f);
     }
@@ -79,7 +79,7 @@ public class FadeTransition : MonoBehaviour
             if(load.progress >= .9f)
                 load.allowSceneActivation =true;
 
-            await Task.Yield();
+            await Awaitable.NextFrameAsync();
         }
 
         await FadeCanvasGroup(dayChangeCG, false, 3f);

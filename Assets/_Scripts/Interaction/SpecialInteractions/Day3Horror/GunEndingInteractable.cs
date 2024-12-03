@@ -1,7 +1,6 @@
 using Horror.InputSystem;
 using Interaction.InteractionCore;
 using Shoelace.Audio.XuulSound;
-using System.Threading.Tasks;
 using UnityEngine;
 
 public class GunEndingInteractable : MonoBehaviour, IInteractable
@@ -20,7 +19,7 @@ public class GunEndingInteractable : MonoBehaviour, IInteractable
         input.DisableAllInput();
         await FadeTransition.Instance.ToggleFadeTransition(true, 4f);
         AudioManager.Instance.PlayOneShot(gunShotSFX);
-        await Task.Delay(7000);
+        await Awaitable.WaitForSecondsAsync(7f);
         input.EnableUIInput();
         FadeTransition.Instance.EndScreen();
     }

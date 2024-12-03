@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
@@ -36,9 +35,9 @@ namespace UserInterface
             exitbutton.interactable = false;
 
             overlayEffect.DOColor(Color.white, 9f);
-            await Task.Delay(5000);
+            await Awaitable.WaitForSecondsAsync(5f);
             horrorAnimation.Play("HorrorMirror");
-            await Task.Delay(4000);
+            await Awaitable.WaitForSecondsAsync(4f);
             overlayEffect.color = Color.white;
             FadeTransition.Instance.ChangeDay(nextDay, "Saturday, December 28th, 2002");
         }

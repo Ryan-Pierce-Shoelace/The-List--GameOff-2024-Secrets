@@ -1,6 +1,5 @@
 using Horror.InputSystem;
 using Shoelace.Audio.XuulSound;
-using System.Threading.Tasks;
 using UnityEngine;
 namespace Interaction
 {
@@ -11,7 +10,7 @@ namespace Interaction
         [SerializeField] private Animator horrorAnim;
         [SerializeField] private SoundConfig horrorSFX;
 
-        private TaskCompletionSource<bool> horrorHitSource;
+        private AwaitableCompletionSource<bool> horrorHitSource;
 
         public void ActivateReturnHorror()
         {
@@ -23,12 +22,12 @@ namespace Interaction
             horrorAnim.gameObject.SetActive(true);
             horrorAnim.Play("WineBodyHorror");
 
-            horrorHitSource = new TaskCompletionSource<bool>();
+            horrorHitSource = new AwaitableCompletionSource<bool>();
 
-            await horrorHitSource.Task;
+            await horrorHitSource.Awaitable;
 
 
-            await Task.Delay(3000);
+            await Awaitable.WaitForSecondsAsync(3f);
             playerInput.EnableGameplayInput();
             horrorAnim.Play("SpillIdle");
         }

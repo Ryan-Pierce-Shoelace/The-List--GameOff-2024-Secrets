@@ -4,7 +4,6 @@ using Horror.Chores;
 using Horror.InputSystem;
 using RyanPierce.Events;
 using Shoelace.Audio.XuulSound;
-using System.Threading.Tasks;
 using UI.Thoughts;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,7 +38,7 @@ namespace Interaction.InteractionCore
         [SerializeField] private GameObject[] revealObjects, hideObjects;
 
         private bool isWatchingTV;
-        private TaskCompletionSource<bool> tvAnimComplete;
+        private AwaitableCompletionSource<bool> tvAnimComplete;
 
         private void Start()
         {
@@ -96,8 +95,8 @@ namespace Interaction.InteractionCore
 
 
             tvAnimation.gameObject.SetActive(true);
-            tvAnimComplete = new TaskCompletionSource<bool>();
-            await tvAnimComplete.Task;
+            tvAnimComplete = new AwaitableCompletionSource<bool>();
+            await tvAnimComplete.Awaitable;
 
             AudioManager.Instance.PlayOneShot(crackSFX);
 
@@ -114,7 +113,7 @@ namespace Interaction.InteractionCore
             }
             await FadeTransition.Instance.ToggleFadeTransition(false, .2f);
             drunkOverlay.DOFade(0f, 1f);
-            await Task.Delay(1000);
+            await Awaitable.WaitForSecondsAsync(1);
 
             revealChores?.TryRevealNewChores();
             inputReader.EnableGameplayInput();
